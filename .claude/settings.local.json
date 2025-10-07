@@ -1,0 +1,15 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(dir lib)",
+      "Bash(git push:*)",
+      "Bash(git add:*)",
+      "Bash(git commit -m \"$(cat <<''EOF''\nAdd root layout and global styles - fixes runtime 404 errors\n\n- Created app/layout.tsx with sticky navigation and brand fonts (Cormorant Garamond, EB Garamond)\n- Created app/globals.css with Ami Sushi brand tokens and design system\n- Establishes proper Next.js App Router foundation for page rendering\n\nThis resolves the build-vs-runtime issue where builds succeeded but pages returned 404.\n\n🤖 Generated with [Claude Code](https://claude.com/claude-code)\n\nCo-Authored-By: Claude <noreply@anthropic.com>\nEOF\n)\")",
+      "Bash(dir app)",
+      "Bash(cat:*)",
+      "Bash(git commit -m \"$(cat <<''EOF''\nAdd missing Next.js configuration files - CRITICAL FIX for 404 errors\n\nRoot cause: Project was missing ALL configuration files required for Next.js deployment\n\nCreated essential configuration:\n- package.json: Next.js 14.2, React 18.3, TypeScript 5.4, Tailwind 3.4\n- tsconfig.json: TypeScript config with @ path aliases\n- next.config.js: Next.js configuration with strict mode\n- tailwind.config.js: Tailwind with Ami Sushi brand colors and fonts\n- postcss.config.js: PostCSS for Tailwind processing\n- .gitignore: Standard Next.js ignore patterns\n\nThis resolves Vercel deployment 404 errors by providing the build system\nwith necessary configuration to compile and serve the application.\n\n🤖 Generated with [Claude Code](https://claude.com/claude-code)\n\nCo-Authored-By: Claude <noreply@anthropic.com>\nEOF\n)\")"
+    ],
+    "deny": [],
+    "ask": []
+  }
+}
