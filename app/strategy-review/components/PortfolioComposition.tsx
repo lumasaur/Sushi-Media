@@ -38,12 +38,12 @@ export function PortfolioComposition({
     if (isActive) {
       return `${baseColor} text-white border-2 shadow-md`;
     }
-    return 'bg-white text-gray-700 border border-gray-300 hover:bg-gray-100 hover:shadow-md';
+    return 'bg-gray-900 text-gray-300 border border-gray-700 hover:bg-gray-800 hover:shadow-md';
   };
 
   return (
     <section id="portfolio" className="max-w-7xl mx-auto px-6 py-8 scroll-mt-20">
-      <h2 className="text-2xl font-bold text-gray-900 mb-6 text-center">
+      <h2 className="text-2xl font-bold text-white mb-6 text-center">
         Strategy Portfolio Composition
       </h2>
 
@@ -55,7 +55,7 @@ export function PortfolioComposition({
           className={`p-6 rounded-lg border-2 transition-all cursor-pointer text-center ${
             !hasActiveFilters
               ? 'bg-blue-600 text-white border-blue-700 shadow-md'
-              : 'bg-white text-gray-700 border-gray-300 hover:bg-gray-100'
+              : 'bg-gray-900 text-gray-300 border-gray-700 hover:bg-gray-800'
           }`}
         >
           <div className="text-4xl mb-2">📊</div>
@@ -96,10 +96,10 @@ export function PortfolioComposition({
         </button>
 
         {/* Implementation Phases */}
-        <div className="p-6 rounded-lg border-2 border-gray-300 bg-gray-50 text-center">
+        <div className="p-6 rounded-lg border-2 border-gray-700 bg-gray-900 text-center">
           <div className="text-4xl mb-2">📅</div>
-          <div className="text-3xl font-bold mb-1 text-gray-900">3</div>
-          <div className="text-sm font-medium text-gray-700">Implementation Phases</div>
+          <div className="text-3xl font-bold mb-1 text-white">3</div>
+          <div className="text-sm font-medium text-gray-300">Implementation Phases</div>
         </div>
       </div>
 
@@ -208,7 +208,7 @@ export function PortfolioComposition({
       {/* Row 2: Filter Dropdown - Mobile */}
       <div className="md:hidden mb-4">
         <select
-          className="w-full px-4 py-3 border-2 border-gray-300 rounded-lg text-base"
+          className="w-full px-4 py-3 border-2 border-gray-700 bg-gray-900 text-gray-300 rounded-lg text-base"
           onChange={(e) => {
             const [filterType, value] = e.target.value.split(':');
             if (filterType && value) {
@@ -242,7 +242,7 @@ export function PortfolioComposition({
             {activeFilters.categories.map((cat) => (
               <span
                 key={cat}
-                className="inline-flex items-center gap-1 px-3 py-1 bg-green-100 text-green-800 text-sm rounded-full"
+                className="inline-flex items-center gap-1 px-3 py-1 bg-green-900 text-green-100 text-sm rounded-full"
               >
                 {cat === 'quick-win' ? '⚡ Quick Wins' : '🏗️ Strategic'}
                 <button onClick={() => onFilterToggle('categories', cat)} className="ml-1 font-bold">
@@ -253,7 +253,7 @@ export function PortfolioComposition({
             {activeFilters.phases.map((phase) => (
               <span
                 key={phase}
-                className="inline-flex items-center gap-1 px-3 py-1 bg-blue-100 text-blue-800 text-sm rounded-full"
+                className="inline-flex items-center gap-1 px-3 py-1 bg-blue-900 text-blue-100 text-sm rounded-full"
               >
                 Phase {phase}
                 <button onClick={() => onFilterToggle('phases', phase)} className="ml-1 font-bold">
@@ -264,7 +264,7 @@ export function PortfolioComposition({
             {activeFilters.objectives.map((obj) => (
               <span
                 key={obj}
-                className="inline-flex items-center gap-1 px-3 py-1 bg-purple-100 text-purple-800 text-sm rounded-full"
+                className="inline-flex items-center gap-1 px-3 py-1 bg-purple-900 text-purple-100 text-sm rounded-full"
               >
                 {obj.charAt(0).toUpperCase() + obj.slice(1)}
                 <button onClick={() => onFilterToggle('objectives', obj)} className="ml-1 font-bold">
@@ -277,14 +277,14 @@ export function PortfolioComposition({
       </div>
 
       {/* Results Counter and Clear Filters */}
-      <div className="flex items-center justify-between text-base text-gray-600">
+      <div className="flex items-center justify-between text-base text-gray-300">
         <div>
           Showing <strong>{filteredCount}</strong> of <strong>{totalCount}</strong> strategies
         </div>
         {hasActiveFilters && (
           <button
             onClick={onClearFilters}
-            className="text-red-600 hover:text-red-800 font-medium flex items-center gap-1"
+            className="text-red-400 hover:text-red-300 font-medium flex items-center gap-1"
           >
             <span>✕</span> Clear All Filters
           </button>

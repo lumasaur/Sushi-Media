@@ -80,16 +80,16 @@ export default function StrategyReviewPage() {
   }, [selectedStrategyId]);
 
   return (
-    <main className="min-h-screen bg-gray-50">
+    <main className="min-h-screen bg-[#120c0d]">
       {/* Section 1: Introduction (Ultra-Condensed) */}
       <IntroSection />
 
       {/* Section 2: Three-Phase Roadmap (BEFORE Portfolio Composition) */}
       <section id="roadmap" className="max-w-7xl mx-auto px-6 py-8 scroll-mt-20">
-        <h2 className="text-3xl font-bold text-gray-900 mb-4 text-center">
+        <h2 className="text-3xl font-bold text-white mb-4 text-center">
           Three-Phase Implementation Roadmap
         </h2>
-        <p className="text-center text-gray-600 mb-8 max-w-3xl mx-auto text-base">
+        <p className="text-center text-gray-300 mb-8 max-w-3xl mx-auto text-base">
           Strategic sequencing balances near-term revenue generation (Quick Wins) with long-term competitive
           advantage building (Strategic Investments). Phase 1 creates cash flow and execution credibility
           funding Phase 2-3 deployment.
@@ -178,10 +178,10 @@ export default function StrategyReviewPage() {
 
       {/* Section 4: Filtered Initiative Cards (Scrollable Grid) */}
       <section ref={initiativeGridRef} className="max-w-7xl mx-auto px-6 py-8" id="initiative-grid">
-        <h2 className="text-2xl font-bold text-gray-900 mb-4">
+        <h2 className="text-2xl font-bold text-white mb-4">
           Complete Strategy Portfolio: 50 Initiatives
         </h2>
-        <p className="text-gray-600 mb-6 text-base">
+        <p className="text-gray-300 mb-6 text-base">
           Click any strategy card to view detailed business case analysis. The portfolio is scrollable to manage
           space efficiently.
         </p>
@@ -204,15 +204,15 @@ export default function StrategyReviewPage() {
 
       {/* Section 6: Implementation Readiness Checklist */}
       <section id="implementation-checklist" className="max-w-7xl mx-auto px-6 py-12 scroll-mt-20">
-        <h2 className="text-2xl font-bold text-gray-900 mb-8 text-center">
+        <h2 className="text-2xl font-bold text-white mb-8 text-center">
           Implementation Readiness Checklist
         </h2>
 
         <div className="grid md:grid-cols-2 gap-6">
           {/* Strategic Alignment */}
-          <div className="bg-white border-2 border-gray-200 rounded-lg p-6 shadow-md">
-            <h3 className="text-lg font-semibold text-gray-900 mb-4">Strategic Alignment</h3>
-            <ul className="space-y-2 text-base text-gray-700">
+          <div className="bg-gray-900 border-2 border-gray-700 rounded-lg p-6 shadow-md">
+            <h3 className="text-lg font-semibold text-white mb-4">Strategic Alignment</h3>
+            <ul className="space-y-2 text-base text-gray-300">
               <li className="flex items-start gap-2">
                 <span className="text-gray-400 text-lg">☐</span>
                 <span>Leadership team aligned on portfolio priorities</span>
@@ -229,57 +229,57 @@ export default function StrategyReviewPage() {
           </div>
 
           {/* Resource Readiness */}
-          <div className="bg-white border-2 border-gray-200 rounded-lg p-6 shadow-md">
-            <h3 className="text-lg font-semibold text-gray-900 mb-4">Resource Readiness</h3>
-            <ul className="space-y-2 text-base text-gray-700">
+          <div className="bg-gray-900 border-2 border-gray-700 rounded-lg p-6 shadow-md">
+            <h3 className="text-lg font-semibold text-white mb-4">Resource Readiness</h3>
+            <ul className="space-y-2 text-base text-gray-300">
               <li className="flex items-start gap-2">
-                <span className="text-gray-400 text-lg">☐</span>
+                <span className="text-gray-500 text-lg">☐</span>
                 <span>Budget allocated for Phase 1 deployment ($5K-8K)</span>
               </li>
               <li className="flex items-start gap-2">
-                <span className="text-gray-400 text-lg">☐</span>
+                <span className="text-gray-500 text-lg">☐</span>
                 <span>Staff training plan developed for new initiatives</span>
               </li>
               <li className="flex items-start gap-2">
-                <span className="text-gray-400 text-lg">☐</span>
+                <span className="text-gray-500 text-lg">☐</span>
                 <span>Marketing materials and communication templates prepared</span>
               </li>
             </ul>
           </div>
 
           {/* Execution Infrastructure */}
-          <div className="bg-white border-2 border-gray-200 rounded-lg p-6 shadow-md">
-            <h3 className="text-lg font-semibold text-gray-900 mb-4">Execution Infrastructure</h3>
-            <ul className="space-y-2 text-base text-gray-700">
+          <div className="bg-gray-900 border-2 border-gray-700 rounded-lg p-6 shadow-md">
+            <h3 className="text-lg font-semibold text-white mb-4">Execution Infrastructure</h3>
+            <ul className="space-y-2 text-base text-gray-300">
               <li className="flex items-start gap-2">
-                <span className="text-gray-400 text-lg">☐</span>
+                <span className="text-gray-500 text-lg">☐</span>
                 <span>Project management system established for tracking</span>
               </li>
               <li className="flex items-start gap-2">
-                <span className="text-gray-400 text-lg">☐</span>
+                <span className="text-gray-500 text-lg">☐</span>
                 <span>Weekly review cadence scheduled with stakeholders</span>
               </li>
               <li className="flex items-start gap-2">
-                <span className="text-gray-400 text-lg">☐</span>
+                <span className="text-gray-500 text-lg">☐</span>
                 <span>Customer feedback mechanism implemented</span>
               </li>
             </ul>
           </div>
 
           {/* Performance Monitoring */}
-          <div className="bg-white border-2 border-gray-200 rounded-lg p-6 shadow-md">
-            <h3 className="text-lg font-semibold text-gray-900 mb-4">Performance Monitoring</h3>
-            <ul className="space-y-2 text-base text-gray-700">
+          <div className="bg-gray-900 border-2 border-gray-700 rounded-lg p-6 shadow-md">
+            <h3 className="text-lg font-semibold text-white mb-4">Performance Monitoring</h3>
+            <ul className="space-y-2 text-base text-gray-300">
               <li className="flex items-start gap-2">
-                <span className="text-gray-400 text-lg">☐</span>
+                <span className="text-gray-500 text-lg">☐</span>
                 <span>Baseline metrics captured for comparison</span>
               </li>
               <li className="flex items-start gap-2">
-                <span className="text-gray-400 text-lg">☐</span>
+                <span className="text-gray-500 text-lg">☐</span>
                 <span>Dashboard or reporting system configured</span>
               </li>
               <li className="flex items-start gap-2">
-                <span className="text-gray-400 text-lg">☐</span>
+                <span className="text-gray-500 text-lg">☐</span>
                 <span>Trigger points defined for strategy adjustments</span>
               </li>
             </ul>
@@ -288,109 +288,109 @@ export default function StrategyReviewPage() {
       </section>
 
       {/* Section 7: Performance Expectations & Financials (Moved Down) */}
-      <section className="max-w-7xl mx-auto px-6 py-12 bg-white">
-        <h2 className="text-3xl font-bold text-gray-900 mb-8 text-center">
+      <section className="max-w-7xl mx-auto px-6 py-12 bg-[#120c0d]">
+        <h2 className="text-3xl font-bold text-white mb-8 text-center">
           Performance Expectations
         </h2>
 
         <div className="grid md:grid-cols-3 gap-6 mb-8">
           {/* Phase 1 Expectations */}
-          <div className="bg-green-50 border-2 border-green-500 rounded-lg p-6">
+          <div className="bg-green-900 border-2 border-green-500 rounded-lg p-6">
             <div className="flex items-center gap-2 mb-4">
               <div className="w-10 h-10 rounded-full bg-green-600 text-white flex items-center justify-center font-bold">
                 1
               </div>
-              <div className="font-bold text-green-900">Months 1-3</div>
+              <div className="font-bold text-green-300">Months 1-3</div>
             </div>
             <div className="space-y-3">
               <div>
-                <div className="text-xs text-green-700 font-semibold mb-1">Revenue Target</div>
-                <div className="text-lg font-bold text-green-900">$15K-25K/month</div>
+                <div className="text-xs text-green-400 font-semibold mb-1">Revenue Target</div>
+                <div className="text-lg font-bold text-green-200">$15K-25K/month</div>
               </div>
               <div>
-                <div className="text-xs text-green-700 font-semibold mb-1">Success Indicator</div>
-                <div className="text-sm text-gray-700">Visible revenue growth from Quick Wins</div>
+                <div className="text-xs text-green-400 font-semibold mb-1">Success Indicator</div>
+                <div className="text-sm text-gray-300">Visible revenue growth from Quick Wins</div>
               </div>
               <div>
-                <div className="text-xs text-green-700 font-semibold mb-1">Key Milestone</div>
-                <div className="text-sm text-gray-700">Break-even by Month 2-3</div>
+                <div className="text-xs text-green-400 font-semibold mb-1">Key Milestone</div>
+                <div className="text-sm text-gray-300">Break-even by Month 2-3</div>
               </div>
             </div>
           </div>
 
           {/* Phase 2 Expectations */}
-          <div className="bg-amber-50 border-2 border-amber-500 rounded-lg p-6">
+          <div className="bg-amber-900 border-2 border-amber-500 rounded-lg p-6">
             <div className="flex items-center gap-2 mb-4">
               <div className="w-10 h-10 rounded-full bg-amber-600 text-white flex items-center justify-center font-bold">
                 2
               </div>
-              <div className="font-bold text-amber-900">Months 4-6</div>
+              <div className="font-bold text-amber-300">Months 4-6</div>
             </div>
             <div className="space-y-3">
               <div>
-                <div className="text-xs text-amber-700 font-semibold mb-1">Revenue Target</div>
-                <div className="text-lg font-bold text-amber-900">$8K-12K/month</div>
+                <div className="text-xs text-amber-400 font-semibold mb-1">Revenue Target</div>
+                <div className="text-lg font-bold text-amber-200">$8K-12K/month</div>
               </div>
               <div>
-                <div className="text-xs text-amber-700 font-semibold mb-1">Success Indicator</div>
-                <div className="text-sm text-gray-700">Strategic foundation established</div>
+                <div className="text-xs text-amber-400 font-semibold mb-1">Success Indicator</div>
+                <div className="text-sm text-gray-300">Strategic foundation established</div>
               </div>
               <div>
-                <div className="text-xs text-amber-700 font-semibold mb-1">Key Milestone</div>
-                <div className="text-sm text-gray-700">Competitive advantages built</div>
+                <div className="text-xs text-amber-400 font-semibold mb-1">Key Milestone</div>
+                <div className="text-sm text-gray-300">Competitive advantages built</div>
               </div>
             </div>
           </div>
 
           {/* Phase 3 Expectations */}
-          <div className="bg-blue-50 border-2 border-blue-500 rounded-lg p-6">
+          <div className="bg-blue-900 border-2 border-blue-500 rounded-lg p-6">
             <div className="flex items-center gap-2 mb-4">
               <div className="w-10 h-10 rounded-full bg-blue-600 text-white flex items-center justify-center font-bold">
                 3
               </div>
-              <div className="font-bold text-blue-900">Months 7-12</div>
+              <div className="font-bold text-blue-300">Months 7-12</div>
             </div>
             <div className="space-y-3">
               <div>
-                <div className="text-xs text-blue-700 font-semibold mb-1">Revenue Target</div>
-                <div className="text-lg font-bold text-blue-900">$20K-35K/month</div>
+                <div className="text-xs text-blue-400 font-semibold mb-1">Revenue Target</div>
+                <div className="text-lg font-bold text-blue-200">$20K-35K/month</div>
               </div>
               <div>
-                <div className="text-xs text-blue-700 font-semibold mb-1">Success Indicator</div>
-                <div className="text-sm text-gray-700">Diversified revenue portfolio</div>
+                <div className="text-xs text-blue-400 font-semibold mb-1">Success Indicator</div>
+                <div className="text-sm text-gray-300">Diversified revenue portfolio</div>
               </div>
               <div>
-                <div className="text-xs text-blue-700 font-semibold mb-1">Key Milestone</div>
-                <div className="text-sm text-gray-700">Market leadership position</div>
+                <div className="text-xs text-blue-400 font-semibold mb-1">Key Milestone</div>
+                <div className="text-sm text-gray-300">Market leadership position</div>
               </div>
             </div>
           </div>
         </div>
 
         {/* Year 1 Cumulative Results */}
-        <div className="bg-red-50 border-2 border-red-700 rounded-lg p-6">
+        <div className="bg-red-900 border-2 border-red-700 rounded-lg p-6">
           <div className="flex items-center justify-between mb-4">
             <div>
-              <div className="text-base font-semibold text-red-900 mb-1">Year 1 Cumulative Results</div>
-              <div className="text-xs text-red-700">Based on sequential phase deployment</div>
+              <div className="text-base font-semibold text-red-200 mb-1">Year 1 Cumulative Results</div>
+              <div className="text-xs text-red-400">Based on sequential phase deployment</div>
             </div>
             <div className="text-right">
-              <div className="text-3xl font-bold text-red-700 mb-1">$300K-450K</div>
-              <div className="text-sm text-red-900">Total Incremental Revenue</div>
+              <div className="text-3xl font-bold text-red-300 mb-1">$300K-450K</div>
+              <div className="text-sm text-red-200">Total Incremental Revenue</div>
             </div>
           </div>
-          <div className="grid grid-cols-3 gap-4 pt-4 border-t border-red-200">
+          <div className="grid grid-cols-3 gap-4 pt-4 border-t border-red-700">
             <div>
-              <div className="text-xs text-red-700">Total Investment</div>
-              <div className="text-lg font-bold text-red-900">$30K-51K</div>
+              <div className="text-xs text-red-400">Total Investment</div>
+              <div className="text-lg font-bold text-red-200">$30K-51K</div>
             </div>
             <div>
-              <div className="text-xs text-red-700">Net Profit Impact</div>
-              <div className="text-lg font-bold text-red-900">$250K-400K</div>
+              <div className="text-xs text-red-400">Net Profit Impact</div>
+              <div className="text-lg font-bold text-red-200">$250K-400K</div>
             </div>
             <div>
-              <div className="text-xs text-red-700">12-Month ROI</div>
-              <div className="text-lg font-bold text-red-900">488-782%</div>
+              <div className="text-xs text-red-400">12-Month ROI</div>
+              <div className="text-lg font-bold text-red-200">488-782%</div>
             </div>
           </div>
         </div>
@@ -398,9 +398,9 @@ export default function StrategyReviewPage() {
 
       {/* Section 8: CTA Section (Simplified) */}
       <section className="max-w-7xl mx-auto px-6 py-12">
-        <div className="bg-gradient-to-r from-red-50 to-amber-50 border-2 border-red-700 rounded-lg p-8 text-center">
-          <h3 className="text-2xl font-bold text-gray-900 mb-4">Ready to Begin Implementation?</h3>
-          <p className="text-gray-700 mb-6 max-w-2xl mx-auto text-base leading-relaxed">
+        <div className="bg-gradient-to-r from-red-900 to-amber-900 border-2 border-red-700 rounded-lg p-8 text-center">
+          <h3 className="text-2xl font-bold text-white mb-4">Ready to Begin Implementation?</h3>
+          <p className="text-gray-300 mb-6 max-w-2xl mx-auto text-base leading-relaxed">
             Start with Phase 1 Quick Wins to generate immediate revenue and build execution momentum. Use the
             interactive strategy cards above to explore specific initiatives and create your deployment plan.
           </p>

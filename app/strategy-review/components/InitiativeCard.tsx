@@ -36,18 +36,18 @@ export function InitiativeCard({ strategy, isSelected, onClick }: InitiativeCard
       onClick={onClick}
       className={`w-full text-left p-4 rounded-lg border-2 transition-all duration-200 ${
         isSelected
-          ? 'border-red-700 bg-red-50 shadow-xl'
-          : 'border-gray-200 bg-white hover:border-gray-300 hover:bg-gray-50 hover:shadow-lg'
+          ? 'border-red-700 bg-red-900 shadow-xl'
+          : 'border-gray-700 bg-gray-900 hover:border-gray-600 hover:bg-gray-800 hover:shadow-lg'
       }`}
     >
       {/* Header: ID and Category Icon */}
       <div className="flex items-start justify-between mb-2">
-        <span className="text-xs font-mono text-gray-500 font-bold">{strategy.id}</span>
+        <span className="text-xs font-mono text-gray-400 font-bold">{strategy.id}</span>
         {categoryIcon && <span className="text-xl">{categoryIcon}</span>}
       </div>
 
       {/* Strategy Name */}
-      <h3 className="text-base font-semibold text-gray-900 mb-3 line-clamp-2 min-h-[3rem]">
+      <h3 className="text-base font-semibold text-white mb-3 line-clamp-2 min-h-[3rem]">
         {strategy.name}
       </h3>
 

@@ -23,22 +23,22 @@ export function PhaseCard({
 }: PhaseCardProps) {
   const colorThemes = {
     1: {
-      bg: 'bg-green-50',
+      bg: 'bg-green-900',
       border: 'border-green-500',
       badge: 'bg-green-500',
-      text: 'text-green-900'
+      text: 'text-green-300'
     },
     2: {
-      bg: 'bg-amber-50',
+      bg: 'bg-amber-900',
       border: 'border-amber-500',
       badge: 'bg-amber-500',
-      text: 'text-amber-900'
+      text: 'text-amber-300'
     },
     3: {
-      bg: 'bg-blue-50',
+      bg: 'bg-blue-900',
       border: 'border-blue-500',
       badge: 'bg-blue-500',
-      text: 'text-blue-900'
+      text: 'text-blue-300'
     }
   };
 
@@ -53,12 +53,12 @@ export function PhaseCard({
             Phase {phaseNumber}
           </div>
           <h3 className={`${theme.text} text-xl font-bold mb-1`}>{name}</h3>
-          <p className="text-sm text-gray-600">{duration}</p>
+          <p className="text-sm text-gray-300">{duration}</p>
         </div>
       </div>
 
       {/* Summary Statistics */}
-      <div className="mb-6 space-y-2">
+      <div className="mb-6 space-y-2 text-gray-300">
         <div className="flex justify-between text-sm">
           <span className="font-medium">Strategies:</span>
           <span className="font-semibold">{strategyCount}</span>
@@ -79,8 +79,8 @@ export function PhaseCard({
 
       {/* Strategy Examples */}
       <div className="mb-6">
-        <h4 className="text-sm font-semibold mb-2">Strategy Examples:</h4>
-        <ul className="text-xs space-y-1">
+        <h4 className="text-sm font-semibold mb-2 text-gray-200">Strategy Examples:</h4>
+        <ul className="text-xs space-y-1 text-gray-300">
           {strategyExamples.slice(0, 5).map((strategy, idx) => (
             <li key={idx} className="flex items-start">
               <span className="mr-2">•</span>
@@ -92,8 +92,8 @@ export function PhaseCard({
 
       {/* Key Outcomes */}
       <div className="mt-auto">
-        <h4 className="text-sm font-semibold mb-2">Key Outcomes:</h4>
-        <ul className="text-xs space-y-1">
+        <h4 className="text-sm font-semibold mb-2 text-gray-200">Key Outcomes:</h4>
+        <ul className="text-xs space-y-1 text-gray-300">
           {keyOutcomes.map((outcome, idx) => (
             <li key={idx} className="flex items-start">
               <span className="mr-2">✓</span>
