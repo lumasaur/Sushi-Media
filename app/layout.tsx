@@ -34,24 +34,17 @@ export default function RootLayout({
         <header className="bg-[#120c0d] border-b border-gray-700 sticky top-0 z-50">
           <div className="max-w-7xl mx-auto px-4 py-4">
             <nav className="flex items-center justify-between">
-              <a href="https://sushi-media-ami.vercel.app/" className="text-2xl font-bold text-white">
+              <a href="/" className="text-2xl font-bold text-white">
                 Ami Sushi Marketing Portal
               </a>
 
               <div className="flex gap-6">
-                <div className="relative group">
-                  <a
-                    href="https://sushi-media-ami.vercel.app/"
-                    className="text-gray-300 hover:text-white font-medium transition-colors"
-                  >
-                    Strategic Marketing Framework
-                  </a>
-                  <div className="absolute left-0 mt-2 w-56 bg-[#1a1416] border border-gray-700 rounded-md shadow-lg opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-200">
-                    <a href="https://sushi-media-ami.vercel.app/#overview" className="block px-4 py-2 text-sm text-gray-300 hover:bg-gray-800 hover:text-white">Overview</a>
-                    <a href="https://sushi-media-ami.vercel.app/#objectives" className="block px-4 py-2 text-sm text-gray-300 hover:bg-gray-800 hover:text-white">Objectives</a>
-                    <a href="https://sushi-media-ami.vercel.app/#analysis" className="block px-4 py-2 text-sm text-gray-300 hover:bg-gray-800 hover:text-white">Analysis</a>
-                  </div>
-                </div>
+                <a
+                  href="/"
+                  className="text-gray-300 hover:text-white font-medium transition-colors"
+                >
+                  Home
+                </a>
 
                 <div className="relative group">
                   <a
