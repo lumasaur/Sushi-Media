@@ -1,7 +1,62 @@
 import { Strategy, FilterState, SortConfig, EFFORT_SCORE, VALUE_SCORE } from './types';
+import { getStrategyCategory, getStrategyPhase } from './strategy-helpers';
+
+export interface ExtendedFilterState {
+  categories: string[];  // quick-win, strategic-investment, standard
+  phases: number[];      // 1, 2, 3
+  objectives: string[];  // bar-sales, lunch, neighborhood, events, doordash
+  effort: string[];      // minimal, low, medium, high, very-high
+  value: string[];       // minimal, low, medium, high, very-high
+}
 
 /**
- * Apply all active filters to strategy list
+ * Apply all active filters to strategy list (Extended version with phases and objectives)
+ */
+export function applyExtendedFilters(
+  strategies: Strategy[],
+  filters: ExtendedFilterState
+): Strategy[] {
+  return strategies.filter(strategy => {
+    const category = getStrategyCategory(strategy);
+    const phase = getStrategyPhase(strategy);
+
+    // Category filter (quick-win, strategic-investment, standard)
+    if (filters.categories.length > 0 && !filters.categories.includes(category)) {
+      return false;
+    }
+
+    // Phase filter (1, 2, 3)
+    if (filters.phases.length > 0 && !filters.phases.includes(phase)) {
+      return false;
+    }
+
+    // Objective filter (bar-sales, lunch, etc.)
+    if (filters.objectives.length > 0 && !filters.objectives.includes(strategy.category)) {
+      return false;
+    }
+
+    // Effort filter
+    if (filters.effort.length > 0 && !filters.effort.includes(strategy.effort)) {
+      return false;
+    }
+
+    // Value filter (support "high" to mean both high and very-high)
+    if (filters.value.length > 0) {
+      const matchesValue = filters.value.some(v => {
+        if (v === 'high') {
+          return strategy.value === 'high' || strategy.value === 'very-high';
+        }
+        return strategy.value === v;
+      });
+      if (!matchesValue) return false;
+    }
+
+    return true;
+  });
+}
+
+/**
+ * Apply all active filters to strategy list (Original version)
  */
 export function applyFilters(
   strategies: Strategy[],
