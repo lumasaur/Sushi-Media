@@ -39,12 +39,19 @@ export default function RootLayout({
               </a>
 
               <div className="flex gap-6">
-                <a
-                  href="/"
-                  className="text-gray-300 hover:text-white font-medium transition-colors"
-                >
-                  Home
-                </a>
+                <div className="relative group">
+                  <a
+                    href="/"
+                    className="text-gray-300 hover:text-white font-medium transition-colors"
+                  >
+                    Strategic Marketing Framework
+                  </a>
+                  <div className="absolute left-0 mt-2 w-56 bg-[#1a1416] border border-gray-700 rounded-md shadow-lg opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-200">
+                    <a href="/#overview" className="block px-4 py-2 text-sm text-gray-300 hover:bg-gray-800 hover:text-white">Overview</a>
+                    <a href="/#objectives" className="block px-4 py-2 text-sm text-gray-300 hover:bg-gray-800 hover:text-white">Objectives</a>
+                    <a href="/#analysis" className="block px-4 py-2 text-sm text-gray-300 hover:bg-gray-800 hover:text-white">Analysis</a>
+                  </div>
+                </div>
 
                 <div className="relative group">
                   <a

@@ -295,7 +295,7 @@ export default function StrategyReviewPage() {
 
         <div className="grid md:grid-cols-3 gap-6 mb-8">
           {/* Phase 1 Expectations */}
-          <div className="bg-green-900 border-2 border-green-500 rounded-lg p-6">
+          <div className="bg-gray-800 border-2 border-green-500 rounded-lg p-6">
             <div className="flex items-center gap-2 mb-4">
               <div className="w-10 h-10 rounded-full bg-green-600 text-white flex items-center justify-center font-bold">
                 1
@@ -319,7 +319,7 @@ export default function StrategyReviewPage() {
           </div>
 
           {/* Phase 2 Expectations */}
-          <div className="bg-amber-900 border-2 border-amber-500 rounded-lg p-6">
+          <div className="bg-gray-800 border-2 border-amber-500 rounded-lg p-6">
             <div className="flex items-center gap-2 mb-4">
               <div className="w-10 h-10 rounded-full bg-amber-600 text-white flex items-center justify-center font-bold">
                 2
@@ -343,7 +343,7 @@ export default function StrategyReviewPage() {
           </div>
 
           {/* Phase 3 Expectations */}
-          <div className="bg-blue-900 border-2 border-blue-500 rounded-lg p-6">
+          <div className="bg-gray-800 border-2 border-blue-500 rounded-lg p-6">
             <div className="flex items-center gap-2 mb-4">
               <div className="w-10 h-10 rounded-full bg-blue-600 text-white flex items-center justify-center font-bold">
                 3
@@ -368,7 +368,7 @@ export default function StrategyReviewPage() {
         </div>
 
         {/* Year 1 Cumulative Results */}
-        <div className="bg-red-900 border-2 border-red-700 rounded-lg p-6">
+        <div className="bg-gray-800 border-2 border-red-700 rounded-lg p-6">
           <div className="flex items-center justify-between mb-4">
             <div>
               <div className="text-base font-semibold text-red-200 mb-1">Year 1 Cumulative Results</div>

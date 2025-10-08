@@ -9,10 +9,10 @@ export default function ContentCalendarPage() {
   return (
     <div className="max-w-7xl mx-auto px-4 py-8">
       <div className="mb-8">
-        <h1 className="text-3xl font-bold text-gray-900 mb-2">
+        <h1 className="text-3xl font-bold text-white mb-2">
           Content Calendar
         </h1>
-        <p className="text-gray-600">
+        <p className="text-gray-300">
           View and manage the complete digital marketing content schedule across all channels.
         </p>
       </div>
