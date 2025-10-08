@@ -1,4 +1,110 @@
+'use client';
+
+import { useState } from 'react';
+
 export default function Home() {
+  const [expandedSections, setExpandedSections] = useState<Record<string, boolean>>({
+    approach: true,
+    opportunities: true,
+    analysis: true,
+    roadmap: true,
+  });
+
+  const [activeTab, setActiveTab] = useState(0);
+
+  const toggleSection = (section: string) => {
+    setExpandedSections(prev => ({
+      ...prev,
+      [section]: !prev[section]
+    }));
+  };
+
+  const opportunities = [
+    {
+      title: "Corporate Market Development",
+      content: (
+        <>
+          <div className="mb-6">
+            <h4 className="font-semibold mb-2">Market Opportunity Analysis</h4>
+            <p className="mb-3 leading-relaxed">
+              Corporate dining demand in Central New Jersey shows concentrated office park density within delivery and catering range, with businesses increasingly prioritizing experience quality for client relations and employee appreciation. Current competitors lack both premium Japanese specialization and community connection authenticity that appeals to businesses seeking distinctive corporate entertainment options.
+            </p>
+          </div>
+          <div className="mb-6">
+            <h4 className="font-semibold mb-2">Strategic Targeting Approach</h4>
+            <p className="mb-3 leading-relaxed">
+              Focus on small to medium-sized businesses (20-200 employees) within three-mile radius that value relationship-based service and community connection. These organizations typically seek venues that reflect their company values while providing professional-grade experiences for client entertainment and team building.
+            </p>
+          </div>
+          <div className="mb-6">
+            <h4 className="font-semibold mb-2">Implementation Recommendations</h4>
+            <div className="grid md:grid-cols-2 gap-4">
+              <div className="p-4 rounded-lg border border-white/10 bg-black/20">
+                <h5 className="font-semibold mb-2">Corporate Service Development</h5>
+                <ul className="list-disc pl-5 space-y-1 text-sm">
+                  <li>Business Lunch Optimization: Menu items specifically designed for professional dining with efficient service timing</li>
+                  <li>Private Dining Enhancement: Upstairs space configuration for business meetings with basic presentation capabilities</li>
+                  <li>Account Management Approach: Dedicated relationship building with key corporate decision makers</li>
+                  <li>Community Connection Integration: Corporate social responsibility partnership opportunities</li>
+                </ul>
+              </div>
+              <div className="p-4 rounded-lg border border-white/10 bg-black/20">
+                <h5 className="font-semibold mb-2">Marketing and Outreach Strategy</h5>
+                <ul className="list-disc pl-5 space-y-1 text-sm">
+                  <li>LinkedIn Professional Engagement: Targeted content marketing emphasizing community values</li>
+                  <li>Direct Relationship Building: Personal outreach to office managers and corporate event coordinators</li>
+                  <li>Somerset County Business Partnership Participation: Active involvement in professional networking events</li>
+                  <li>Referral Network Development: Systematic approach to encouraging existing corporate clients</li>
+                </ul>
+              </div>
+            </div>
+          </div>
+          <div>
+            <h4 className="font-semibold mb-2">Potential Success Indicators</h4>
+            <ul className="list-disc pl-5 space-y-1">
+              <li className="leading-relaxed">Corporate account establishment and retention rates</li>
+              <li className="leading-relaxed">Business lunch order frequency and consistency</li>
+              <li className="leading-relaxed">Private dining space utilization for corporate meetings</li>
+              <li className="leading-relaxed">Corporate event booking patterns and repeat engagement</li>
+            </ul>
+          </div>
+        </>
+      )
+    },
+    {
+      title: "Community Events & Social Programming",
+      content: (
+        <p className="leading-relaxed text-gray-300">
+          Building on proven weekend music event success to develop systematic community engagement programming that drives consistent mid-week and weekend traffic while strengthening neighborhood relationships and creating differentiated social dining experiences.
+        </p>
+      )
+    },
+    {
+      title: "Enhanced Takeout & Delivery",
+      content: (
+        <p className="leading-relaxed text-gray-300">
+          Premium takeout positioning that maintains quality standards while capturing convenience-oriented customer demand and expanding market reach beyond dine-in capacity constraints.
+        </p>
+      )
+    },
+    {
+      title: "Weekend Social Events & Beverage Revenue",
+      content: (
+        <p className="leading-relaxed text-gray-300">
+          Systematic expansion of successful music event format combined with elevated beverage program to maximize per-customer revenue during peak weekend traffic periods.
+        </p>
+      )
+    },
+    {
+      title: "Premium Catering & Private Events",
+      content: (
+        <p className="leading-relaxed text-gray-300">
+          High-margin private event services leveraging upstairs space and culinary expertise to serve corporate celebrations and special occasions with premium positioning.
+        </p>
+      )
+    }
+  ];
+
   return (
     <main className="min-h-screen bg-black text-white pt-20">
       <div className="max-w-6xl mx-auto px-4 py-8">
@@ -23,7 +129,18 @@ export default function Home() {
 
         {/* Strategic Marketing Approach Section */}
         <section id="overview" className="scroll-mt-20 p-6 md:p-10 mb-10 bg-black/50 backdrop-blur-sm rounded-xl border border-white/20">
-          <h2 className="text-2xl md:text-3xl font-bold mb-6">Strategic Marketing Approach</h2>
+          <div className="flex items-center justify-between mb-6">
+            <h2 className="text-2xl md:text-3xl font-bold">Strategic Marketing Approach</h2>
+            <button
+              onClick={() => toggleSection('approach')}
+              className="text-[#b22222] hover:text-[#a01e1e] transition-colors"
+            >
+              {expandedSections.approach ? '▲' : '▼'}
+            </button>
+          </div>
+
+          {expandedSections.approach && (
+          <div>
 
           <article className="mb-8">
             <h3 className="text-xl font-semibold mb-3">Strategic Content Assessment & Competitive Positioning Analysis</h3>
@@ -108,52 +225,117 @@ export default function Home() {
               </p>
             </div>
           </article>
+
+          <article className="mb-8">
+            <h3 className="text-xl font-semibold mb-3">Strategic Brand Pillars</h3>
+            <div className="grid md:grid-cols-2 gap-5">
+              <div className="p-5 rounded-lg border border-white/10 bg-black/20">
+                <h4 className="font-semibold mb-2">Community‑Embedded Authenticity</h4>
+                <ul className="list-disc pl-5 space-y-1">
+                  <li className="leading-relaxed">Family business credibility with multi‑generational local presence</li>
+                  <li className="leading-relaxed">Genuine community integration beyond transactional relationships</li>
+                  <li className="leading-relaxed">Local sourcing partnerships and regional business network participation</li>
+                  <li className="leading-relaxed">Authentic hospitality rooted in both Japanese service traditions and neighborhood values</li>
+                </ul>
+              </div>
+              <div className="p-5 rounded-lg border border-white/10 bg-black/20">
+                <h4 className="font-semibold mb-2">Premium Quality Accessibility</h4>
+                <ul className="list-disc pl-5 space-y-1">
+                  <li className="leading-relaxed">Professional‑grade culinary execution without intimidation factors</li>
+                  <li className="leading-relaxed">Sophisticated ingredients and preparation techniques presented in approachable formats</li>
+                  <li className="leading-relaxed">Education‑focused service that enhances rather than excludes customer experience</li>
+                  <li className="leading-relaxed">Price‑value positioning that justifies premium without creating barriers</li>
+                </ul>
+              </div>
+              <div className="p-5 rounded-lg border border-white/10 bg-black/20">
+                <h4 className="font-semibold mb-2">Social Experience Engineering</h4>
+                <ul className="list-disc pl-5 space-y-1">
+                  <li className="leading-relaxed">Physical space design optimized for both intimate dining and group celebration</li>
+                  <li className="leading-relaxed">Service protocols that facilitate conversation and connection</li>
+                  <li className="leading-relaxed">Event programming that brings community together around shared experiences</li>
+                  <li className="leading-relaxed">Technology integration that enhances rather than replaces human interaction</li>
+                </ul>
+              </div>
+              <div className="p-5 rounded-lg border border-white/10 bg-black/20">
+                <h4 className="font-semibold mb-2">Cultural Bridge Building</h4>
+                <ul className="list-disc pl-5 space-y-1">
+                  <li className="leading-relaxed">Japanese culinary traditions interpreted through local community lens</li>
+                  <li className="leading-relaxed">Educational components that respect cultural authenticity while maintaining accessibility</li>
+                  <li className="leading-relaxed">Service approach that honors both Japanese hospitality principles and American social expectations</li>
+                  <li className="leading-relaxed">Menu development that bridges traditional techniques with regional preferences</li>
+                </ul>
+              </div>
+            </div>
+          </article>
+
+          <article>
+            <h3 className="text-xl font-semibold mb-3">Competitive Differentiation Matrix</h3>
+            <div className="grid md:grid-cols-2 gap-5">
+              <div className="p-5 rounded-lg border border-white/10 bg-black/20">
+                <h4 className="font-semibold mb-2">Unique Competitive Advantages</h4>
+                <ul className="list-disc pl-5 space-y-1">
+                  <li className="leading-relaxed">Established Community Credibility: Family business reputation with proven local relationships</li>
+                  <li className="leading-relaxed">Proven Social Programming Success: Demonstrated capability through weekend music events</li>
+                  <li className="leading-relaxed">Premium Quality Foundation: Existing culinary standards that support elevated positioning</li>
+                  <li className="leading-relaxed">Flexible Space Utilization: Physical environment adaptable for multiple experience types</li>
+                  <li className="leading-relaxed">Authentic Cultural Integration: Japanese expertise combined with genuine community connection</li>
+                </ul>
+              </div>
+              <div className="p-5 rounded-lg border border-white/10 bg-black/20">
+                <h4 className="font-semibold mb-2">Barriers to Competitive Replication</h4>
+                <ul className="list-disc pl-5 space-y-1">
+                  <li className="leading-relaxed">Multi-generational Business Relationships: Community trust built over extended time periods</li>
+                  <li className="leading-relaxed">Cultural Expertise Combined with Local Knowledge: Unique intersection of Japanese culinary training and Central New Jersey market understanding</li>
+                  <li className="leading-relaxed">Integrated Social Programming: Music events and community activities require sustained relationship building</li>
+                  <li className="leading-relaxed">Physical Space Advantages: Existing infrastructure supporting both intimate dining and group events</li>
+                </ul>
+              </div>
+            </div>
+          </article>
+          </div>
+          )}
         </section>
 
         {/* Strategic Revenue Opportunities Section */}
         <section id="objectives" className="scroll-mt-20 p-6 md:p-10 mb-10 bg-black/50 backdrop-blur-sm rounded-xl border border-white/20">
-          <h2 className="text-2xl md:text-3xl font-bold mb-6">Five Strategic Revenue Opportunities</h2>
+          <div className="flex items-center justify-between mb-6">
+            <h2 className="text-2xl md:text-3xl font-bold">Five Strategic Revenue Opportunities</h2>
+            <button
+              onClick={() => toggleSection('opportunities')}
+              className="text-[#b22222] hover:text-[#a01e1e] transition-colors"
+            >
+              {expandedSections.opportunities ? '▲' : '▼'}
+            </button>
+          </div>
+
+          {expandedSections.opportunities && (
+          <div>
           <p className="text-gray-300 mb-6 leading-relaxed">
-            Strategic revenue opportunities identified through market analysis and competitive positioning assessment.
+            Explore each opportunity for detailed market analysis, targeting approach, implementation recommendations, marketing strategy, and potential success indicators.
           </p>
 
+          {/* Tab Navigation */}
+          <div className="flex flex-wrap items-end gap-4 border-b border-white/20 mb-6">
+            {opportunities.map((opp, index) => (
+              <button
+                key={index}
+                onClick={() => setActiveTab(index)}
+                className={`py-2 px-3 transition-all duration-200 ${
+                  activeTab === index
+                    ? 'text-[#b22222] border-b-2 border-[#b22222] font-semibold'
+                    : 'hover:text-[#b22222]'
+                }`}
+              >
+                {opp.title}
+              </button>
+            ))}
+          </div>
+
+          {/* Tab Content */}
           <div className="space-y-6">
-            <article>
-              <h3 className="text-xl font-semibold mb-4">1. Corporate Market Development</h3>
-              <div className="mb-4">
-                <h4 className="font-semibold mb-2">Market Opportunity Analysis</h4>
-                <p className="leading-relaxed text-gray-300">
-                  Corporate dining demand in Central New Jersey shows concentrated office park density within delivery and catering range, with businesses increasingly prioritizing experience quality for client relations and employee appreciation.
-                </p>
-              </div>
-            </article>
-
-            <article>
-              <h3 className="text-xl font-semibold mb-4">2. Community Events & Social Programming</h3>
-              <p className="leading-relaxed text-gray-300">
-                Building on proven weekend music event success to develop systematic community engagement programming that drives consistent mid-week and weekend traffic.
-              </p>
-            </article>
-
-            <article>
-              <h3 className="text-xl font-semibold mb-4">3. Enhanced Takeout & Delivery</h3>
-              <p className="leading-relaxed text-gray-300">
-                Premium takeout positioning that maintains quality standards while capturing convenience-oriented customer demand and expanding market reach beyond dine-in capacity.
-              </p>
-            </article>
-
-            <article>
-              <h3 className="text-xl font-semibold mb-4">4. Weekend Social Events & Beverage Revenue</h3>
-              <p className="leading-relaxed text-gray-300">
-                Systematic expansion of successful music event format combined with elevated beverage program to maximize per-customer revenue during peak weekend traffic.
-              </p>
-            </article>
-
-            <article>
-              <h3 className="text-xl font-semibold mb-4">5. Premium Catering & Private Events</h3>
-              <p className="leading-relaxed text-gray-300">
-                High-margin private event services leveraging upstairs space and culinary expertise to serve corporate celebrations and special occasions.
-              </p>
+            <article className="fade">
+              <h3 className="text-xl font-semibold mb-4">Opportunity {activeTab + 1}: {opportunities[activeTab].title}</h3>
+              {opportunities[activeTab].content}
             </article>
           </div>
 
@@ -169,12 +351,24 @@ export default function Home() {
               View Strategy Prioritization Tool →
             </a>
           </div>
+          </div>
+          )}
         </section>
 
         {/* Analysis/Social Media Strategy Section */}
         <section id="analysis" className="scroll-mt-20 p-6 md:p-10 mb-10 bg-black/50 backdrop-blur-sm rounded-xl border border-white/20">
-          <h2 className="text-2xl md:text-3xl font-bold mb-6">Social Media Messaging & Content Strategy</h2>
+          <div className="flex items-center justify-between mb-6">
+            <h2 className="text-2xl md:text-3xl font-bold">Social Media Messaging & Content Strategy</h2>
+            <button
+              onClick={() => toggleSection('analysis')}
+              className="text-[#b22222] hover:text-[#a01e1e] transition-colors"
+            >
+              {expandedSections.analysis ? '▲' : '▼'}
+            </button>
+          </div>
 
+          {expandedSections.analysis && (
+          <div>
           <article className="mb-8">
             <h3 className="text-xl font-semibold mb-3">Daily Posting Framework: Structured Content Strategy</h3>
             <p className="mb-4 leading-relaxed">
@@ -239,11 +433,24 @@ export default function Home() {
               </div>
             </div>
           </article>
+          </div>
+          )}
         </section>
 
         {/* Implementation Roadmap */}
         <section id="roadmap" className="scroll-mt-20 p-6 md:p-10 mb-10 bg-black/50 backdrop-blur-sm rounded-xl border border-white/20">
-          <h2 className="text-2xl md:text-3xl font-bold mb-6">Implementation Roadmap & Next Steps</h2>
+          <div className="flex items-center justify-between mb-6">
+            <h2 className="text-2xl md:text-3xl font-bold">Implementation Roadmap & Next Steps</h2>
+            <button
+              onClick={() => toggleSection('roadmap')}
+              className="text-[#b22222] hover:text-[#a01e1e] transition-colors"
+            >
+              {expandedSections.roadmap ? '▲' : '▼'}
+            </button>
+          </div>
+
+          {expandedSections.roadmap && (
+          <div>
 
           <div className="grid md:grid-cols-3 gap-8 mb-12">
             <div className="bg-black/40 rounded-lg p-8 border border-white/10">
@@ -328,6 +535,8 @@ export default function Home() {
               Open Strategy Review Tool →
             </a>
           </div>
+          </div>
+          )}
         </section>
       </div>
     </main>
