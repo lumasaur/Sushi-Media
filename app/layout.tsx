@@ -34,7 +34,7 @@ export default function RootLayout({
         <header className="bg-[#120c0d] border-b border-gray-700 sticky top-0 z-50">
           <div className="max-w-7xl mx-auto px-4 py-4">
             <nav className="flex items-center justify-between">
-              <a href="/" className="text-2xl font-bold text-white">
+              <a href="https://sushi-media-ami.vercel.app/" className="text-2xl font-bold text-white">
                 Ami Sushi Marketing Portal
               </a>
 

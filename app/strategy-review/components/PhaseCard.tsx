@@ -23,19 +23,19 @@ export function PhaseCard({
 }: PhaseCardProps) {
   const colorThemes = {
     1: {
-      bg: 'bg-green-900',
+      bg: 'bg-gray-800',
       border: 'border-green-500',
       badge: 'bg-green-500',
       text: 'text-green-300'
     },
     2: {
-      bg: 'bg-amber-900',
+      bg: 'bg-gray-800',
       border: 'border-amber-500',
       badge: 'bg-amber-500',
       text: 'text-amber-300'
     },
     3: {
-      bg: 'bg-blue-900',
+      bg: 'bg-gray-800',
       border: 'border-blue-500',
       badge: 'bg-blue-500',
       text: 'text-blue-300'

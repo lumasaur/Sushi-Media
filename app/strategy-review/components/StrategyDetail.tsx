@@ -132,7 +132,7 @@ export function StrategyDetail({ strategy, onClose }: StrategyDetailProps) {
       {/* Competitive Context + Success Metrics - Side by Side */}
       <div className="grid md:grid-cols-2 gap-6 mb-8">
         {/* Competitive Context */}
-        <section className="bg-blue-900 border-l-4 border-blue-500 rounded-lg p-6">
+        <section className="bg-gray-800 border-l-4 border-blue-500 rounded-lg p-6">
           <h3 className="text-xl font-semibold text-white mb-4">Competitive Context</h3>
 
           <div className="mb-4">
@@ -166,7 +166,7 @@ export function StrategyDetail({ strategy, onClose }: StrategyDetailProps) {
         </section>
 
         {/* Success Metrics & KPIs */}
-        <section className="bg-purple-900 border-l-4 border-purple-500 rounded-lg p-6">
+        <section className="bg-gray-800 border-l-4 border-purple-500 rounded-lg p-6">
           <h3 className="text-xl font-semibold text-white mb-4">Success Metrics & KPIs</h3>
           <ul className="space-y-3 text-base text-gray-300">
             <li className="flex items-start gap-3">
@@ -190,7 +190,7 @@ export function StrategyDetail({ strategy, onClose }: StrategyDetailProps) {
       </div>
 
       {/* Implementation Roadmap - Horizontal Layout */}
-      <section className="mb-8 bg-green-900 border-l-4 border-green-500 rounded-lg p-6">
+      <section className="mb-8 bg-gray-800 border-l-4 border-green-500 rounded-lg p-6">
         <h3 className="text-xl font-semibold text-white mb-4">Implementation Roadmap</h3>
 
         <div className="grid md:grid-cols-3 gap-6">
@@ -223,7 +223,7 @@ export function StrategyDetail({ strategy, onClose }: StrategyDetailProps) {
       </section>
 
       {/* Business Case Financials - LAST SECTION */}
-      <section className="mb-8 bg-amber-900 border-l-4 border-amber-500 rounded-lg p-6">
+      <section className="mb-8 bg-gray-800 border-l-4 border-amber-500 rounded-lg p-6">
         <h3 className="text-xl font-semibold text-white mb-4">Business Case Financials</h3>
 
         <div className="grid md:grid-cols-2 gap-4 mb-6">
