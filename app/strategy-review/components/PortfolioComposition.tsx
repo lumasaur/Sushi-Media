@@ -60,7 +60,7 @@ export function PortfolioComposition({
         >
           <div className="text-4xl mb-2">📊</div>
           <div className="text-3xl font-bold mb-1">{totalCount}</div>
-          <div className="text-sm font-medium">Total Strategies</div>
+          <div className="font-medium">Total Strategies</div>
         </button>
 
         {/* Quick Wins */}
@@ -74,7 +74,7 @@ export function PortfolioComposition({
         >
           <div className="text-4xl mb-2">⚡</div>
           <div className="text-3xl font-bold mb-1">14</div>
-          <div className="text-sm font-medium">
+          <div className="font-medium">
             {isFilterActive('categories', 'quick-win') && '✓ '}Quick Wins
           </div>
         </button>
@@ -90,7 +90,7 @@ export function PortfolioComposition({
         >
           <div className="text-4xl mb-2">🏗️</div>
           <div className="text-3xl font-bold mb-1">5</div>
-          <div className="text-sm font-medium">
+          <div className="font-medium">
             {isFilterActive('categories', 'strategic-investment') && '✓ '}Strategic Investments
           </div>
         </button>
@@ -99,7 +99,7 @@ export function PortfolioComposition({
         <div className="p-6 rounded-lg border-2 border-gray-700 bg-gray-900 text-center">
           <div className="text-4xl mb-2">📅</div>
           <div className="text-3xl font-bold mb-1 text-white">3</div>
-          <div className="text-sm font-medium text-gray-300">Implementation Phases</div>
+          <div className="font-medium text-gray-300">Implementation Phases</div>
         </div>
       </div>
 
@@ -107,7 +107,7 @@ export function PortfolioComposition({
       <div className="hidden md:flex flex-wrap gap-3 justify-center mb-4">
         <button
           onClick={() => onFilterToggle('phases', 1)}
-          className={`px-4 py-2 rounded-lg font-medium text-sm transition-all ${getCardClasses(
+          className={`px-4 py-2 rounded-lg font-medium transition-all ${getCardClasses(
             'phases',
             1,
             'bg-green-600 border-green-700'
@@ -118,7 +118,7 @@ export function PortfolioComposition({
 
         <button
           onClick={() => onFilterToggle('phases', 2)}
-          className={`px-4 py-2 rounded-lg font-medium text-sm transition-all ${getCardClasses(
+          className={`px-4 py-2 rounded-lg font-medium transition-all ${getCardClasses(
             'phases',
             2,
             'bg-amber-600 border-amber-700'
@@ -129,7 +129,7 @@ export function PortfolioComposition({
 
         <button
           onClick={() => onFilterToggle('phases', 3)}
-          className={`px-4 py-2 rounded-lg font-medium text-sm transition-all ${getCardClasses(
+          className={`px-4 py-2 rounded-lg font-medium transition-all ${getCardClasses(
             'phases',
             3,
             'bg-blue-600 border-blue-700'
@@ -140,7 +140,7 @@ export function PortfolioComposition({
 
         <button
           onClick={() => onFilterToggle('value', 'high')}
-          className={`px-4 py-2 rounded-lg font-medium text-sm transition-all ${getCardClasses(
+          className={`px-4 py-2 rounded-lg font-medium transition-all ${getCardClasses(
             'value',
             'high',
             'bg-yellow-600 border-yellow-700'
@@ -151,7 +151,7 @@ export function PortfolioComposition({
 
         <button
           onClick={() => onFilterToggle('effort', 'minimal')}
-          className={`px-4 py-2 rounded-lg font-medium text-sm transition-all ${getCardClasses(
+          className={`px-4 py-2 rounded-lg font-medium transition-all ${getCardClasses(
             'effort',
             'minimal',
             'bg-blue-600 border-blue-700'
@@ -162,7 +162,7 @@ export function PortfolioComposition({
 
         <button
           onClick={() => onFilterToggle('objectives', 'bar-sales')}
-          className={`px-4 py-2 rounded-lg font-medium text-sm transition-all ${getCardClasses(
+          className={`px-4 py-2 rounded-lg font-medium transition-all ${getCardClasses(
             'objectives',
             'bar-sales',
             'bg-purple-600 border-purple-700'
@@ -173,7 +173,7 @@ export function PortfolioComposition({
 
         <button
           onClick={() => onFilterToggle('objectives', 'lunch')}
-          className={`px-4 py-2 rounded-lg font-medium text-sm transition-all ${getCardClasses(
+          className={`px-4 py-2 rounded-lg font-medium transition-all ${getCardClasses(
             'objectives',
             'lunch',
             'bg-blue-600 border-blue-700'
@@ -184,7 +184,7 @@ export function PortfolioComposition({
 
         <button
           onClick={() => onFilterToggle('objectives', 'neighborhood')}
-          className={`px-4 py-2 rounded-lg font-medium text-sm transition-all ${getCardClasses(
+          className={`px-4 py-2 rounded-lg font-medium transition-all ${getCardClasses(
             'objectives',
             'neighborhood',
             'bg-green-600 border-green-700'
@@ -195,7 +195,7 @@ export function PortfolioComposition({
 
         <button
           onClick={() => onFilterToggle('objectives', 'doordash')}
-          className={`px-4 py-2 rounded-lg font-medium text-sm transition-all ${getCardClasses(
+          className={`px-4 py-2 rounded-lg font-medium transition-all ${getCardClasses(
             'objectives',
             'doordash',
             'bg-red-600 border-red-700'
@@ -208,7 +208,7 @@ export function PortfolioComposition({
       {/* Row 2: Filter Dropdown - Mobile */}
       <div className="md:hidden mb-4">
         <select
-          className="w-full px-4 py-3 border-2 border-gray-700 bg-gray-900 text-gray-300 rounded-lg text-base"
+          className="w-full px-4 py-3 border-2 border-gray-700 bg-gray-900 text-gray-300 rounded-lg"
           onChange={(e) => {
             const [filterType, value] = e.target.value.split(':');
             if (filterType && value) {
@@ -242,7 +242,7 @@ export function PortfolioComposition({
             {activeFilters.categories.map((cat) => (
               <span
                 key={cat}
-                className="inline-flex items-center gap-1 px-3 py-1 bg-green-900 text-green-100 text-sm rounded-full"
+                className="inline-flex items-center gap-1 px-3 py-1 bg-green-900 text-green-100 rounded-full"
               >
                 {cat === 'quick-win' ? '⚡ Quick Wins' : '🏗️ Strategic'}
                 <button onClick={() => onFilterToggle('categories', cat)} className="ml-1 font-bold">
@@ -253,7 +253,7 @@ export function PortfolioComposition({
             {activeFilters.phases.map((phase) => (
               <span
                 key={phase}
-                className="inline-flex items-center gap-1 px-3 py-1 bg-blue-900 text-blue-100 text-sm rounded-full"
+                className="inline-flex items-center gap-1 px-3 py-1 bg-blue-900 text-blue-100 rounded-full"
               >
                 Phase {phase}
                 <button onClick={() => onFilterToggle('phases', phase)} className="ml-1 font-bold">
@@ -264,7 +264,7 @@ export function PortfolioComposition({
             {activeFilters.objectives.map((obj) => (
               <span
                 key={obj}
-                className="inline-flex items-center gap-1 px-3 py-1 bg-purple-900 text-purple-100 text-sm rounded-full"
+                className="inline-flex items-center gap-1 px-3 py-1 bg-purple-900 text-purple-100 rounded-full"
               >
                 {obj.charAt(0).toUpperCase() + obj.slice(1)}
                 <button onClick={() => onFilterToggle('objectives', obj)} className="ml-1 font-bold">
@@ -277,7 +277,7 @@ export function PortfolioComposition({
       </div>
 
       {/* Results Counter and Clear Filters */}
-      <div className="flex items-center justify-between text-base text-gray-300">
+      <div className="flex items-center justify-between text-gray-300">
         <div>
           Showing <strong>{filteredCount}</strong> of <strong>{totalCount}</strong> strategies
         </div>

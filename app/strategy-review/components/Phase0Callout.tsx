@@ -43,20 +43,20 @@ export function Phase0Callout() {
             <div className="bg-black/40 rounded p-4 mb-4">
               <div className="grid md:grid-cols-3 gap-4 text-center">
                 <div>
-                  <div className="text-sm text-blue-300 mb-1">Estimated Timeline</div>
+                  <div className="text-blue-300 mb-1">Estimated Timeline</div>
                   <div className="text-lg font-bold text-white">6-8 weeks</div>
                 </div>
                 <div>
-                  <div className="text-sm text-blue-300 mb-1">Investment Range</div>
+                  <div className="text-blue-300 mb-1">Investment Range</div>
                   <div className="text-lg font-bold text-white">$5,400-14,700</div>
                 </div>
                 <div>
-                  <div className="text-sm text-blue-300 mb-1">Outcome</div>
+                  <div className="text-blue-300 mb-1">Outcome</div>
                   <div className="text-lg font-bold text-white">Enhanced campaign measurement</div>
                 </div>
               </div>
             </div>
-            <p className="text-sm text-gray-400 italic mb-4">
+            <p className="text-gray-400 italic mb-4">
               These are recommendations, not requirements. Stakeholders may choose to implement some, all, or none based on current capabilities and priorities.
             </p>
             <a

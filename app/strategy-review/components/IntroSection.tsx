@@ -9,7 +9,7 @@ export function IntroSection() {
         Systematic Revenue Optimization Through Prioritized Strategic Initiatives
       </p>
 
-      <div className="space-y-4 text-base leading-relaxed text-gray-300">
+      <div className="space-y-4 leading-relaxed text-gray-300">
         <p>
           This framework presents <strong>50 marketing initiatives</strong> addressing four underutilized assets:
           temporal capacity gaps (Sunday/Monday evenings, weekday lunch), geographic proximity to apartment
@@ -32,7 +32,7 @@ export function IntroSection() {
 
         <div className="bg-gray-900 border-l-4 border-red-700 p-6 mt-6">
           <h3 className="text-lg font-bold mb-3 text-white">How to Use This Page</h3>
-          <ul className="space-y-2 text-base text-gray-300">
+          <ul className="space-y-2 text-gray-300">
             <li>• Review Phase 0 infrastructure recommendations (optional foundation)</li>
             <li>• Explore the four-phase roadmap to understand deployment timeline</li>
             <li>• Use filter cards to explore specific objectives, effort levels, or priorities</li>

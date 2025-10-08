@@ -110,15 +110,15 @@ export default function StrategyReviewPage() {
               <div className="flex-1">
                 <div className="flex items-center gap-3 flex-wrap">
                   <h3 className="text-xl font-bold text-white">Infrastructure Recommendations</h3>
-                  <span className="px-3 py-1 bg-blue-600 text-white text-xs font-bold rounded-full">
+                  <span className="px-3 py-1 bg-blue-600 text-white font-bold rounded-full">
                     RECOMMENDED FIRST STEP
                   </span>
                 </div>
-                <p className="text-sm text-blue-300">Suggested Timeline: Months 0-2</p>
+                <p className="text-blue-300">Suggested Timeline: Months 0-2</p>
               </div>
             </div>
 
-            <div className="grid md:grid-cols-2 gap-4 mb-4 text-sm">
+            <div className="grid md:grid-cols-2 gap-4 mb-4">
               <div>
                 <span className="text-blue-300">Investment Range:</span>
                 <span className="text-white font-semibold ml-2">$5,400-14,700</span>
@@ -130,8 +130,8 @@ export default function StrategyReviewPage() {
             </div>
 
             <div className="mb-4">
-              <h4 className="text-sm font-semibold text-white mb-2">Key Considerations:</h4>
-              <ul className="space-y-1 text-sm text-gray-300">
+              <h4 className="font-semibold text-white mb-2">Key Considerations:</h4>
+              <ul className="space-y-1 text-gray-300">
                 <li className="flex items-start gap-2">
                   <span className="text-blue-400">•</span>
                   <span>Customer data capture systems for attribution</span>
@@ -151,13 +151,13 @@ export default function StrategyReviewPage() {
               </ul>
             </div>
 
-            <p className="text-xs italic text-gray-400 mb-3">
+            <p className="italic text-gray-400 mb-3">
               Note: Adapt based on existing capabilities. Can begin Phase 1 immediately or after infrastructure enhancements.
             </p>
 
             <a
               href="#phase-0-foundation"
-              className="inline-block px-4 py-2 bg-blue-600 text-white rounded hover:bg-blue-500 transition-colors text-sm font-semibold"
+              className="inline-block px-4 py-2 bg-blue-600 text-white rounded hover:bg-blue-500 transition-colors font-semibold"
             >
               View Infrastructure Options →
             </a>
@@ -381,16 +381,16 @@ export default function StrategyReviewPage() {
             </div>
             <div className="space-y-3">
               <div>
-                <div className="text-xs text-green-400 font-semibold mb-1">Revenue Target</div>
+                <div className="text-green-400 font-semibold mb-1">Revenue Target</div>
                 <div className="text-lg font-bold text-green-200">$15K-25K/month</div>
               </div>
               <div>
-                <div className="text-xs text-green-400 font-semibold mb-1">Success Indicator</div>
-                <div className="text-sm text-gray-300">Visible revenue growth from Quick Wins</div>
+                <div className="text-green-400 font-semibold mb-1">Success Indicator</div>
+                <div className="text-gray-300">Visible revenue growth from Quick Wins</div>
               </div>
               <div>
-                <div className="text-xs text-green-400 font-semibold mb-1">Key Milestone</div>
-                <div className="text-sm text-gray-300">Break-even by Month 2-3</div>
+                <div className="text-green-400 font-semibold mb-1">Key Milestone</div>
+                <div className="text-gray-300">Break-even by Month 2-3</div>
               </div>
             </div>
           </div>
@@ -405,16 +405,16 @@ export default function StrategyReviewPage() {
             </div>
             <div className="space-y-3">
               <div>
-                <div className="text-xs text-amber-400 font-semibold mb-1">Revenue Target</div>
+                <div className="text-amber-400 font-semibold mb-1">Revenue Target</div>
                 <div className="text-lg font-bold text-amber-200">$8K-12K/month</div>
               </div>
               <div>
-                <div className="text-xs text-amber-400 font-semibold mb-1">Success Indicator</div>
-                <div className="text-sm text-gray-300">Strategic foundation established</div>
+                <div className="text-amber-400 font-semibold mb-1">Success Indicator</div>
+                <div className="text-gray-300">Strategic foundation established</div>
               </div>
               <div>
-                <div className="text-xs text-amber-400 font-semibold mb-1">Key Milestone</div>
-                <div className="text-sm text-gray-300">Competitive advantages built</div>
+                <div className="text-amber-400 font-semibold mb-1">Key Milestone</div>
+                <div className="text-gray-300">Competitive advantages built</div>
               </div>
             </div>
           </div>
@@ -429,16 +429,16 @@ export default function StrategyReviewPage() {
             </div>
             <div className="space-y-3">
               <div>
-                <div className="text-xs text-blue-400 font-semibold mb-1">Revenue Target</div>
+                <div className="text-blue-400 font-semibold mb-1">Revenue Target</div>
                 <div className="text-lg font-bold text-blue-200">$20K-35K/month</div>
               </div>
               <div>
-                <div className="text-xs text-blue-400 font-semibold mb-1">Success Indicator</div>
-                <div className="text-sm text-gray-300">Diversified revenue portfolio</div>
+                <div className="text-blue-400 font-semibold mb-1">Success Indicator</div>
+                <div className="text-gray-300">Diversified revenue portfolio</div>
               </div>
               <div>
-                <div className="text-xs text-blue-400 font-semibold mb-1">Key Milestone</div>
-                <div className="text-sm text-gray-300">Market leadership position</div>
+                <div className="text-blue-400 font-semibold mb-1">Key Milestone</div>
+                <div className="text-gray-300">Market leadership position</div>
               </div>
             </div>
           </div>
@@ -452,34 +452,34 @@ export default function StrategyReviewPage() {
           <div className="bg-gray-800 border-2 border-blue-500 rounded-lg p-6">
             <div className="flex items-center justify-between mb-4">
               <div>
-                <div className="text-base font-semibold text-blue-200 mb-1">Scenario A: With Phase 0 Infrastructure (14 Months)</div>
-                <div className="text-xs text-blue-400">Infrastructure-First Approach</div>
+                <div className="font-semibold text-blue-200 mb-1">Scenario A: With Phase 0 Infrastructure (14 Months)</div>
+                <div className="text-blue-400">Infrastructure-First Approach</div>
               </div>
               <div className="text-right">
                 <div className="text-3xl font-bold text-blue-300 mb-1">$300K-450K</div>
-                <div className="text-sm text-blue-200">Measurable, Attributable Revenue</div>
+                <div className="text-blue-200">Measurable, Attributable Revenue</div>
               </div>
             </div>
             <div className="grid grid-cols-4 gap-4 pt-4 border-t border-blue-700">
               <div>
-                <div className="text-xs text-blue-400">Months 0-2</div>
+                <div className="text-blue-400">Months 0-2</div>
                 <div className="text-lg font-bold text-blue-200">$5K-15K</div>
-                <div className="text-xs text-gray-400">Infrastructure</div>
+                <div className="text-gray-400">Infrastructure</div>
               </div>
               <div>
-                <div className="text-xs text-blue-400">Months 3-14</div>
+                <div className="text-blue-400">Months 3-14</div>
                 <div className="text-lg font-bold text-blue-200">$30K-51K</div>
-                <div className="text-xs text-gray-400">Marketing</div>
+                <div className="text-gray-400">Marketing</div>
               </div>
               <div>
-                <div className="text-xs text-blue-400">Net Profit</div>
+                <div className="text-blue-400">Net Profit</div>
                 <div className="text-lg font-bold text-blue-200">$245K-395K</div>
-                <div className="text-xs text-gray-400">After investment</div>
+                <div className="text-gray-400">After investment</div>
               </div>
               <div>
-                <div className="text-xs text-blue-400">Complete Program ROI</div>
+                <div className="text-blue-400">Complete Program ROI</div>
                 <div className="text-lg font-bold text-blue-200">373-598%</div>
-                <div className="text-xs text-gray-400">Clear attribution</div>
+                <div className="text-gray-400">Clear attribution</div>
               </div>
             </div>
             <div className="mt-4 p-3 bg-blue-900/20 rounded text-gray-300">
@@ -491,29 +491,29 @@ export default function StrategyReviewPage() {
           <div className="bg-gray-800 border-2 border-red-700 rounded-lg p-6">
             <div className="flex items-center justify-between mb-4">
               <div>
-                <div className="text-base font-semibold text-red-200 mb-1">Scenario B: Direct to Phase 1 (12 Months)</div>
-                <div className="text-xs text-red-400">Direct-to-Marketing Approach</div>
+                <div className="font-semibold text-red-200 mb-1">Scenario B: Direct to Phase 1 (12 Months)</div>
+                <div className="text-red-400">Direct-to-Marketing Approach</div>
               </div>
               <div className="text-right">
                 <div className="text-3xl font-bold text-red-300 mb-1">$300K-450K</div>
-                <div className="text-sm text-red-200">Estimated Revenue (attribution uncertain)</div>
+                <div className="text-red-200">Estimated Revenue (attribution uncertain)</div>
               </div>
             </div>
             <div className="grid grid-cols-3 gap-4 pt-4 border-t border-red-700">
               <div>
-                <div className="text-xs text-red-400">Total Investment</div>
+                <div className="text-red-400">Total Investment</div>
                 <div className="text-lg font-bold text-red-200">$30K-51K</div>
-                <div className="text-xs text-gray-400">Marketing only</div>
+                <div className="text-gray-400">Marketing only</div>
               </div>
             <div>
-              <div className="text-xs text-red-400">Net Profit Impact</div>
+              <div className="text-red-400">Net Profit Impact</div>
               <div className="text-lg font-bold text-red-200">$250K-400K</div>
-              <div className="text-xs text-gray-400">Estimated</div>
+              <div className="text-gray-400">Estimated</div>
             </div>
             <div>
-              <div className="text-xs text-red-400">Marketing ROI</div>
+              <div className="text-red-400">Marketing ROI</div>
               <div className="text-lg font-bold text-red-200">488-782%</div>
-              <div className="text-xs text-gray-400">Depends on existing systems</div>
+              <div className="text-gray-400">Depends on existing systems</div>
             </div>
           </div>
           <div className="mt-4 p-3 bg-red-900/20 rounded text-gray-300">

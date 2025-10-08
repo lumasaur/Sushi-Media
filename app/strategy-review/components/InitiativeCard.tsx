@@ -42,19 +42,19 @@ export function InitiativeCard({ strategy, isSelected, onClick }: InitiativeCard
     >
       {/* Header: ID and Category Icon */}
       <div className="flex items-start justify-between mb-2">
-        <span className="text-xs font-mono text-gray-400 font-bold">{strategy.id}</span>
+        <span className="font-mono text-gray-400 font-bold">{strategy.id}</span>
         {categoryIcon && <span className="text-xl">{categoryIcon}</span>}
       </div>
 
       {/* Strategy Name */}
-      <h3 className="text-base font-semibold text-white mb-3 line-clamp-2 min-h-[3rem]">
+      <h3 className="font-semibold text-white mb-3 line-clamp-2 min-h-[3rem]">
         {strategy.name}
       </h3>
 
       {/* Objective Badge */}
       <div className="mb-3">
         <span
-          className={`inline-block px-3 py-1 text-xs font-medium text-white rounded-full ${
+          className={`inline-block px-3 py-1 font-medium text-white rounded-full ${
             objectiveColors[strategy.category]
           }`}
         >
@@ -74,7 +74,7 @@ export function InitiativeCard({ strategy, isSelected, onClick }: InitiativeCard
 
       {/* Phase Badge */}
       <div>
-        <span className={`inline-block px-3 py-1 text-xs font-bold text-white rounded ${phaseColors[phase]}`}>
+        <span className={`inline-block px-3 py-1 font-bold text-white rounded ${phaseColors[phase]}`}>
           Phase {phase}
         </span>
       </div>
