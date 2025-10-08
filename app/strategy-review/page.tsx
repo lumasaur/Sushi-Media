@@ -5,6 +5,7 @@ import { strategies } from '@/lib/strategy-data';
 import { applyExtendedFilters, ExtendedFilterState } from '@/lib/filter-utils';
 import { IntroSection } from './components/IntroSection';
 import { Phase0Callout } from './components/Phase0Callout';
+import { Phase0DetailedSection } from './components/Phase0DetailedSection';
 import { PhaseCard } from './components/PhaseCard';
 import { PortfolioComposition } from './components/PortfolioComposition';
 import { InitiativeCardGrid } from './components/InitiativeCardGrid';
@@ -235,6 +236,9 @@ export default function StrategyReviewPage() {
         </div>
       </section>
 
+      {/* Section 2.5: Detailed Phase 0 Infrastructure Section */}
+      <Phase0DetailedSection />
+
       {/* Section 3: Portfolio Composition (Interactive Filters with Phase Selector) */}
       <PortfolioComposition
         activeFilters={filters}
@@ -361,6 +365,11 @@ export default function StrategyReviewPage() {
           Performance Expectations
         </h2>
 
+        <p className="text-center text-gray-400 mb-6 max-w-3xl mx-auto text-sm italic">
+          Timeline Note: Phases begin sequentially. If implementing Phase 0 recommendations, add 6-8 weeks before Phase 1 launch.
+          If proceeding without Phase 0, begin Phase 1 immediately.
+        </p>
+
         <div className="grid md:grid-cols-3 gap-6 mb-8">
           {/* Phase 1 Expectations */}
           <div className="bg-gray-800 border-2 border-green-500 rounded-lg p-6">
@@ -435,33 +444,92 @@ export default function StrategyReviewPage() {
           </div>
         </div>
 
-        {/* Year 1 Cumulative Results */}
-        <div className="bg-gray-800 border-2 border-red-700 rounded-lg p-6">
-          <div className="flex items-center justify-between mb-4">
-            <div>
-              <div className="text-base font-semibold text-red-200 mb-1">Year 1 Cumulative Results</div>
-              <div className="text-xs text-red-400">Based on sequential phase deployment</div>
+        {/* Program Results - Scenarios */}
+        <div className="space-y-6">
+          <h3 className="text-2xl font-bold text-white text-center">Program Results (Scenarios)</h3>
+
+          {/* Scenario A: With Phase 0 */}
+          <div className="bg-gray-800 border-2 border-blue-500 rounded-lg p-6">
+            <div className="flex items-center justify-between mb-4">
+              <div>
+                <div className="text-base font-semibold text-blue-200 mb-1">Scenario A: With Phase 0 Infrastructure (14 Months)</div>
+                <div className="text-xs text-blue-400">Infrastructure-First Approach</div>
+              </div>
+              <div className="text-right">
+                <div className="text-3xl font-bold text-blue-300 mb-1">$300K-450K</div>
+                <div className="text-sm text-blue-200">Measurable, Attributable Revenue</div>
+              </div>
             </div>
-            <div className="text-right">
-              <div className="text-3xl font-bold text-red-300 mb-1">$300K-450K</div>
-              <div className="text-sm text-red-200">Total Incremental Revenue</div>
+            <div className="grid grid-cols-4 gap-4 pt-4 border-t border-blue-700">
+              <div>
+                <div className="text-xs text-blue-400">Months 0-2</div>
+                <div className="text-lg font-bold text-blue-200">$5K-15K</div>
+                <div className="text-xs text-gray-400">Infrastructure</div>
+              </div>
+              <div>
+                <div className="text-xs text-blue-400">Months 3-14</div>
+                <div className="text-lg font-bold text-blue-200">$30K-51K</div>
+                <div className="text-xs text-gray-400">Marketing</div>
+              </div>
+              <div>
+                <div className="text-xs text-blue-400">Net Profit</div>
+                <div className="text-lg font-bold text-blue-200">$245K-395K</div>
+                <div className="text-xs text-gray-400">After investment</div>
+              </div>
+              <div>
+                <div className="text-xs text-blue-400">Complete Program ROI</div>
+                <div className="text-lg font-bold text-blue-200">373-598%</div>
+                <div className="text-xs text-gray-400">Clear attribution</div>
+              </div>
+            </div>
+            <div className="mt-4 p-3 bg-blue-900/20 rounded text-sm text-gray-300">
+              <strong>Key Benefit:</strong> Clear attribution and optimization data enables data-driven decisions
             </div>
           </div>
-          <div className="grid grid-cols-3 gap-4 pt-4 border-t border-red-700">
-            <div>
-              <div className="text-xs text-red-400">Total Investment</div>
-              <div className="text-lg font-bold text-red-200">$30K-51K</div>
+
+          {/* Scenario B: Direct to Phase 1 */}
+          <div className="bg-gray-800 border-2 border-red-700 rounded-lg p-6">
+            <div className="flex items-center justify-between mb-4">
+              <div>
+                <div className="text-base font-semibold text-red-200 mb-1">Scenario B: Direct to Phase 1 (12 Months)</div>
+                <div className="text-xs text-red-400">Direct-to-Marketing Approach</div>
+              </div>
+              <div className="text-right">
+                <div className="text-3xl font-bold text-red-300 mb-1">$300K-450K</div>
+                <div className="text-sm text-red-200">Estimated Revenue (attribution uncertain)</div>
+              </div>
             </div>
+            <div className="grid grid-cols-3 gap-4 pt-4 border-t border-red-700">
+              <div>
+                <div className="text-xs text-red-400">Total Investment</div>
+                <div className="text-lg font-bold text-red-200">$30K-51K</div>
+                <div className="text-xs text-gray-400">Marketing only</div>
+              </div>
             <div>
               <div className="text-xs text-red-400">Net Profit Impact</div>
               <div className="text-lg font-bold text-red-200">$250K-400K</div>
+              <div className="text-xs text-gray-400">Estimated</div>
             </div>
             <div>
-              <div className="text-xs text-red-400">12-Month ROI</div>
+              <div className="text-xs text-red-400">Marketing ROI</div>
               <div className="text-lg font-bold text-red-200">488-782%</div>
+              <div className="text-xs text-gray-400">Depends on existing systems</div>
             </div>
           </div>
+          <div className="mt-4 p-3 bg-red-900/20 rounded text-sm text-gray-300">
+            <strong>Key Benefit:</strong> Faster deployment, lower upfront cost, immediate revenue generation
+          </div>
         </div>
+
+        {/* Discussion Point */}
+        <div className="mt-6 p-6 bg-gray-900 rounded-lg border border-gray-700">
+          <p className="text-gray-300 leading-relaxed">
+            <strong>Discussion Point:</strong> Both scenarios can generate significant revenue. The primary difference is measurement
+            confidence and optimization capability. Stakeholders should evaluate based on current analytics capabilities and strategic
+            priorities.
+          </p>
+        </div>
+      </div>
       </section>
 
       {/* Section 8: CTA Section (Simplified) */}
