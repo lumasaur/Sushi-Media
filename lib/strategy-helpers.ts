@@ -1,31 +1,30 @@
 import { Strategy, EffortLevel, ValueLevel, EFFORT_SCORE, VALUE_SCORE } from './types';
 
 /**
- * Determine if a strategy is a "Quick Win" (minimal/low effort + high/very-high value)
+ * Determine if a strategy is a "Strategic Investment" (any effort + very-high value)
+ */
+export function isStrategicInvestment(strategy: Strategy): boolean {
+  const valueScore = VALUE_SCORE[strategy.value];
+
+  return valueScore === 5; // Any effort + Very High value
+}
+
+/**
+ * Determine if a strategy is a "Quick Win" (minimal/low effort + high value, excluding very-high)
  */
 export function isQuickWin(strategy: Strategy): boolean {
   const effortScore = EFFORT_SCORE[strategy.effort];
   const valueScore = VALUE_SCORE[strategy.value];
 
-  return effortScore <= 2 && valueScore >= 4; // Minimal/Low effort + High/Very High value
-}
-
-/**
- * Determine if a strategy is a "Strategic Investment" (high/very-high effort + very-high value)
- */
-export function isStrategicInvestment(strategy: Strategy): boolean {
-  const effortScore = EFFORT_SCORE[strategy.effort];
-  const valueScore = VALUE_SCORE[strategy.value];
-
-  return effortScore >= 4 && valueScore === 5; // High/Very High effort + Very High value
+  return effortScore <= 2 && valueScore === 4; // Minimal/Low effort + High value (not very-high)
 }
 
 /**
  * Get the category badge for a strategy
  */
 export function getStrategyCategory(strategy: Strategy): 'quick-win' | 'strategic-investment' | 'standard' {
-  if (isQuickWin(strategy)) return 'quick-win';
   if (isStrategicInvestment(strategy)) return 'strategic-investment';
+  if (isQuickWin(strategy)) return 'quick-win';
   return 'standard';
 }
 

@@ -113,7 +113,29 @@ export function PortfolioComposition({
             'bg-green-600 border-green-700'
           )}`}
         >
-          {isFilterActive('phases', 1) && '✓ '}Phase 1
+          {isFilterActive('phases', 1) && '✓ '}Phase 1 (Months 1-3)
+        </button>
+
+        <button
+          onClick={() => onFilterToggle('phases', 2)}
+          className={`px-4 py-2 rounded-lg font-medium text-sm transition-all ${getCardClasses(
+            'phases',
+            2,
+            'bg-amber-600 border-amber-700'
+          )}`}
+        >
+          {isFilterActive('phases', 2) && '✓ '}Phase 2 (Months 4-6)
+        </button>
+
+        <button
+          onClick={() => onFilterToggle('phases', 3)}
+          className={`px-4 py-2 rounded-lg font-medium text-sm transition-all ${getCardClasses(
+            'phases',
+            3,
+            'bg-blue-600 border-blue-700'
+          )}`}
+        >
+          {isFilterActive('phases', 3) && '✓ '}Phase 3 (Months 7-12)
         </button>
 
         <button
@@ -190,14 +212,17 @@ export function PortfolioComposition({
           onChange={(e) => {
             const [filterType, value] = e.target.value.split(':');
             if (filterType && value) {
-              onFilterToggle(filterType, value === '1' ? 1 : value);
+              const numValue = ['1', '2', '3'].includes(value) ? parseInt(value) : value;
+              onFilterToggle(filterType, numValue);
             }
           }}
           value=""
         >
           <option value="">Select a filter...</option>
           <optgroup label="Phase">
-            <option value="phases:1">Phase 1</option>
+            <option value="phases:1">Phase 1 (Months 1-3)</option>
+            <option value="phases:2">Phase 2 (Months 4-6)</option>
+            <option value="phases:3">Phase 3 (Months 7-12)</option>
           </optgroup>
           <optgroup label="Value & Effort">
             <option value="value:high">High+ Value</option>

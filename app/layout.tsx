@@ -30,24 +30,46 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en" className={`${cormorantGaramond.variable} ${ebGaramond.variable}`}>
-      <body className="antialiased bg-gray-50">
-        <header className="bg-white border-b border-gray-200 sticky top-0 z-50">
+      <body className="antialiased">
+        <header className="bg-[#120c0d] border-b border-gray-700 sticky top-0 z-50">
           <div className="max-w-7xl mx-auto px-4 py-4">
             <nav className="flex items-center justify-between">
-              <a href="/" className="text-2xl font-bold text-gray-900">
+              <a href="/" className="text-2xl font-bold text-white">
                 Ami Sushi Marketing Portal
               </a>
 
               <div className="flex gap-6">
+                <div className="relative group">
+                  <a
+                    href="/strategic-marketing-framework"
+                    className="text-gray-300 hover:text-white font-medium transition-colors"
+                  >
+                    Strategic Marketing Framework
+                  </a>
+                  <div className="absolute left-0 mt-2 w-56 bg-[#1a1416] border border-gray-700 rounded-md shadow-lg opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-200">
+                    <a href="/strategic-marketing-framework/overview" className="block px-4 py-2 text-sm text-gray-300 hover:bg-gray-800 hover:text-white">Overview</a>
+                    <a href="/strategic-marketing-framework/objectives" className="block px-4 py-2 text-sm text-gray-300 hover:bg-gray-800 hover:text-white">Objectives</a>
+                    <a href="/strategic-marketing-framework/analysis" className="block px-4 py-2 text-sm text-gray-300 hover:bg-gray-800 hover:text-white">Analysis</a>
+                  </div>
+                </div>
+
+                <div className="relative group">
+                  <a
+                    href="/strategy-review"
+                    className="text-gray-300 hover:text-white font-medium transition-colors"
+                  >
+                    Strategy Initiatives Review
+                  </a>
+                  <div className="absolute left-0 mt-2 w-56 bg-[#1a1416] border border-gray-700 rounded-md shadow-lg opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-200">
+                    <a href="/strategy-review#roadmap" className="block px-4 py-2 text-sm text-gray-300 hover:bg-gray-800 hover:text-white">Roadmap</a>
+                    <a href="/strategy-review#portfolio" className="block px-4 py-2 text-sm text-gray-300 hover:bg-gray-800 hover:text-white">Portfolio</a>
+                    <a href="/strategy-review#implementation-checklist" className="block px-4 py-2 text-sm text-gray-300 hover:bg-gray-800 hover:text-white">Implementation Checklist</a>
+                  </div>
+                </div>
+
                 <a
-                  href="/strategy-review"
-                  className="text-gray-700 hover:text-red-700 font-medium transition-colors"
-                >
-                  Strategy Review
-                </a>
-                <a
-                  href="/strategy-review/content-calendar"
-                  className="text-gray-700 hover:text-red-700 font-medium transition-colors"
+                  href="/content-calendar"
+                  className="text-gray-300 hover:text-white font-medium transition-colors"
                 >
                   Content Calendar
                 </a>
@@ -60,9 +82,9 @@ export default function RootLayout({
           {children}
         </main>
 
-        <footer className="bg-white border-t border-gray-200 mt-16">
+        <footer className="bg-[#120c0d] border-t border-gray-700 mt-16">
           <div className="max-w-7xl mx-auto px-4 py-8">
-            <div className="text-center text-gray-600">
+            <div className="text-center text-gray-400">
               <p className="text-sm">
                 Ami Sushi Marketing Portal — Internal Strategy Review Tool
               </p>

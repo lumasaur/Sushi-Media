@@ -129,93 +129,97 @@ export function StrategyDetail({ strategy, onClose }: StrategyDetailProps) {
         <p className="text-base leading-relaxed text-gray-800">{strategy.rationale}</p>
       </section>
 
-      {/* Competitive Context */}
-      <section className="mb-8 bg-blue-50 border-l-4 border-blue-500 rounded-lg p-6">
-        <h3 className="text-xl font-semibold text-gray-900 mb-4">Competitive Context</h3>
+      {/* Competitive Context + Success Metrics - Side by Side */}
+      <div className="grid md:grid-cols-2 gap-6 mb-8">
+        {/* Competitive Context */}
+        <section className="bg-blue-50 border-l-4 border-blue-500 rounded-lg p-6">
+          <h3 className="text-xl font-semibold text-gray-900 mb-4">Competitive Context</h3>
 
-        <div className="mb-4">
-          <h4 className="text-lg font-medium text-gray-800 mb-2 flex items-center gap-2">
-            <span className="text-green-600">✓</span> Strategic Advantages
-          </h4>
-          <ul className="space-y-2 text-base text-gray-700 ml-6">
-            <li className="list-disc">First-mover advantage in local market</li>
-            <li className="list-disc">Leverages existing customer relationships</li>
-            <li className="list-disc">Difficult for competitors to replicate quickly</li>
-          </ul>
-        </div>
+          <div className="mb-4">
+            <h4 className="text-lg font-medium text-gray-800 mb-2 flex items-center gap-2">
+              <span className="text-green-600">✓</span> Strategic Advantages
+            </h4>
+            <ul className="space-y-2 text-base text-gray-700 ml-6">
+              <li className="list-disc">First-mover advantage in local market</li>
+              <li className="list-disc">Leverages existing customer relationships</li>
+              <li className="list-disc">Difficult for competitors to replicate quickly</li>
+            </ul>
+          </div>
 
-        <div>
-          <h4 className="text-lg font-medium text-gray-800 mb-2 flex items-center gap-2">
-            <span className="text-amber-600">⚠</span> Implementation Risks
-          </h4>
-          <ul className="space-y-2 text-base text-gray-700 ml-6">
-            <li className="list-disc">
-              <span className="font-medium">Execution consistency required</span>
-              <br />
-              <span className="text-sm italic">Mitigation: Weekly performance reviews and staff accountability</span>
+          <div>
+            <h4 className="text-lg font-medium text-gray-800 mb-2 flex items-center gap-2">
+              <span className="text-amber-600">⚠</span> Implementation Risks
+            </h4>
+            <ul className="space-y-2 text-base text-gray-700 ml-6">
+              <li className="list-disc">
+                <span className="font-medium">Execution consistency required</span>
+                <br />
+                <span className="text-sm italic">Mitigation: Weekly performance reviews and staff accountability</span>
+              </li>
+              <li className="list-disc">
+                <span className="font-medium">Customer adoption may vary</span>
+                <br />
+                <span className="text-sm italic">Mitigation: Pilot testing and iterative refinement based on feedback</span>
+              </li>
+            </ul>
+          </div>
+        </section>
+
+        {/* Success Metrics & KPIs */}
+        <section className="bg-purple-50 border-l-4 border-purple-500 rounded-lg p-6">
+          <h3 className="text-xl font-semibold text-gray-900 mb-4">Success Metrics & KPIs</h3>
+          <ul className="space-y-3 text-base text-gray-700">
+            <li className="flex items-start gap-3">
+              <span className="text-green-600 text-lg">✓</span>
+              <span>Monthly incremental revenue tracking with direct attribution</span>
             </li>
-            <li className="list-disc">
-              <span className="font-medium">Customer adoption may vary</span>
-              <br />
-              <span className="text-sm italic">Mitigation: Pilot testing and iterative refinement based on feedback</span>
+            <li className="flex items-start gap-3">
+              <span className="text-green-600 text-lg">✓</span>
+              <span>Customer participation rates and repeat visit frequency</span>
+            </li>
+            <li className="flex items-start gap-3">
+              <span className="text-green-600 text-lg">✓</span>
+              <span>Operational efficiency metrics (time investment, resource utilization)</span>
+            </li>
+            <li className="flex items-start gap-3">
+              <span className="text-green-600 text-lg">✓</span>
+              <span>Customer satisfaction scores and feedback sentiment analysis</span>
             </li>
           </ul>
-        </div>
-      </section>
+        </section>
+      </div>
 
-      {/* Implementation Roadmap */}
+      {/* Implementation Roadmap - Horizontal Layout */}
       <section className="mb-8 bg-green-50 border-l-4 border-green-500 rounded-lg p-6">
         <h3 className="text-xl font-semibold text-gray-900 mb-4">Implementation Roadmap</h3>
 
-        <div className="mb-4">
-          <span className="text-lg font-medium text-red-700">Timeline: {getTimeline()}</span>
-        </div>
+        <div className="grid md:grid-cols-3 gap-6">
+          <div>
+            <div className="mb-4">
+              <span className="text-lg font-medium text-red-700">Timeline: {getTimeline()}</span>
+            </div>
+            <h4 className="text-base font-medium text-gray-800 mb-2">Dependencies</h4>
+            <p className="text-base text-gray-700">None - can be implemented independently</p>
+          </div>
 
-        <div className="mb-4">
-          <h4 className="text-base font-medium text-gray-800 mb-2">Required Resources</h4>
-          <ul className="space-y-1 text-base text-gray-700 ml-6">
-            <li className="list-disc">Marketing materials and promotional content</li>
-            <li className="list-disc">Staff training and briefing sessions</li>
-            <li className="list-disc">Tracking and measurement systems</li>
-          </ul>
-        </div>
+          <div>
+            <h4 className="text-base font-medium text-gray-800 mb-2">Required Resources</h4>
+            <ul className="space-y-1 text-base text-gray-700 ml-6">
+              <li className="list-disc">Marketing materials and promotional content</li>
+              <li className="list-disc">Staff training and briefing sessions</li>
+              <li className="list-disc">Tracking and measurement systems</li>
+            </ul>
+          </div>
 
-        <div className="mb-4">
-          <h4 className="text-base font-medium text-gray-800 mb-2">Dependencies</h4>
-          <p className="text-base text-gray-700">None - can be implemented independently</p>
+          <div>
+            <h4 className="text-base font-medium text-gray-800 mb-2">Week-by-Week Plan</h4>
+            <ul className="space-y-1 text-base text-gray-700">
+              <li><strong>Week 1:</strong> Planning, resource preparation, design materials</li>
+              <li><strong>Week 2:</strong> Staff training, system setup, soft launch preparation</li>
+              <li><strong>Week 3+:</strong> Launch, monitor performance, gather feedback, iterate</li>
+            </ul>
+          </div>
         </div>
-
-        <div>
-          <h4 className="text-base font-medium text-gray-800 mb-2">Week-by-Week Plan</h4>
-          <ul className="space-y-1 text-base text-gray-700">
-            <li><strong>Week 1:</strong> Planning, resource preparation, design materials</li>
-            <li><strong>Week 2:</strong> Staff training, system setup, soft launch preparation</li>
-            <li><strong>Week 3+:</strong> Launch, monitor performance, gather feedback, iterate</li>
-          </ul>
-        </div>
-      </section>
-
-      {/* Success Metrics & KPIs */}
-      <section className="mb-8 bg-purple-50 border-l-4 border-purple-500 rounded-lg p-6">
-        <h3 className="text-xl font-semibold text-gray-900 mb-4">Success Metrics & KPIs</h3>
-        <ul className="space-y-3 text-base text-gray-700">
-          <li className="flex items-start gap-3">
-            <span className="text-green-600 text-lg">✓</span>
-            <span>Monthly incremental revenue tracking with direct attribution</span>
-          </li>
-          <li className="flex items-start gap-3">
-            <span className="text-green-600 text-lg">✓</span>
-            <span>Customer participation rates and repeat visit frequency</span>
-          </li>
-          <li className="flex items-start gap-3">
-            <span className="text-green-600 text-lg">✓</span>
-            <span>Operational efficiency metrics (time investment, resource utilization)</span>
-          </li>
-          <li className="flex items-start gap-3">
-            <span className="text-green-600 text-lg">✓</span>
-            <span>Customer satisfaction scores and feedback sentiment analysis</span>
-          </li>
-        </ul>
       </section>
 
       {/* Business Case Financials - LAST SECTION */}

@@ -22,6 +22,7 @@ export default function StrategyReviewPage() {
   });
 
   const detailViewRef = useRef<HTMLDivElement>(null);
+  const initiativeGridRef = useRef<HTMLDivElement>(null);
 
   const selectedStrategy = strategies.find((s) => s.id === selectedStrategyId);
   const filteredStrategies = applyExtendedFilters(strategies, filters);
@@ -63,6 +64,10 @@ export default function StrategyReviewPage() {
 
   const handleCloseDetail = () => {
     setSelectedStrategyId(null);
+    // Scroll back to initiative grid
+    setTimeout(() => {
+      initiativeGridRef.current?.scrollIntoView({ behavior: 'smooth', block: 'start' });
+    }, 100);
   };
 
   // Scroll to detail view when strategy is selected
@@ -80,7 +85,7 @@ export default function StrategyReviewPage() {
       <IntroSection />
 
       {/* Section 2: Three-Phase Roadmap (BEFORE Portfolio Composition) */}
-      <section className="max-w-7xl mx-auto px-6 py-8">
+      <section className="max-w-7xl mx-auto px-6 py-8" id="roadmap">
         <h2 className="text-3xl font-bold text-gray-900 mb-4 text-center">
           Three-Phase Implementation Roadmap
         </h2>
@@ -162,7 +167,7 @@ export default function StrategyReviewPage() {
         </div>
       </section>
 
-      {/* Section 3: Portfolio Composition (Interactive Filters) */}
+      {/* Section 3: Portfolio Composition (Interactive Filters with Phase Selector) */}
       <PortfolioComposition
         activeFilters={filters}
         onFilterToggle={handleFilterToggle}
@@ -172,7 +177,7 @@ export default function StrategyReviewPage() {
       />
 
       {/* Section 4: Filtered Initiative Cards (Scrollable Grid) */}
-      <section className="max-w-7xl mx-auto px-6 py-8">
+      <section ref={initiativeGridRef} className="max-w-7xl mx-auto px-6 py-8" id="initiative-grid">
         <h2 className="text-2xl font-bold text-gray-900 mb-4">
           Complete Strategy Portfolio: 50 Initiatives
         </h2>
@@ -284,10 +289,9 @@ export default function StrategyReviewPage() {
 
       {/* Section 7: Performance Expectations & Financials (Moved Down) */}
       <section className="max-w-7xl mx-auto px-6 py-12 bg-white">
-        <h2 className="text-3xl font-bold text-gray-900 mb-4 text-center">
-          Implementation Success Framework
+        <h2 className="text-3xl font-bold text-gray-900 mb-8 text-center">
+          Performance Expectations
         </h2>
-        <p className="text-center text-gray-600 mb-8 text-base">Performance Expectations</p>
 
         <div className="grid md:grid-cols-3 gap-6 mb-8">
           {/* Phase 1 Expectations */}
