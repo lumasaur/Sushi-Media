@@ -42,7 +42,7 @@ export function PortfolioComposition({
   };
 
   return (
-    <section className="max-w-7xl mx-auto px-6 py-8">
+    <section id="portfolio" className="max-w-7xl mx-auto px-6 py-8 scroll-mt-20">
       <h2 className="text-2xl font-bold text-gray-900 mb-6 text-center">
         Strategy Portfolio Composition
       </h2>

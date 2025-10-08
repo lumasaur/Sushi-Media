@@ -41,15 +41,15 @@ export default function RootLayout({
               <div className="flex gap-6">
                 <div className="relative group">
                   <a
-                    href="/strategic-marketing-framework"
+                    href="https://sushi-media-ami.vercel.app/"
                     className="text-gray-300 hover:text-white font-medium transition-colors"
                   >
                     Strategic Marketing Framework
                   </a>
                   <div className="absolute left-0 mt-2 w-56 bg-[#1a1416] border border-gray-700 rounded-md shadow-lg opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-200">
-                    <a href="/strategic-marketing-framework/overview" className="block px-4 py-2 text-sm text-gray-300 hover:bg-gray-800 hover:text-white">Overview</a>
-                    <a href="/strategic-marketing-framework/objectives" className="block px-4 py-2 text-sm text-gray-300 hover:bg-gray-800 hover:text-white">Objectives</a>
-                    <a href="/strategic-marketing-framework/analysis" className="block px-4 py-2 text-sm text-gray-300 hover:bg-gray-800 hover:text-white">Analysis</a>
+                    <a href="https://sushi-media-ami.vercel.app/#overview" className="block px-4 py-2 text-sm text-gray-300 hover:bg-gray-800 hover:text-white">Overview</a>
+                    <a href="https://sushi-media-ami.vercel.app/#objectives" className="block px-4 py-2 text-sm text-gray-300 hover:bg-gray-800 hover:text-white">Objectives</a>
+                    <a href="https://sushi-media-ami.vercel.app/#analysis" className="block px-4 py-2 text-sm text-gray-300 hover:bg-gray-800 hover:text-white">Analysis</a>
                   </div>
                 </div>
 
@@ -68,7 +68,7 @@ export default function RootLayout({
                 </div>
 
                 <a
-                  href="/content-calendar"
+                  href="https://v0-html-webpage-development-git-master-lumasaurs-projects.vercel.app/strategy-review/content-calendar"
                   className="text-gray-300 hover:text-white font-medium transition-colors"
                 >
                   Content Calendar
@@ -85,10 +85,10 @@ export default function RootLayout({
         <footer className="bg-[#120c0d] border-t border-gray-700 mt-16">
           <div className="max-w-7xl mx-auto px-4 py-8">
             <div className="text-center text-gray-400">
-              <p className="text-sm">
+              <p className="text-base">
                 Ami Sushi Marketing Portal — Internal Strategy Review Tool
               </p>
-              <p className="text-xs mt-2 text-gray-500">
+              <p className="text-sm mt-2 text-gray-500">
                 538 Springfield Avenue, Berkeley Heights, NJ 07922
               </p>
             </div>

@@ -85,7 +85,7 @@ export default function StrategyReviewPage() {
       <IntroSection />
 
       {/* Section 2: Three-Phase Roadmap (BEFORE Portfolio Composition) */}
-      <section className="max-w-7xl mx-auto px-6 py-8" id="roadmap">
+      <section id="roadmap" className="max-w-7xl mx-auto px-6 py-8 scroll-mt-20">
         <h2 className="text-3xl font-bold text-gray-900 mb-4 text-center">
           Three-Phase Implementation Roadmap
         </h2>
@@ -203,7 +203,7 @@ export default function StrategyReviewPage() {
       </section>
 
       {/* Section 6: Implementation Readiness Checklist */}
-      <section className="max-w-7xl mx-auto px-6 py-12">
+      <section id="implementation-checklist" className="max-w-7xl mx-auto px-6 py-12 scroll-mt-20">
         <h2 className="text-2xl font-bold text-gray-900 mb-8 text-center">
           Implementation Readiness Checklist
         </h2>
