@@ -365,7 +365,7 @@ export default function StrategyReviewPage() {
           Performance Expectations
         </h2>
 
-        <p className="text-center text-gray-400 mb-6 max-w-3xl mx-auto text-sm italic">
+        <p className="text-center text-gray-400 mb-6 max-w-3xl mx-auto italic">
           Timeline Note: Phases begin sequentially. If implementing Phase 0 recommendations, add 6-8 weeks before Phase 1 launch.
           If proceeding without Phase 0, begin Phase 1 immediately.
         </p>
@@ -482,7 +482,7 @@ export default function StrategyReviewPage() {
                 <div className="text-xs text-gray-400">Clear attribution</div>
               </div>
             </div>
-            <div className="mt-4 p-3 bg-blue-900/20 rounded text-sm text-gray-300">
+            <div className="mt-4 p-3 bg-blue-900/20 rounded text-gray-300">
               <strong>Key Benefit:</strong> Clear attribution and optimization data enables data-driven decisions
             </div>
           </div>
@@ -516,7 +516,7 @@ export default function StrategyReviewPage() {
               <div className="text-xs text-gray-400">Depends on existing systems</div>
             </div>
           </div>
-          <div className="mt-4 p-3 bg-red-900/20 rounded text-sm text-gray-300">
+          <div className="mt-4 p-3 bg-red-900/20 rounded text-gray-300">
             <strong>Key Benefit:</strong> Faster deployment, lower upfront cost, immediate revenue generation
           </div>
         </div>

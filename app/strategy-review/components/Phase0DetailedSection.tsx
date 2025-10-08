@@ -368,7 +368,7 @@ export function Phase0DetailedSection() {
                 📋 Detailed 8-Week Implementation Guide (Optional Reference)
               </summary>
               <div className="p-6 pt-0 space-y-6 text-gray-300">
-                <p className="italic text-sm text-gray-400">
+                <p className="italic text-gray-400">
                   This detailed guide provides week-by-week implementation steps for stakeholders who choose to pursue Phase 0 infrastructure development.
                 </p>
 
@@ -379,7 +379,7 @@ export function Phase0DetailedSection() {
                   </p>
                   <div className="bg-black/40 rounded p-4">
                     <p className="font-semibold mb-2">Platform Decisions:</p>
-                    <ul className="space-y-1 text-sm">
+                    <ul className="space-y-1">
                       <li>• <strong>CRM:</strong> HubSpot Starter ($216/yr), Toast Loyalty ($1,200-2,400/yr), or Square ($0-50/mo)</li>
                       <li>• <strong>Email:</strong> Mailchimp Essentials ($390/yr) or built into your CRM</li>
                       <li>• <strong>Integration:</strong> Zapier Professional ($239/yr) if systems don't talk natively</li>
