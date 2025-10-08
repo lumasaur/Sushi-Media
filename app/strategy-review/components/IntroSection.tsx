@@ -17,20 +17,27 @@ export function IntroSection() {
         </p>
 
         <p>
+          Many of these initiatives benefit from foundational infrastructure—systems that capture customer data,
+          measure campaign performance, and automate repetitive tasks. <strong>Phase 0 outlines infrastructure
+          recommendations</strong> for stakeholder consideration before deploying Phases 1-3.
+        </p>
+
+        <p>
           The portfolio includes <strong>14 "Quick Win"</strong> opportunities (minimal effort, high value)
           delivering immediate revenue, alongside <strong>5 "Strategic Investment"</strong> initiatives creating
-          sustainable competitive advantages. Sequential deployment across three phases generates{' '}
+          sustainable competitive advantages. Sequential deployment generates{' '}
           <strong>$300,000-450,000 incremental revenue</strong> over 12 months with{' '}
-          <strong>488-782% ROI</strong>.
+          <strong>488-782% ROI</strong> when supported by appropriate infrastructure.
         </p>
 
         <div className="bg-gray-900 border-l-4 border-red-700 p-6 mt-6">
           <h3 className="text-lg font-bold mb-3 text-white">How to Use This Page</h3>
           <ul className="space-y-2 text-base text-gray-300">
-            <li>• Review the three-phase roadmap below to understand deployment timeline</li>
+            <li>• Review Phase 0 infrastructure recommendations (optional foundation)</li>
+            <li>• Explore the four-phase roadmap to understand deployment timeline</li>
             <li>• Use filter cards to explore specific objectives, effort levels, or priorities</li>
             <li>• Click any initiative card to view detailed implementation guidance</li>
-            <li>• Focus on Phase 1 Quick Wins for immediate action (Months 1-3)</li>
+            <li>• Focus on Phase 1 Quick Wins for immediate action</li>
           </ul>
         </div>
       </div>

@@ -4,6 +4,7 @@ import { useState, useEffect, useRef } from 'react';
 import { strategies } from '@/lib/strategy-data';
 import { applyExtendedFilters, ExtendedFilterState } from '@/lib/filter-utils';
 import { IntroSection } from './components/IntroSection';
+import { Phase0Callout } from './components/Phase0Callout';
 import { PhaseCard } from './components/PhaseCard';
 import { PortfolioComposition } from './components/PortfolioComposition';
 import { InitiativeCardGrid } from './components/InitiativeCardGrid';
@@ -84,16 +85,83 @@ export default function StrategyReviewPage() {
       {/* Section 1: Introduction (Ultra-Condensed) */}
       <IntroSection />
 
-      {/* Section 2: Three-Phase Roadmap (BEFORE Portfolio Composition) */}
+      {/* Section 1.5: Phase 0 Callout */}
+      <Phase0Callout />
+
+      {/* Section 2: Four-Phase Roadmap (BEFORE Portfolio Composition) */}
       <section id="roadmap" className="max-w-7xl mx-auto px-6 py-8 scroll-mt-20">
         <h2 className="text-3xl font-bold text-white mb-4 text-center">
-          Three-Phase Implementation Roadmap
+          Recommended Implementation Sequence
         </h2>
         <p className="text-center text-gray-300 mb-8 max-w-3xl mx-auto text-base">
-          Strategic sequencing balances near-term revenue generation (Quick Wins) with long-term competitive
-          advantage building (Strategic Investments). Phase 1 creates cash flow and execution credibility
-          funding Phase 2-3 deployment.
+          This framework suggests starting with infrastructure considerations (Phase 0), then deploying marketing
+          initiatives across three phases. Stakeholders can adapt this sequence based on existing capabilities and
+          strategic priorities.
         </p>
+
+        {/* Phase 0 - Infrastructure Recommendation */}
+        <div className="mb-8 max-w-3xl mx-auto">
+          <div className="bg-blue-900/10 border-2 border-blue-500 rounded-lg p-6">
+            <div className="flex items-center gap-3 mb-4">
+              <div className="w-12 h-12 rounded-full bg-blue-600 text-white flex items-center justify-center font-bold text-xl">
+                0
+              </div>
+              <div className="flex-1">
+                <div className="flex items-center gap-3 flex-wrap">
+                  <h3 className="text-xl font-bold text-white">Infrastructure Recommendations</h3>
+                  <span className="px-3 py-1 bg-blue-600 text-white text-xs font-bold rounded-full">
+                    RECOMMENDED FIRST STEP
+                  </span>
+                </div>
+                <p className="text-sm text-blue-300">Suggested Timeline: Months 0-2</p>
+              </div>
+            </div>
+
+            <div className="grid md:grid-cols-2 gap-4 mb-4 text-sm">
+              <div>
+                <span className="text-blue-300">Investment Range:</span>
+                <span className="text-white font-semibold ml-2">$5,400-14,700</span>
+              </div>
+              <div>
+                <span className="text-blue-300">Focus:</span>
+                <span className="text-white font-semibold ml-2">Measurement, automation, content</span>
+              </div>
+            </div>
+
+            <div className="mb-4">
+              <h4 className="text-sm font-semibold text-white mb-2">Key Considerations:</h4>
+              <ul className="space-y-1 text-sm text-gray-300">
+                <li className="flex items-start gap-2">
+                  <span className="text-blue-400">•</span>
+                  <span>Customer data capture systems for attribution</span>
+                </li>
+                <li className="flex items-start gap-2">
+                  <span className="text-blue-400">•</span>
+                  <span>Marketing automation capabilities</span>
+                </li>
+                <li className="flex items-start gap-2">
+                  <span className="text-blue-400">•</span>
+                  <span>Digital asset quality (photos, website)</span>
+                </li>
+                <li className="flex items-start gap-2">
+                  <span className="text-blue-400">•</span>
+                  <span>Content planning workflow and analytics setup</span>
+                </li>
+              </ul>
+            </div>
+
+            <p className="text-xs italic text-gray-400 mb-3">
+              Note: Adapt based on existing capabilities. Can begin Phase 1 immediately or after infrastructure enhancements.
+            </p>
+
+            <a
+              href="#phase-0-foundation"
+              className="inline-block px-4 py-2 bg-blue-600 text-white rounded hover:bg-blue-500 transition-colors text-sm font-semibold"
+            >
+              View Infrastructure Options →
+            </a>
+          </div>
+        </div>
 
         <div className="grid md:grid-cols-3 gap-6 mb-12">
           <PhaseCard
