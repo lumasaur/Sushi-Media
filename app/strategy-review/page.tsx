@@ -359,6 +359,50 @@ export default function StrategyReviewPage() {
         </div>
       </section>
 
+      {/* Section 6.5: Implementation Proposal Link */}
+      <section className="max-w-7xl mx-auto px-6 py-8">
+        <div className="bg-gradient-to-r from-[#b22222]/20 to-[#8b0000]/20 border-2 border-[#b22222] rounded-lg p-8">
+          <div className="flex items-start gap-6">
+            <div className="flex-shrink-0">
+              <span className="text-6xl">📋</span>
+            </div>
+            <div className="flex-1">
+              <h2 className="text-3xl font-bold text-white mb-3">
+                Phase 1 Implementation: Events, Corporate & Delivery
+              </h2>
+              <p className="text-xl text-gray-300 mb-4 leading-relaxed">
+                Refined execution framework with Toast POS-native data capture, value-driven email marketing,
+                and digital-first corporate ordering. Alternating event weeks balance engagement with operational efficiency.
+              </p>
+              <div className="grid md:grid-cols-3 gap-4 mb-6">
+                <div className="bg-black/40 rounded p-4">
+                  <div className="text-sm text-gray-400 mb-1">Timeline</div>
+                  <div className="text-2xl font-bold text-white">30 Days</div>
+                  <div className="text-sm text-gray-400">Setup to launch</div>
+                </div>
+                <div className="bg-black/40 rounded p-4">
+                  <div className="text-sm text-gray-400 mb-1">Investment</div>
+                  <div className="text-2xl font-bold text-white">$550-1,200</div>
+                  <div className="text-sm text-gray-400">per month</div>
+                </div>
+                <div className="bg-black/40 rounded p-4">
+                  <div className="text-sm text-gray-400 mb-1">Projected ROI</div>
+                  <div className="text-2xl font-bold text-green-400">8-18x</div>
+                  <div className="text-sm text-gray-400">within 90 days</div>
+                </div>
+              </div>
+              <a
+                href="/strategy-review/implementation-proposal"
+                className="inline-flex items-center gap-2 px-8 py-4 bg-[#b22222] text-white text-lg font-semibold rounded-lg hover:bg-[#a01e1e] transition-colors"
+              >
+                View Detailed Implementation Plan
+                <span>→</span>
+              </a>
+            </div>
+          </div>
+        </div>
+      </section>
+
       {/* Section 7: Performance Expectations & Financials (Moved Down) */}
       <section className="max-w-7xl mx-auto px-6 py-12 bg-[#120c0d]">
         <h2 className="text-3xl font-bold text-white mb-8 text-center">

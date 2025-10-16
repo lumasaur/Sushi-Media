@@ -64,6 +64,12 @@ export default function RootLayout({
                     <a href="/strategy-review#roadmap" className="block px-4 py-2 text-sm text-gray-300 hover:bg-gray-800 hover:text-white">Roadmap</a>
                     <a href="/strategy-review#portfolio" className="block px-4 py-2 text-sm text-gray-300 hover:bg-gray-800 hover:text-white">Portfolio</a>
                     <a href="/strategy-review#implementation-checklist" className="block px-4 py-2 text-sm text-gray-300 hover:bg-gray-800 hover:text-white">Implementation Checklist</a>
+                    <a href="/strategy-review/implementation-proposal" className="block px-4 py-2 text-sm text-gray-300 hover:bg-gray-800 hover:text-white border-t border-gray-700">
+                      <span className="flex items-center gap-2">
+                        Implementation Plan
+                        <span className="px-2 py-0.5 bg-[#b22222] text-white text-xs rounded font-semibold">NEW</span>
+                      </span>
+                    </a>
                   </div>
                 </div>
 
