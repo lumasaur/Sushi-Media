@@ -139,7 +139,7 @@ export function Track3PerformanceSection() {
       <div className="mb-8">
         <ExpandableSection
           title="Weekly Reporting Routine (30-Minute Monday Check-In)"
-          badge="implementation"
+          badge="recommended"
           executiveSummary={
             <>
               Every Monday morning, spend 30 minutes reviewing the previous week's performance across
@@ -377,7 +377,7 @@ export function Track3PerformanceSection() {
       <div className="mb-8">
         <ExpandableSection
           title="Success Metrics Timeline: What Good Looks Like"
-          badge="implementation"
+          badge="recommended"
           executiveSummary={
             <>
               Clear checkpoints at Week 2, Month 1, Month 2, and Month 3 so you know if you're on track

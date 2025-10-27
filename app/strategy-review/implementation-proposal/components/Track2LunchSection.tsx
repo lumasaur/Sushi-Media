@@ -103,7 +103,7 @@ export function Track2LunchSection() {
       <div className="mb-8">
         <ExpandableSection
           title="Lunch Delivery Menu Design"
-          badge="implementation"
+          badge="recommended"
           executiveSummary={
             <>
               Streamlined lunch menu focused on speed, portion control, and delivery-friendly packaging.
@@ -227,7 +227,7 @@ export function Track2LunchSection() {
       <div className="mb-8">
         <ExpandableSection
           title="Delivery Approach & Staffing"
-          badge="implementation"
+          badge="recommended"
           executiveSummary={
             <>
               Use existing DoorDash/Uber Eats infrastructure initially. No additional delivery driver needed.
@@ -372,7 +372,7 @@ export function Track2LunchSection() {
       <div className="mb-8">
         <ExpandableSection
           title="Marketing & Outreach Strategy"
-          badge="implementation"
+          badge="recommended"
           executiveSummary={
             <>
               Direct outreach to office managers and HR departments with flyers, phone calls, and introductory
