@@ -7,7 +7,9 @@ export function Track1EventsSection() {
   return (
     <div className="max-w-7xl mx-auto px-6 py-16">
       <div className="flex items-center gap-4 mb-10">
-        <span className="text-6xl">🎉</span>
+        <div className="flex-shrink-0 w-16 h-16 rounded-full bg-[#b22222] flex items-center justify-center">
+          <span className="text-2xl font-bold text-white">T1</span>
+        </div>
         <div>
           <div className="text-sm text-[#b22222] font-bold mb-1 tracking-wide">TRACK 1</div>
           <h2 className="text-4xl md:text-5xl font-bold text-white">Events Programming</h2>
@@ -18,8 +20,7 @@ export function Track1EventsSection() {
       {/* The Problem & Full Vision */}
       <div className="grid md:grid-cols-2 gap-8 mb-10">
         <div className="card-dark p-8 shadow-medium">
-          <h3 className="text-2xl font-bold text-white mb-4 flex items-center gap-3">
-            <span className="text-3xl">🎯</span>
+          <h3 className="text-2xl font-bold text-white mb-4">
             The Problem We're Solving
           </h3>
           <p className="text-gray-300 text-lg leading-relaxed">
@@ -113,7 +114,6 @@ export function Track1EventsSection() {
       {/* Tuesday: Latin Dance Lessons */}
       <ExpandableSection
         title="Tuesday: Latin Dance Lessons"
-        icon="💃"
         badge="high-priority"
         executiveSummary={
           <>
@@ -129,19 +129,19 @@ export function Track1EventsSection() {
             <h4 className="text-xl font-bold text-white mb-4">Why It Works</h4>
             <div className="grid md:grid-cols-2 gap-4">
               <div className="card-dark p-5">
-                <div className="text-[#b22222] font-bold mb-2">💰 High per-person spend</div>
+                <div className="text-[#b22222] font-bold mb-2">$$ High per-person spend</div>
                 <p className="text-sm text-gray-300">$15 entry + $20-30 bar/food = $35-45 per customer</p>
               </div>
               <div className="card-dark p-5">
-                <div className="text-[#b22222] font-bold mb-2">🔄 Recurring community</div>
+                <div className="text-[#b22222] font-bold mb-2">↻ Recurring community</div>
                 <p className="text-sm text-gray-300">Students return weekly to practice and improve</p>
               </div>
               <div className="card-dark p-5">
-                <div className="text-[#b22222] font-bold mb-2">📱 Social media gold</div>
+                <div className="text-[#b22222] font-bold mb-2">[phone] Social media gold</div>
                 <p className="text-sm text-gray-300">Movement + music + food = highly shareable content</p>
               </div>
               <div className="card-dark p-5">
-                <div className="text-[#b22222] font-bold mb-2">👥 Social activity appeal</div>
+                <div className="text-[#b22222] font-bold mb-2">[people] Social activity appeal</div>
                 <p className="text-sm text-gray-300">Young professionals seeking social connection</p>
               </div>
             </div>
@@ -282,7 +282,6 @@ export function Track1EventsSection() {
       {/* Thursday: Social Night */}
       <ExpandableSection
         title="Thursday: Social Night \"Meet & Mingle\""
-        icon="🤝"
         badge="high-priority"
         executiveSummary={
           <>
@@ -298,19 +297,19 @@ export function Track1EventsSection() {
             <h4 className="text-xl font-bold text-white mb-4">Why It Works</h4>
             <div className="grid md:grid-cols-2 gap-4">
               <div className="card-dark p-5">
-                <div className="text-[#b22222] font-bold mb-2">⚡ Zero operational complexity</div>
+                <div className="text-[#b22222] font-bold mb-2">* Zero operational complexity</div>
                 <p className="text-sm text-gray-300">No host, no equipment, no instructor needed</p>
               </div>
               <div className="card-dark p-5">
-                <div className="text-[#b22222] font-bold mb-2">🎯 Perfect demographic</div>
+                <div className="text-[#b22222] font-bold mb-2">• Perfect demographic</div>
                 <p className="text-sm text-gray-300">Appeals to 25-45 age seeking social connections</p>
               </div>
               <div className="card-dark p-5">
-                <div className="text-[#b22222] font-bold mb-2">📅 Weekend preview energy</div>
+                <div className="text-[#b22222] font-bold mb-2">[cal] Weekend preview energy</div>
                 <p className="text-sm text-gray-300">Thursday creates "weekend starts here" vibe</p>
               </div>
               <div className="card-dark p-5">
-                <div className="text-[#b22222] font-bold mb-2">🔄 Drives return visits</div>
+                <div className="text-[#b22222] font-bold mb-2">↻ Drives return visits</div>
                 <p className="text-sm text-gray-300">New customer acquisition for Fri/Sat</p>
               </div>
             </div>
@@ -321,28 +320,28 @@ export function Track1EventsSection() {
             <h4 className="text-xl font-bold text-white mb-4">Event Format</h4>
             <div className="space-y-4 text-gray-300">
               <div className="flex items-start gap-4">
-                <span className="text-3xl">🎵</span>
+                <span className="text-3xl">♪</span>
                 <div>
                   <div className="font-semibold text-white">High-energy playlist</div>
                   <div className="text-sm">Upbeat background music, dimmed lighting for ambiance</div>
                 </div>
               </div>
               <div className="flex items-start gap-4">
-                <span className="text-3xl">🪑</span>
+                <span className="text-3xl">[chair]</span>
                 <div>
                   <div className="font-semibold text-white">High-top seating arrangement</div>
                   <div className="text-sm">Encourages mingling and standing conversations</div>
                 </div>
               </div>
               <div className="flex items-start gap-4">
-                <span className="text-3xl">📛</span>
+                <span className="text-3xl">[tag]</span>
                 <div>
                   <div className="font-semibold text-white">Optional name tags (opt-in)</div>
                   <div className="text-sm">First name only for those who want to be approachable</div>
                 </div>
               </div>
               <div className="flex items-start gap-4">
-                <span className="text-3xl">👥</span>
+                <span className="text-3xl">[people]</span>
                 <div>
                   <div className="font-semibold text-white">Staff trained to facilitate introductions</div>
                   <div className="text-sm">If requested, can help connect solo attendees</div>
@@ -418,7 +417,6 @@ export function Track1EventsSection() {
       {/* Monthly Saturday: Sushi & Sounds */}
       <ExpandableSection
         title="Monthly Saturday: Sushi & Sounds (Ongoing)"
-        icon="🎸"
         badge="recommended"
         executiveSummary={
           <>

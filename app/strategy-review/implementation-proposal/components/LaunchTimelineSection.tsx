@@ -7,7 +7,9 @@ export function LaunchTimelineSection() {
   return (
     <div className="max-w-7xl mx-auto px-6 py-16">
       <div className="flex items-center gap-4 mb-10">
-        <span className="text-6xl">🗓️</span>
+        <div className="flex-shrink-0 w-16 h-16 rounded-full bg-gradient-to-br from-purple-600 to-purple-800 flex items-center justify-center">
+          <span className="text-2xl font-bold text-white">TL</span>
+        </div>
         <div>
           <h2 className="text-4xl md:text-5xl font-bold text-white">Launch Timeline</h2>
           <p className="text-gray-400 mt-2 text-lg">Your roadmap from planning to launch</p>
@@ -126,7 +128,7 @@ export function LaunchTimelineSection() {
             <div className="bg-gradient-to-br from-[#b22222] to-[#a01e1e] p-4 text-center rounded-xl shadow-glow-red">
               <div className="text-sm text-gray-200 mb-1">Week of</div>
               <div className="text-2xl font-bold text-white">Nov 11</div>
-              <div className="text-xs text-gray-200 mt-1 font-bold">🚀 LAUNCH WEEK</div>
+              <div className="text-xs text-gray-200 mt-1 font-bold">» LAUNCH WEEK</div>
             </div>
           </div>
           <div className="flex-1 bg-gradient-to-br from-gray-800 to-gray-900 p-6 shadow-strong rounded-xl border-2 border-[#b22222]">
@@ -252,7 +254,9 @@ export function DecisionChecklistSection() {
   return (
     <div className="max-w-7xl mx-auto px-6 py-16">
       <div className="flex items-center gap-4 mb-10">
-        <span className="text-6xl">✅</span>
+        <div className="flex-shrink-0 w-16 h-16 rounded-full bg-gradient-to-br from-green-600 to-green-800 flex items-center justify-center">
+          <span className="text-3xl font-bold text-white">✓</span>
+        </div>
         <div>
           <h2 className="text-4xl md:text-5xl font-bold text-white">Key Decisions Required</h2>
           <p className="text-gray-400 mt-2 text-lg">10 critical decisions to finalize before launch</p>
@@ -263,7 +267,6 @@ export function DecisionChecklistSection() {
         {/* Decision 1 */}
         <ExpandableSection
           title="Decision 1: Dance Instructor"
-          icon="💃"
           badge="high-priority"
           defaultExpanded={false}
           executiveSummary={
@@ -292,7 +295,6 @@ export function DecisionChecklistSection() {
         {/* Decision 2 */}
         <ExpandableSection
           title="Decision 2: Entry Pricing"
-          icon="💰"
           defaultExpanded={false}
           executiveSummary={
             <>
@@ -320,7 +322,6 @@ export function DecisionChecklistSection() {
         {/* Decision 3 */}
         <ExpandableSection
           title="Decision 3: Thursday Setup"
-          icon="🤝"
           defaultExpanded={false}
           executiveSummary={
             <>
@@ -348,7 +349,6 @@ export function DecisionChecklistSection() {
         {/* Decision 4 */}
         <ExpandableSection
           title="Decision 4: Lunch Delivery Launch"
-          icon="🥡"
           defaultExpanded={false}
           executiveSummary={
             <>
@@ -379,7 +379,6 @@ export function DecisionChecklistSection() {
         {/* Decision 5 */}
         <ExpandableSection
           title="Decision 5: Delivery Staffing"
-          icon="🚗"
           defaultExpanded={false}
           executiveSummary={
             <>
@@ -407,7 +406,6 @@ export function DecisionChecklistSection() {
         {/* Decision 6 */}
         <ExpandableSection
           title="Decision 6: Marketing Budget"
-          icon="💵"
           defaultExpanded={false}
           executiveSummary={
             <>
@@ -437,7 +435,6 @@ export function DecisionChecklistSection() {
         {/* Decision 7 */}
         <ExpandableSection
           title="Decision 7: Sushi & Sounds"
-          icon="🎸"
           defaultExpanded={false}
           executiveSummary={
             <>
@@ -465,7 +462,6 @@ export function DecisionChecklistSection() {
         {/* Decision 8 */}
         <ExpandableSection
           title="Decision 8: Launch Date"
-          icon="🗓️"
           defaultExpanded={false}
           executiveSummary={
             <>
@@ -493,7 +489,6 @@ export function DecisionChecklistSection() {
         {/* Decision 9 */}
         <ExpandableSection
           title="Decision 9: Performance Tracking"
-          icon="📊"
           defaultExpanded={false}
           executiveSummary={
             <>
@@ -521,7 +516,6 @@ export function DecisionChecklistSection() {
         {/* Decision 10 */}
         <ExpandableSection
           title="Decision 10: Success Criteria"
-          icon="🎯"
           defaultExpanded={false}
           executiveSummary={
             <>
@@ -594,19 +588,19 @@ export function DecisionChecklistSection() {
               <div className="font-bold text-green-400 mb-3">Week of Nov 11:</div>
               <ul className="space-y-2 text-sm text-gray-300">
                 <li className="flex items-start gap-2">
-                  <span className="text-green-400">🚀</span>
+                  <span className="text-green-400">»</span>
                   <span>LAUNCH Tuesday Latin Dance (Nov 12)</span>
                 </li>
                 <li className="flex items-start gap-2">
-                  <span className="text-green-400">🚀</span>
+                  <span className="text-green-400">»</span>
                   <span>LAUNCH Thursday Social Night (Nov 14)</span>
                 </li>
                 <li className="flex items-start gap-2">
-                  <span className="text-green-400">🚀</span>
+                  <span className="text-green-400">»</span>
                   <span>Begin lunch delivery outreach</span>
                 </li>
                 <li className="flex items-start gap-2">
-                  <span className="text-green-400">🚀</span>
+                  <span className="text-green-400">»</span>
                   <span>Track everything</span>
                 </li>
               </ul>

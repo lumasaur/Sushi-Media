@@ -7,7 +7,9 @@ export function Track3PerformanceSection() {
   return (
     <div className="max-w-7xl mx-auto px-6 py-16">
       <div className="flex items-center gap-4 mb-10">
-        <span className="text-6xl">📊</span>
+        <div className="flex-shrink-0 w-16 h-16 rounded-full bg-[#00A86B] flex items-center justify-center">
+          <span className="text-2xl font-bold text-white">T3</span>
+        </div>
         <div>
           <div className="text-sm text-[#00A86B] font-bold mb-1 tracking-wide">TRACK 3</div>
           <h2 className="text-4xl md:text-5xl font-bold text-white">Weekly Performance Tracking</h2>
@@ -19,7 +21,7 @@ export function Track3PerformanceSection() {
       <div className="grid md:grid-cols-2 gap-8 mb-10">
         <div className="card-dark p-8 shadow-medium">
           <h3 className="text-2xl font-bold text-white mb-4 flex items-center gap-3">
-            <span className="text-3xl">🎯</span>
+            <span className="text-3xl">•</span>
             The Problem We're Solving
           </h3>
           <p className="text-gray-300 text-lg leading-relaxed">
@@ -40,7 +42,6 @@ export function Track3PerformanceSection() {
       {/* What to Track */}
       <ExpandableSection
         title="What to Track (Your Responsibility)"
-        icon="📈"
         badge="high-priority"
         executiveSummary={
           <>
@@ -92,7 +93,7 @@ export function Track3PerformanceSection() {
           {/* Lunch Delivery Metrics */}
           <div className="card-dark p-6">
             <h4 className="font-bold text-white mb-4 flex items-center gap-3">
-              <span className="text-3xl">🥡</span>
+              <span className="text-3xl">[box]</span>
               Lunch Delivery Metrics
             </h4>
             <ul className="space-y-3 text-gray-300">
@@ -130,7 +131,7 @@ export function Track3PerformanceSection() {
           {/* Overall Business */}
           <div className="card-dark p-6">
             <h4 className="font-bold text-white mb-4 flex items-center gap-3">
-              <span className="text-3xl">📊</span>
+              <span className="text-3xl">[chart]</span>
               Overall Business Trends
             </h4>
             <ul className="space-y-3 text-gray-300">
@@ -163,7 +164,6 @@ export function Track3PerformanceSection() {
       {/* Weekly Reporting Cadence */}
       <ExpandableSection
         title="Weekly Reporting Cadence"
-        icon="📅"
         executiveSummary={
           <>
             <strong className="text-white">Every Monday morning (30 minutes):</strong> Pull last week's data from Toast, compare to previous weeks,

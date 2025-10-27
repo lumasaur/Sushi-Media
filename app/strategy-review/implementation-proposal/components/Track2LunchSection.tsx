@@ -7,7 +7,9 @@ export function Track2LunchSection() {
   return (
     <div className="max-w-7xl mx-auto px-6 py-16">
       <div className="flex items-center gap-4 mb-10">
-        <span className="text-6xl">🥡</span>
+        <div className="flex-shrink-0 w-16 h-16 rounded-full bg-[#D4AF37] flex items-center justify-center">
+          <span className="text-2xl font-bold text-white">T2</span>
+        </div>
         <div>
           <div className="text-sm text-[#D4AF37] font-bold mb-1 tracking-wide">TRACK 2</div>
           <h2 className="text-4xl md:text-5xl font-bold text-white">Lunch Delivery Program</h2>
@@ -19,7 +21,7 @@ export function Track2LunchSection() {
       <div className="grid md:grid-cols-2 gap-8 mb-10">
         <div className="card-dark p-8 shadow-medium">
           <h3 className="text-2xl font-bold text-white mb-4 flex items-center gap-3">
-            <span className="text-3xl">🎯</span>
+            <span className="text-3xl">•</span>
             The Problem We're Solving
           </h3>
           <p className="text-gray-300 text-lg leading-relaxed">
@@ -115,7 +117,6 @@ export function Track2LunchSection() {
       {/* Lunch Delivery Menu */}
       <ExpandableSection
         title="Lunch Delivery Menu Design"
-        icon="📋"
         badge="high-priority"
         executiveSummary={
           <>
@@ -197,7 +198,6 @@ export function Track2LunchSection() {
       {/* Delivery Approach */}
       <ExpandableSection
         title="Delivery Approach & Staffing"
-        icon="🚗"
         executiveSummary={
           <>
             <strong className="text-white">Weeks 1-2: Use existing staff</strong> during lunch window. <strong className="text-white">Week 3+: Evaluate based on volume.</strong> If
@@ -271,7 +271,6 @@ export function Track2LunchSection() {
       {/* Marketing & Outreach */}
       <ExpandableSection
         title="Marketing & Outreach Strategy"
-        icon="📣"
         executiveSummary={
           <>
             Professional flyers + direct calls + <strong className="text-white">sample lunch deliveries</strong> (50-70% conversion). Phone script provided.
