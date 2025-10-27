@@ -5,7 +5,7 @@ import { ExpandableSection } from './ExpandableSection';
 
 export function Track1EventsSection() {
   return (
-    <section className="max-w-7xl mx-auto px-6 py-16">
+    <div className="max-w-7xl mx-auto px-6 py-16">
       <div className="flex items-center gap-4 mb-10">
         <span className="text-6xl">🎉</span>
         <div>
@@ -485,6 +485,6 @@ export function Track1EventsSection() {
           </div>
         </div>
       </div>
-    </section>
+    </div>
   );
 }
