@@ -24,8 +24,7 @@ export function IntroSection() {
           {/* Gold accent corner */}
           <div className="absolute top-0 right-0 w-32 h-32 bg-[#D4AF37] opacity-10 rounded-bl-full" />
 
-          <h2 className="text-3xl font-bold text-white mb-6 flex items-center gap-4">
-            <span className="text-5xl">🎯</span>
+          <h2 className="text-3xl font-bold text-white mb-6">
             The Plan at a Glance
           </h2>
           <p className="text-xl leading-relaxed text-gray-300 mb-8">

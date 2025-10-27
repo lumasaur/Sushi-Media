@@ -44,6 +44,180 @@ export function Track1EventsSection() {
         </div>
       </div>
 
+      {/* November 2024 Calendar Visual */}
+      <div className="card-dark p-8 mb-10 shadow-strong border-2 border-[#b22222]/30">
+        <h3 className="text-3xl font-bold text-white mb-6 text-center">November 2024 Launch Calendar</h3>
+        <p className="text-center text-gray-400 mb-8">Your roadmap to consistent weekday traffic</p>
+
+        <div className="overflow-x-auto">
+          <div className="min-w-[700px]">
+            {/* Calendar Header */}
+            <div className="grid grid-cols-7 gap-2 mb-2">
+              <div className="text-center text-sm font-bold text-gray-400 py-2">SUN</div>
+              <div className="text-center text-sm font-bold text-gray-400 py-2">MON</div>
+              <div className="text-center text-sm font-bold text-gray-400 py-2">TUE</div>
+              <div className="text-center text-sm font-bold text-gray-400 py-2">WED</div>
+              <div className="text-center text-sm font-bold text-gray-400 py-2">THU</div>
+              <div className="text-center text-sm font-bold text-gray-400 py-2">FRI</div>
+              <div className="text-center text-sm font-bold text-gray-400 py-2">SAT</div>
+            </div>
+
+            {/* Calendar Grid */}
+            <div className="grid grid-cols-7 gap-2">
+              {/* Week 1: Oct 27 - Nov 2 */}
+              <div className="bg-gray-800/30 rounded p-3 min-h-[100px] opacity-50">
+                <div className="text-xs text-gray-500">27</div>
+              </div>
+              <div className="bg-gray-800/30 rounded p-3 min-h-[100px] opacity-50">
+                <div className="text-xs text-gray-500">28</div>
+              </div>
+              <div className="bg-gray-800/30 rounded p-3 min-h-[100px] opacity-50">
+                <div className="text-xs text-gray-500">29</div>
+              </div>
+              <div className="bg-gray-800/30 rounded p-3 min-h-[100px] opacity-50">
+                <div className="text-xs text-gray-500">30</div>
+              </div>
+              <div className="bg-gray-800/30 rounded p-3 min-h-[100px] opacity-50">
+                <div className="text-xs text-gray-500">31</div>
+              </div>
+              <div className="bg-gray-800/50 rounded p-3 min-h-[100px]">
+                <div className="text-sm font-bold text-white mb-1">1</div>
+              </div>
+              <div className="bg-gray-800/50 rounded p-3 min-h-[100px]">
+                <div className="text-sm font-bold text-white mb-1">2</div>
+              </div>
+
+              {/* Week 2: Nov 3-9 (Preparation Week) */}
+              <div className="bg-gray-800/50 rounded p-3 min-h-[100px]">
+                <div className="text-sm font-bold text-white mb-1">3</div>
+              </div>
+              <div className="bg-gray-800/50 rounded p-3 min-h-[100px]">
+                <div className="text-sm font-bold text-white mb-1">4</div>
+                <div className="text-xs text-yellow-400 font-semibold">Final Prep Week</div>
+              </div>
+              <div className="bg-gray-800/50 rounded p-3 min-h-[100px]">
+                <div className="text-sm font-bold text-white mb-1">5</div>
+              </div>
+              <div className="bg-gray-800/50 rounded p-3 min-h-[100px]">
+                <div className="text-sm font-bold text-white mb-1">6</div>
+              </div>
+              <div className="bg-gray-800/50 rounded p-3 min-h-[100px]">
+                <div className="text-sm font-bold text-white mb-1">7</div>
+              </div>
+              <div className="bg-gray-800/50 rounded p-3 min-h-[100px]">
+                <div className="text-sm font-bold text-white mb-1">8</div>
+              </div>
+              <div className="bg-gray-800/50 rounded p-3 min-h-[100px]">
+                <div className="text-sm font-bold text-white mb-1">9</div>
+              </div>
+
+              {/* Week 3: Nov 10-16 (LAUNCH WEEK) */}
+              <div className="bg-gray-800/50 rounded p-3 min-h-[100px]">
+                <div className="text-sm font-bold text-white mb-1">10</div>
+              </div>
+              <div className="bg-gray-800/50 rounded p-3 min-h-[100px]">
+                <div className="text-sm font-bold text-white mb-1">11</div>
+                <div className="text-xs text-purple-400 font-semibold">Launch Week!</div>
+              </div>
+              <div className="bg-gradient-to-br from-[#b22222]/30 to-[#b22222]/10 border-2 border-[#b22222] rounded p-3 min-h-[100px]">
+                <div className="text-sm font-bold text-white mb-1">12</div>
+                <div className="text-xs text-[#b22222] font-bold mb-1">LAUNCH</div>
+                <div className="text-xs text-white font-semibold leading-tight">Latin Dance</div>
+                <div className="text-xs text-gray-400">7-10pm</div>
+              </div>
+              <div className="bg-gray-800/50 rounded p-3 min-h-[100px]">
+                <div className="text-sm font-bold text-white mb-1">13</div>
+              </div>
+              <div className="bg-gradient-to-br from-[#b22222]/30 to-[#b22222]/10 border-2 border-[#b22222] rounded p-3 min-h-[100px]">
+                <div className="text-sm font-bold text-white mb-1">14</div>
+                <div className="text-xs text-[#b22222] font-bold mb-1">LAUNCH</div>
+                <div className="text-xs text-white font-semibold leading-tight">Social Night</div>
+                <div className="text-xs text-gray-400">7-10pm</div>
+              </div>
+              <div className="bg-gray-800/50 rounded p-3 min-h-[100px]">
+                <div className="text-sm font-bold text-white mb-1">15</div>
+              </div>
+              <div className="bg-gradient-to-br from-purple-900/30 to-purple-900/10 border-2 border-purple-500/50 rounded p-3 min-h-[100px]">
+                <div className="text-sm font-bold text-white mb-1">16</div>
+                <div className="text-xs text-purple-400 font-semibold leading-tight">Sushi & Sounds</div>
+                <div className="text-xs text-gray-400">7-10pm</div>
+              </div>
+
+              {/* Week 4: Nov 17-23 */}
+              <div className="bg-gray-800/50 rounded p-3 min-h-[100px]">
+                <div className="text-sm font-bold text-white mb-1">17</div>
+              </div>
+              <div className="bg-gray-800/50 rounded p-3 min-h-[100px]">
+                <div className="text-sm font-bold text-white mb-1">18</div>
+                <div className="text-xs text-green-400 font-semibold">Week 2 Review</div>
+              </div>
+              <div className="bg-gradient-to-br from-[#b22222]/20 to-[#b22222]/5 border border-[#b22222]/50 rounded p-3 min-h-[100px]">
+                <div className="text-sm font-bold text-white mb-1">19</div>
+                <div className="text-xs text-white font-semibold leading-tight">Latin Dance</div>
+                <div className="text-xs text-gray-400">7-10pm</div>
+              </div>
+              <div className="bg-gray-800/50 rounded p-3 min-h-[100px]">
+                <div className="text-sm font-bold text-white mb-1">20</div>
+              </div>
+              <div className="bg-gradient-to-br from-[#b22222]/20 to-[#b22222]/5 border border-[#b22222]/50 rounded p-3 min-h-[100px]">
+                <div className="text-sm font-bold text-white mb-1">21</div>
+                <div className="text-xs text-white font-semibold leading-tight">Social Night</div>
+                <div className="text-xs text-gray-400">7-10pm</div>
+              </div>
+              <div className="bg-gray-800/50 rounded p-3 min-h-[100px]">
+                <div className="text-sm font-bold text-white mb-1">22</div>
+              </div>
+              <div className="bg-gray-800/50 rounded p-3 min-h-[100px]">
+                <div className="text-sm font-bold text-white mb-1">23</div>
+              </div>
+
+              {/* Week 5: Nov 24-30 (Thanksgiving Week) */}
+              <div className="bg-gray-800/50 rounded p-3 min-h-[100px]">
+                <div className="text-sm font-bold text-white mb-1">24</div>
+              </div>
+              <div className="bg-gray-800/50 rounded p-3 min-h-[100px]">
+                <div className="text-sm font-bold text-white mb-1">25</div>
+                <div className="text-xs text-orange-400 font-semibold">Thanksgiving Week</div>
+              </div>
+              <div className="bg-gradient-to-br from-[#b22222]/20 to-[#b22222]/5 border border-[#b22222]/50 rounded p-3 min-h-[100px]">
+                <div className="text-sm font-bold text-white mb-1">26</div>
+                <div className="text-xs text-white font-semibold leading-tight">Latin Dance</div>
+                <div className="text-xs text-gray-400">7-10pm</div>
+              </div>
+              <div className="bg-gray-800/50 rounded p-3 min-h-[100px]">
+                <div className="text-sm font-bold text-white mb-1">27</div>
+              </div>
+              <div className="bg-orange-900/20 border border-orange-500/30 rounded p-3 min-h-[100px]">
+                <div className="text-sm font-bold text-white mb-1">28</div>
+                <div className="text-xs text-orange-400 font-semibold">Thanksgiving</div>
+              </div>
+              <div className="bg-gray-800/50 rounded p-3 min-h-[100px]">
+                <div className="text-sm font-bold text-white mb-1">29</div>
+              </div>
+              <div className="bg-gray-800/50 rounded p-3 min-h-[100px]">
+                <div className="text-sm font-bold text-white mb-1">30</div>
+              </div>
+            </div>
+
+            {/* Legend */}
+            <div className="mt-6 flex flex-wrap gap-4 justify-center">
+              <div className="flex items-center gap-2">
+                <div className="w-4 h-4 rounded bg-gradient-to-br from-[#b22222]/30 to-[#b22222]/10 border-2 border-[#b22222]"></div>
+                <span className="text-sm text-gray-300">Launch Events</span>
+              </div>
+              <div className="flex items-center gap-2">
+                <div className="w-4 h-4 rounded bg-gradient-to-br from-[#b22222]/20 to-[#b22222]/5 border border-[#b22222]/50"></div>
+                <span className="text-sm text-gray-300">Recurring Events</span>
+              </div>
+              <div className="flex items-center gap-2">
+                <div className="w-4 h-4 rounded bg-gradient-to-br from-purple-900/30 to-purple-900/10 border-2 border-purple-500/50"></div>
+                <span className="text-sm text-gray-300">Sushi & Sounds (Monthly)</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
       {/* Full Weekly Calendar Vision */}
       <div className="card-dark p-8 mb-10 shadow-medium">
         <h3 className="text-2xl font-bold text-white mb-6">The Full Weekly Calendar Vision</h3>
