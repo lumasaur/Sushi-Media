@@ -254,8 +254,8 @@ export function DecisionChecklistSection() {
   return (
     <div className="max-w-7xl mx-auto px-6 py-16">
       <div className="flex items-center gap-4 mb-10">
-        <div className="flex-shrink-0 w-16 h-16 rounded-full bg-gradient-to-br from-green-600 to-green-800 flex items-center justify-center">
-          <span className="text-3xl font-bold text-white">✓</span>
+        <div className="flex-shrink-0 w-16 h-16 rounded-full bg-gradient-to-br from-green-600 to-green-800 flex items-center justify-center shadow-medium">
+          <span className="text-2xl font-bold text-white">DC</span>
         </div>
         <div>
           <h2 className="text-4xl md:text-5xl font-bold text-white">Key Decisions Required</h2>
@@ -519,7 +519,7 @@ export function DecisionChecklistSection() {
           defaultExpanded={false}
           executiveSummary={
             <>
-              Month 3 revenue target: <strong className="text-green-400">$12,000-18,500</strong> additional.
+              Month 3 revenue target: <strong className="text-green-400">$16.5K-24K</strong> additional.
               Minimum per-event profit: <strong className="text-white">$500/night</strong> to continue.
               Evaluation process agreed.
             </>
@@ -528,7 +528,7 @@ export function DecisionChecklistSection() {
           <div className="space-y-3 text-sm">
             <div className="flex items-start gap-2">
               <span className="text-gray-500">☐</span>
-              <span className="text-gray-300">Month 3 revenue target: $12,000-18,500 additional</span>
+              <span className="text-gray-300">Month 3 revenue target: $16,500-24,000 additional</span>
             </div>
             <div className="flex items-start gap-2">
               <span className="text-gray-500">☐</span>
@@ -621,7 +621,7 @@ export function DecisionChecklistSection() {
             </div>
             <div>
               <div className="text-sm text-gray-400">Month 3 Revenue</div>
-              <div className="text-2xl font-bold text-green-400">$13K-21K</div>
+              <div className="text-2xl font-bold text-green-400">$16.5K-24K</div>
             </div>
             <div>
               <div className="text-sm text-gray-400">Approach</div>
