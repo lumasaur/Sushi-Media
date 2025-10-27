@@ -45,15 +45,15 @@
   }
 
   h1 {
-    @apply text-3xl md:text-4xl;
+    @apply text-4xl md:text-5xl;
   }
 
   h2 {
-    @apply text-2xl md:text-3xl;
+    @apply text-3xl md:text-4xl;
   }
 
   h3 {
-    @apply text-xl md:text-2xl;
+    @apply text-2xl md:text-3xl;
   }
 
   /* Smooth Scrolling */
@@ -84,11 +84,19 @@
 
   /* Card Component */
   .card {
-    @apply bg-white border border-gray-200 rounded-lg shadow-sm;
+    @apply bg-white border border-gray-200 rounded-lg shadow-soft;
   }
 
   .card-hover {
-    @apply hover:shadow-md transition-shadow duration-200;
+    @apply hover:shadow-medium transition-all duration-300 hover:-translate-y-1;
+  }
+
+  .card-dark {
+    @apply bg-gradient-to-br from-gray-800 to-gray-900 border border-gray-700/50 rounded-xl shadow-medium;
+  }
+
+  .card-dark-hover {
+    @apply hover:shadow-strong hover:border-gray-600 transition-all duration-300;
   }
 
   /* Badge Component */

@@ -1,12 +1,8 @@
 import { IntroSection } from './components/IntroSection';
-import { AlternatingWeekCalendar } from './components/AlternatingWeekCalendar';
-import { MonthlyThemeCard } from './components/MonthlyThemeCard';
-import { MonthlyCalendarTabs } from './components/MonthlyCalendarTabs';
-import { ToastDataCaptureSection } from './components/ToastDataCaptureSection';
-import { EmailMarketingSection } from './components/EmailMarketingSection';
-import { CorporateOrderingSection } from './components/CorporateOrderingSection';
-import { ImplementationTimelineSection } from './components/ImplementationTimelineSection';
-import { ResourcesSection } from './components/ResourcesSection';
+import { Track1EventsSection } from './components/Track1EventsSection';
+import { Track2LunchSection } from './components/Track2LunchSection';
+import { Track3PerformanceSection } from './components/Track3PerformanceSection';
+import { LaunchTimelineSection, DecisionChecklistSection } from './components/LaunchTimelineSection';
 
 export default function ImplementationProposalPage() {
   return (
@@ -14,61 +10,39 @@ export default function ImplementationProposalPage() {
       {/* Introduction & Executive Summary */}
       <IntroSection />
 
-      {/* Section 1: Events Calendar Framework */}
-      <section className="border-t border-gray-800">
-        <div className="max-w-7xl mx-auto px-6 py-8">
-          <div className="flex items-center gap-3 mb-8">
-            <span className="text-4xl">📅</span>
-            <div>
-              <h2 className="text-3xl font-bold text-white">Section 1: Events Calendar & Weekly Programming</h2>
-              <p className="text-gray-400 mt-1">Systematic community engagement through alternating event structure</p>
-            </div>
-          </div>
-        </div>
-
-        {/* Alternating Week Framework */}
-        <AlternatingWeekCalendar />
-
-        {/* Monthly Themes */}
-        <MonthlyThemeCard />
-
-        {/* Detailed 3-Month Calendar */}
-        <MonthlyCalendarTabs />
+      {/* Track 1: Events Programming */}
+      <section className="border-t-2 border-gray-800/50">
+        <Track1EventsSection />
       </section>
 
-      {/* Section 2: Toast POS Data Capture Strategy */}
-      <section className="border-t border-gray-800">
-        <ToastDataCaptureSection />
+      {/* Track 2: Lunch Delivery Program */}
+      <section className="border-t-2 border-gray-800/50">
+        <Track2LunchSection />
       </section>
 
-      {/* Section 3: Email Marketing Strategy */}
-      <section className="border-t border-gray-800">
-        <EmailMarketingSection />
+      {/* Track 3: Performance Tracking */}
+      <section className="border-t-2 border-gray-800/50">
+        <Track3PerformanceSection />
       </section>
 
-      {/* Section 4: Corporate Ordering Strategy */}
-      <section className="border-t border-gray-800">
-        <CorporateOrderingSection />
+      {/* Launch Timeline */}
+      <section className="border-t-2 border-gray-800/50 bg-gradient-to-b from-transparent to-gray-900/30">
+        <LaunchTimelineSection />
       </section>
 
-      {/* Section 5: Implementation Timeline */}
-      <section className="border-t border-gray-800">
-        <ImplementationTimelineSection />
-      </section>
-
-      {/* Section 6: Resources & Templates */}
-      <section className="border-t border-gray-800">
-        <ResourcesSection />
+      {/* Decision Checklist */}
+      <section className="border-t-2 border-gray-800/50 bg-gray-900/50">
+        <DecisionChecklistSection />
       </section>
 
       {/* Back to Strategy Review Link */}
-      <section className="border-t border-gray-800">
-        <div className="max-w-7xl mx-auto px-6 py-8">
+      <section className="border-t-2 border-gray-800/50">
+        <div className="max-w-7xl mx-auto px-6 py-12">
           <a
             href="/strategy-review"
-            className="inline-flex items-center gap-2 text-[#b22222] hover:text-[#a01e1e] transition-colors font-semibold"
+            className="inline-flex items-center gap-3 text-[#b22222] hover:text-[#a01e1e] transition-all duration-300 font-semibold text-lg group"
           >
-            <span>←</span>
+            <span className="group-hover:-translate-x-1 transition-transform duration-300">←</span>
             Back to Strategy Review
           </a>
         </div>
