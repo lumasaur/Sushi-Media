@@ -1,5 +1,6 @@
 'use client';
 
+import React from 'react';
 import { ExpandableSection } from './ExpandableSection';
 
 export function Track2LunchSection() {
