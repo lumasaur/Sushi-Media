@@ -34,7 +34,7 @@ export function IntroSection() {
           </p>
 
           {/* Three Tracks Visual */}
-          <div className="grid md:grid-cols-3 gap-6 mb-10">
+          <div className="grid md:grid-cols-3 gap-6">
             {/* Track 1 */}
             <div className="bg-gradient-to-br from-[#b22222]/20 to-[#b22222]/5 rounded-xl p-6 border border-[#b22222]/30 hover:border-[#b22222] transition-all duration-300">
               <div className="text-sm text-[#b22222] font-bold mb-2 tracking-wide">TRACK 1</div>
@@ -42,15 +42,15 @@ export function IntroSection() {
               <div className="space-y-2 text-sm text-gray-300">
                 <div className="flex items-center gap-2">
                   <span className="w-1.5 h-1.5 rounded-full bg-[#b22222]" />
-                  <span>START: 2nd Week November</span>
+                  <span>Latin Dance Lessons (Tuesdays)</span>
                 </div>
                 <div className="flex items-center gap-2">
                   <span className="w-1.5 h-1.5 rounded-full bg-[#b22222]" />
-                  <span>$700-1,200/month investment</span>
+                  <span>Social Night (Thursdays)</span>
                 </div>
                 <div className="flex items-center gap-2">
-                  <span className="w-1.5 h-1.5 rounded-full bg-green-400" />
-                  <span className="text-green-400 font-semibold">+$5,100-9,300/month revenue</span>
+                  <span className="w-1.5 h-1.5 rounded-full bg-[#b22222]" />
+                  <span>Sushi & Sounds (Monthly Saturdays)</span>
                 </div>
               </div>
             </div>
@@ -62,15 +62,15 @@ export function IntroSection() {
               <div className="space-y-2 text-sm text-gray-300">
                 <div className="flex items-center gap-2">
                   <span className="w-1.5 h-1.5 rounded-full bg-[#D4AF37]" />
-                  <span>START: 3rd Week November</span>
+                  <span>Office park blitz strategy</span>
                 </div>
                 <div className="flex items-center gap-2">
                   <span className="w-1.5 h-1.5 rounded-full bg-[#D4AF37]" />
-                  <span>Minimal setup cost</span>
+                  <span>Streamlined lunch menu</span>
                 </div>
                 <div className="flex items-center gap-2">
-                  <span className="w-1.5 h-1.5 rounded-full bg-green-400" />
-                  <span className="text-green-400 font-semibold">+$8,000-12,000/month (Month 3)</span>
+                  <span className="w-1.5 h-1.5 rounded-full bg-[#D4AF37]" />
+                  <span>3-phase expansion approach</span>
                 </div>
               </div>
             </div>
@@ -82,41 +82,17 @@ export function IntroSection() {
               <div className="space-y-2 text-sm text-gray-300">
                 <div className="flex items-center gap-2">
                   <span className="w-1.5 h-1.5 rounded-full bg-[#00A86B]" />
-                  <span>START: 2nd Week November</span>
+                  <span>30-minute Monday reviews</span>
                 </div>
                 <div className="flex items-center gap-2">
                   <span className="w-1.5 h-1.5 rounded-full bg-[#00A86B]" />
-                  <span>Weekly performance reviews</span>
+                  <span>Weekly metrics tracking</span>
                 </div>
                 <div className="flex items-center gap-2">
-                  <span className="w-1.5 h-1.5 rounded-full bg-green-400" />
-                  <span className="text-green-400 font-semibold">Foundation for optimization</span>
+                  <span className="w-1.5 h-1.5 rounded-full bg-[#00A86B]" />
+                  <span>Data-driven optimization</span>
                 </div>
               </div>
-            </div>
-          </div>
-
-          {/* Key Metrics Grid */}
-          <div className="grid grid-cols-2 md:grid-cols-4 gap-4">
-            <div className="bg-black/40 rounded-xl p-5 border border-gray-700 hover:border-[#b22222] transition-all duration-300">
-              <div className="text-sm text-gray-400 mb-2">Launch Date</div>
-              <div className="text-2xl font-bold text-white">Week of</div>
-              <div className="text-xl font-bold text-white">Nov 11</div>
-            </div>
-            <div className="bg-black/40 rounded-xl p-5 border border-gray-700 hover:border-[#D4AF37] transition-all duration-300">
-              <div className="text-sm text-gray-400 mb-2">First-Month Investment</div>
-              <div className="text-2xl font-bold text-white">$700-1,200</div>
-              <div className="text-xs text-gray-400 mt-1">Total across tracks</div>
-            </div>
-            <div className="bg-black/40 rounded-xl p-5 border border-gray-700 hover:border-green-500 transition-all duration-300">
-              <div className="text-sm text-gray-400 mb-2">Month 3 Revenue Target</div>
-              <div className="text-2xl font-bold text-green-400">$12K-18.5K</div>
-              <div className="text-xs text-gray-400 mt-1">per month increase</div>
-            </div>
-            <div className="bg-black/40 rounded-xl p-5 border border-gray-700 hover:border-green-500 transition-all duration-300">
-              <div className="text-sm text-gray-400 mb-2">90-Day ROI</div>
-              <div className="text-2xl font-bold text-green-400">490-1,040%</div>
-              <div className="text-xs text-gray-400 mt-1">Net profit: $22.5K-43.3K</div>
             </div>
           </div>
         </div>
@@ -158,6 +134,33 @@ export function IntroSection() {
                   <span><strong className="text-white">Data-driven optimization</strong> of all tracks</span>
                 </li>
               </ul>
+            </div>
+          </div>
+        </div>
+
+        {/* Investment & ROI Summary - Moved to End */}
+        <div className="card-dark shadow-strong border-2 border-green-500/30 rounded-2xl p-8 mt-10">
+          <h3 className="text-2xl font-bold text-white mb-6 text-center">Investment & Expected Returns</h3>
+          <div className="grid grid-cols-2 md:grid-cols-4 gap-4">
+            <div className="bg-black/40 rounded-xl p-5 border border-gray-700 hover:border-[#b22222] transition-all duration-300">
+              <div className="text-sm text-gray-400 mb-2">Launch Date</div>
+              <div className="text-2xl font-bold text-white">Week of</div>
+              <div className="text-xl font-bold text-white">Nov 11</div>
+            </div>
+            <div className="bg-black/40 rounded-xl p-5 border border-gray-700 hover:border-[#D4AF37] transition-all duration-300">
+              <div className="text-sm text-gray-400 mb-2">First-Month Investment</div>
+              <div className="text-2xl font-bold text-white">$700-1,200</div>
+              <div className="text-xs text-gray-400 mt-1">Total across tracks</div>
+            </div>
+            <div className="bg-black/40 rounded-xl p-5 border border-gray-700 hover:border-green-500 transition-all duration-300">
+              <div className="text-sm text-gray-400 mb-2">Month 3 Revenue Target</div>
+              <div className="text-2xl font-bold text-green-400">$12K-18.5K</div>
+              <div className="text-xs text-gray-400 mt-1">per month increase</div>
+            </div>
+            <div className="bg-black/40 rounded-xl p-5 border border-gray-700 hover:border-green-500 transition-all duration-300">
+              <div className="text-sm text-gray-400 mb-2">90-Day ROI</div>
+              <div className="text-2xl font-bold text-green-400">490-1,040%</div>
+              <div className="text-xs text-gray-400 mt-1">Net profit: $22.5K-43.3K</div>
             </div>
           </div>
         </div>
