@@ -151,10 +151,10 @@ export function Track1EventsSection() {
                 <div className="text-sm font-bold text-white mb-1">18</div>
                 <div className="text-xs text-green-400 font-semibold">Week 2 Review</div>
               </div>
-              <div className="bg-gradient-to-br from-[#b22222]/20 to-[#b22222]/5 border border-[#b22222]/50 rounded p-3 min-h-[100px]">
+              <div className="bg-gray-800/50 rounded p-3 min-h-[100px]">
                 <div className="text-sm font-bold text-white mb-1">19</div>
-                <div className="text-xs text-white font-semibold leading-tight">Latin Dance</div>
-                <div className="text-xs text-gray-400">7-10pm</div>
+                <div className="text-xs text-gray-500 italic">No Latin Dance</div>
+                <div className="text-xs text-gray-500">(Bi-weekly)</div>
               </div>
               <div className="bg-gray-800/50 rounded p-3 min-h-[100px]">
                 <div className="text-sm font-bold text-white mb-1">20</div>
@@ -245,10 +245,10 @@ export function Track1EventsSection() {
                 <td className="p-4"><span className="px-3 py-1 bg-gray-700 text-gray-400 rounded text-xs">Future consideration</span></td>
               </tr>
               <tr className="bg-[#b22222]/10">
-                <td className="p-4 font-semibold text-white">Tuesday</td>
+                <td className="p-4 font-semibold text-white">Every Other Tuesday</td>
                 <td className="p-4 text-white font-semibold">Latin Dance Lessons</td>
                 <td className="p-4 text-gray-300">7-10pm</td>
-                <td className="p-4"><span className="px-3 py-1 bg-[#b22222] text-white rounded text-xs font-bold">LAUNCHING NOV 12</span></td>
+                <td className="p-4"><span className="px-3 py-1 bg-[#b22222] text-white rounded text-xs font-bold">LAUNCHING NOV 12 (BI-WEEKLY)</span></td>
               </tr>
               <tr>
                 <td className="p-4 font-semibold text-white">Wednesday</td>
@@ -284,14 +284,15 @@ export function Track1EventsSection() {
         </div>
       </div>
 
-      {/* Tuesday: Latin Dance Lessons */}
+      {/* Every Other Tuesday: Latin Dance Lessons */}
       <ExpandableSection
-        title="Tuesday: Latin Dance Lessons"
+        title="Every Other Tuesday: Latin Dance Lessons (Bi-Weekly)"
         badge="high-priority"
         executiveSummary={
           <>
-            Beginner-friendly salsa/bachata lessons (7-9pm) + social dancing (9-10pm). <strong className="text-white">No partner required.</strong> High
-            per-person spend ($15 entry + $20-30 bar/food). <strong className="text-green-400">Expected: $900-1,450/night</strong>, <strong className="text-green-400">$3,600-5,800/month</strong>.
+            Beginner-friendly salsa/bachata lessons (7-9pm) + social dancing (9-10pm). <strong className="text-white">No partner required.</strong>
+            <strong className="text-[#D4AF37]"> Bi-weekly schedule maintains excitement and prevents burnout.</strong> High
+            per-person spend ($15 entry + $20-30 bar/food). <strong className="text-green-400">Expected: $900-1,450/night</strong>, <strong className="text-green-400">$1,800-2,900/month (2 events)</strong>.
             Investment: $100-150/session instructor + $50-100/month marketing.
           </>
         }
@@ -307,7 +308,7 @@ export function Track1EventsSection() {
               </div>
               <div className="card-dark p-5">
                 <div className="text-[#b22222] font-bold mb-2">RECURRING COMMUNITY</div>
-                <p className="text-sm text-gray-300">Students return weekly to practice and improve</p>
+                <p className="text-sm text-gray-300">Bi-weekly schedule keeps students eager to return and practice</p>
               </div>
               <div className="card-dark p-5">
                 <div className="text-[#b22222] font-bold mb-2">SOCIAL MEDIA GOLD</div>
@@ -524,18 +525,18 @@ export function Track1EventsSection() {
         <div className="grid md:grid-cols-3 gap-6 mb-8">
           <div className="text-center p-6 bg-gray-900 rounded-xl">
             <div className="text-sm text-gray-400 mb-2">Monthly Investment</div>
-            <div className="text-3xl font-bold text-white mb-1">$685-1,180</div>
+            <div className="text-3xl font-bold text-white mb-1">$485-880</div>
             <div className="text-xs text-gray-400">All events included</div>
           </div>
           <div className="text-center p-6 bg-gray-900 rounded-xl">
             <div className="text-sm text-gray-400 mb-2">Monthly Revenue</div>
-            <div className="text-3xl font-bold text-green-400 mb-1">$5,100-9,300</div>
+            <div className="text-3xl font-bold text-green-400 mb-1">$3,300-6,400</div>
             <div className="text-xs text-gray-400">Incremental revenue</div>
           </div>
           <div className="text-center p-6 bg-gray-900 rounded-xl border-2 border-green-500">
             <div className="text-sm text-gray-400 mb-2">Net Monthly Profit</div>
-            <div className="text-3xl font-bold text-green-400 mb-1">$3,900-8,600</div>
-            <div className="text-xs text-green-300">490-1,040% ROI</div>
+            <div className="text-3xl font-bold text-green-400 mb-1">$2,815-5,520</div>
+            <div className="text-xs text-green-300">380-630% ROI</div>
           </div>
         </div>
 
@@ -544,7 +545,7 @@ export function Track1EventsSection() {
           <ul className="space-y-2 text-gray-300">
             <li className="flex items-center gap-3">
               <span className="text-[#b22222]">✓</span>
-              <span>Tuesday Latin Dance Lessons</span>
+              <span>Every Other Tuesday: Latin Dance Lessons (bi-weekly to maintain excitement)</span>
             </li>
             <li className="flex items-center gap-3">
               <span className="text-[#b22222]">✓</span>
