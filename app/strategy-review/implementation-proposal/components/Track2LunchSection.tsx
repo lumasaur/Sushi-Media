@@ -528,6 +528,367 @@ export function Track2LunchSection() {
         </ExpandableSection>
       </div>
 
+      {/* Expandable Section: Corporate Lunch Menu Packages */}
+      <div className="mb-8">
+        <ExpandableSection
+          title="Corporate Lunch Menu Packages - Direct Ordering"
+          badge="recommended"
+          executiveSummary={
+            <>
+              Four premium lunch packages designed for direct corporate ordering with <strong className="text-white">no delivery fee</strong>.
+              Prices: $20-26 per person. Competitive positioning against third-party delivery platforms while offering
+              better value and direct relationship with offices.
+            </>
+          }
+        >
+          <div className="space-y-8">
+            {/* Introduction */}
+            <div>
+              <h4 className="text-xl font-bold text-white mb-4">Direct Corporate Ordering Strategy</h4>
+              <div className="bg-gradient-to-r from-[#D4AF37]/10 to-transparent border-l-4 border-[#D4AF37] rounded p-6">
+                <p className="text-gray-300 leading-relaxed mb-4">
+                  <strong className="text-white">Key Positioning:</strong> "Order direct from us and skip the delivery fee."
+                  When offices order through DoorDash/Uber Eats, they pay $3-8 delivery fees plus service charges.
+                  By ordering direct, they save money while you keep full revenue and build direct relationships.
+                </p>
+                <div className="grid md:grid-cols-3 gap-4 text-sm">
+                  <div>
+                    <div className="text-[#D4AF37] font-semibold mb-2">Customer Benefit</div>
+                    <p className="text-gray-400">No delivery fees or service charges - save $5-10 per order</p>
+                  </div>
+                  <div>
+                    <div className="text-[#D4AF37] font-semibold mb-2">Your Benefit</div>
+                    <p className="text-gray-400">Keep 100% of revenue, no platform commission (save 20-30%)</p>
+                  </div>
+                  <div>
+                    <div className="text-[#D4AF37] font-semibold mb-2">Relationship Benefit</div>
+                    <p className="text-gray-400">Direct contact with office managers - easier to build recurring accounts</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            {/* Four Menu Packages */}
+            <div>
+              <h4 className="text-xl font-bold text-white mb-6">Four Premium Lunch Packages</h4>
+              <div className="space-y-6">
+                {/* Package 1: Executive Sashimi Bento */}
+                <div className="bg-gray-800/50 rounded-xl p-6 border border-gray-700 hover:border-[#D4AF37] transition-all duration-300">
+                  <div className="grid md:grid-cols-3 gap-6">
+                    <div className="md:col-span-2">
+                      <div className="flex items-center gap-3 mb-3">
+                        <div className="text-3xl font-bold text-[#D4AF37]">$24</div>
+                        <div>
+                          <div className="text-xl font-bold text-white">Executive Sashimi Bento</div>
+                          <div className="text-sm text-gray-400">Premium sashimi presentation</div>
+                        </div>
+                      </div>
+                      <div className="space-y-2 text-sm text-gray-300">
+                        <div className="flex items-start gap-2">
+                          <span className="text-[#D4AF37] mt-1">•</span>
+                          <span><strong className="text-white">6pc premium sashimi</strong> (salmon, tuna, yellowtail)</span>
+                        </div>
+                        <div className="flex items-start gap-2">
+                          <span className="text-[#D4AF37] mt-1">•</span>
+                          <span><strong className="text-white">California roll</strong> (8pc)</span>
+                        </div>
+                        <div className="flex items-start gap-2">
+                          <span className="text-[#D4AF37] mt-1">•</span>
+                          <span>Seaweed salad</span>
+                        </div>
+                        <div className="flex items-start gap-2">
+                          <span className="text-[#D4AF37] mt-1">•</span>
+                          <span>Miso soup</span>
+                        </div>
+                        <div className="flex items-start gap-2">
+                          <span className="text-[#D4AF37] mt-1">•</span>
+                          <span>Steamed rice</span>
+                        </div>
+                        <div className="flex items-start gap-2">
+                          <span className="text-[#D4AF37] mt-1">•</span>
+                          <span>Fruit (orange slices)</span>
+                        </div>
+                      </div>
+                    </div>
+                    <div className="bg-gray-900/50 rounded p-4">
+                      <div className="text-xs text-gray-400 mb-3">TARGET CUSTOMER</div>
+                      <div className="space-y-2 text-sm text-gray-300">
+                        <div>• Executives and managers</div>
+                        <div>• Client meetings and presentations</div>
+                        <div>• Professionals seeking premium quality</div>
+                      </div>
+                      <div className="mt-4 pt-4 border-t border-gray-700">
+                        <div className="text-xs text-gray-400 mb-1">FOOD COST</div>
+                        <div className="text-white font-bold">$7.50-8.50 (31-35%)</div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+
+                {/* Package 2: Premium Roll Combo */}
+                <div className="bg-gray-800/50 rounded-xl p-6 border border-gray-700 hover:border-[#D4AF37] transition-all duration-300">
+                  <div className="grid md:grid-cols-3 gap-6">
+                    <div className="md:col-span-2">
+                      <div className="flex items-center gap-3 mb-3">
+                        <div className="text-3xl font-bold text-[#D4AF37]">$22</div>
+                        <div>
+                          <div className="text-xl font-bold text-white">Premium Roll Combo</div>
+                          <div className="text-sm text-gray-400">Popular specialty rolls</div>
+                        </div>
+                      </div>
+                      <div className="space-y-2 text-sm text-gray-300">
+                        <div className="flex items-start gap-2">
+                          <span className="text-[#D4AF37] mt-1">•</span>
+                          <span><strong className="text-white">Spicy tuna roll</strong> (8pc)</span>
+                        </div>
+                        <div className="flex items-start gap-2">
+                          <span className="text-[#D4AF37] mt-1">•</span>
+                          <span><strong className="text-white">Philadelphia roll</strong> (8pc)</span>
+                        </div>
+                        <div className="flex items-start gap-2">
+                          <span className="text-[#D4AF37] mt-1">•</span>
+                          <span>Edamame</span>
+                        </div>
+                        <div className="flex items-start gap-2">
+                          <span className="text-[#D4AF37] mt-1">•</span>
+                          <span>Gyoza (3pc)</span>
+                        </div>
+                        <div className="flex items-start gap-2">
+                          <span className="text-[#D4AF37] mt-1">•</span>
+                          <span>Miso soup</span>
+                        </div>
+                        <div className="flex items-start gap-2">
+                          <span className="text-[#D4AF37] mt-1">•</span>
+                          <span>Fortune cookie</span>
+                        </div>
+                      </div>
+                    </div>
+                    <div className="bg-gray-900/50 rounded p-4">
+                      <div className="text-xs text-gray-400 mb-3">TARGET CUSTOMER</div>
+                      <div className="space-y-2 text-sm text-gray-300">
+                        <div>• Office workers and professionals</div>
+                        <div>• Team lunches and casual meetings</div>
+                        <div>• Sushi enthusiasts</div>
+                      </div>
+                      <div className="mt-4 pt-4 border-t border-gray-700">
+                        <div className="text-xs text-gray-400 mb-1">FOOD COST</div>
+                        <div className="text-white font-bold">$6.80-7.70 (31-35%)</div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+
+                {/* Package 3: Chirashi Bowl */}
+                <div className="bg-gray-800/50 rounded-xl p-6 border border-gray-700 hover:border-[#D4AF37] transition-all duration-300">
+                  <div className="grid md:grid-cols-3 gap-6">
+                    <div className="md:col-span-2">
+                      <div className="flex items-center gap-3 mb-3">
+                        <div className="text-3xl font-bold text-[#D4AF37]">$26</div>
+                        <div>
+                          <div className="text-xl font-bold text-white">Chirashi Bowl</div>
+                          <div className="text-sm text-gray-400">Premium sashimi over rice</div>
+                        </div>
+                      </div>
+                      <div className="space-y-2 text-sm text-gray-300">
+                        <div className="flex items-start gap-2">
+                          <span className="text-[#D4AF37] mt-1">•</span>
+                          <span><strong className="text-white">Assorted sashimi</strong> (9-10pc: salmon, tuna, yellowtail, white fish, octopus)</span>
+                        </div>
+                        <div className="flex items-start gap-2">
+                          <span className="text-[#D4AF37] mt-1">•</span>
+                          <span><strong className="text-white">Sushi rice bowl</strong> with seasoning</span>
+                        </div>
+                        <div className="flex items-start gap-2">
+                          <span className="text-[#D4AF37] mt-1">•</span>
+                          <span>Seaweed salad</span>
+                        </div>
+                        <div className="flex items-start gap-2">
+                          <span className="text-[#D4AF37] mt-1">•</span>
+                          <span>Edamame</span>
+                        </div>
+                        <div className="flex items-start gap-2">
+                          <span className="text-[#D4AF37] mt-1">•</span>
+                          <span>Miso soup</span>
+                        </div>
+                        <div className="flex items-start gap-2">
+                          <span className="text-[#D4AF37] mt-1">•</span>
+                          <span>Pickled ginger & wasabi</span>
+                        </div>
+                      </div>
+                    </div>
+                    <div className="bg-gray-900/50 rounded p-4">
+                      <div className="text-xs text-gray-400 mb-3">TARGET CUSTOMER</div>
+                      <div className="space-y-2 text-sm text-gray-300">
+                        <div>• Sashimi lovers and adventurous eaters</div>
+                        <div>• High-value client meetings</div>
+                        <div>• Special occasions and celebrations</div>
+                      </div>
+                      <div className="mt-4 pt-4 border-t border-gray-700">
+                        <div className="text-xs text-gray-400 mb-1">FOOD COST</div>
+                        <div className="text-white font-bold">$8.50-9.50 (33-37%)</div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+
+                {/* Package 4: Teriyaki Lunch */}
+                <div className="bg-gray-800/50 rounded-xl p-6 border border-gray-700 hover:border-[#D4AF37] transition-all duration-300">
+                  <div className="grid md:grid-cols-3 gap-6">
+                    <div className="md:col-span-2">
+                      <div className="flex items-center gap-3 mb-3">
+                        <div className="text-3xl font-bold text-[#D4AF37]">$20</div>
+                        <div>
+                          <div className="text-xl font-bold text-white">Teriyaki Lunch</div>
+                          <div className="text-sm text-gray-400">Classic Japanese comfort meal</div>
+                        </div>
+                      </div>
+                      <div className="space-y-2 text-sm text-gray-300">
+                        <div className="flex items-start gap-2">
+                          <span className="text-[#D4AF37] mt-1">•</span>
+                          <span><strong className="text-white">Choice of protein:</strong> Chicken, Salmon, or Tofu teriyaki</span>
+                        </div>
+                        <div className="flex items-start gap-2">
+                          <span className="text-[#D4AF37] mt-1">•</span>
+                          <span>Steamed rice</span>
+                        </div>
+                        <div className="flex items-start gap-2">
+                          <span className="text-[#D4AF37] mt-1">•</span>
+                          <span>Mixed vegetables (stir-fried)</span>
+                        </div>
+                        <div className="flex items-start gap-2">
+                          <span className="text-[#D4AF37] mt-1">•</span>
+                          <span>Gyoza (3pc)</span>
+                        </div>
+                        <div className="flex items-start gap-2">
+                          <span className="text-[#D4AF37] mt-1">•</span>
+                          <span>Miso soup</span>
+                        </div>
+                        <div className="flex items-start gap-2">
+                          <span className="text-[#D4AF37] mt-1">•</span>
+                          <span>Fortune cookie</span>
+                        </div>
+                      </div>
+                    </div>
+                    <div className="bg-gray-900/50 rounded p-4">
+                      <div className="text-xs text-gray-400 mb-3">TARGET CUSTOMER</div>
+                      <div className="space-y-2 text-sm text-gray-300">
+                        <div>• Budget-conscious professionals</div>
+                        <div>• Those preferring cooked food</div>
+                        <div>• Large group orders and team lunches</div>
+                      </div>
+                      <div className="mt-4 pt-4 border-t border-gray-700">
+                        <div className="text-xs text-gray-400 mb-1">FOOD COST</div>
+                        <div className="text-white font-bold">$5.50-6.50 (28-33%)</div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            {/* Group Ordering Incentives */}
+            <div>
+              <h4 className="text-xl font-bold text-white mb-6">Group Ordering Incentives</h4>
+              <div className="grid md:grid-cols-3 gap-6">
+                <div className="bg-gradient-to-br from-green-900/20 to-transparent border border-green-500/30 rounded-lg p-6">
+                  <div className="text-green-400 font-bold mb-3 text-lg">Order 10+</div>
+                  <div className="text-3xl font-bold text-white mb-2">1 Free</div>
+                  <p className="text-sm text-gray-400">Order 10 lunches, get 1 free (any package)</p>
+                </div>
+                <div className="bg-gradient-to-br from-blue-900/20 to-transparent border border-blue-500/30 rounded-lg p-6">
+                  <div className="text-blue-400 font-bold mb-3 text-lg">Recurring Accounts</div>
+                  <div className="text-3xl font-bold text-white mb-2">5% Off</div>
+                  <p className="text-sm text-gray-400">Office orders 2+ times per week - automatic 5% discount</p>
+                </div>
+                <div className="bg-gradient-to-br from-purple-900/20 to-transparent border border-purple-500/30 rounded-lg p-6">
+                  <div className="text-purple-400 font-bold mb-3 text-lg">Monthly Catering</div>
+                  <div className="text-3xl font-bold text-white mb-2">Custom</div>
+                  <p className="text-sm text-gray-400">Monthly team meetings - custom menu and pricing</p>
+                </div>
+              </div>
+            </div>
+
+            {/* How to Order */}
+            <div>
+              <h4 className="text-xl font-bold text-white mb-6">How Corporate Direct Ordering Works</h4>
+              <div className="bg-gray-800/50 rounded-lg p-6">
+                <div className="grid md:grid-cols-4 gap-4 text-sm">
+                  <div className="text-center">
+                    <div className="w-12 h-12 rounded-full bg-[#D4AF37] flex items-center justify-center text-white font-bold text-xl mx-auto mb-3">1</div>
+                    <div className="font-bold text-white mb-2">Call or Text</div>
+                    <p className="text-gray-400">Office manager calls or texts order by 10:30am</p>
+                  </div>
+                  <div className="text-center">
+                    <div className="w-12 h-12 rounded-full bg-[#D4AF37] flex items-center justify-center text-white font-bold text-xl mx-auto mb-3">2</div>
+                    <div className="font-bold text-white mb-2">Confirm</div>
+                    <p className="text-gray-400">We confirm order and delivery time (11:30am-1pm)</p>
+                  </div>
+                  <div className="text-center">
+                    <div className="w-12 h-12 rounded-full bg-[#D4AF37] flex items-center justify-center text-white font-bold text-xl mx-auto mb-3">3</div>
+                    <div className="font-bold text-white mb-2">Prepare</div>
+                    <p className="text-gray-400">We prepare fresh and package with labels</p>
+                  </div>
+                  <div className="text-center">
+                    <div className="w-12 h-12 rounded-full bg-[#D4AF37] flex items-center justify-center text-white font-bold text-xl mx-auto mb-3">4</div>
+                    <div className="font-bold text-white mb-2">Deliver</div>
+                    <p className="text-gray-400">Deliver to office lobby - payment on delivery or invoice</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            {/* Competitive Comparison */}
+            <div>
+              <h4 className="text-xl font-bold text-white mb-6">Direct vs Third-Party Delivery Comparison</h4>
+              <div className="overflow-x-auto">
+                <table className="w-full border-collapse text-sm">
+                  <thead>
+                    <tr className="bg-gray-900/80 border-b border-gray-700">
+                      <th className="text-left p-4 text-gray-400 font-semibold">Factor</th>
+                      <th className="text-left p-4 text-gray-400 font-semibold">Direct Order (Us)</th>
+                      <th className="text-left p-4 text-gray-400 font-semibold">DoorDash/Uber Eats</th>
+                    </tr>
+                  </thead>
+                  <tbody className="divide-y divide-gray-700/50">
+                    <tr>
+                      <td className="p-4 font-semibold text-white">Menu Price</td>
+                      <td className="p-4 text-green-400">$20-26</td>
+                      <td className="p-4 text-gray-300">$20-26</td>
+                    </tr>
+                    <tr>
+                      <td className="p-4 font-semibold text-white">Delivery Fee</td>
+                      <td className="p-4 text-green-400 font-bold">$0 (FREE)</td>
+                      <td className="p-4 text-red-400">$3-8</td>
+                    </tr>
+                    <tr>
+                      <td className="p-4 font-semibold text-white">Service Fee</td>
+                      <td className="p-4 text-green-400 font-bold">$0</td>
+                      <td className="p-4 text-red-400">$2-5</td>
+                    </tr>
+                    <tr>
+                      <td className="p-4 font-semibold text-white">Group Discount</td>
+                      <td className="p-4 text-green-400">Yes (10+ = 1 free)</td>
+                      <td className="p-4 text-gray-300">No</td>
+                    </tr>
+                    <tr className="bg-[#D4AF37]/10">
+                      <td className="p-4 font-semibold text-white">Total Cost (Example: $22 meal)</td>
+                      <td className="p-4 text-green-400 font-bold text-lg">$22</td>
+                      <td className="p-4 text-red-400 font-bold text-lg">$27-35</td>
+                    </tr>
+                  </tbody>
+                </table>
+              </div>
+              <div className="mt-4 p-4 bg-[#D4AF37]/10 border-l-4 border-[#D4AF37] rounded">
+                <p className="text-gray-300 text-sm">
+                  <strong className="text-white">Marketing Message:</strong> "Why pay $27-35 through delivery apps when you can
+                  order the same meal direct from us for $22 with FREE delivery? Call us at [PHONE] to set up your office account today."
+                </p>
+              </div>
+            </div>
+          </div>
+        </ExpandableSection>
+      </div>
+
       {/* Track 2 Summary */}
       <div className="bg-gradient-to-br from-[#D4AF37]/20 to-[#D4AF37]/5 border border-[#D4AF37]/30 rounded-xl p-8 shadow-strong">
         <h3 className="text-2xl font-bold text-white mb-6">Track 2 Summary</h3>

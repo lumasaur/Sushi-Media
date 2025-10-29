@@ -28,7 +28,7 @@ export function IntroSection() {
             The Plan at a Glance
           </h2>
           <p className="text-xl leading-relaxed text-gray-300 mb-8">
-            We're launching three parallel tracks starting <strong className="text-white">2nd week of November</strong> to
+            We're launching three parallel tracks starting <strong className="text-white">second week of November</strong> to
             drive weekday revenue and build sustainable growth through <strong className="text-[#b22222]">events programming</strong>,
             <strong className="text-[#D4AF37]"> lunch delivery</strong>, and <strong className="text-[#00A86B]">performance tracking</strong>.
           </p>
@@ -144,8 +144,8 @@ export function IntroSection() {
           <div className="grid grid-cols-2 md:grid-cols-4 gap-4">
             <div className="bg-black/40 rounded-xl p-5 border border-gray-700 hover:border-[#b22222] transition-all duration-300">
               <div className="text-sm text-gray-400 mb-2">Launch Date</div>
-              <div className="text-2xl font-bold text-white">Week of</div>
-              <div className="text-xl font-bold text-white">Nov 11</div>
+              <div className="text-2xl font-bold text-white">Second week</div>
+              <div className="text-xl font-bold text-white">of November</div>
             </div>
             <div className="bg-black/40 rounded-xl p-5 border border-gray-700 hover:border-[#D4AF37] transition-all duration-300">
               <div className="text-sm text-gray-400 mb-2">First-Month Investment</div>

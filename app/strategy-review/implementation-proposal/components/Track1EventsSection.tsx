@@ -518,6 +518,374 @@ export function Track1EventsSection() {
         </div>
       </ExpandableSection>
 
+      {/* Event Operational Details & Naming Options */}
+      <ExpandableSection
+        title="Event Operational Details & Naming Options"
+        badge="high-priority"
+        executiveSummary={
+          <>
+            Comprehensive operational details for both Tuesday and Thursday events. Includes 5 naming options for each event,
+            service fee structures, happy hour packages, color-coded social systems, and icebreaker game formats.
+            <strong className="text-white"> Everything you need to launch with confidence.</strong>
+          </>
+        }
+      >
+        <div className="space-y-10">
+          {/* Tuesday Latin Dance - Naming Options */}
+          <div>
+            <h4 className="text-2xl font-bold text-white mb-6">Tuesday Latin Dance: Naming Options</h4>
+            <div className="space-y-3">
+              <div className="bg-gray-800/50 rounded-lg p-4 border-l-4 border-[#b22222]">
+                <div className="font-bold text-white mb-1">Option 1: "Salsa & Sushi Tuesdays"</div>
+                <p className="text-gray-400 text-sm">Direct, memorable, clearly communicates both the food and dance element</p>
+              </div>
+              <div className="bg-gray-800/50 rounded-lg p-4 border-l-4 border-[#b22222]">
+                <div className="font-bold text-white mb-1">Option 2: "Rhythm & Rice"</div>
+                <p className="text-gray-400 text-sm">Catchy alliteration, playful tone, emphasizes movement and Japanese cuisine</p>
+              </div>
+              <div className="bg-gray-800/50 rounded-lg p-4 border-l-4 border-[#b22222]">
+                <div className="font-bold text-white mb-1">Option 3: "Latin Nights at Ami"</div>
+                <p className="text-gray-400 text-sm">Straightforward, highlights cultural dance experience at your restaurant</p>
+              </div>
+              <div className="bg-gray-800/50 rounded-lg p-4 border-l-4 border-[#b22222]">
+                <div className="font-bold text-white mb-1">Option 4: "Dance & Dine Tuesdays"</div>
+                <p className="text-gray-400 text-sm">Simple alliteration, broad appeal, emphasizes both activities equally</p>
+              </div>
+              <div className="bg-gray-800/50 rounded-lg p-4 border-l-4 border-[#b22222]">
+                <div className="font-bold text-white mb-1">Option 5: "Bachata & Bites"</div>
+                <p className="text-gray-400 text-sm">Alliterative, specific dance style, casual food reference</p>
+              </div>
+            </div>
+          </div>
+
+          {/* Tuesday Latin Dance - Service Fee Structure */}
+          <div>
+            <h4 className="text-2xl font-bold text-white mb-6">Tuesday Service Fee Structure</h4>
+            <div className="bg-gradient-to-r from-[#b22222]/10 to-transparent border-l-4 border-[#b22222] rounded p-6">
+              <div className="grid md:grid-cols-3 gap-6">
+                <div className="bg-gray-800/50 rounded p-4">
+                  <div className="text-[#D4AF37] font-bold mb-2 text-center">$10 Per Person</div>
+                  <div className="text-2xl font-bold text-white text-center mb-3">100%</div>
+                  <div className="text-sm text-gray-400 text-center">Total collected at door</div>
+                </div>
+                <div className="bg-gray-800/50 rounded p-4">
+                  <div className="text-green-400 font-bold mb-2 text-center">Split Breakdown</div>
+                  <div className="space-y-2 text-sm">
+                    <div className="flex justify-between text-gray-300">
+                      <span>Instructor:</span>
+                      <span className="font-bold text-white">50% ($5)</span>
+                    </div>
+                    <div className="flex justify-between text-gray-300">
+                      <span>Server tip pool:</span>
+                      <span className="font-bold text-white">25% ($2.50)</span>
+                    </div>
+                    <div className="flex justify-between text-gray-300">
+                      <span>House (operations):</span>
+                      <span className="font-bold text-white">25% ($2.50)</span>
+                    </div>
+                  </div>
+                </div>
+                <div className="bg-gray-800/50 rounded p-4">
+                  <div className="text-blue-400 font-bold mb-2 text-center">Example: 30 People</div>
+                  <div className="space-y-2 text-sm">
+                    <div className="flex justify-between text-gray-300">
+                      <span>Total collected:</span>
+                      <span className="font-bold text-white">$300</span>
+                    </div>
+                    <div className="flex justify-between text-gray-300">
+                      <span>Instructor gets:</span>
+                      <span className="font-bold text-white">$150</span>
+                    </div>
+                    <div className="flex justify-between text-gray-300">
+                      <span>Server pool gets:</span>
+                      <span className="font-bold text-white">$75</span>
+                    </div>
+                    <div className="flex justify-between text-gray-300">
+                      <span>House keeps:</span>
+                      <span className="font-bold text-white">$75</span>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div className="mt-4 text-sm text-gray-400 italic text-center">
+                This structure incentivizes the instructor to promote and grow attendance, rewards servers for excellent service during events, and covers house operational costs.
+              </div>
+            </div>
+          </div>
+
+          {/* Tuesday Latin Dance - Happy Hour Packages */}
+          <div>
+            <h4 className="text-2xl font-bold text-white mb-6">Tuesday Happy Hour Food Packages</h4>
+            <div className="grid md:grid-cols-2 gap-6">
+              <div className="bg-gradient-to-br from-[#D4AF37]/20 to-[#D4AF37]/5 border border-[#D4AF37]/30 rounded-xl p-6">
+                <div className="text-center mb-4">
+                  <div className="text-[#D4AF37] font-bold text-lg mb-2">"Dance Fuel Platter"</div>
+                  <div className="text-4xl font-bold text-white mb-2">$28</div>
+                  <div className="text-sm text-gray-400">Perfect for 2-3 dancers to share</div>
+                </div>
+                <div className="space-y-2 text-sm text-gray-300">
+                  <div className="flex items-start gap-2">
+                    <span className="text-[#D4AF37]">•</span>
+                    <span>California Roll (8pc)</span>
+                  </div>
+                  <div className="flex items-start gap-2">
+                    <span className="text-[#D4AF37]">•</span>
+                    <span>Spicy Tuna Roll (8pc)</span>
+                  </div>
+                  <div className="flex items-start gap-2">
+                    <span className="text-[#D4AF37]">•</span>
+                    <span>Gyoza (6pc)</span>
+                  </div>
+                  <div className="flex items-start gap-2">
+                    <span className="text-[#D4AF37]">•</span>
+                    <span>Edamame</span>
+                  </div>
+                  <div className="flex items-start gap-2">
+                    <span className="text-[#D4AF37]">•</span>
+                    <span>Seaweed Salad</span>
+                  </div>
+                </div>
+                <div className="mt-4 pt-4 border-t border-[#D4AF37]/30 text-xs text-gray-400 italic">
+                  Designed to sustain energy throughout the 3-hour event without being too heavy for dancing
+                </div>
+              </div>
+
+              <div className="bg-gradient-to-br from-[#D4AF37]/20 to-[#D4AF37]/5 border border-[#D4AF37]/30 rounded-xl p-6">
+                <div className="text-center mb-4">
+                  <div className="text-[#D4AF37] font-bold text-lg mb-2">"Salsa Starter"</div>
+                  <div className="text-4xl font-bold text-white mb-2">$18</div>
+                  <div className="text-sm text-gray-400">Light bites for individual dancers</div>
+                </div>
+                <div className="space-y-2 text-sm text-gray-300">
+                  <div className="flex items-start gap-2">
+                    <span className="text-[#D4AF37]">•</span>
+                    <span>Choice of 1 roll: California, Spicy Tuna, or Avocado (8pc)</span>
+                  </div>
+                  <div className="flex items-start gap-2">
+                    <span className="text-[#D4AF37]">•</span>
+                    <span>Gyoza (3pc)</span>
+                  </div>
+                  <div className="flex items-start gap-2">
+                    <span className="text-[#D4AF37]">•</span>
+                    <span>Edamame</span>
+                  </div>
+                </div>
+                <div className="mt-4 pt-4 border-t border-[#D4AF37]/30 text-xs text-gray-400 italic">
+                  Individual portion for dancers who want a light meal before or during the lesson
+                </div>
+              </div>
+            </div>
+          </div>
+
+          {/* Thursday Social Connection - Naming Options */}
+          <div>
+            <h4 className="text-2xl font-bold text-white mb-6">Thursday Social Connection: Naming Options</h4>
+            <div className="space-y-3">
+              <div className="bg-gray-800/50 rounded-lg p-4 border-l-4 border-[#b22222]">
+                <div className="font-bold text-white mb-1">Option 1: "Social Thursdays"</div>
+                <p className="text-gray-400 text-sm">Simple, direct, clearly indicates purpose and day</p>
+              </div>
+              <div className="bg-gray-800/50 rounded-lg p-4 border-l-4 border-[#b22222]">
+                <div className="font-bold text-white mb-1">Option 2: "Mix & Mingle"</div>
+                <p className="text-gray-400 text-sm">Friendly, approachable, emphasizes social networking aspect</p>
+              </div>
+              <div className="bg-gray-800/50 rounded-lg p-4 border-l-4 border-[#b22222]">
+                <div className="font-bold text-white mb-1">Option 3: "Connect Night"</div>
+                <p className="text-gray-400 text-sm">Modern, professional, appeals to networking crowd</p>
+              </div>
+              <div className="bg-gray-800/50 rounded-lg p-4 border-l-4 border-[#b22222]">
+                <div className="font-bold text-white mb-1">Option 4: "Thursday Social Club"</div>
+                <p className="text-gray-400 text-sm">Creates sense of membership and recurring community</p>
+              </div>
+              <div className="bg-gray-800/50 rounded-lg p-4 border-l-4 border-[#b22222]">
+                <div className="font-bold text-white mb-1">Option 5: "Friends & Sushi Thursdays"</div>
+                <p className="text-gray-400 text-sm">Casual, food-focused, emphasizes come with friends or make new ones</p>
+              </div>
+            </div>
+          </div>
+
+          {/* Thursday Social Connection - Color-Coded System */}
+          <div>
+            <h4 className="text-2xl font-bold text-white mb-6">Thursday Color-Coded Social System</h4>
+            <div className="bg-gradient-to-r from-blue-900/10 to-transparent border-l-4 border-blue-500 rounded p-6 mb-6">
+              <p className="text-gray-300 leading-relaxed mb-4">
+                <strong className="text-white">How it works:</strong> Upon arrival, guests choose a colored wristband or name tag sticker
+                that signals their social intent. Bartender facilitates introductions between matching colors throughout the night.
+              </p>
+            </div>
+            <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-4">
+              <div className="bg-gray-800/50 rounded-lg p-4 border-l-4 border-red-500">
+                <div className="flex items-center gap-2 mb-2">
+                  <div className="w-6 h-6 rounded-full bg-red-500"></div>
+                  <div className="font-bold text-white">Red</div>
+                </div>
+                <p className="text-gray-400 text-sm">"Here to meet new people" - Open to conversations and introductions</p>
+              </div>
+              <div className="bg-gray-800/50 rounded-lg p-4 border-l-4 border-yellow-500">
+                <div className="flex items-center gap-2 mb-2">
+                  <div className="w-6 h-6 rounded-full bg-yellow-500"></div>
+                  <div className="font-bold text-white">Yellow</div>
+                </div>
+                <p className="text-gray-400 text-sm">"Happy to chat but came with friends" - Social but part of existing group</p>
+              </div>
+              <div className="bg-gray-800/50 rounded-lg p-4 border-l-4 border-green-500">
+                <div className="flex items-center gap-2 mb-2">
+                  <div className="w-6 h-6 rounded-full bg-green-500"></div>
+                  <div className="font-bold text-white">Green</div>
+                </div>
+                <p className="text-gray-400 text-sm">"Industry professional networking" - Career connections and business talk welcome</p>
+              </div>
+              <div className="bg-gray-800/50 rounded-lg p-4 border-l-4 border-blue-500">
+                <div className="flex items-center gap-2 mb-2">
+                  <div className="w-6 h-6 rounded-full bg-blue-500"></div>
+                  <div className="font-bold text-white">Blue</div>
+                </div>
+                <p className="text-gray-400 text-sm">"New to the area looking for friends" - Recent transplants seeking community</p>
+              </div>
+              <div className="bg-gray-800/50 rounded-lg p-4 border-l-4 border-purple-500">
+                <div className="flex items-center gap-2 mb-2">
+                  <div className="w-6 h-6 rounded-full bg-purple-500"></div>
+                  <div className="font-bold text-white">Purple</div>
+                </div>
+                <p className="text-gray-400 text-sm">"Hobby/interest-based connections" - Sports, books, activities, shared interests</p>
+              </div>
+              <div className="bg-gray-800/50 rounded-lg p-4 border-l-4 border-orange-500">
+                <div className="flex items-center gap-2 mb-2">
+                  <div className="w-6 h-6 rounded-full bg-orange-500"></div>
+                  <div className="font-bold text-white">Orange</div>
+                </div>
+                <p className="text-gray-400 text-sm">"Foodie and restaurant enthusiasts" - Here to enjoy food and talk cuisine</p>
+              </div>
+            </div>
+            <div className="mt-6 bg-gray-800/50 rounded-lg p-6">
+              <div className="text-white font-semibold mb-3">Bartender Facilitation Role:</div>
+              <ul className="space-y-2 text-sm text-gray-400">
+                <li className="flex items-start gap-2">
+                  <span className="text-blue-400">•</span>
+                  <span>Observe guests with same colors sitting alone or in small groups</span>
+                </li>
+                <li className="flex items-start gap-2">
+                  <span className="text-blue-400">•</span>
+                  <span>Make casual introductions: "Hey, I noticed you both have red bands - John, meet Sarah, Sarah meet John"</span>
+                </li>
+                <li className="flex items-start gap-2">
+                  <span className="text-blue-400">•</span>
+                  <span>Offer conversation starters based on color meanings</span>
+                </li>
+                <li className="flex items-start gap-2">
+                  <span className="text-blue-400">•</span>
+                  <span>No pressure - if someone seems uninterested, respect their space</span>
+                </li>
+              </ul>
+            </div>
+          </div>
+
+          {/* Thursday Social Connection - Icebreaker Games */}
+          <div>
+            <h4 className="text-2xl font-bold text-white mb-6">Thursday Icebreaker Games & Activities</h4>
+            <div className="grid md:grid-cols-2 gap-6">
+              {/* Table Card Games */}
+              <div className="bg-gray-800/50 rounded-lg p-6">
+                <div className="text-[#D4AF37] font-bold mb-3 text-lg">Table Card Icebreakers</div>
+                <p className="text-gray-300 text-sm mb-4 leading-relaxed">
+                  Place conversation starter cards on tables. Guests can pick a card and ask their neighbor or group.
+                </p>
+                <div className="space-y-2 text-sm">
+                  <div className="bg-gray-900/50 rounded p-3 text-gray-300 italic">
+                    "What's the best meal you've ever had and where?"
+                  </div>
+                  <div className="bg-gray-900/50 rounded p-3 text-gray-300 italic">
+                    "If you could travel anywhere next month, where would you go?"
+                  </div>
+                  <div className="bg-gray-900/50 rounded p-3 text-gray-300 italic">
+                    "What's your go-to karaoke song?"
+                  </div>
+                  <div className="bg-gray-900/50 rounded p-3 text-gray-300 italic">
+                    "What hobby have you always wanted to try?"
+                  </div>
+                </div>
+              </div>
+
+              {/* Board Game Station */}
+              <div className="bg-gray-800/50 rounded-lg p-6">
+                <div className="text-[#D4AF37] font-bold mb-3 text-lg">Optional Board Game Station</div>
+                <p className="text-gray-300 text-sm mb-4 leading-relaxed">
+                  Set up a small area with easy-to-learn social games that encourage group participation.
+                </p>
+                <div className="space-y-2 text-sm text-gray-300">
+                  <div className="flex items-start gap-2">
+                    <span className="text-[#D4AF37]">•</span>
+                    <span><strong className="text-white">Jenga:</strong> Physical, conversation-friendly, easy to join</span>
+                  </div>
+                  <div className="flex items-start gap-2">
+                    <span className="text-[#D4AF37]">•</span>
+                    <span><strong className="text-white">Cards Against Humanity:</strong> Humor-based, breaks ice quickly</span>
+                  </div>
+                  <div className="flex items-start gap-2">
+                    <span className="text-[#D4AF37]">•</span>
+                    <span><strong className="text-white">Uno:</strong> Universal, quick rounds, inclusive</span>
+                  </div>
+                  <div className="flex items-start gap-2">
+                    <span className="text-[#D4AF37]">•</span>
+                    <span><strong className="text-white">Connect Four:</strong> Simple 2-player, tournament-style</span>
+                  </div>
+                </div>
+                <div className="mt-4 text-xs text-gray-400 italic">
+                  Games are optional - not mandatory. They simply provide structure for those who want it.
+                </div>
+              </div>
+            </div>
+          </div>
+
+          {/* Cost & Materials Summary */}
+          <div>
+            <h4 className="text-2xl font-bold text-white mb-6">Operational Materials & Costs</h4>
+            <div className="bg-gradient-to-r from-green-900/10 to-transparent border-l-4 border-green-500 rounded p-6">
+              <div className="grid md:grid-cols-2 gap-6">
+                <div>
+                  <div className="text-white font-semibold mb-3">One-Time Setup Costs:</div>
+                  <div className="space-y-2 text-sm text-gray-300">
+                    <div className="flex justify-between">
+                      <span>Colored wristbands (500 count):</span>
+                      <span className="font-bold">$25-40</span>
+                    </div>
+                    <div className="flex justify-between">
+                      <span>Icebreaker card printing:</span>
+                      <span className="font-bold">$15-30</span>
+                    </div>
+                    <div className="flex justify-between">
+                      <span>Board games (if adding):</span>
+                      <span className="font-bold">$60-100</span>
+                    </div>
+                    <div className="flex justify-between border-t border-gray-700 pt-2 font-bold">
+                      <span>Total Setup:</span>
+                      <span className="text-green-400">$100-170</span>
+                    </div>
+                  </div>
+                </div>
+                <div>
+                  <div className="text-white font-semibold mb-3">Ongoing Monthly Costs:</div>
+                  <div className="space-y-2 text-sm text-gray-300">
+                    <div className="flex justify-between">
+                      <span>Wristband replenishment:</span>
+                      <span className="font-bold">$10-15</span>
+                    </div>
+                    <div className="flex justify-between">
+                      <span>Card replacement:</span>
+                      <span className="font-bold">$5-10</span>
+                    </div>
+                    <div className="flex justify-between border-t border-gray-700 pt-2 font-bold">
+                      <span>Total Monthly:</span>
+                      <span className="text-green-400">$15-25</span>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </ExpandableSection>
+
       {/* Track 1 Summary */}
       <div className="card-dark p-10 shadow-strong border-2 border-[#b22222]/30 mt-10">
         <h3 className="text-3xl font-bold text-white mb-6">Track 1 Summary</h3>

@@ -663,6 +663,426 @@ export function Track3PerformanceSection() {
         </ExpandableSection>
       </div>
 
+      {/* Expandable Section: Event-Specific Performance Metrics */}
+      <div className="mb-8">
+        <ExpandableSection
+          title="Event-Specific Performance Metrics: Month 1 vs Month 3"
+          badge="recommended"
+          executiveSummary={
+            <>
+              Detailed performance metrics comparing launch month (Month 1) vs established performance (Month 3).
+              Track attendance, revenue per event, customer acquisition, and operational efficiency improvements as
+              events mature. <strong className="text-white">See exactly how growth should look.</strong>
+            </>
+          }
+        >
+          <div className="space-y-10">
+            {/* Introduction */}
+            <div>
+              <h4 className="text-xl font-bold text-white mb-4">Understanding Event Maturation</h4>
+              <div className="bg-gradient-to-r from-blue-900/10 to-transparent border-l-4 border-blue-500 rounded p-6">
+                <p className="text-gray-300 leading-relaxed">
+                  Events don't reach peak performance immediately. There's a natural maturation curve as word spreads,
+                  community forms, and operational efficiency improves. These metrics show what "good" looks like at
+                  each stage, so you can benchmark your actual performance against realistic targets.
+                </p>
+              </div>
+            </div>
+
+            {/* Latin Dance Event Metrics */}
+            <div>
+              <h4 className="text-2xl font-bold text-white mb-6">Tuesday Latin Dance: Evolution Metrics</h4>
+              <div className="overflow-x-auto">
+                <table className="w-full border-collapse">
+                  <thead>
+                    <tr className="bg-gray-900/80 border-b-2 border-[#b22222]">
+                      <th className="text-left p-4 text-gray-400 font-semibold">Metric</th>
+                      <th className="text-center p-4 text-gray-400 font-semibold">Month 1 (Launch)</th>
+                      <th className="text-center p-4 text-gray-400 font-semibold">Month 3 (Established)</th>
+                      <th className="text-center p-4 text-gray-400 font-semibold">Growth Factor</th>
+                    </tr>
+                  </thead>
+                  <tbody className="divide-y divide-gray-700/50">
+                    <tr>
+                      <td className="p-4 font-semibold text-white">Avg Attendance per Event</td>
+                      <td className="p-4 text-center text-gray-300">20-25 people</td>
+                      <td className="p-4 text-center text-green-400 font-bold">28-35 people</td>
+                      <td className="p-4 text-center text-blue-400">+40-50%</td>
+                    </tr>
+                    <tr>
+                      <td className="p-4 font-semibold text-white">Entry Fee Revenue per Event</td>
+                      <td className="p-4 text-center text-gray-300">$200-250</td>
+                      <td className="p-4 text-center text-green-400 font-bold">$280-350</td>
+                      <td className="p-4 text-center text-blue-400">+40-50%</td>
+                    </tr>
+                    <tr>
+                      <td className="p-4 font-semibold text-white">Food & Drink Revenue per Event</td>
+                      <td className="p-4 text-center text-gray-300">$400-550</td>
+                      <td className="p-4 text-center text-green-400 font-bold">$650-900</td>
+                      <td className="p-4 text-center text-blue-400">+60-65%</td>
+                    </tr>
+                    <tr>
+                      <td className="p-4 font-semibold text-white">Total Revenue per Event</td>
+                      <td className="p-4 text-center text-gray-300">$600-800</td>
+                      <td className="p-4 text-center text-green-400 font-bold">$930-1,250</td>
+                      <td className="p-4 text-center text-blue-400">+55-65%</td>
+                    </tr>
+                    <tr>
+                      <td className="p-4 font-semibold text-white">Avg Spend per Person (food/drinks)</td>
+                      <td className="p-4 text-center text-gray-300">$20-25</td>
+                      <td className="p-4 text-center text-green-400 font-bold">$23-30</td>
+                      <td className="p-4 text-center text-blue-400">+15-25%</td>
+                    </tr>
+                    <tr>
+                      <td className="p-4 font-semibold text-white">Repeat Attendee Rate</td>
+                      <td className="p-4 text-center text-gray-300">15-25%</td>
+                      <td className="p-4 text-center text-green-400 font-bold">50-60%</td>
+                      <td className="p-4 text-center text-blue-400">+200-240%</td>
+                    </tr>
+                    <tr>
+                      <td className="p-4 font-semibold text-white">Social Media Engagement (per post)</td>
+                      <td className="p-4 text-center text-gray-300">15-30 likes/shares</td>
+                      <td className="p-4 text-center text-green-400 font-bold">40-80 likes/shares</td>
+                      <td className="p-4 text-center text-blue-400">+165-240%</td>
+                    </tr>
+                    <tr>
+                      <td className="p-4 font-semibold text-white">Events per Month (Bi-Weekly)</td>
+                      <td className="p-4 text-center text-gray-300">2 events</td>
+                      <td className="p-4 text-center text-green-400 font-bold">2 events</td>
+                      <td className="p-4 text-center text-gray-400">Same</td>
+                    </tr>
+                    <tr className="bg-[#b22222]/10 font-bold">
+                      <td className="p-4 text-white">Monthly Revenue (Latin Dance Only)</td>
+                      <td className="p-4 text-center text-white">$1,200-1,600</td>
+                      <td className="p-4 text-center text-green-400 text-lg">$1,860-2,500</td>
+                      <td className="p-4 text-center text-blue-400">+55-65%</td>
+                    </tr>
+                  </tbody>
+                </table>
+              </div>
+              <div className="mt-6 grid md:grid-cols-2 gap-4 text-sm">
+                <div className="bg-gray-800/50 rounded p-4">
+                  <div className="text-[#b22222] font-bold mb-2">Why Month 1 is Lower</div>
+                  <ul className="text-gray-400 space-y-1">
+                    <li>• Brand new event - limited awareness</li>
+                    <li>• No word-of-mouth yet</li>
+                    <li>• Customers testing it out (lower spend)</li>
+                    <li>• Marketing just getting started</li>
+                  </ul>
+                </div>
+                <div className="bg-gray-800/50 rounded p-4">
+                  <div className="text-green-400 font-bold mb-2">Why Month 3 is Higher</div>
+                  <ul className="text-gray-400 space-y-1">
+                    <li>• Strong word-of-mouth referrals</li>
+                    <li>• Repeat customers spend more confidently</li>
+                    <li>• Community forming around event</li>
+                    <li>• Social media momentum building</li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+
+            {/* Thursday Social Night Metrics */}
+            <div>
+              <h4 className="text-2xl font-bold text-white mb-6">Thursday Social Night: Evolution Metrics</h4>
+              <div className="overflow-x-auto">
+                <table className="w-full border-collapse">
+                  <thead>
+                    <tr className="bg-gray-900/80 border-b-2 border-[#b22222]">
+                      <th className="text-left p-4 text-gray-400 font-semibold">Metric</th>
+                      <th className="text-center p-4 text-gray-400 font-semibold">Month 1 (Launch)</th>
+                      <th className="text-center p-4 text-gray-400 font-semibold">Month 3 (Established)</th>
+                      <th className="text-center p-4 text-gray-400 font-semibold">Growth Factor</th>
+                    </tr>
+                  </thead>
+                  <tbody className="divide-y divide-gray-700/50">
+                    <tr>
+                      <td className="p-4 font-semibold text-white">Avg Attendance per Event</td>
+                      <td className="p-4 text-center text-gray-300">12-18 people</td>
+                      <td className="p-4 text-center text-green-400 font-bold">22-30 people</td>
+                      <td className="p-4 text-center text-blue-400">+65-85%</td>
+                    </tr>
+                    <tr>
+                      <td className="p-4 font-semibold text-white">Avg Spend per Person</td>
+                      <td className="p-4 text-center text-gray-300">$20-28</td>
+                      <td className="p-4 text-center text-green-400 font-bold">$28-38</td>
+                      <td className="p-4 text-center text-blue-400">+35-40%</td>
+                    </tr>
+                    <tr>
+                      <td className="p-4 font-semibold text-white">Total Revenue per Event</td>
+                      <td className="p-4 text-center text-gray-300">$240-500</td>
+                      <td className="p-4 text-center text-green-400 font-bold">$615-1,140</td>
+                      <td className="p-4 text-center text-blue-400">+128-155%</td>
+                    </tr>
+                    <tr>
+                      <td className="p-4 font-semibold text-white">Repeat Customer Rate</td>
+                      <td className="p-4 text-center text-gray-300">10-20%</td>
+                      <td className="p-4 text-center text-green-400 font-bold">45-55%</td>
+                      <td className="p-4 text-center text-blue-400">+175-350%</td>
+                    </tr>
+                    <tr>
+                      <td className="p-4 font-semibold text-white">Group Size (people arriving together)</td>
+                      <td className="p-4 text-center text-gray-300">1-2 people</td>
+                      <td className="p-4 text-center text-green-400 font-bold">2-4 people</td>
+                      <td className="p-4 text-center text-blue-400">+100-150%</td>
+                    </tr>
+                    <tr>
+                      <td className="p-4 font-semibold text-white">Color-Coded Band Usage Rate</td>
+                      <td className="p-4 text-center text-gray-300">40-50%</td>
+                      <td className="p-4 text-center text-green-400 font-bold">65-80%</td>
+                      <td className="p-4 text-center text-blue-400">+60-65%</td>
+                    </tr>
+                    <tr>
+                      <td className="p-4 font-semibold text-white">Events per Month (Weekly)</td>
+                      <td className="p-4 text-center text-gray-300">4 events</td>
+                      <td className="p-4 text-center text-green-400 font-bold">4 events</td>
+                      <td className="p-4 text-center text-gray-400">Same</td>
+                    </tr>
+                    <tr className="bg-[#b22222]/10 font-bold">
+                      <td className="p-4 text-white">Monthly Revenue (Social Night Only)</td>
+                      <td className="p-4 text-center text-white">$960-2,000</td>
+                      <td className="p-4 text-center text-green-400 text-lg">$2,460-4,560</td>
+                      <td className="p-4 text-center text-blue-400">+128-155%</td>
+                    </tr>
+                  </tbody>
+                </table>
+              </div>
+              <div className="mt-6 bg-blue-900/10 border-l-4 border-blue-500 rounded p-6">
+                <div className="text-white font-semibold mb-2">Why Social Night Growth is Higher than Latin Dance</div>
+                <p className="text-gray-300 text-sm leading-relaxed">
+                  Social Night shows steeper growth curves because it relies entirely on word-of-mouth and community building.
+                  As regulars bring friends and social groups form, attendance compounds faster. Latin Dance growth is more
+                  linear because it's limited by dance skill acquisition (can't just bring anyone - they need to want to learn).
+                </p>
+              </div>
+            </div>
+
+            {/* Lunch Delivery Metrics */}
+            <div>
+              <h4 className="text-2xl font-bold text-white mb-6">Lunch Delivery: Evolution Metrics</h4>
+              <div className="overflow-x-auto">
+                <table className="w-full border-collapse">
+                  <thead>
+                    <tr className="bg-gray-900/80 border-b-2 border-[#D4AF37]">
+                      <th className="text-left p-4 text-gray-400 font-semibold">Metric</th>
+                      <th className="text-center p-4 text-gray-400 font-semibold">Month 1 (Launch)</th>
+                      <th className="text-center p-4 text-gray-400 font-semibold">Month 3 (Established)</th>
+                      <th className="text-center p-4 text-gray-400 font-semibold">Growth Factor</th>
+                    </tr>
+                  </thead>
+                  <tbody className="divide-y divide-gray-700/50">
+                    <tr>
+                      <td className="p-4 font-semibold text-white">Orders per Week</td>
+                      <td className="p-4 text-center text-gray-300">10-18 orders</td>
+                      <td className="p-4 text-center text-green-400 font-bold">50-70 orders</td>
+                      <td className="p-4 text-center text-blue-400">+290-400%</td>
+                    </tr>
+                    <tr>
+                      <td className="p-4 font-semibold text-white">Avg Order Value</td>
+                      <td className="p-4 text-center text-gray-300">$14-16</td>
+                      <td className="p-4 text-center text-green-400 font-bold">$17-20</td>
+                      <td className="p-4 text-center text-blue-400">+20-30%</td>
+                    </tr>
+                    <tr>
+                      <td className="p-4 font-semibold text-white">Recurring Corporate Accounts</td>
+                      <td className="p-4 text-center text-gray-300">2-4 accounts</td>
+                      <td className="p-4 text-center text-green-400 font-bold">15-20 accounts</td>
+                      <td className="p-4 text-center text-blue-400">+400-650%</td>
+                    </tr>
+                    <tr>
+                      <td className="p-4 font-semibold text-white">Repeat Order Rate</td>
+                      <td className="p-4 text-center text-gray-300">15-25%</td>
+                      <td className="p-4 text-center text-green-400 font-bold">40-50%</td>
+                      <td className="p-4 text-center text-blue-400">+100-165%</td>
+                    </tr>
+                    <tr>
+                      <td className="p-4 font-semibold text-white">Direct Orders (vs Third-Party)</td>
+                      <td className="p-4 text-center text-gray-300">10-20%</td>
+                      <td className="p-4 text-center text-green-400 font-bold">35-50%</td>
+                      <td className="p-4 text-center text-blue-400">+150-250%</td>
+                    </tr>
+                    <tr>
+                      <td className="p-4 font-semibold text-white">Avg Delivery Time (minutes)</td>
+                      <td className="p-4 text-center text-gray-300">32-38 min</td>
+                      <td className="p-4 text-center text-green-400 font-bold">22-28 min</td>
+                      <td className="p-4 text-center text-blue-400">-26-32%</td>
+                    </tr>
+                    <tr>
+                      <td className="p-4 font-semibold text-white">Customer Rating (avg)</td>
+                      <td className="p-4 text-center text-gray-300">4.2-4.5 stars</td>
+                      <td className="p-4 text-center text-green-400 font-bold">4.6-4.9 stars</td>
+                      <td className="p-4 text-center text-blue-400">+9-11%</td>
+                    </tr>
+                    <tr className="bg-[#D4AF37]/10 font-bold">
+                      <td className="p-4 text-white">Monthly Revenue (Gross)</td>
+                      <td className="p-4 text-center text-white">$2,000-3,500</td>
+                      <td className="p-4 text-center text-green-400 text-lg">$8,000-12,000</td>
+                      <td className="p-4 text-center text-blue-400">+243-300%</td>
+                    </tr>
+                    <tr className="bg-[#D4AF37]/10 font-bold">
+                      <td className="p-4 text-white">Monthly Net Profit (after all costs)</td>
+                      <td className="p-4 text-center text-white">$200-600</td>
+                      <td className="p-4 text-center text-green-400 text-lg">$2,800-5,200</td>
+                      <td className="p-4 text-center text-blue-400">+767-1300%</td>
+                    </tr>
+                  </tbody>
+                </table>
+              </div>
+              <div className="mt-6 grid md:grid-cols-3 gap-4 text-sm">
+                <div className="bg-gray-800/50 rounded p-4">
+                  <div className="text-[#D4AF37] font-bold mb-2">Month 1 Challenges</div>
+                  <ul className="text-gray-400 space-y-1">
+                    <li>• Unknown to offices</li>
+                    <li>• Building trust and quality reputation</li>
+                    <li>• Slower kitchen prep times</li>
+                    <li>• Heavy reliance on third-party platforms</li>
+                  </ul>
+                </div>
+                <div className="bg-gray-800/50 rounded p-4">
+                  <div className="text-[#D4AF37] font-bold mb-2">Month 3 Improvements</div>
+                  <ul className="text-gray-400 space-y-1">
+                    <li>• Direct relationships with offices</li>
+                    <li>• Recurring weekly orders</li>
+                    <li>• Kitchen efficiency optimized</li>
+                    <li>• Higher direct order percentage</li>
+                  </ul>
+                </div>
+                <div className="bg-gray-800/50 rounded p-4">
+                  <div className="text-[#D4AF37] font-bold mb-2">Profit Acceleration</div>
+                  <ul className="text-gray-400 space-y-1">
+                    <li>• Shift from 3rd party to direct (save 20-30% fees)</li>
+                    <li>• Higher order values from upsells</li>
+                    <li>• Operational efficiency gains</li>
+                    <li>• Group orders become common</li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+
+            {/* Combined Business Impact */}
+            <div>
+              <h4 className="text-2xl font-bold text-white mb-6">Combined Business Impact: Month 1 vs Month 3</h4>
+              <div className="bg-gradient-to-r from-green-900/20 to-transparent border-2 border-green-500/50 rounded-xl p-8">
+                <div className="grid md:grid-cols-2 gap-8">
+                  {/* Month 1 Totals */}
+                  <div>
+                    <div className="text-center mb-6">
+                      <div className="text-sm text-gray-400 mb-2">MONTH 1 (LAUNCH)</div>
+                      <div className="text-5xl font-bold text-white mb-2">$7.1K-11K</div>
+                      <div className="text-sm text-gray-400">Total monthly revenue increase</div>
+                    </div>
+                    <div className="space-y-3 text-sm">
+                      <div className="flex justify-between text-gray-300 border-b border-gray-700 pb-2">
+                        <span>Latin Dance (2 events):</span>
+                        <span className="font-bold text-white">$1,200-1,600</span>
+                      </div>
+                      <div className="flex justify-between text-gray-300 border-b border-gray-700 pb-2">
+                        <span>Social Night (4 events):</span>
+                        <span className="font-bold text-white">$960-2,000</span>
+                      </div>
+                      <div className="flex justify-between text-gray-300 border-b border-gray-700 pb-2">
+                        <span>Sushi & Sounds (1 event):</span>
+                        <span className="font-bold text-white">$1,200-1,500</span>
+                      </div>
+                      <div className="flex justify-between text-gray-300 border-b border-gray-700 pb-2">
+                        <span>Lunch Delivery (net):</span>
+                        <span className="font-bold text-white">$200-600</span>
+                      </div>
+                      <div className="flex justify-between text-gray-300 pb-2">
+                        <span>Regular business spillover:</span>
+                        <span className="font-bold text-white">$3,500-5,000</span>
+                      </div>
+                    </div>
+                  </div>
+
+                  {/* Month 3 Totals */}
+                  <div>
+                    <div className="text-center mb-6">
+                      <div className="text-sm text-green-400 mb-2">MONTH 3 (ESTABLISHED)</div>
+                      <div className="text-5xl font-bold text-green-400 mb-2">$18K-27K</div>
+                      <div className="text-sm text-gray-400">Total monthly revenue increase</div>
+                    </div>
+                    <div className="space-y-3 text-sm">
+                      <div className="flex justify-between text-gray-300 border-b border-gray-700 pb-2">
+                        <span>Latin Dance (2 events):</span>
+                        <span className="font-bold text-green-400">$1,860-2,500</span>
+                      </div>
+                      <div className="flex justify-between text-gray-300 border-b border-gray-700 pb-2">
+                        <span>Social Night (4 events):</span>
+                        <span className="font-bold text-green-400">$2,460-4,560</span>
+                      </div>
+                      <div className="flex justify-between text-gray-300 border-b border-gray-700 pb-2">
+                        <span>Sushi & Sounds (1 event):</span>
+                        <span className="font-bold text-green-400">$1,500-2,000</span>
+                      </div>
+                      <div className="flex justify-between text-gray-300 border-b border-gray-700 pb-2">
+                        <span>Lunch Delivery (net):</span>
+                        <span className="font-bold text-green-400">$2,800-5,200</span>
+                      </div>
+                      <div className="flex justify-between text-gray-300 pb-2">
+                        <span>Regular business spillover:</span>
+                        <span className="font-bold text-green-400">$9,000-13,000</span>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+
+                {/* Growth Summary */}
+                <div className="mt-8 pt-6 border-t-2 border-green-500/30">
+                  <div className="text-center">
+                    <div className="text-sm text-gray-400 mb-2">TOTAL GROWTH (Month 1 → Month 3)</div>
+                    <div className="text-4xl font-bold text-green-400 mb-2">+154% to +245%</div>
+                    <div className="text-sm text-gray-300">Revenue more than doubles or triples by Month 3</div>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            {/* What to Do with This Data */}
+            <div>
+              <h4 className="text-2xl font-bold text-white mb-6">How to Use These Metrics</h4>
+              <div className="grid md:grid-cols-2 gap-6">
+                <div className="bg-gradient-to-br from-blue-900/20 to-transparent border border-blue-500/30 rounded-lg p-6">
+                  <div className="text-blue-400 font-bold mb-3 text-lg">If You're Meeting/Exceeding Targets</div>
+                  <ul className="text-gray-300 text-sm space-y-2">
+                    <li className="flex items-start gap-2">
+                      <span className="text-blue-400">✓</span>
+                      <span>You're on track - maintain current course and continue weekly reviews</span>
+                    </li>
+                    <li className="flex items-start gap-2">
+                      <span className="text-blue-400">✓</span>
+                      <span>Document what's working well in your tracking spreadsheet</span>
+                    </li>
+                    <li className="flex items-start gap-2">
+                      <span className="text-blue-400">✓</span>
+                      <span>Consider adding future programming (Wednesday happy hour, NFL Sundays)</span>
+                    </li>
+                  </ul>
+                </div>
+
+                <div className="bg-gradient-to-br from-red-900/20 to-transparent border border-red-500/30 rounded-lg p-6">
+                  <div className="text-red-400 font-bold mb-3 text-lg">If You're Below Targets (50-90%)</div>
+                  <ul className="text-gray-300 text-sm space-y-2">
+                    <li className="flex items-start gap-2">
+                      <span className="text-red-400">!</span>
+                      <span>Identify the specific bottleneck: Awareness? Attendance? Spend per person?</span>
+                    </li>
+                    <li className="flex items-start gap-2">
+                      <span className="text-red-400">!</span>
+                      <span>Increase marketing effort - more social posts, flyers, direct outreach</span>
+                    </li>
+                    <li className="flex items-start gap-2">
+                      <span className="text-red-400">!</span>
+                      <span>Consider promotional offers to drive trial (first event half-price, group discounts)</span>
+                    </li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+          </div>
+        </ExpandableSection>
+      </div>
+
       {/* Track 3 Summary */}
       <div className="bg-gradient-to-br from-[#00A86B]/20 to-[#00A86B]/5 border border-[#00A86B]/30 rounded-xl p-8 shadow-strong">
         <h3 className="text-2xl font-bold text-white mb-6">Track 3 Summary: The Bottom Line</h3>
