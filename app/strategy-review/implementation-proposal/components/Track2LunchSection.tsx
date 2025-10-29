@@ -889,6 +889,253 @@ export function Track2LunchSection() {
         </ExpandableSection>
       </div>
 
+      {/* Pre-Launch Checklist for Lunch Delivery */}
+      <div className="mb-8">
+        <ExpandableSection
+          title="Pre-Launch Checklist: Corporate Lunch Delivery"
+          badge="high-priority"
+          executiveSummary={
+            <>
+              Complete task list for launching corporate lunch delivery program. Covers menu finalization,
+              logistics testing, marketing materials, and office outreach strategy.
+              <strong className="text-white"> Everything you need to launch successfully.</strong>
+            </>
+          }
+        >
+          <div className="space-y-8">
+            {/* Week 1: Menu & Systems */}
+            <div>
+              <div className="flex items-center gap-3 mb-4">
+                <div className="w-12 h-12 rounded-full bg-blue-600 flex items-center justify-center text-white font-bold">W1</div>
+                <h4 className="text-2xl font-bold text-white">Week 1: Menu Finalization & Systems</h4>
+              </div>
+              <div className="space-y-3">
+                <div className="bg-gray-800/50 rounded-lg p-4">
+                  <div className="flex items-start gap-3">
+                    <input type="checkbox" className="mt-1 w-5 h-5 rounded border-gray-600 text-[#D4AF37] focus:ring-[#D4AF37]" />
+                    <div>
+                      <div className="text-white font-semibold mb-1">Finalize 4 lunch package menus and pricing</div>
+                      <p className="text-gray-400 text-sm">Lock in Executive Sashimi Bento, Premium Roll Combo, Chirashi Bowl, Teriyaki Lunch</p>
+                    </div>
+                  </div>
+                </div>
+                <div className="bg-gray-800/50 rounded-lg p-4">
+                  <div className="flex items-start gap-3">
+                    <input type="checkbox" className="mt-1 w-5 h-5 rounded border-gray-600 text-[#D4AF37] focus:ring-[#D4AF37]" />
+                    <div>
+                      <div className="text-white font-semibold mb-1">Research Toast POS group ordering capabilities</div>
+                      <p className="text-gray-400 text-sm">Check if Toast supports native group ordering or needs third-party integration</p>
+                    </div>
+                  </div>
+                </div>
+                <div className="bg-gray-800/50 rounded-lg p-4">
+                  <div className="flex items-start gap-3">
+                    <input type="checkbox" className="mt-1 w-5 h-5 rounded border-gray-600 text-[#D4AF37] focus:ring-[#D4AF37]" />
+                    <div>
+                      <div className="text-white font-semibold mb-1">Set up dedicated phone line for corporate orders</div>
+                      <p className="text-gray-400 text-sm">Dedicated number or extension for office managers to call directly</p>
+                    </div>
+                  </div>
+                </div>
+                <div className="bg-gray-800/50 rounded-lg p-4">
+                  <div className="flex items-start gap-3">
+                    <input type="checkbox" className="mt-1 w-5 h-5 rounded border-gray-600 text-[#D4AF37] focus:ring-[#D4AF37]" />
+                    <div>
+                      <div className="text-white font-semibold mb-1">Identify target office buildings (3-mile radius)</div>
+                      <p className="text-gray-400 text-sm">List 15-20 office parks/buildings, note building names, addresses, employee counts</p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            {/* Week 2: Logistics & Testing */}
+            <div>
+              <div className="flex items-center gap-3 mb-4">
+                <div className="w-12 h-12 rounded-full bg-purple-600 flex items-center justify-center text-white font-bold">W2</div>
+                <h4 className="text-2xl font-bold text-white">Week 2: Delivery Logistics & Testing</h4>
+              </div>
+              <div className="space-y-3">
+                <div className="bg-gray-800/50 rounded-lg p-4">
+                  <div className="flex items-start gap-3">
+                    <input type="checkbox" className="mt-1 w-5 h-5 rounded border-gray-600 text-[#D4AF37] focus:ring-[#D4AF37]" />
+                    <div>
+                      <div className="text-white font-semibold mb-1">Test in-house delivery logistics</div>
+                      <p className="text-gray-400 text-sm">Dry run: prepare packages, test packaging, drive to sample office locations, time routes</p>
+                    </div>
+                  </div>
+                </div>
+                <div className="bg-gray-800/50 rounded-lg p-4">
+                  <div className="flex items-start gap-3">
+                    <input type="checkbox" className="mt-1 w-5 h-5 rounded border-gray-600 text-[#D4AF37] focus:ring-[#D4AF37]" />
+                    <div>
+                      <div className="text-white font-semibold mb-1">Source packaging for 30-45 minute delivery hold</div>
+                      <p className="text-gray-400 text-sm">Insulated bags, bento boxes, utensils, napkins, labeling system</p>
+                    </div>
+                  </div>
+                </div>
+                <div className="bg-gray-800/50 rounded-lg p-4">
+                  <div className="flex items-start gap-3">
+                    <input type="checkbox" className="mt-1 w-5 h-5 rounded border-gray-600 text-[#D4AF37] focus:ring-[#D4AF37]" />
+                    <div>
+                      <div className="text-white font-semibold mb-1">Confirm vehicle availability and insurance</div>
+                      <p className="text-gray-400 text-sm">Verify insurance covers commercial food delivery, identify backup drivers</p>
+                    </div>
+                  </div>
+                </div>
+                <div className="bg-gray-800/50 rounded-lg p-4">
+                  <div className="flex items-start gap-3">
+                    <input type="checkbox" className="mt-1 w-5 h-5 rounded border-gray-600 text-[#D4AF37] focus:ring-[#D4AF37]" />
+                    <div>
+                      <div className="text-white font-semibold mb-1">Train kitchen staff on lunch package assembly and timing</div>
+                      <p className="text-gray-400 text-sm">Practice making all 4 packages, test prep times, identify bottlenecks</p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            {/* Week 3: Marketing Materials */}
+            <div>
+              <div className="flex items-center gap-3 mb-4">
+                <div className="w-12 h-12 rounded-full bg-orange-600 flex items-center justify-center text-white font-bold">W3</div>
+                <h4 className="text-2xl font-bold text-white">Week 3: Marketing & Office Outreach</h4>
+              </div>
+              <div className="space-y-3">
+                <div className="bg-gray-800/50 rounded-lg p-4">
+                  <div className="flex items-start gap-3">
+                    <input type="checkbox" className="mt-1 w-5 h-5 rounded border-gray-600 text-[#D4AF37] focus:ring-[#D4AF37]" />
+                    <div>
+                      <div className="text-white font-semibold mb-1">Design corporate lunch flyer</div>
+                      <p className="text-gray-400 text-sm">Highlight: 4 packages, no delivery fee, group ordering, contact info</p>
+                    </div>
+                  </div>
+                </div>
+                <div className="bg-gray-800/50 rounded-lg p-4">
+                  <div className="flex items-start gap-3">
+                    <input type="checkbox" className="mt-1 w-5 h-5 rounded border-gray-600 text-[#D4AF37] focus:ring-[#D4AF37]" />
+                    <div>
+                      <div className="text-white font-semibold mb-1">Print flyers and create distribution plan</div>
+                      <p className="text-gray-400 text-sm">Print 200-300 flyers, plan which buildings to visit and when</p>
+                    </div>
+                  </div>
+                </div>
+                <div className="bg-gray-800/50 rounded-lg p-4">
+                  <div className="flex items-start gap-3">
+                    <input type="checkbox" className="mt-1 w-5 h-5 rounded border-gray-600 text-[#D4AF37] focus:ring-[#D4AF37]" />
+                    <div>
+                      <div className="text-white font-semibold mb-1">Distribute flyers to office building lobbies</div>
+                      <p className="text-gray-400 text-sm">Visit 15-20 target buildings, leave flyers with front desk or post on bulletin boards</p>
+                    </div>
+                  </div>
+                </div>
+                <div className="bg-gray-800/50 rounded-lg p-4">
+                  <div className="flex items-start gap-3">
+                    <input type="checkbox" className="mt-1 w-5 h-5 rounded border-gray-600 text-[#D4AF37] focus:ring-[#D4AF37]" />
+                    <div>
+                      <div className="text-white font-semibold mb-1">Create office manager contact list</div>
+                      <p className="text-gray-400 text-sm">Collect names/emails/phone numbers for direct outreach to key decision-makers</p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            {/* Week 4: Final Prep */}
+            <div>
+              <div className="flex items-center gap-3 mb-4">
+                <div className="w-12 h-12 rounded-full bg-green-600 flex items-center justify-center text-white font-bold">W4</div>
+                <h4 className="text-2xl font-bold text-white">Week 4 (Launch Week): Final Preparations</h4>
+              </div>
+              <div className="space-y-3">
+                <div className="bg-gray-800/50 rounded-lg p-4">
+                  <div className="flex items-start gap-3">
+                    <input type="checkbox" className="mt-1 w-5 h-5 rounded border-gray-600 text-[#D4AF37] focus:ring-[#D4AF37]" />
+                    <div>
+                      <div className="text-white font-semibold mb-1">Photograph all 4 lunch packages</div>
+                      <p className="text-gray-400 text-sm">Professional styled photos: closed packaging, open display, close-ups of each component</p>
+                    </div>
+                  </div>
+                </div>
+                <div className="bg-gray-800/50 rounded-lg p-4">
+                  <div className="flex items-start gap-3">
+                    <input type="checkbox" className="mt-1 w-5 h-5 rounded border-gray-600 text-[#D4AF37] focus:ring-[#D4AF37]" />
+                    <div>
+                      <div className="text-white font-semibold mb-1">Launch social media campaign</div>
+                      <p className="text-gray-400 text-sm">Post lunch packages with pricing, highlight no delivery fee, tag local businesses</p>
+                    </div>
+                  </div>
+                </div>
+                <div className="bg-gray-800/50 rounded-lg p-4">
+                  <div className="flex items-start gap-3">
+                    <input type="checkbox" className="mt-1 w-5 h-5 rounded border-gray-600 text-[#D4AF37] focus:ring-[#D4AF37]" />
+                    <div>
+                      <div className="text-white font-semibold mb-1">Set up Toast POS tracking for lunch orders</div>
+                      <p className="text-gray-400 text-sm">Configure separate tracking for corporate lunch vs regular delivery orders</p>
+                    </div>
+                  </div>
+                </div>
+                <div className="bg-gray-800/50 rounded-lg p-4">
+                  <div className="flex items-start gap-3">
+                    <input type="checkbox" className="mt-1 w-5 h-5 rounded border-gray-600 text-[#D4AF37] focus:ring-[#D4AF37]" />
+                    <div>
+                      <div className="text-white font-semibold mb-1">Conduct full dress rehearsal</div>
+                      <p className="text-gray-400 text-sm">Mock order: take call, prep packages, load vehicle, deliver to sample location, time entire process</p>
+                    </div>
+                  </div>
+                </div>
+                <div className="bg-gray-800/50 rounded-lg p-4">
+                  <div className="flex items-start gap-3">
+                    <input type="checkbox" className="mt-1 w-5 h-5 rounded border-gray-600 text-[#D4AF37] focus:ring-[#D4AF37]" />
+                    <div>
+                      <div className="text-white font-semibold mb-1">Send direct outreach to office managers</div>
+                      <p className="text-gray-400 text-sm">Email or call top 10 target offices, introduce service, offer first-order discount</p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            {/* Ongoing Operations */}
+            <div>
+              <div className="flex items-center gap-3 mb-4">
+                <div className="w-12 h-12 rounded-full bg-[#D4AF37] flex items-center justify-center text-white font-bold text-xs">ON</div>
+                <h4 className="text-2xl font-bold text-white">Ongoing Operations (Post-Launch)</h4>
+              </div>
+              <div className="space-y-3">
+                <div className="bg-gray-800/50 rounded-lg p-4">
+                  <div className="flex items-start gap-3">
+                    <input type="checkbox" className="mt-1 w-5 h-5 rounded border-gray-600 text-[#D4AF37] focus:ring-[#D4AF37]" />
+                    <div>
+                      <div className="text-white font-semibold mb-1">Weekly follow-up with offices that ordered</div>
+                      <p className="text-gray-400 text-sm">Call or email to check satisfaction, ask for recurring orders, offer incentives</p>
+                    </div>
+                  </div>
+                </div>
+                <div className="bg-gray-800/50 rounded-lg p-4">
+                  <div className="flex items-start gap-3">
+                    <input type="checkbox" className="mt-1 w-5 h-5 rounded border-gray-600 text-[#D4AF37] focus:ring-[#D4AF37]" />
+                    <div>
+                      <div className="text-white font-semibold mb-1">Track order patterns and adjust inventory</div>
+                      <p className="text-gray-400 text-sm">Monitor which packages sell best, prep accordingly, minimize waste</p>
+                    </div>
+                  </div>
+                </div>
+                <div className="bg-gray-800/50 rounded-lg p-4">
+                  <div className="flex items-start gap-3">
+                    <input type="checkbox" className="mt-1 w-5 h-5 rounded border-gray-600 text-[#D4AF37] focus:ring-[#D4AF37]" />
+                    <div>
+                      <div className="text-white font-semibold mb-1">Monthly office manager check-ins</div>
+                      <p className="text-gray-400 text-sm">Build relationships with key accounts, offer custom menu options, secure recurring orders</p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </ExpandableSection>
+      </div>
+
       {/* Track 2 Summary */}
       <div className="bg-gradient-to-br from-[#D4AF37]/20 to-[#D4AF37]/5 border border-[#D4AF37]/30 rounded-xl p-8 shadow-strong">
         <h3 className="text-2xl font-bold text-white mb-6">Track 2 Summary</h3>

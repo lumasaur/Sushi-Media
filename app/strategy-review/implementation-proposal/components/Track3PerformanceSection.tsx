@@ -1083,6 +1083,348 @@ export function Track3PerformanceSection() {
         </ExpandableSection>
       </div>
 
+      {/* Success Criteria & Adjustment Triggers */}
+      <div className="mb-8">
+        <ExpandableSection
+          title="Success Criteria & When to Adjust Strategy"
+          badge="high-priority"
+          executiveSummary={
+            <>
+              Clear benchmarks for evaluating performance and specific triggers for when to pivot strategy.
+              Know exactly when things are working, when to adjust, and when to consider stopping.
+              <strong className="text-white"> Make data-driven decisions, not emotional ones.</strong>
+            </>
+          }
+        >
+          <div className="space-y-10">
+            {/* Evaluation Timeline */}
+            <div>
+              <h4 className="text-2xl font-bold text-white mb-6">When to Evaluate: Review Cadence</h4>
+              <div className="grid md:grid-cols-3 gap-6">
+                <div className="bg-gradient-to-br from-blue-900/20 to-transparent border border-blue-500/30 rounded-xl p-6">
+                  <div className="text-blue-400 font-bold mb-3 text-lg">After 2 Weeks</div>
+                  <div className="text-white font-semibold mb-2 text-sm">Initial Check-In</div>
+                  <ul className="text-gray-300 text-sm space-y-1">
+                    <li>• Are people showing up?</li>
+                    <li>• Any major operational issues?</li>
+                    <li>• Staff comfortable with format?</li>
+                    <li>• Quick fixes needed?</li>
+                  </ul>
+                  <div className="mt-4 p-3 bg-gray-800/50 rounded">
+                    <div className="text-xs text-gray-400 mb-1">Decision:</div>
+                    <div className="text-sm text-white">Tactical adjustments only (timing, menu, pricing)</div>
+                  </div>
+                </div>
+
+                <div className="bg-gradient-to-br from-yellow-900/20 to-transparent border border-yellow-500/30 rounded-xl p-6">
+                  <div className="text-yellow-400 font-bold mb-3 text-lg">After 4 Weeks</div>
+                  <div className="text-white font-semibold mb-2 text-sm">First Real Assessment</div>
+                  <ul className="text-gray-300 text-sm space-y-1">
+                    <li>• Hitting Month 1 targets?</li>
+                    <li>• Growth trend positive?</li>
+                    <li>• Revenue vs cost equation?</li>
+                    <li>• Customer feedback quality?</li>
+                  </ul>
+                  <div className="mt-4 p-3 bg-gray-800/50 rounded">
+                    <div className="text-xs text-gray-400 mb-1">Decision:</div>
+                    <div className="text-sm text-white">Continue, adjust format, or stop underperformers</div>
+                  </div>
+                </div>
+
+                <div className="bg-gradient-to-br from-green-900/20 to-transparent border border-green-500/30 rounded-xl p-6">
+                  <div className="text-green-400 font-bold mb-3 text-lg">After 8-12 Weeks</div>
+                  <div className="text-white font-semibold mb-2 text-sm">Strategic Evaluation</div>
+                  <ul className="text-gray-300 text-sm space-y-1">
+                    <li>• Approaching Month 3 goals?</li>
+                    <li>• ROI positive?</li>
+                    <li>• Staff satisfaction stable?</li>
+                    <li>• Expand or maintain?</li>
+                  </ul>
+                  <div className="mt-4 p-3 bg-gray-800/50 rounded">
+                    <div className="text-xs text-gray-400 mb-1">Decision:</div>
+                    <div className="text-sm text-white">Scale up, add nights, or maintain current model</div>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            {/* Success Criteria by Track */}
+            <div>
+              <h4 className="text-2xl font-bold text-white mb-6">What "Success" Looks Like: Clear Benchmarks</h4>
+
+              {/* Tuesday Latin Dance Success */}
+              <div className="bg-gray-800/50 rounded-xl p-6 mb-6">
+                <div className="text-[#b22222] font-bold mb-4 text-lg">Tuesday Latin Dance: Success Criteria</div>
+                <div className="grid md:grid-cols-3 gap-6">
+                  <div>
+                    <div className="text-green-400 font-semibold mb-3 text-sm">GREAT (Exceeding Goals)</div>
+                    <ul className="text-gray-300 text-sm space-y-1">
+                      <li>• 30+ attendees by Week 4</li>
+                      <li>• $25+ average spend per person</li>
+                      <li>• 30%+ return rate</li>
+                      <li>• Staff enthusiastic</li>
+                      <li>• Positive social media buzz</li>
+                    </ul>
+                    <div className="mt-3 p-2 bg-green-900/20 rounded text-xs text-green-400">
+                      → Keep format, consider adding more dance nights
+                    </div>
+                  </div>
+                  <div>
+                    <div className="text-yellow-400 font-semibold mb-3 text-sm">GOOD (On Track)</div>
+                    <ul className="text-gray-300 text-sm space-y-1">
+                      <li>• 20-25 attendees by Week 4</li>
+                      <li>• $18-25 average spend</li>
+                      <li>• 20%+ return rate</li>
+                      <li>• Staff managing well</li>
+                      <li>• Steady growth week-over-week</li>
+                    </ul>
+                    <div className="mt-3 p-2 bg-yellow-900/20 rounded text-xs text-yellow-400">
+                      → Continue current format, minor optimizations
+                    </div>
+                  </div>
+                  <div>
+                    <div className="text-red-400 font-semibold mb-3 text-sm">CONCERNING (Below Target)</div>
+                    <ul className="text-gray-300 text-sm space-y-1">
+                      <li>• <15 attendees by Week 4</li>
+                      <li>• <$15 average spend</li>
+                      <li>• <10% return rate</li>
+                      <li>• Staff stressed/unhappy</li>
+                      <li>• Declining week-over-week</li>
+                    </ul>
+                    <div className="mt-3 p-2 bg-red-900/20 rounded text-xs text-red-400">
+                      → Reassess format, marketing, or consider stopping
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              {/* Thursday Social Night Success */}
+              <div className="bg-gray-800/50 rounded-xl p-6 mb-6">
+                <div className="text-[#b22222] font-bold mb-4 text-lg">Thursday Social Night: Success Criteria</div>
+                <div className="grid md:grid-cols-3 gap-6">
+                  <div>
+                    <div className="text-green-400 font-semibold mb-3 text-sm">GREAT (Exceeding Goals)</div>
+                    <ul className="text-gray-300 text-sm space-y-1">
+                      <li>• 25+ attendees by Week 4</li>
+                      <li>• 60%+ solo arrivals</li>
+                      <li>• $25+ average spend</li>
+                      <li>• Visible connections forming</li>
+                      <li>• Strong word-of-mouth</li>
+                    </ul>
+                    <div className="mt-3 p-2 bg-green-900/20 rounded text-xs text-green-400">
+                      → Scale up, potentially add Wednesday social night
+                    </div>
+                  </div>
+                  <div>
+                    <div className="text-yellow-400 font-semibold mb-3 text-sm">GOOD (On Track)</div>
+                    <ul className="text-gray-300 text-sm space-y-1">
+                      <li>• 15-20 attendees by Week 4</li>
+                      <li>• 40%+ solo arrivals</li>
+                      <li>• $20+ average spend</li>
+                      <li>• Some connections happening</li>
+                      <li>• Positive feedback</li>
+                    </ul>
+                    <div className="mt-3 p-2 bg-yellow-900/20 rounded text-xs text-yellow-400">
+                      → Continue, refine facilitation approach
+                    </div>
+                  </div>
+                  <div>
+                    <div className="text-red-400 font-semibold mb-3 text-sm">CONCERNING (Below Target)</div>
+                    <ul className="text-gray-300 text-sm space-y-1">
+                      <li>• <10 attendees by Week 4</li>
+                      <li>• <30% solo arrivals</li>
+                      <li>• <$15 average spend</li>
+                      <li>• Awkward atmosphere</li>
+                      <li>• Few meaningful connections</li>
+                    </ul>
+                    <div className="mt-3 p-2 bg-red-900/20 rounded text-xs text-red-400">
+                      → Rethink format, target audience, or stop
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              {/* Lunch Delivery Success */}
+              <div className="bg-gray-800/50 rounded-xl p-6">
+                <div className="text-[#D4AF37] font-bold mb-4 text-lg">Corporate Lunch Delivery: Success Criteria</div>
+                <div className="grid md:grid-cols-3 gap-6">
+                  <div>
+                    <div className="text-green-400 font-semibold mb-3 text-sm">GREAT (Exceeding Goals)</div>
+                    <ul className="text-gray-300 text-sm space-y-1">
+                      <li>• 10+ orders/week by Week 4</li>
+                      <li>• 5+ different offices ordering</li>
+                      <li>• $150+ average order value</li>
+                      <li>• 2-3 recurring weekly accounts</li>
+                      <li>• Profitable on unit economics</li>
+                    </ul>
+                    <div className="mt-3 p-2 bg-green-900/20 rounded text-xs text-green-400">
+                      → Expand marketing, hire dedicated delivery driver
+                    </div>
+                  </div>
+                  <div>
+                    <div className="text-yellow-400 font-semibold mb-3 text-sm">GOOD (On Track)</div>
+                    <ul className="text-gray-300 text-sm space-y-1">
+                      <li>• 5-8 orders/week by Week 4</li>
+                      <li>• 3-4 different offices ordering</li>
+                      <li>• $120+ average order value</li>
+                      <li>• 1-2 potential recurring accounts</li>
+                      <li>• Breaking even or slight profit</li>
+                    </ul>
+                    <div className="mt-3 p-2 bg-yellow-900/20 rounded text-xs text-yellow-400">
+                      → Continue outreach, optimize packaging/timing
+                    </div>
+                  </div>
+                  <div>
+                    <div className="text-red-400 font-semibold mb-3 text-sm">CONCERNING (Below Target)</div>
+                    <ul className="text-gray-300 text-sm space-y-1">
+                      <li>• <3 orders/week by Week 4</li>
+                      <li>• <2 offices ordering</li>
+                      <li>• <$100 average order value</li>
+                      <li>• No recurring orders</li>
+                      <li>• Losing money on each delivery</li>
+                    </ul>
+                    <div className="mt-3 p-2 bg-red-900/20 rounded text-xs text-red-400">
+                      → Pivot to pickup-only or pause program
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            {/* When to Adjust vs Stop */}
+            <div>
+              <h4 className="text-2xl font-bold text-white mb-6">Decision Framework: Adjust, Pivot, or Stop</h4>
+              <div className="space-y-6">
+                {/* ADJUST: Format Changes */}
+                <div className="bg-gradient-to-r from-yellow-900/20 to-transparent border-l-4 border-yellow-500 rounded p-6">
+                  <div className="flex items-center gap-3 mb-4">
+                    <div className="text-yellow-400 text-3xl">⚙️</div>
+                    <div>
+                      <div className="text-yellow-400 font-bold text-lg">ADJUST Format (Minor Changes)</div>
+                      <div className="text-sm text-gray-400">When metrics are 50-90% of target</div>
+                    </div>
+                  </div>
+                  <div className="grid md:grid-cols-2 gap-4 text-sm">
+                    <div>
+                      <div className="text-white font-semibold mb-2">Try These Adjustments:</div>
+                      <ul className="text-gray-300 space-y-1">
+                        <li>• Change event timing (earlier/later start)</li>
+                        <li>• Adjust pricing (lower entry fee, better packages)</li>
+                        <li>• Improve marketing (better messaging, more channels)</li>
+                        <li>• Tweak format (shorten/lengthen event, different activities)</li>
+                        <li>• Enhance experience (better music, lighting, facilitation)</li>
+                      </ul>
+                    </div>
+                    <div>
+                      <div className="text-white font-semibold mb-2">Timeline:</div>
+                      <div className="text-gray-300">
+                        Give each adjustment 2 weeks to show impact before trying next change.
+                        Don't change multiple things at once - you won't know what worked.
+                      </div>
+                    </div>
+                  </div>
+                </div>
+
+                {/* PIVOT: Major Strategy Change */}
+                <div className="bg-gradient-to-r from-blue-900/20 to-transparent border-l-4 border-blue-500 rounded p-6">
+                  <div className="flex items-center gap-3 mb-4">
+                    <div className="text-blue-400 text-3xl">🔄</div>
+                    <div>
+                      <div className="text-blue-400 font-bold text-lg">PIVOT Strategy (Major Changes)</div>
+                      <div className="text-sm text-gray-400">When adjustments aren't working after 4-6 weeks</div>
+                    </div>
+                  </div>
+                  <div className="grid md:grid-cols-2 gap-4 text-sm">
+                    <div>
+                      <div className="text-white font-semibold mb-2">Consider These Pivots:</div>
+                      <ul className="text-gray-300 space-y-1">
+                        <li>• Change event type entirely (different concept)</li>
+                        <li>• Target different audience (age, demographic)</li>
+                        <li>• Switch day of week (Tuesday → Wednesday, etc.)</li>
+                        <li>• Reduce frequency (weekly → bi-weekly)</li>
+                        <li>• Partner with external organizer (dance studio, networking group)</li>
+                      </ul>
+                    </div>
+                    <div>
+                      <div className="text-white font-semibold mb-2">Timeline:</div>
+                      <div className="text-gray-300">
+                        Treat pivot as a fresh launch. Give new strategy 4 weeks to prove itself
+                        before deciding whether to continue or stop.
+                      </div>
+                    </div>
+                  </div>
+                </div>
+
+                {/* STOP: End the Program */}
+                <div className="bg-gradient-to-r from-red-900/20 to-transparent border-l-4 border-red-500 rounded p-6">
+                  <div className="flex items-center gap-3 mb-4">
+                    <div className="text-red-400 text-3xl">🛑</div>
+                    <div>
+                      <div className="text-red-400 font-bold text-lg">STOP Program (End Initiative)</div>
+                      <div className="text-sm text-gray-400">When these conditions persist after pivots</div>
+                    </div>
+                  </div>
+                  <div className="grid md:grid-cols-2 gap-4 text-sm">
+                    <div>
+                      <div className="text-white font-semibold mb-2">Stop When:</div>
+                      <ul className="text-gray-300 space-y-1">
+                        <li>• Consistently <50% of attendance targets for 6+ weeks</li>
+                        <li>• Losing money with no path to profitability</li>
+                        <li>• Staff burnout or consistent unhappiness</li>
+                        <li>• Negative customer feedback or community reputation</li>
+                        <li>• Tried multiple adjustments and pivots with no improvement</li>
+                        <li>• Better opportunities identified for same resources</li>
+                      </ul>
+                    </div>
+                    <div>
+                      <div className="text-white font-semibold mb-2">How to Stop Gracefully:</div>
+                      <ul className="text-gray-300 space-y-1">
+                        <li>• Announce 2 weeks in advance</li>
+                        <li>• Thank attendees and explain decision transparently</li>
+                        <li>• Collect feedback for future initiatives</li>
+                        <li>• Offer alternative: "Stay tuned for new events"</li>
+                        <li>• Don't apologize - pivot is part of smart business</li>
+                      </ul>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            {/* Final Wisdom */}
+            <div>
+              <div className="bg-gradient-to-r from-purple-900/20 to-transparent border-2 border-purple-500/30 rounded-xl p-8">
+                <h4 className="text-2xl font-bold text-white mb-4">Final Wisdom: Trust the Data, Not Your Feelings</h4>
+                <div className="space-y-4 text-sm text-gray-300 leading-relaxed">
+                  <p>
+                    <strong className="text-white">You will get attached</strong> to your events. You'll love the idea
+                    of Latin Dance Night or Social Thursdays. But if the data says it's not working after honest attempts
+                    to improve, trust the metrics over your emotions.
+                  </p>
+                  <p>
+                    <strong className="text-white">Failing fast is a win.</strong> If something isn't working by Week 6-8,
+                    stopping it frees up time, money, and energy to try something new. Every successful restaurant has a
+                    graveyard of initiatives that didn't work - that's normal and healthy.
+                  </p>
+                  <p>
+                    <strong className="text-white">Celebrate wins and learn from losses.</strong> If Latin Dance takes off
+                    but Social Night struggles, lean into what works. If lunch delivery is slow but event nights are booming,
+                    double down on events. The goal isn't to make every idea work - it's to find what resonates and scale that.
+                  </p>
+                  <div className="mt-6 p-4 bg-purple-900/20 rounded-lg border border-purple-500/30">
+                    <div className="text-purple-400 font-bold mb-2">Remember:</div>
+                    <div className="text-white">
+                      You're not failing if you stop an underperforming initiative. You're failing if you keep pouring
+                      resources into something the market has already told you isn't working.
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </ExpandableSection>
+      </div>
+
       {/* Track 3 Summary */}
       <div className="bg-gradient-to-br from-[#00A86B]/20 to-[#00A86B]/5 border border-[#00A86B]/30 rounded-xl p-8 shadow-strong">
         <h3 className="text-2xl font-bold text-white mb-6">Track 3 Summary: The Bottom Line</h3>

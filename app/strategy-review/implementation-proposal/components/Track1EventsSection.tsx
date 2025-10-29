@@ -615,7 +615,27 @@ export function Track1EventsSection() {
 
           {/* Tuesday Latin Dance - Happy Hour Packages */}
           <div>
-            <h4 className="text-2xl font-bold text-white mb-6">Tuesday Happy Hour Food Packages</h4>
+            <h4 className="text-2xl font-bold text-white mb-6">Tuesday Happy Hour Options</h4>
+
+            {/* Drink Specials */}
+            <div className="bg-gradient-to-r from-blue-900/10 to-transparent border-l-4 border-blue-500 rounded p-6 mb-6">
+              <div className="text-white font-bold mb-3 text-lg">Drink Special Options (Choose One)</div>
+              <div className="grid md:grid-cols-2 gap-4">
+                <div className="bg-gray-800/50 rounded-lg p-4">
+                  <div className="text-blue-400 font-bold mb-2">Option A: Beer & Wine Focus</div>
+                  <div className="text-2xl font-bold text-white mb-1">$2 OFF</div>
+                  <p className="text-gray-400 text-sm">All beer and wine, 7-10pm</p>
+                </div>
+                <div className="bg-gray-800/50 rounded-lg p-4">
+                  <div className="text-blue-400 font-bold mb-2">Option B: Cocktail Focus</div>
+                  <div className="text-2xl font-bold text-white mb-1">$3 OFF</div>
+                  <p className="text-gray-400 text-sm">All cocktails, 7-10pm</p>
+                </div>
+              </div>
+            </div>
+
+            {/* Food Packages */}
+            <div className="text-white font-bold mb-4 text-lg">Food Package Options</div>
             <div className="grid md:grid-cols-2 gap-6">
               <div className="bg-gradient-to-br from-[#D4AF37]/20 to-[#D4AF37]/5 border border-[#D4AF37]/30 rounded-xl p-6">
                 <div className="text-center mb-4">
@@ -756,6 +776,13 @@ export function Track1EventsSection() {
                 </div>
                 <p className="text-gray-400 text-sm">"Foodie and restaurant enthusiasts" - Here to enjoy food and talk cuisine</p>
               </div>
+              <div className="bg-gray-800/50 rounded-lg p-4 border-l-4 border-gray-700">
+                <div className="flex items-center gap-2 mb-2">
+                  <div className="w-6 h-6 rounded-full bg-gray-600 border border-gray-400"></div>
+                  <div className="font-bold text-white">Black/Gray</div>
+                </div>
+                <p className="text-gray-400 text-sm">"Just here to observe tonight" - Checking out the vibe, not actively seeking connections</p>
+              </div>
             </div>
             <div className="mt-6 bg-gray-800/50 rounded-lg p-6">
               <div className="text-white font-semibold mb-3">Bartender Facilitation Role:</div>
@@ -837,6 +864,74 @@ export function Track1EventsSection() {
             </div>
           </div>
 
+          {/* Thursday Happy Hour Options */}
+          <div>
+            <h4 className="text-2xl font-bold text-white mb-6">Thursday Happy Hour Options</h4>
+
+            {/* Drink Specials */}
+            <div className="bg-gradient-to-r from-blue-900/10 to-transparent border-l-4 border-blue-500 rounded p-6 mb-6">
+              <div className="text-white font-bold mb-3 text-lg">Drink Special Options (Choose One)</div>
+              <div className="grid md:grid-cols-2 gap-4">
+                <div className="bg-gray-800/50 rounded-lg p-4">
+                  <div className="text-blue-400 font-bold mb-2">Option A: Beer & Wine Focus</div>
+                  <div className="text-2xl font-bold text-white mb-1">$2 OFF</div>
+                  <p className="text-gray-400 text-sm">All beer and wine, 7-10pm</p>
+                </div>
+                <div className="bg-gray-800/50 rounded-lg p-4">
+                  <div className="text-blue-400 font-bold mb-2">Option B: House Sake Focus</div>
+                  <div className="text-2xl font-bold text-white mb-1">$3 OFF</div>
+                  <p className="text-gray-400 text-sm">House sake selections, 7-10pm</p>
+                </div>
+              </div>
+            </div>
+
+            {/* Food Packages */}
+            <div className="text-white font-bold mb-4 text-lg">Food Package Options</div>
+            <div className="grid md:grid-cols-2 gap-6">
+              <div className="bg-gradient-to-br from-[#D4AF37]/20 to-[#D4AF37]/5 border border-[#D4AF37]/30 rounded-xl p-6">
+                <div className="text-center mb-4">
+                  <div className="text-[#D4AF37] font-bold text-lg mb-2">"Two for One Social"</div>
+                  <div className="text-4xl font-bold text-white mb-2">$20</div>
+                  <div className="text-sm text-gray-400">Perfect for starting conversations</div>
+                </div>
+                <div className="space-y-2 text-sm text-gray-300">
+                  <div className="flex items-start gap-2">
+                    <span className="text-[#D4AF37]">•</span>
+                    <span><strong className="text-white">2 cocktails</strong> from select list</span>
+                  </div>
+                  <div className="flex items-start gap-2">
+                    <span className="text-[#D4AF37]">•</span>
+                    <span><strong className="text-white">1 appetizer</strong> choice of 3-4 options</span>
+                  </div>
+                </div>
+                <div className="mt-4 pt-4 border-t border-[#D4AF37]/30 text-xs text-gray-400 italic">
+                  Great for solo arrivals who want to settle in with a drink before socializing
+                </div>
+              </div>
+
+              <div className="bg-gradient-to-br from-[#D4AF37]/20 to-[#D4AF37]/5 border border-[#D4AF37]/30 rounded-xl p-6">
+                <div className="text-center mb-4">
+                  <div className="text-[#D4AF37] font-bold text-lg mb-2">"Table Starter"</div>
+                  <div className="text-4xl font-bold text-white mb-2">$35</div>
+                  <div className="text-sm text-gray-400">For two people to share</div>
+                </div>
+                <div className="space-y-2 text-sm text-gray-300">
+                  <div className="flex items-start gap-2">
+                    <span className="text-[#D4AF37]">•</span>
+                    <span><strong className="text-white">Shareable platter:</strong> Gyoza, spring rolls, edamame, small sushi selection</span>
+                  </div>
+                  <div className="flex items-start gap-2">
+                    <span className="text-[#D4AF37]">•</span>
+                    <span><strong className="text-white">2 drinks:</strong> Beer, wine, or house cocktails</span>
+                  </div>
+                </div>
+                <div className="mt-4 pt-4 border-t border-[#D4AF37]/30 text-xs text-gray-400 italic">
+                  Encourages group formation - easy for strangers to share food and chat
+                </div>
+              </div>
+            </div>
+          </div>
+
           {/* Cost & Materials Summary */}
           <div>
             <h4 className="text-2xl font-bold text-white mb-6">Operational Materials & Costs</h4>
@@ -879,6 +974,665 @@ export function Track1EventsSection() {
                       <span className="text-green-400">$15-25</span>
                     </div>
                   </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </ExpandableSection>
+
+      {/* Pre-Launch Checklist */}
+      <ExpandableSection
+        title="Pre-Launch Checklist & Operational Setup"
+        badge="high-priority"
+        executiveSummary={
+          <>
+            Complete task list for launching Tuesday and Thursday events. Covers physical setup, staff training,
+            marketing materials, and operational systems. <strong className="text-white">Everything you need to launch successfully.</strong>
+          </>
+        }
+      >
+        <div className="space-y-8">
+          {/* Week 1: Planning & Design */}
+          <div>
+            <div className="flex items-center gap-3 mb-4">
+              <div className="w-12 h-12 rounded-full bg-blue-600 flex items-center justify-center text-white font-bold">W1</div>
+              <h4 className="text-2xl font-bold text-white">Week 1: Planning & Design Phase</h4>
+            </div>
+            <div className="space-y-3">
+              <div className="bg-gray-800/50 rounded-lg p-4">
+                <div className="flex items-start gap-3">
+                  <input type="checkbox" className="mt-1 w-5 h-5 rounded border-gray-600 text-[#b22222] focus:ring-[#b22222]" />
+                  <div>
+                    <div className="text-white font-semibold mb-1">Finalize event names and taglines</div>
+                    <p className="text-gray-400 text-sm">Choose from naming options for Tuesday and Thursday events</p>
+                  </div>
+                </div>
+              </div>
+              <div className="bg-gray-800/50 rounded-lg p-4">
+                <div className="flex items-start gap-3">
+                  <input type="checkbox" className="mt-1 w-5 h-5 rounded border-gray-600 text-[#b22222] focus:ring-[#b22222]" />
+                  <div>
+                    <div className="text-white font-semibold mb-1">Design color-coded name tag/wristband system</div>
+                    <p className="text-gray-400 text-sm">Order 500 wristbands in 7 colors, create signage explaining system</p>
+                  </div>
+                </div>
+              </div>
+              <div className="bg-gray-800/50 rounded-lg p-4">
+                <div className="flex items-start gap-3">
+                  <input type="checkbox" className="mt-1 w-5 h-5 rounded border-gray-600 text-[#b22222] focus:ring-[#b22222]" />
+                  <div>
+                    <div className="text-white font-semibold mb-1">Create event flyers (print + digital)</div>
+                    <p className="text-gray-400 text-sm">Design marketing materials highlighting each event's unique value</p>
+                  </div>
+                </div>
+              </div>
+              <div className="bg-gray-800/50 rounded-lg p-4">
+                <div className="flex items-start gap-3">
+                  <input type="checkbox" className="mt-1 w-5 h-5 rounded border-gray-600 text-[#b22222] focus:ring-[#b22222]" />
+                  <div>
+                    <div className="text-white font-semibold mb-1">Finalize happy hour menu items and pricing</div>
+                    <p className="text-gray-400 text-sm">Lock in drink specials and package deals for each night</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          {/* Week 2: Physical Setup */}
+          <div>
+            <div className="flex items-center gap-3 mb-4">
+              <div className="w-12 h-12 rounded-full bg-purple-600 flex items-center justify-center text-white font-bold">W2</div>
+              <h4 className="text-2xl font-bold text-white">Week 2: Physical Setup & Materials</h4>
+            </div>
+            <div className="space-y-3">
+              <div className="bg-gray-800/50 rounded-lg p-4">
+                <div className="flex items-start gap-3">
+                  <input type="checkbox" className="mt-1 w-5 h-5 rounded border-gray-600 text-[#b22222] focus:ring-[#b22222]" />
+                  <div>
+                    <div className="text-white font-semibold mb-1">Source and purchase board games</div>
+                    <p className="text-gray-400 text-sm">Jenga, Cards Against Humanity, Uno, Connect Four - $60-100 total</p>
+                  </div>
+                </div>
+              </div>
+              <div className="bg-gray-800/50 rounded-lg p-4">
+                <div className="flex items-start gap-3">
+                  <input type="checkbox" className="mt-1 w-5 h-5 rounded border-gray-600 text-[#b22222] focus:ring-[#b22222]" />
+                  <div>
+                    <div className="text-white font-semibold mb-1">Create icebreaker conversation cards</div>
+                    <p className="text-gray-400 text-sm">Print 50-100 cards with conversation starters, place on tables</p>
+                  </div>
+                </div>
+              </div>
+              <div className="bg-gray-800/50 rounded-lg p-4">
+                <div className="flex items-start gap-3">
+                  <input type="checkbox" className="mt-1 w-5 h-5 rounded border-gray-600 text-[#b22222] focus:ring-[#b22222]" />
+                  <div>
+                    <div className="text-white font-semibold mb-1">Map Tuesday upstairs dance floor layout</div>
+                    <p className="text-gray-400 text-sm">Clear space, mark dance floor boundaries, plan table/seating arrangement</p>
+                  </div>
+                </div>
+              </div>
+              <div className="bg-gray-800/50 rounded-lg p-4">
+                <div className="flex items-start gap-3">
+                  <input type="checkbox" className="mt-1 w-5 h-5 rounded border-gray-600 text-[#b22222] focus:ring-[#b22222]" />
+                  <div>
+                    <div className="text-white font-semibold mb-1">Test Spotify-to-sound-system connection</div>
+                    <p className="text-gray-400 text-sm">Work with dance instructor to test music setup and volume levels</p>
+                  </div>
+                </div>
+              </div>
+              <div className="bg-gray-800/50 rounded-lg p-4">
+                <div className="flex items-start gap-3">
+                  <input type="checkbox" className="mt-1 w-5 h-5 rounded border-gray-600 text-[#b22222] focus:ring-[#b22222]" />
+                  <div>
+                    <div className="text-white font-semibold mb-1">Set up Thursday entry welcome table</div>
+                    <p className="text-gray-400 text-sm">Position table, stock with wristbands/name tags, create signage</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          {/* Week 3: Staff Training & Marketing */}
+          <div>
+            <div className="flex items-center gap-3 mb-4">
+              <div className="w-12 h-12 rounded-full bg-orange-600 flex items-center justify-center text-white font-bold">W3</div>
+              <h4 className="text-2xl font-bold text-white">Week 3: Training & Marketing Launch</h4>
+            </div>
+            <div className="space-y-3">
+              <div className="bg-gray-800/50 rounded-lg p-4">
+                <div className="flex items-start gap-3">
+                  <input type="checkbox" className="mt-1 w-5 h-5 rounded border-gray-600 text-[#b22222] focus:ring-[#b22222]" />
+                  <div>
+                    <div className="text-white font-semibold mb-1">Train bartenders on facilitation approach</div>
+                    <p className="text-gray-400 text-sm">Thursday social night: how to greet solo arrivals, make introductions, run icebreakers</p>
+                  </div>
+                </div>
+              </div>
+              <div className="bg-gray-800/50 rounded-lg p-4">
+                <div className="flex items-start gap-3">
+                  <input type="checkbox" className="mt-1 w-5 h-5 rounded border-gray-600 text-[#b22222] focus:ring-[#b22222]" />
+                  <div>
+                    <div className="text-white font-semibold mb-1">Train staff on service fee collection (Tuesday)</div>
+                    <p className="text-gray-400 text-sm">$10 per person, how to communicate, where to collect, split distribution</p>
+                  </div>
+                </div>
+              </div>
+              <div className="bg-gray-800/50 rounded-lg p-4">
+                <div className="flex items-start gap-3">
+                  <input type="checkbox" className="mt-1 w-5 h-5 rounded border-gray-600 text-[#b22222] focus:ring-[#b22222]" />
+                  <div>
+                    <div className="text-white font-semibold mb-1">Print and distribute flyers locally</div>
+                    <p className="text-gray-400 text-sm">Coffee shops, gyms, community boards within 3-mile radius</p>
+                  </div>
+                </div>
+              </div>
+              <div className="bg-gray-800/50 rounded-lg p-4">
+                <div className="flex items-start gap-3">
+                  <input type="checkbox" className="mt-1 w-5 h-5 rounded border-gray-600 text-[#b22222] focus:ring-[#b22222]" />
+                  <div>
+                    <div className="text-white font-semibold mb-1">Launch social media campaign</div>
+                    <p className="text-gray-400 text-sm">Post daily for 2 weeks leading to launch, build anticipation</p>
+                  </div>
+                </div>
+              </div>
+              <div className="bg-gray-800/50 rounded-lg p-4">
+                <div className="flex items-start gap-3">
+                  <input type="checkbox" className="mt-1 w-5 h-5 rounded border-gray-600 text-[#b22222] focus:ring-[#b22222]" />
+                  <div>
+                    <div className="text-white font-semibold mb-1">Create event calendar for November-December</div>
+                    <p className="text-gray-400 text-sm">Plan exact dates, coordinate with instructor availability</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          {/* Week 4: Final Preparations */}
+          <div>
+            <div className="flex items-center gap-3 mb-4">
+              <div className="w-12 h-12 rounded-full bg-green-600 flex items-center justify-center text-white font-bold">W4</div>
+              <h4 className="text-2xl font-bold text-white">Week 4 (Launch Week): Final Prep</h4>
+            </div>
+            <div className="space-y-3">
+              <div className="bg-gray-800/50 rounded-lg p-4">
+                <div className="flex items-start gap-3">
+                  <input type="checkbox" className="mt-1 w-5 h-5 rounded border-gray-600 text-[#b22222] focus:ring-[#b22222]" />
+                  <div>
+                    <div className="text-white font-semibold mb-1">Conduct full event rehearsal (dry run)</div>
+                    <p className="text-gray-400 text-sm">Walk through Tuesday and Thursday setups with full staff</p>
+                  </div>
+                </div>
+              </div>
+              <div className="bg-gray-800/50 rounded-lg p-4">
+                <div className="flex items-start gap-3">
+                  <input type="checkbox" className="mt-1 w-5 h-5 rounded border-gray-600 text-[#b22222] focus:ring-[#b22222]" />
+                  <div>
+                    <div className="text-white font-semibold mb-1">Identify daytime setup crew for Tuesday</div>
+                    <p className="text-gray-400 text-sm">Assign 2 people to convert upstairs space 4-6pm before event</p>
+                  </div>
+                </div>
+              </div>
+              <div className="bg-gray-800/50 rounded-lg p-4">
+                <div className="flex items-start gap-3">
+                  <input type="checkbox" className="mt-1 w-5 h-5 rounded border-gray-600 text-[#b22222] focus:ring-[#b22222]" />
+                  <div>
+                    <div className="text-white font-semibold mb-1">Pre-print happy hour menus for both nights</div>
+                    <p className="text-gray-400 text-sm">Table tents or insert cards highlighting package deals</p>
+                  </div>
+                </div>
+              </div>
+              <div className="bg-gray-800/50 rounded-lg p-4">
+                <div className="flex items-start gap-3">
+                  <input type="checkbox" className="mt-1 w-5 h-5 rounded border-gray-600 text-[#b22222] focus:ring-[#b22222]" />
+                  <div>
+                    <div className="text-white font-semibold mb-1">Arrange photographer for launch events</div>
+                    <p className="text-gray-400 text-sm">Professional or team member to capture authentic moments first 2 weeks</p>
+                  </div>
+                </div>
+              </div>
+              <div className="bg-gray-800/50 rounded-lg p-4">
+                <div className="flex items-start gap-3">
+                  <input type="checkbox" className="mt-1 w-5 h-5 rounded border-gray-600 text-[#b22222] focus:ring-[#b22222]" />
+                  <div>
+                    <div className="text-white font-semibold mb-1">Set up Toast POS tracking for events</div>
+                    <p className="text-gray-400 text-sm">Configure reporting to track Tuesday and Thursday performance separately</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </ExpandableSection>
+
+      {/* Photography & Content Direction */}
+      <ExpandableSection
+        title="Photography & Content Direction"
+        badge="recommended"
+        executiveSummary={
+          <>
+            Visual storytelling guide for capturing authentic event moments. Includes shot lists, aesthetic direction,
+            and Instagram feed strategy. <strong className="text-white">Tell the story that brings people in.</strong>
+          </>
+        }
+      >
+        <div className="space-y-10">
+          {/* Photography Aesthetic Options */}
+          <div>
+            <h4 className="text-2xl font-bold text-white mb-6">Instagram Feed Aesthetic: Choose Your Direction</h4>
+            <div className="grid md:grid-cols-3 gap-6">
+              <div className="bg-gradient-to-br from-blue-900/20 to-transparent border border-blue-500/30 rounded-xl p-6">
+                <div className="text-blue-400 font-bold mb-3 text-lg">Option A: "Social Documentary"</div>
+                <ul className="text-gray-300 text-sm space-y-2 mb-4">
+                  <li>• Authentic, candid moments</li>
+                  <li>• Minimal editing, natural lighting</li>
+                  <li>• Story-driven captions</li>
+                  <li>• Focus on people and experiences</li>
+                </ul>
+                <div className="text-xs text-gray-400 italic">
+                  Best for: Building community, showcasing real connections, user-generated content feel
+                </div>
+              </div>
+
+              <div className="bg-gradient-to-br from-purple-900/20 to-transparent border border-purple-500/30 rounded-xl p-6">
+                <div className="text-purple-400 font-bold mb-3 text-lg">Option B: "Premium Social"</div>
+                <ul className="text-gray-300 text-sm space-y-2 mb-4">
+                  <li>• Polished but approachable</li>
+                  <li>• Good lighting, professional composition</li>
+                  <li>• Balance of people + food/drinks</li>
+                  <li>• Aspirational but attainable</li>
+                </ul>
+                <div className="text-xs text-gray-400 italic">
+                  Best for: Premium positioning, lifestyle marketing, attracting 25-45 demographic
+                </div>
+              </div>
+
+              <div className="bg-gradient-to-br from-orange-900/20 to-transparent border border-orange-500/30 rounded-xl p-6">
+                <div className="text-orange-400 font-bold mb-3 text-lg">Option C: "Neighborhood Vibes"</div>
+                <ul className="text-gray-300 text-sm space-y-2 mb-4">
+                  <li>• Warm, community-focused</li>
+                  <li>• Mix of professional and user content</li>
+                  <li>• Local partnerships visible</li>
+                  <li>• Family business personality</li>
+                </ul>
+                <div className="text-xs text-gray-400 italic">
+                  Best for: Local loyalty, word-of-mouth growth, approachable premium feel
+                </div>
+              </div>
+            </div>
+          </div>
+
+          {/* Shot Lists */}
+          <div>
+            <h4 className="text-2xl font-bold text-white mb-6">Launch Week Shot Lists</h4>
+
+            {/* Tuesday Dance Night Shots */}
+            <div className="bg-gray-800/50 rounded-lg p-6 mb-6">
+              <div className="text-[#b22222] font-bold mb-4 text-lg">Tuesday Latin Dance Night</div>
+              <div className="grid md:grid-cols-2 gap-4">
+                <div>
+                  <div className="text-white font-semibold mb-2 text-sm">MUST CAPTURE</div>
+                  <ul className="text-gray-400 text-sm space-y-1">
+                    <li>☐ Instructor teaching basic steps (wide shot)</li>
+                    <li>☐ Couples/groups dancing together</li>
+                    <li>☐ Close-ups of happy, laughing faces</li>
+                    <li>☐ Dance Fuel Platter presentation</li>
+                    <li>☐ Upstairs space setup with dance floor</li>
+                    <li>☐ Energy of full crowd (wide atmosphere shot)</li>
+                  </ul>
+                </div>
+                <div>
+                  <div className="text-white font-semibold mb-2 text-sm">NICE TO HAVE</div>
+                  <ul className="text-gray-400 text-sm space-y-1">
+                    <li>☐ Footwork close-ups (movement detail)</li>
+                    <li>☐ Hand-holding/partner connection moments</li>
+                    <li>☐ Bartender preparing Latin-themed cocktails</li>
+                    <li>☐ Service fee collection (candid, not staged)</li>
+                    <li>☐ Break time - people chatting, eating</li>
+                    <li>☐ Before/after space transformation</li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+
+            {/* Thursday Social Night Shots */}
+            <div className="bg-gray-800/50 rounded-lg p-6">
+              <div className="text-[#b22222] font-bold mb-4 text-lg">Thursday Social Connection Night</div>
+              <div className="grid md:grid-cols-2 gap-4">
+                <div>
+                  <div className="text-white font-semibold mb-2 text-sm">MUST CAPTURE</div>
+                  <ul className="text-gray-400 text-sm space-y-1">
+                    <li>☐ Entry table with color system display</li>
+                    <li>☐ Solo arrival being greeted warmly</li>
+                    <li>☐ Bartender facilitating introduction</li>
+                    <li>☐ People playing board games, laughing</li>
+                    <li>☐ Icebreaker game action at bar</li>
+                    <li>☐ Strangers connecting/having conversation</li>
+                    <li>☐ Full bar atmosphere (warm, welcoming)</li>
+                  </ul>
+                </div>
+                <div>
+                  <div className="text-white font-semibold mb-2 text-sm">NICE TO HAVE</div>
+                  <ul className="text-gray-400 text-sm space-y-1">
+                    <li>☐ Close-ups of colored wristbands</li>
+                    <li>☐ Individual portraits with name tags visible</li>
+                    <li>☐ Thursday package deals styled for photo</li>
+                    <li>☐ Board game station setup</li>
+                    <li>☐ Icebreaker conversation cards on tables</li>
+                    <li>☐ Groups forming naturally around activities</li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          {/* Photography Logistics */}
+          <div>
+            <h4 className="text-2xl font-bold text-white mb-6">Photography Logistics & Decisions</h4>
+            <div className="space-y-4">
+              <div className="bg-gradient-to-r from-yellow-900/10 to-transparent border-l-4 border-yellow-500 rounded p-6">
+                <div className="text-white font-semibold mb-3">Timing Strategy: Capture During vs Stage Before?</div>
+                <div className="grid md:grid-cols-2 gap-4 text-sm">
+                  <div>
+                    <div className="text-yellow-400 font-semibold mb-2">Staged Before Launch</div>
+                    <div className="text-gray-300 mb-2">
+                      <strong className="text-white">Pro:</strong> Controlled lighting, perfect composition, can use in pre-launch marketing
+                    </div>
+                    <div className="text-gray-400">
+                      <strong className="text-white">Con:</strong> Less authentic, may not match actual event energy
+                    </div>
+                  </div>
+                  <div>
+                    <div className="text-yellow-400 font-semibold mb-2">Capture During Events</div>
+                    <div className="text-gray-300 mb-2">
+                      <strong className="text-white">Pro:</strong> Authentic moments, real energy, natural interactions
+                    </div>
+                    <div className="text-gray-400">
+                      <strong className="text-white">Con:</strong> Harder to get perfect shots, need skilled photographer
+                    </div>
+                  </div>
+                </div>
+                <div className="mt-4 text-sm text-gray-300">
+                  <strong className="text-white">Recommendation:</strong> Mix of both - stage some setup shots (entry table, food packages, space)
+                  but capture authentic event moments during first 2-3 weeks for real social proof.
+                </div>
+              </div>
+
+              <div className="bg-gradient-to-r from-green-900/10 to-transparent border-l-4 border-green-500 rounded p-6">
+                <div className="text-white font-semibold mb-3">Who Captures Content?</div>
+                <div className="space-y-3 text-sm">
+                  <div className="bg-gray-800/50 rounded p-4">
+                    <div className="text-green-400 font-semibold mb-1">Option 1: Professional Photographer</div>
+                    <div className="text-gray-300">Hire for launch week (2-3 events) - $200-400 per session</div>
+                  </div>
+                  <div className="bg-gray-800/50 rounded p-4">
+                    <div className="text-green-400 font-semibold mb-1">Option 2: Team Member with Good Eye</div>
+                    <div className="text-gray-300">Use high-quality smartphone, train on composition basics - $0 cost</div>
+                  </div>
+                  <div className="bg-gray-800/50 rounded p-4">
+                    <div className="text-green-400 font-semibold mb-1">Option 3: Mix of Both</div>
+                    <div className="text-gray-300">Pro photographer for launch night, team member for ongoing content</div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </ExpandableSection>
+
+      {/* Staffing Decision Framework */}
+      <ExpandableSection
+        title="Staffing Decision Framework"
+        badge="recommended"
+        executiveSummary={
+          <>
+            Staffing scenarios for Tuesday and Thursday events based on attendance levels. Clear decision triggers
+            for when to add support, how to handle high/low volume, and service model options.
+            <strong className="text-white"> Scale staffing as events grow.</strong>
+          </>
+        }
+      >
+        <div className="space-y-10">
+          {/* Tuesday Staffing Scenarios */}
+          <div>
+            <h4 className="text-2xl font-bold text-white mb-6">Tuesday Latin Dance Night: Staffing Scenarios</h4>
+            <div className="space-y-6">
+              {/* Low Volume */}
+              <div className="bg-gradient-to-r from-green-900/20 to-transparent border-l-4 border-green-500 rounded p-6">
+                <div className="flex justify-between items-start mb-4">
+                  <div>
+                    <div className="text-green-400 font-bold text-lg">Low Volume (15-25 attendees)</div>
+                    <div className="text-sm text-gray-400">Typical for first 2-4 weeks</div>
+                  </div>
+                  <div className="text-green-400 font-bold text-2xl">1-2 Staff</div>
+                </div>
+                <div className="space-y-3 text-sm">
+                  <div className="bg-gray-800/50 rounded p-4">
+                    <div className="text-white font-semibold mb-2">Recommended Staffing:</div>
+                    <ul className="text-gray-300 space-y-1">
+                      <li>• 1 upstairs bartender (primary)</li>
+                      <li>• 1 downstairs server (floats up if needed)</li>
+                    </ul>
+                  </div>
+                  <div className="bg-gray-800/50 rounded p-4">
+                    <div className="text-white font-semibold mb-2">Service Model:</div>
+                    <ul className="text-gray-300 space-y-1">
+                      <li>• Walk-up bar service only</li>
+                      <li>• Bartender handles service fee collection at entry</li>
+                      <li>• Food orders placed at bar, delivered to tables</li>
+                    </ul>
+                  </div>
+                  <div className="bg-gray-800/50 rounded p-4">
+                    <div className="text-white font-semibold mb-2">When to Add Support:</div>
+                    <div className="text-gray-300">If bartender is consistently overwhelmed or wait times exceed 5 minutes</div>
+                  </div>
+                </div>
+              </div>
+
+              {/* Medium Volume */}
+              <div className="bg-gradient-to-r from-yellow-900/20 to-transparent border-l-4 border-yellow-500 rounded p-6">
+                <div className="flex justify-between items-start mb-4">
+                  <div>
+                    <div className="text-yellow-400 font-bold text-lg">Medium Volume (25-40 attendees)</div>
+                    <div className="text-sm text-gray-400">Expected by Month 2-3</div>
+                  </div>
+                  <div className="text-yellow-400 font-bold text-2xl">2 Staff</div>
+                </div>
+                <div className="space-y-3 text-sm">
+                  <div className="bg-gray-800/50 rounded p-4">
+                    <div className="text-white font-semibold mb-2">Recommended Staffing:</div>
+                    <ul className="text-gray-300 space-y-1">
+                      <li>• 1 upstairs bartender (drinks only)</li>
+                      <li>• 1 floating server (entry greeting + table service)</li>
+                    </ul>
+                  </div>
+                  <div className="bg-gray-800/50 rounded p-4">
+                    <div className="text-white font-semibold mb-2">Service Model:</div>
+                    <ul className="text-gray-300 space-y-1">
+                      <li>• Server greets at entry, collects service fee, hands out wristbands</li>
+                      <li>• Server takes food orders at tables</li>
+                      <li>• Bartender focuses on drinks only</li>
+                      <li>• Faster service, better customer experience</li>
+                    </ul>
+                  </div>
+                  <div className="bg-gray-800/50 rounded p-4">
+                    <div className="text-white font-semibold mb-2">When to Add Support:</div>
+                    <div className="text-gray-300">If server can't keep up with tables, or bar has consistent backup</div>
+                  </div>
+                </div>
+              </div>
+
+              {/* High Volume */}
+              <div className="bg-gradient-to-r from-red-900/20 to-transparent border-l-4 border-red-500 rounded p-6">
+                <div className="flex justify-between items-start mb-4">
+                  <div>
+                    <div className="text-red-400 font-bold text-lg">High Volume (40+ attendees)</div>
+                    <div className="text-sm text-gray-400">Goal by Month 3-4</div>
+                  </div>
+                  <div className="text-red-400 font-bold text-2xl">3 Staff</div>
+                </div>
+                <div className="space-y-3 text-sm">
+                  <div className="bg-gray-800/50 rounded p-4">
+                    <div className="text-white font-semibold mb-2">Recommended Staffing:</div>
+                    <ul className="text-gray-300 space-y-1">
+                      <li>• 2 upstairs bartenders (split bar sections)</li>
+                      <li>• 1 dedicated server (entry + full table service)</li>
+                    </ul>
+                  </div>
+                  <div className="bg-gray-800/50 rounded p-4">
+                    <div className="text-white font-semibold mb-2">Service Model:</div>
+                    <ul className="text-gray-300 space-y-1">
+                      <li>• Server dedicated to entry greeting and service fee</li>
+                      <li>• Server handles all food orders and delivery</li>
+                      <li>• Two bartenders ensure no drink wait times</li>
+                      <li>• Premium service experience</li>
+                    </ul>
+                  </div>
+                  <div className="bg-gray-800/50 rounded p-4">
+                    <div className="text-white font-semibold mb-2">Alternative: Cap Attendance</div>
+                    <div className="text-gray-300">If space becomes tight, limit to 45-50 people max, take reservations</div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          {/* Thursday Staffing Scenarios */}
+          <div>
+            <h4 className="text-2xl font-bold text-white mb-6">Thursday Social Night: Staffing Scenarios</h4>
+            <div className="space-y-6">
+              {/* Low Volume */}
+              <div className="bg-gradient-to-r from-green-900/20 to-transparent border-l-4 border-green-500 rounded p-6">
+                <div className="flex justify-between items-start mb-4">
+                  <div>
+                    <div className="text-green-400 font-bold text-lg">Low Volume (12-20 attendees)</div>
+                    <div className="text-sm text-gray-400">Typical for first month</div>
+                  </div>
+                  <div className="text-green-400 font-bold text-2xl">1 Staff</div>
+                </div>
+                <div className="space-y-3 text-sm">
+                  <div className="bg-gray-800/50 rounded p-4">
+                    <div className="text-white font-semibold mb-2">Recommended Staffing:</div>
+                    <ul className="text-gray-300 space-y-1">
+                      <li>• 1 upstairs bartender (handles everything)</li>
+                    </ul>
+                  </div>
+                  <div className="bg-gray-800/50 rounded p-4">
+                    <div className="text-white font-semibold mb-2">Service Model:</div>
+                    <ul className="text-gray-300 space-y-1">
+                      <li>• Bartender greets solo arrivals, hands out wristbands</li>
+                      <li>• Bar service only (no table service)</li>
+                      <li>• Bartender facilitates introductions between drink orders</li>
+                      <li>• Hourly icebreaker games run by bartender</li>
+                    </ul>
+                  </div>
+                  <div className="bg-gray-800/50 rounded p-4">
+                    <div className="text-white font-semibold mb-2">When to Add Support:</div>
+                    <div className="text-gray-300">If bartender can't keep up with drinks + facilitation, or entry gets backed up</div>
+                  </div>
+                </div>
+              </div>
+
+              {/* Medium Volume */}
+              <div className="bg-gradient-to-r from-yellow-900/20 to-transparent border-l-4 border-yellow-500 rounded p-6">
+                <div className="flex justify-between items-start mb-4">
+                  <div>
+                    <div className="text-yellow-400 font-bold text-lg">Medium Volume (20-35 attendees)</div>
+                    <div className="text-sm text-gray-400">Expected by Month 2</div>
+                  </div>
+                  <div className="text-yellow-400 font-bold text-2xl">2 Staff</div>
+                </div>
+                <div className="space-y-3 text-sm">
+                  <div className="bg-gray-800/50 rounded p-4">
+                    <div className="text-white font-semibold mb-2">Recommended Staffing:</div>
+                    <ul className="text-gray-300 space-y-1">
+                      <li>• 1 upstairs bartender (drinks only)</li>
+                      <li>• 1 dedicated host (entry table + facilitation)</li>
+                    </ul>
+                  </div>
+                  <div className="bg-gray-800/50 rounded p-4">
+                    <div className="text-white font-semibold mb-2">Service Model:</div>
+                    <ul className="text-gray-300 space-y-1">
+                      <li>• Host greets everyone at entry, explains color system</li>
+                      <li>• Host makes introductions, runs icebreaker games</li>
+                      <li>• Bartender focuses on drinks and bar service</li>
+                      <li>• Better facilitation, smoother experience</li>
+                    </ul>
+                  </div>
+                  <div className="bg-gray-800/50 rounded p-4">
+                    <div className="text-white font-semibold mb-2">When to Add Support:</div>
+                    <div className="text-gray-300">If bar gets backed up, or if food orders exceed walk-up capacity</div>
+                  </div>
+                </div>
+              </div>
+
+              {/* High Volume */}
+              <div className="bg-gradient-to-r from-red-900/20 to-transparent border-l-4 border-red-500 rounded p-6">
+                <div className="flex justify-between items-start mb-4">
+                  <div>
+                    <div className="text-red-400 font-bold text-lg">High Volume (35+ attendees)</div>
+                    <div className="text-sm text-gray-400">Goal by Month 3</div>
+                  </div>
+                  <div className="text-red-400 font-bold text-2xl">3 Staff</div>
+                </div>
+                <div className="space-y-3 text-sm">
+                  <div className="bg-gray-800/50 rounded p-4">
+                    <div className="text-white font-semibold mb-2">Recommended Staffing:</div>
+                    <ul className="text-gray-300 space-y-1">
+                      <li>• 2 bartenders (high drink volume)</li>
+                      <li>• 1 dedicated host/facilitator</li>
+                    </ul>
+                  </div>
+                  <div className="bg-gray-800/50 rounded p-4">
+                    <div className="text-white font-semibold mb-2">Service Model:</div>
+                    <ul className="text-gray-300 space-y-1">
+                      <li>• Host at entry full-time, active facilitation</li>
+                      <li>• Two bartenders ensure fast drink service</li>
+                      <li>• Consider light table service for food if space allows</li>
+                      <li>• Premium social experience</li>
+                    </ul>
+                  </div>
+                  <div className="bg-gray-800/50 rounded p-4">
+                    <div className="text-white font-semibold mb-2">Space Considerations:</div>
+                    <div className="text-gray-300">May need to use overflow seating areas or cap attendance at comfortable capacity</div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          {/* Decision Triggers */}
+          <div>
+            <h4 className="text-2xl font-bold text-white mb-6">When to Adjust Staffing: Clear Triggers</h4>
+            <div className="bg-blue-900/10 border-l-4 border-blue-500 rounded p-6">
+              <div className="space-y-4 text-sm">
+                <div>
+                  <div className="text-blue-400 font-semibold mb-2">Add Staff If:</div>
+                  <ul className="text-gray-300 space-y-1">
+                    <li>• Bar wait times consistently exceed 5 minutes</li>
+                    <li>• Entry greeting/wristband distribution creates backlog</li>
+                    <li>• Food orders delayed more than 15 minutes</li>
+                    <li>• Staff report being overwhelmed for 2+ weeks straight</li>
+                    <li>• Customer complaints about service speed</li>
+                  </ul>
+                </div>
+                <div>
+                  <div className="text-blue-400 font-semibold mb-2">Reduce Staff If:</div>
+                  <ul className="text-gray-300 space-y-1">
+                    <li>• Attendance drops below 15 people for 3+ weeks</li>
+                    <li>• Staff standing idle for extended periods</li>
+                    <li>• Event economics no longer support extra labor</li>
+                  </ul>
+                </div>
+                <div>
+                  <div className="text-blue-400 font-semibold mb-2">Alternative to Adding Staff:</div>
+                  <ul className="text-gray-300 space-y-1">
+                    <li>• Implement reservations to manage flow</li>
+                    <li>• Cap attendance at manageable level</li>
+                    <li>• Pre-order food options to reduce kitchen stress</li>
+                    <li>• Simplify menu to speed service</li>
+                  </ul>
                 </div>
               </div>
             </div>
