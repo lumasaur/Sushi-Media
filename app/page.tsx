@@ -4,10 +4,10 @@ import { useState } from 'react';
 
 export default function Home() {
   const [expandedSections, setExpandedSections] = useState<Record<string, boolean>>({
-    approach: true,
-    opportunities: true,
-    analysis: true,
-    roadmap: true,
+    approach: false,
+    opportunities: false,
+    analysis: false,
+    roadmap: false,
   });
 
   const [activeTab, setActiveTab] = useState(0);
@@ -22,6 +22,9 @@ export default function Home() {
   const opportunities = [
     {
       title: "Corporate Market Development",
+      icon: "🏢",
+      color: "blue",
+      shortDesc: "Target businesses 20-200 employees within 3-mile radius",
       content: (
         <>
           <div className="mb-6">
@@ -73,6 +76,9 @@ export default function Home() {
     },
     {
       title: "Community Events & Social Programming",
+      icon: "🎵",
+      color: "orange",
+      shortDesc: "Build on proven weekend music event success",
       content: (
         <p className="leading-relaxed text-gray-300">
           Building on proven weekend music event success to develop systematic community engagement programming that drives consistent mid-week and weekend traffic while strengthening neighborhood relationships and creating differentiated social dining experiences.
@@ -81,6 +87,9 @@ export default function Home() {
     },
     {
       title: "Enhanced Takeout & Delivery",
+      icon: "📦",
+      color: "green",
+      shortDesc: "Premium takeout maintaining quality standards",
       content: (
         <p className="leading-relaxed text-gray-300">
           Premium takeout positioning that maintains quality standards while capturing convenience-oriented customer demand and expanding market reach beyond dine-in capacity constraints.
@@ -89,6 +98,9 @@ export default function Home() {
     },
     {
       title: "Weekend Social Events & Beverage Revenue",
+      icon: "🍷",
+      color: "purple",
+      shortDesc: "Maximize per-customer revenue on weekends",
       content: (
         <p className="leading-relaxed text-gray-300">
           Systematic expansion of successful music event format combined with elevated beverage program to maximize per-customer revenue during peak weekend traffic periods.
@@ -97,6 +109,9 @@ export default function Home() {
     },
     {
       title: "Premium Catering & Private Events",
+      icon: "🎉",
+      color: "red",
+      shortDesc: "High-margin private event services",
       content: (
         <p className="leading-relaxed text-gray-300">
           High-margin private event services leveraging upstairs space and culinary expertise to serve corporate celebrations and special occasions with premium positioning.
@@ -105,438 +120,529 @@ export default function Home() {
     }
   ];
 
+  const brandPillars = [
+    {
+      icon: "🤝",
+      title: "Community-Embedded Authenticity",
+      color: "green",
+      points: [
+        "Family business credibility with multi-generational local presence",
+        "Genuine community integration beyond transactional relationships",
+        "Local sourcing partnerships and regional business network participation",
+        "Authentic hospitality rooted in both Japanese service traditions and neighborhood values"
+      ]
+    },
+    {
+      icon: "⭐",
+      title: "Premium Quality Accessibility",
+      color: "yellow",
+      points: [
+        "Professional-grade culinary execution without intimidation factors",
+        "Sophisticated ingredients and preparation techniques presented in approachable formats",
+        "Education-focused service that enhances rather than excludes customer experience",
+        "Price-value positioning that justifies premium without creating barriers"
+      ]
+    },
+    {
+      icon: "🎭",
+      title: "Social Experience Engineering",
+      color: "blue",
+      points: [
+        "Physical space design optimized for both intimate dining and group celebration",
+        "Service protocols that facilitate conversation and connection",
+        "Event programming that brings community together around shared experiences",
+        "Technology integration that enhances rather than replaces human interaction"
+      ]
+    },
+    {
+      icon: "🌉",
+      title: "Cultural Bridge Building",
+      color: "purple",
+      points: [
+        "Japanese culinary traditions interpreted through local community lens",
+        "Educational components that respect cultural authenticity while maintaining accessibility",
+        "Service approach that honors both Japanese hospitality principles and American social expectations",
+        "Menu development that bridges traditional techniques with regional preferences"
+      ]
+    }
+  ];
+
+  const contentPillars = [
+    { icon: "🎯", title: "Mastery of Skills", desc: "Technical authority with accessibility" },
+    { icon: "❤️", title: "Social Soul", desc: "Authentic community integration" },
+    { icon: "👨‍👩‍👧‍👦", title: "About Us", desc: "Heritage authority building" },
+    { icon: "🍣", title: "Highlighting Food", desc: "Premium accessibility balance" },
+    { icon: "📢", title: "Information Updates", desc: "Community-focused communication" }
+  ];
+
+  const weeklyContent = [
+    { day: "Mon", name: "Mastery Monday", icon: "🔪", focus: "Behind-the-Scenes Excellence", purpose: "Technical authority" },
+    { day: "Tue", name: "Technique Tuesday", icon: "📚", focus: "Educational Premium", purpose: "Accessible education" },
+    { day: "Wed", name: "Wine & Sake Wednesday", icon: "🍶", focus: "Beverage Program", purpose: "Increase beverage sales" },
+    { day: "Thu", name: "Thankful Thursday", icon: "🙏", focus: "Community Celebration", purpose: "Build connections" },
+    { day: "Fri", name: "Friday Energy", icon: "⚡", focus: "Weekend Preparation", purpose: "Drive weekend traffic" },
+    { day: "Sat", name: "Social Saturday", icon: "🎉", focus: "Live Event Coverage", purpose: "Showcase experience" },
+    { day: "Sun", name: "Sunday Preview", icon: "📅", focus: "Week Ahead Planning", purpose: "Advance booking" }
+  ];
+
+  const targetMarkets = [
+    { icon: "💼", name: "Corporate Professionals", desc: "Business lunches, events, networking" },
+    { icon: "👨‍👩‍👧‍👦", name: "Affluent Families", desc: "Special occasions, celebrations, takeout" },
+    { icon: "🎵", name: "Social Enthusiasts", desc: "Weekend entertainment, music events" },
+    { icon: "🏘️", name: "Community-Minded", desc: "Local supporters, charity events" }
+  ];
+
   return (
-    <main className="min-h-screen bg-black text-white pt-20">
-      <div className="max-w-6xl mx-auto px-4 py-8">
-        {/* Hero Section */}
-        <section id="hero" className="p-6 md:p-10 mb-10 bg-black/50 backdrop-blur-sm rounded-xl border border-white/20">
-          <h1 className="text-3xl md:text-4xl font-bold tracking-tight mb-3">
+    <main className="min-h-screen bg-gradient-to-b from-[#120c0d] via-[#1a1416] to-[#120c0d] text-white pt-20">
+      <div className="max-w-7xl mx-auto px-4 py-8">
+        {/* Visual Hero Section */}
+        <section id="hero" className="relative mb-16">
+          <div className="bg-gradient-to-br from-[#b22222]/20 via-[#8b0000]/10 to-transparent rounded-2xl p-8 md:p-12 border border-[#b22222]/30 backdrop-blur-sm">
+            <div className="flex flex-col md:flex-row items-start md:items-center justify-between gap-6 mb-8">
+              <div className="flex-1">
+                <h1 className="text-4xl md:text-5xl font-bold tracking-tight mb-4 bg-gradient-to-r from-white to-gray-300 bg-clip-text text-transparent">
             Ami Marketing Strategy
           </h1>
-          <p className="text-lg text-gray-300 mb-5">
-            Strategic Marketing Framework for Premium Sushi with Social Soul
-          </p>
-          <div className="flex flex-wrap gap-2 mb-4">
-            <span className="bg-white/10 rounded-full px-3 py-1 text-sm">Community‑Embedded</span>
-            <span className="bg-white/10 rounded-full px-3 py-1 text-sm">Premium & Approachable</span>
-            <span className="bg-white/10 rounded-full px-3 py-1 text-sm">Social by Design</span>
-            <span className="bg-white/10 rounded-full px-3 py-1 text-sm">Cultural Bridge</span>
+                <p className="text-xl md:text-2xl text-gray-300 mb-6 font-light">
+                  Premium Sushi with Social Soul
+                </p>
+                <p className="text-base text-gray-400 max-w-2xl leading-relaxed">
+                  Central New Jersey's premier social dining destination where premium Japanese cuisine quality meets authentic community connection.
+              </p>
+            </div>
+              <div className="flex flex-wrap gap-3">
+                {['Community-Embedded', 'Premium & Approachable', 'Social by Design', 'Cultural Bridge'].map((tag, i) => (
+                  <span key={i} className="bg-white/10 backdrop-blur-sm rounded-full px-4 py-2 text-sm border border-white/20 hover:bg-white/20 transition-colors">
+                    {tag}
+                  </span>
+                ))}
+              </div>
+            </div>
+
+            {/* Key Metrics Visual */}
+            <div className="grid grid-cols-2 md:grid-cols-4 gap-4 mt-8">
+              <div className="bg-black/40 rounded-lg p-4 border border-white/10">
+                <div className="text-2xl font-bold text-[#b22222] mb-1">5</div>
+                <div className="text-xs text-gray-400">Revenue Opportunities</div>
+              </div>
+              <div className="bg-black/40 rounded-lg p-4 border border-white/10">
+                <div className="text-2xl font-bold text-[#b22222] mb-1">50</div>
+                <div className="text-xs text-gray-400">Marketing Initiatives</div>
+              </div>
+              <div className="bg-black/40 rounded-lg p-4 border border-white/10">
+                <div className="text-2xl font-bold text-[#b22222] mb-1">3</div>
+                <div className="text-xs text-gray-400">Implementation Phases</div>
+              </div>
+              <div className="bg-black/40 rounded-lg p-4 border border-white/10">
+                <div className="text-2xl font-bold text-[#b22222] mb-1">12</div>
+                <div className="text-xs text-gray-400">Month Timeline</div>
+              </div>
+            </div>
           </div>
-          <p className="text-sm text-gray-400">
-            Central New Jersey's premier social dining destination where premium Japanese cuisine quality meets authentic community connection, serving as both sophisticated celebration venue and neighborhood gathering place.
-          </p>
         </section>
 
-        {/* Strategic Marketing Approach Section */}
-        <section id="overview" className="scroll-mt-20 p-6 md:p-10 mb-10 bg-black/50 backdrop-blur-sm rounded-xl border border-white/20">
-          <div className="flex items-center justify-between mb-6">
-            <h2 className="text-2xl md:text-3xl font-bold">Strategic Marketing Approach</h2>
-            <button
-              onClick={() => toggleSection('approach')}
-              className="text-[#b22222] hover:text-[#a01e1e] transition-colors"
-            >
-              {expandedSections.approach ? '▲' : '▼'}
-            </button>
+        {/* Visual Brand Pillars */}
+        <section id="brand-pillars" className="mb-16 scroll-mt-20">
+          <div className="text-center mb-8">
+            <h2 className="text-3xl md:text-4xl font-bold mb-3">Strategic Brand Pillars</h2>
+            <p className="text-gray-400 max-w-2xl mx-auto">Four foundational principles that differentiate Ami Sushi in the market</p>
           </div>
-
-          {expandedSections.approach && (
-          <div>
-
-          <article className="mb-8">
-            <h3 className="text-xl font-semibold mb-3">Strategic Content Assessment & Competitive Positioning Analysis</h3>
-
-            <div className="mb-4">
-              <h4 className="font-semibold mb-2">Current Content Infrastructure Analysis</h4>
-              <p className="mb-3 leading-relaxed">
-                Through systematic evaluation of existing social media content, we have identified a sophisticated five-pillar framework that demonstrates intuitive understanding of premium social dining positioning. This analysis reveals strategic advantages that, when systematically leveraged, create sustainable competitive differentiation in the Central New Jersey market.
-              </p>
-            </div>
-
-            <div className="mb-4">
-              <h4 className="font-semibold mb-2">Content Pillar Strategic Architecture</h4>
-              <div className="grid md:grid-cols-2 gap-5">
-                <div className="p-5 rounded-lg border border-white/10 bg-black/20">
-                  <h5 className="font-semibold mb-2 text-sm">Pillar 1: "Mastery of Skills and Quality" - Technical Authority Establishment</h5>
-                  <p className="text-sm leading-relaxed">
-                    Premium positioning requires credible expertise demonstration without creating customer intimidation barriers. Current content successfully balances technical sophistication with educational accessibility.
-                  </p>
-                </div>
-                <div className="p-5 rounded-lg border border-white/10 bg-black/20">
-                  <h5 className="font-semibold mb-2 text-sm">Pillar 2: "Social Soul (Events & Community)" - Authentic Community Integration</h5>
-                  <p className="text-sm leading-relaxed">
-                    Community-embedded positioning creates replication barriers for competitors while building sustainable customer loyalty through genuine relationship development.
-                  </p>
-                </div>
-                <div className="p-5 rounded-lg border border-white/10 bg-black/20">
-                  <h5 className="font-semibold mb-2 text-sm">Pillar 3: "About Us" - Heritage Authority Building</h5>
-                  <p className="text-sm leading-relaxed">
-                    Family business storytelling establishes authentic culinary expertise while building personal connection that differentiates from corporate dining experiences.
-                  </p>
-                </div>
-                <div className="p-5 rounded-lg border border-white/10 bg-black/20">
-                  <h5 className="font-semibold mb-2 text-sm">Pillar 4: "Highlighting the Food" - Premium Accessibility Balance</h5>
-                  <p className="text-sm leading-relaxed">
-                    Premium food positioning must demonstrate sophistication while maintaining social accessibility to serve diverse customer segments effectively.
-                  </p>
-                </div>
-                <div className="p-5 rounded-lg border border-white/10 bg-black/20">
-                  <h5 className="font-semibold mb-2 text-sm">Pillar 5: "Information Updates" - Community-Focused Communication</h5>
-                  <p className="text-sm leading-relaxed">
-                    Operational communication opportunities reinforce community integration while maintaining customer engagement through accessible programming.
-                  </p>
-                </div>
+          <div className="grid md:grid-cols-2 gap-6">
+            {brandPillars.map((pillar, index) => {
+              const getColorClasses = (color: string) => {
+                const classes: Record<string, { gradient: string; border: string; hoverBorder: string; shadow: string; iconBg: string }> = {
+                  green: {
+                    gradient: 'from-green-900/20',
+                    border: 'border-green-500/30',
+                    hoverBorder: 'hover:border-green-500/50',
+                    shadow: 'hover:shadow-green-500/20',
+                    iconBg: 'bg-green-500/20'
+                  },
+                  yellow: {
+                    gradient: 'from-yellow-900/20',
+                    border: 'border-yellow-500/30',
+                    hoverBorder: 'hover:border-yellow-500/50',
+                    shadow: 'hover:shadow-yellow-500/20',
+                    iconBg: 'bg-yellow-500/20'
+                  },
+                  blue: {
+                    gradient: 'from-blue-900/20',
+                    border: 'border-blue-500/30',
+                    hoverBorder: 'hover:border-blue-500/50',
+                    shadow: 'hover:shadow-blue-500/20',
+                    iconBg: 'bg-blue-500/20'
+                  },
+                  purple: {
+                    gradient: 'from-purple-900/20',
+                    border: 'border-purple-500/30',
+                    hoverBorder: 'hover:border-purple-500/50',
+                    shadow: 'hover:shadow-purple-500/20',
+                    iconBg: 'bg-purple-500/20'
+                  },
+                };
+                return classes[color] || classes.green;
+              };
+              const colors = getColorClasses(pillar.color);
+              return (
+              <div
+                key={index}
+                className={`bg-gradient-to-br ${colors.gradient} to-black/40 rounded-xl p-6 border ${colors.border} ${colors.hoverBorder} transition-all duration-300 hover:shadow-xl ${colors.shadow}`}
+              >
+                <div className="flex items-start gap-4 mb-4">
+                  <div className={`text-4xl ${colors.iconBg} rounded-full p-3`}>
+                    {pillar.icon}
+                  </div>
+                  <div className="flex-1">
+                    <h3 className="text-xl font-bold mb-2">{pillar.title}</h3>
+                  </div>
               </div>
-            </div>
-          </article>
-
-          <article className="mb-8">
-            <h3 className="text-xl font-semibold mb-3">Market Opportunity Assessment</h3>
-
-            <div className="mb-4">
-              <h4 className="font-semibold mb-2">Primary Market Gap Analysis</h4>
-              <p className="mb-3 leading-relaxed">
-                Central New Jersey's dining landscape presents a distinct opportunity in the premium social dining segment. Current market competitors cluster into three primary categories: formal omakase establishments offering limited social interaction, casual sushi chains lacking premium quality differentiation, and premium restaurants without Japanese culinary specialization.
-              </p>
-            </div>
-
-            <div className="mb-4">
-              <h4 className="font-semibold mb-2">Target Market Segmentation</h4>
-              <ul className="list-disc pl-5 space-y-1">
-                <li className="leading-relaxed">Corporate Professionals: Business lunch demand, corporate event hosting, professional networking requirements</li>
-                <li className="leading-relaxed">Affluent Suburban Families: Special occasion dining, family celebrations, premium takeout convenience</li>
-                <li className="leading-relaxed">Social Dining Enthusiasts: Weekend entertainment seekers, music event attendees, group celebration organizers</li>
-                <li className="leading-relaxed">Community-Minded Consumers: Local business supporters, charity event participants, neighborhood gathering participants</li>
-              </ul>
-            </div>
-          </article>
-
-          <article className="mb-8">
-            <h3 className="text-xl font-semibold mb-3">Value Proposition Development</h3>
-            <div className="p-5 rounded-lg border border-white/10 bg-black/20 mb-4">
-              <h4 className="font-semibold mb-2">Core Value Proposition</h4>
-              <p className="leading-relaxed">
-                Central New Jersey's premier social dining destination where premium Japanese cuisine quality meets authentic community connection, serving as both sophisticated celebration venue and neighborhood gathering place.
-              </p>
-            </div>
-            <div className="p-5 rounded-lg border border-white/10 bg-black/20">
-              <h4 className="font-semibold mb-2">Differentiated Positioning Statement</h4>
-              <p className="leading-relaxed">
-                "Premium Sushi with Social Soul" - the only restaurant in Central New Jersey delivering NYC-caliber Japanese cuisine within a community-embedded social environment that facilitates meaningful connection while maintaining culinary excellence.
-              </p>
-            </div>
-          </article>
-
-          <article className="mb-8">
-            <h3 className="text-xl font-semibold mb-3">Strategic Brand Pillars</h3>
-            <div className="grid md:grid-cols-2 gap-5">
-              <div className="p-5 rounded-lg border border-white/10 bg-black/20">
-                <h4 className="font-semibold mb-2">Community‑Embedded Authenticity</h4>
-                <ul className="list-disc pl-5 space-y-1">
-                  <li className="leading-relaxed">Family business credibility with multi‑generational local presence</li>
-                  <li className="leading-relaxed">Genuine community integration beyond transactional relationships</li>
-                  <li className="leading-relaxed">Local sourcing partnerships and regional business network participation</li>
-                  <li className="leading-relaxed">Authentic hospitality rooted in both Japanese service traditions and neighborhood values</li>
+                <ul className="space-y-2 ml-16">
+                  {pillar.points.map((point, i) => (
+                    <li key={i} className="flex items-start gap-2 text-sm text-gray-300">
+                      <span className="text-[#b22222] mt-1">•</span>
+                      <span>{point}</span>
+                    </li>
+                  ))}
                 </ul>
               </div>
-              <div className="p-5 rounded-lg border border-white/10 bg-black/20">
-                <h4 className="font-semibold mb-2">Premium Quality Accessibility</h4>
-                <ul className="list-disc pl-5 space-y-1">
-                  <li className="leading-relaxed">Professional‑grade culinary execution without intimidation factors</li>
-                  <li className="leading-relaxed">Sophisticated ingredients and preparation techniques presented in approachable formats</li>
-                  <li className="leading-relaxed">Education‑focused service that enhances rather than excludes customer experience</li>
-                  <li className="leading-relaxed">Price‑value positioning that justifies premium without creating barriers</li>
-                </ul>
-              </div>
-              <div className="p-5 rounded-lg border border-white/10 bg-black/20">
-                <h4 className="font-semibold mb-2">Social Experience Engineering</h4>
-                <ul className="list-disc pl-5 space-y-1">
-                  <li className="leading-relaxed">Physical space design optimized for both intimate dining and group celebration</li>
-                  <li className="leading-relaxed">Service protocols that facilitate conversation and connection</li>
-                  <li className="leading-relaxed">Event programming that brings community together around shared experiences</li>
-                  <li className="leading-relaxed">Technology integration that enhances rather than replaces human interaction</li>
-                </ul>
-              </div>
-              <div className="p-5 rounded-lg border border-white/10 bg-black/20">
-                <h4 className="font-semibold mb-2">Cultural Bridge Building</h4>
-                <ul className="list-disc pl-5 space-y-1">
-                  <li className="leading-relaxed">Japanese culinary traditions interpreted through local community lens</li>
-                  <li className="leading-relaxed">Educational components that respect cultural authenticity while maintaining accessibility</li>
-                  <li className="leading-relaxed">Service approach that honors both Japanese hospitality principles and American social expectations</li>
-                  <li className="leading-relaxed">Menu development that bridges traditional techniques with regional preferences</li>
-                </ul>
-              </div>
-            </div>
-          </article>
-
-          <article>
-            <h3 className="text-xl font-semibold mb-3">Competitive Differentiation Matrix</h3>
-            <div className="grid md:grid-cols-2 gap-5">
-              <div className="p-5 rounded-lg border border-white/10 bg-black/20">
-                <h4 className="font-semibold mb-2">Unique Competitive Advantages</h4>
-                <ul className="list-disc pl-5 space-y-1">
-                  <li className="leading-relaxed">Established Community Credibility: Family business reputation with proven local relationships</li>
-                  <li className="leading-relaxed">Proven Social Programming Success: Demonstrated capability through weekend music events</li>
-                  <li className="leading-relaxed">Premium Quality Foundation: Existing culinary standards that support elevated positioning</li>
-                  <li className="leading-relaxed">Flexible Space Utilization: Physical environment adaptable for multiple experience types</li>
-                  <li className="leading-relaxed">Authentic Cultural Integration: Japanese expertise combined with genuine community connection</li>
-                </ul>
-              </div>
-              <div className="p-5 rounded-lg border border-white/10 bg-black/20">
-                <h4 className="font-semibold mb-2">Barriers to Competitive Replication</h4>
-                <ul className="list-disc pl-5 space-y-1">
-                  <li className="leading-relaxed">Multi-generational Business Relationships: Community trust built over extended time periods</li>
-                  <li className="leading-relaxed">Cultural Expertise Combined with Local Knowledge: Unique intersection of Japanese culinary training and Central New Jersey market understanding</li>
-                  <li className="leading-relaxed">Integrated Social Programming: Music events and community activities require sustained relationship building</li>
-                  <li className="leading-relaxed">Physical Space Advantages: Existing infrastructure supporting both intimate dining and group events</li>
-                </ul>
-              </div>
-            </div>
-          </article>
+              );
+            })}
           </div>
-          )}
         </section>
 
-        {/* Strategic Revenue Opportunities Section */}
-        <section id="objectives" className="scroll-mt-20 p-6 md:p-10 mb-10 bg-black/50 backdrop-blur-sm rounded-xl border border-white/20">
-          <div className="flex items-center justify-between mb-6">
-            <h2 className="text-2xl md:text-3xl font-bold">Five Strategic Revenue Opportunities</h2>
-            <button
-              onClick={() => toggleSection('opportunities')}
-              className="text-[#b22222] hover:text-[#a01e1e] transition-colors"
-            >
-              {expandedSections.opportunities ? '▲' : '▼'}
-            </button>
+        {/* Visual Revenue Opportunities */}
+        <section id="objectives" className="mb-16 scroll-mt-20">
+          <div className="text-center mb-8">
+            <h2 className="text-3xl md:text-4xl font-bold mb-3">Five Strategic Revenue Opportunities</h2>
+            <p className="text-gray-400 max-w-2xl mx-auto">Explore each opportunity for detailed analysis and implementation recommendations</p>
           </div>
 
-          {expandedSections.opportunities && (
-          <div>
-          <p className="text-gray-300 mb-6 leading-relaxed">
-            Explore each opportunity for detailed market analysis, targeting approach, implementation recommendations, marketing strategy, and potential success indicators.
-          </p>
-
-          {/* Tab Navigation */}
-          <div className="flex flex-wrap items-end gap-4 border-b border-white/20 mb-6">
-            {opportunities.map((opp, index) => (
+          {/* Visual Opportunity Cards */}
+          <div className="grid md:grid-cols-5 gap-4 mb-8">
+            {opportunities.map((opp, index) => {
+              const colorMap: Record<string, string> = {
+                blue: activeTab === index ? 'border-blue-500 bg-blue-900/30 shadow-lg shadow-blue-500/20' : '',
+                orange: activeTab === index ? 'border-orange-500 bg-orange-900/30 shadow-lg shadow-orange-500/20' : '',
+                green: activeTab === index ? 'border-green-500 bg-green-900/30 shadow-lg shadow-green-500/20' : '',
+                purple: activeTab === index ? 'border-purple-500 bg-purple-900/30 shadow-lg shadow-purple-500/20' : '',
+                red: activeTab === index ? 'border-red-500 bg-red-900/30 shadow-lg shadow-red-500/20' : '',
+              };
+              return (
               <button
                 key={index}
-                onClick={() => setActiveTab(index)}
-                className={`py-2 px-3 transition-all duration-200 ${
+                onClick={() => {
+                  setActiveTab(index);
+                  setExpandedSections(prev => ({ ...prev, opportunities: true }));
+                }}
+                className={`p-4 rounded-xl border-2 transition-all duration-300 text-left ${
                   activeTab === index
-                    ? 'text-[#b22222] border-b-2 border-[#b22222] font-semibold'
-                    : 'hover:text-[#b22222]'
+                    ? colorMap[opp.color] || 'border-gray-500 bg-gray-900/30'
+                    : 'border-gray-700 bg-black/40 hover:border-gray-600 hover:bg-black/60'
                 }`}
               >
-                {opp.title}
+                <div className="text-3xl mb-2">{opp.icon}</div>
+                <h3 className="font-bold text-sm mb-2 line-clamp-2">{opp.title}</h3>
+                <p className="text-xs text-gray-400 line-clamp-2">{opp.shortDesc}</p>
               </button>
-            ))}
+              );
+            })}
           </div>
 
-          {/* Tab Content */}
-          <div className="space-y-6">
-            <article className="fade">
-              <h3 className="text-xl font-semibold mb-4">Opportunity {activeTab + 1}: {opportunities[activeTab].title}</h3>
+          {/* Expanded Content */}
+          {expandedSections.opportunities && (
+            <div className="bg-black/50 backdrop-blur-sm rounded-xl border border-white/20 p-6 md:p-10 mb-6">
+              <div className="flex items-center justify-between mb-6">
+                <div className="flex items-center gap-4">
+                  <span className="text-4xl">{opportunities[activeTab].icon}</span>
+                  <div>
+                    <h3 className="text-2xl font-bold">Opportunity {activeTab + 1}: {opportunities[activeTab].title}</h3>
+                    <p className="text-gray-400 text-sm">{opportunities[activeTab].shortDesc}</p>
+                  </div>
+                </div>
+                <button
+                  onClick={() => toggleSection('opportunities')}
+                  className="text-gray-400 hover:text-white transition-colors"
+                >
+                  ✕
+                </button>
+              </div>
+              <div className="space-y-6 animate-fadeIn">
               {opportunities[activeTab].content}
-            </article>
+              </div>
           </div>
+          )}
 
-          <div className="mt-8 p-6 bg-gray-800 rounded-lg border border-gray-700">
-            <h4 className="font-semibold mb-3">Explore Detailed Strategy Review</h4>
-            <p className="text-gray-300 mb-4">
-              Access comprehensive strategy prioritization tool with 50 marketing initiatives across all 5 objectives, including implementation roadmap, portfolio composition, and detailed business cases.
+          <div className="bg-gradient-to-r from-[#b22222]/20 to-[#8b0000]/20 border-2 border-[#b22222] rounded-xl p-6 text-center">
+            <h4 className="font-semibold mb-2 text-lg">Explore Detailed Strategy Review</h4>
+            <p className="text-gray-300 mb-4 text-sm">
+              50 marketing initiatives across all 5 objectives with implementation roadmap and detailed business cases
             </p>
             <a
               href="/strategy-review"
-              className="inline-block px-6 py-3 bg-[#b22222] text-white rounded-lg hover:bg-[#a01e1e] transition-colors font-semibold"
+              className="inline-block px-8 py-3 bg-[#b22222] text-white rounded-lg hover:bg-[#a01e1e] transition-colors font-semibold"
             >
               View Strategy Prioritization Tool →
             </a>
           </div>
-          </div>
-          )}
         </section>
 
-        {/* Analysis/Social Media Strategy Section */}
-        <section id="analysis" className="scroll-mt-20 p-6 md:p-10 mb-10 bg-black/50 backdrop-blur-sm rounded-xl border border-white/20">
-          <div className="flex items-center justify-between mb-6">
-            <h2 className="text-2xl md:text-3xl font-bold">Social Media Messaging & Content Strategy</h2>
-            <button
-              onClick={() => toggleSection('analysis')}
-              className="text-[#b22222] hover:text-[#a01e1e] transition-colors"
-            >
-              {expandedSections.analysis ? '▲' : '▼'}
-            </button>
+        {/* Visual Content Strategy */}
+        <section id="analysis" className="mb-16 scroll-mt-20">
+          <div className="text-center mb-8">
+            <h2 className="text-3xl md:text-4xl font-bold mb-3">Social Media Content Strategy</h2>
+            <p className="text-gray-400 max-w-2xl mx-auto">Weekly Content Architecture for "Premium Sushi with Social Soul"</p>
           </div>
 
-          {expandedSections.analysis && (
-          <div>
-          <article className="mb-8">
-            <h3 className="text-xl font-semibold mb-3">Daily Posting Framework: Structured Content Strategy</h3>
-            <p className="mb-4 leading-relaxed">
-              Weekly Content Architecture for "Premium Sushi with Social Soul"
-            </p>
-
-            <div className="grid gap-4">
-              <div className="p-4 rounded-lg border border-white/10 bg-black/20">
-                <h4 className="font-semibold mb-2 text-[#b22222]">Monday: "Mastery Monday" - Behind-the-Scenes Excellence</h4>
-                <div className="space-y-2 text-sm text-gray-300">
-                  <p><strong>Content Focus:</strong> Chef preparation, fish selection, rice preparation, knife skills</p>
-                  <p><strong>Strategic Purpose:</strong> Establish technical authority while building customer appreciation</p>
+          {/* Content Pillars Visual */}
+          <div className="grid grid-cols-5 gap-3 mb-8">
+            {contentPillars.map((pillar, i) => (
+              <div key={i} className="bg-black/40 rounded-lg p-3 border border-white/10 text-center hover:border-[#b22222]/50 transition-colors">
+                <div className="text-2xl mb-2">{pillar.icon}</div>
+                <div className="text-xs font-semibold mb-1">{pillar.title}</div>
+                <div className="text-xs text-gray-400">{pillar.desc}</div>
                 </div>
+            ))}
               </div>
 
-              <div className="p-4 rounded-lg border border-white/10 bg-black/20">
-                <h4 className="font-semibold mb-2 text-[#b22222]">Tuesday: "Technique Tuesday" - Educational Premium Positioning</h4>
-                <div className="space-y-2 text-sm text-gray-300">
-                  <p><strong>Content Focus:</strong> Cooking techniques, preparation methods, ingredient knowledge</p>
-                  <p><strong>Strategic Purpose:</strong> Premium positioning through accessible education</p>
+          {/* Weekly Content Calendar - Visual Timeline */}
+          <div className="bg-black/50 backdrop-blur-sm rounded-xl border border-white/20 p-6 md:p-10">
+            <h3 className="text-xl font-semibold mb-6 text-center">Daily Posting Framework</h3>
+            <div className="grid md:grid-cols-7 gap-3">
+              {weeklyContent.map((day, index) => (
+                <div
+                  key={index}
+                  className="bg-gradient-to-br from-gray-800/50 to-black/50 rounded-lg p-4 border border-gray-700 hover:border-[#b22222]/50 transition-all duration-300 hover:shadow-lg hover:shadow-[#b22222]/20"
+                >
+                  <div className="text-center mb-3">
+                    <div className="text-2xl mb-2">{day.icon}</div>
+                    <div className="text-xs font-bold text-gray-400 mb-1">{day.day}</div>
+                    <div className="text-sm font-semibold text-white mb-2">{day.name}</div>
+                  </div>
+                  <div className="space-y-2 text-xs">
+                    <div>
+                      <div className="text-[#b22222] font-semibold mb-1">Focus:</div>
+                      <div className="text-gray-300">{day.focus}</div>
+                    </div>
+                    <div>
+                      <div className="text-[#b22222] font-semibold mb-1">Purpose:</div>
+                      <div className="text-gray-400">{day.purpose}</div>
                 </div>
               </div>
-
-              <div className="p-4 rounded-lg border border-white/10 bg-black/20">
-                <h4 className="font-semibold mb-2 text-[#b22222]">Wednesday: "Wine & Sake Wednesday" - Beverage Program Showcase</h4>
-                <div className="space-y-2 text-sm text-gray-300">
-                  <p><strong>Content Focus:</strong> Sake education, cocktail features, pairing recommendations</p>
-                  <p><strong>Strategic Purpose:</strong> Increase beverage sales and position as beverage destination</p>
                 </div>
-              </div>
-
-              <div className="p-4 rounded-lg border border-white/10 bg-black/20">
-                <h4 className="font-semibold mb-2 text-[#b22222]">Thursday: "Thankful Thursday" - Community & Customer Celebration</h4>
-                <div className="space-y-2 text-sm text-gray-300">
-                  <p><strong>Content Focus:</strong> Customer celebrations, community partnerships, staff appreciation</p>
-                  <p><strong>Strategic Purpose:</strong> Build community connection and showcase relationship focus</p>
-                </div>
-              </div>
-
-              <div className="p-4 rounded-lg border border-white/10 bg-black/20">
-                <h4 className="font-semibold mb-2 text-[#b22222]">Friday: "Friday Energy" - Weekend Preparation & Social Atmosphere</h4>
-                <div className="space-y-2 text-sm text-gray-300">
-                  <p><strong>Content Focus:</strong> Weekend preparation, social atmosphere, music event previews</p>
-                  <p><strong>Strategic Purpose:</strong> Drive weekend traffic and establish social dining positioning</p>
-                </div>
-              </div>
-
-              <div className="p-4 rounded-lg border border-white/10 bg-black/20">
-                <h4 className="font-semibold mb-2 text-[#b22222]">Saturday: "Social Saturday" - Community Gathering & Celebration</h4>
-                <div className="space-y-2 text-sm text-gray-300">
-                  <p><strong>Content Focus:</strong> Live event coverage, customer interactions, group celebrations</p>
-                  <p><strong>Strategic Purpose:</strong> Showcase social dining experience and encourage sharing</p>
-                </div>
-              </div>
-
-              <div className="p-4 rounded-lg border border-white/10 bg-black/20">
-                <h4 className="font-semibold mb-2 text-[#b22222]">Sunday: "Sunday Preview" - Week Ahead & Planning</h4>
-                <div className="space-y-2 text-sm text-gray-300">
-                  <p><strong>Content Focus:</strong> Weekly menu previews, upcoming events, seasonal announcements</p>
-                  <p><strong>Strategic Purpose:</strong> Drive advance booking and maintain customer engagement</p>
-                </div>
-              </div>
+              ))}
             </div>
-          </article>
           </div>
-          )}
         </section>
 
-        {/* Implementation Roadmap */}
-        <section id="roadmap" className="scroll-mt-20 p-6 md:p-10 mb-10 bg-black/50 backdrop-blur-sm rounded-xl border border-white/20">
+        {/* Visual Market Positioning */}
+        <section id="overview" className="mb-16 scroll-mt-20">
+          <div className="bg-black/50 backdrop-blur-sm rounded-xl border border-white/20 p-6 md:p-10">
+            <div className="flex items-center justify-between mb-6">
+              <h2 className="text-2xl md:text-3xl font-bold">Market Positioning & Strategy</h2>
+              <button
+                onClick={() => toggleSection('approach')}
+                className="text-[#b22222] hover:text-[#a01e1e] transition-colors text-2xl"
+              >
+                {expandedSections.approach ? '▲' : '▼'}
+              </button>
+              </div>
+
+            {expandedSections.approach && (
+              <div className="space-y-8 animate-fadeIn">
+                {/* Target Markets Visual */}
+                <div>
+                  <h3 className="text-xl font-semibold mb-4">Target Market Segments</h3>
+                  <div className="grid md:grid-cols-4 gap-4">
+                    {targetMarkets.map((market, i) => (
+                      <div key={i} className="bg-black/40 rounded-lg p-4 border border-white/10 text-center hover:border-[#b22222]/50 transition-colors">
+                        <div className="text-3xl mb-2">{market.icon}</div>
+                        <div className="font-semibold mb-1 text-sm">{market.name}</div>
+                        <div className="text-xs text-gray-400">{market.desc}</div>
+                      </div>
+                    ))}
+                  </div>
+                </div>
+
+                {/* Value Proposition */}
+                <div className="bg-gradient-to-r from-[#b22222]/20 to-transparent rounded-lg p-6 border border-[#b22222]/30">
+                  <h3 className="text-xl font-semibold mb-3">Core Value Proposition</h3>
+                  <p className="text-lg leading-relaxed mb-4">
+                    Central New Jersey's premier social dining destination where premium Japanese cuisine quality meets authentic community connection, serving as both sophisticated celebration venue and neighborhood gathering place.
+                  </p>
+                  <div className="bg-black/40 rounded p-4 border border-white/10">
+                    <div className="text-[#b22222] font-semibold mb-2">Differentiated Positioning:</div>
+                    <div className="text-white font-semibold">"Premium Sushi with Social Soul"</div>
+                    <div className="text-sm text-gray-400 mt-2">
+                      The only restaurant in Central New Jersey delivering NYC-caliber Japanese cuisine within a community-embedded social environment.
+                </div>
+              </div>
+                </div>
+
+                {/* Competitive Advantages */}
+                <div>
+                  <h3 className="text-xl font-semibold mb-4">Competitive Advantages</h3>
+                  <div className="grid md:grid-cols-2 gap-4">
+                    <div className="bg-green-900/20 rounded-lg p-5 border border-green-500/30">
+                      <h4 className="font-semibold mb-3 text-green-300">Unique Advantages</h4>
+                      <ul className="space-y-2 text-sm">
+                        {[
+                          "Established Community Credibility",
+                          "Proven Social Programming Success",
+                          "Premium Quality Foundation",
+                          "Flexible Space Utilization",
+                          "Authentic Cultural Integration"
+                        ].map((item, i) => (
+                          <li key={i} className="flex items-start gap-2">
+                            <span className="text-green-400">✓</span>
+                            <span className="text-gray-300">{item}</span>
+                          </li>
+                        ))}
+                      </ul>
+              </div>
+                    <div className="bg-amber-900/20 rounded-lg p-5 border border-amber-500/30">
+                      <h4 className="font-semibold mb-3 text-amber-300">Replication Barriers</h4>
+                      <ul className="space-y-2 text-sm">
+                        {[
+                          "Multi-generational Business Relationships",
+                          "Cultural Expertise + Local Knowledge",
+                          "Integrated Social Programming",
+                          "Physical Space Advantages"
+                        ].map((item, i) => (
+                          <li key={i} className="flex items-start gap-2">
+                            <span className="text-amber-400">🛡️</span>
+                            <span className="text-gray-300">{item}</span>
+                          </li>
+                        ))}
+                      </ul>
+                </div>
+              </div>
+                </div>
+              </div>
+            )}
+          </div>
+        </section>
+
+        {/* Visual Implementation Roadmap */}
+        <section id="roadmap" className="mb-16 scroll-mt-20">
+          <div className="text-center mb-8">
+            <h2 className="text-3xl md:text-4xl font-bold mb-3">Implementation Roadmap</h2>
+            <p className="text-gray-400 max-w-2xl mx-auto">Three-phase approach to market leadership</p>
+          </div>
+
+          <div className="bg-black/50 backdrop-blur-sm rounded-xl border border-white/20 p-6 md:p-10">
           <div className="flex items-center justify-between mb-6">
-            <h2 className="text-2xl md:text-3xl font-bold">Implementation Roadmap & Next Steps</h2>
+              <h3 className="text-xl font-semibold">Phase Timeline & Focus Areas</h3>
             <button
               onClick={() => toggleSection('roadmap')}
-              className="text-[#b22222] hover:text-[#a01e1e] transition-colors"
+                className="text-[#b22222] hover:text-[#a01e1e] transition-colors text-2xl"
             >
               {expandedSections.roadmap ? '▲' : '▼'}
             </button>
           </div>
 
           {expandedSections.roadmap && (
-          <div>
-
-          <div className="grid md:grid-cols-3 gap-8 mb-12">
-            <div className="bg-black/40 rounded-lg p-8 border border-white/10">
-              <h3 className="text-2xl font-bold mb-6 text-[#b22222]">Phase 1: Foundation</h3>
-              <p className="text-sm text-gray-400 mb-4">Months 1-3</p>
-              <ul className="space-y-2 text-sm text-gray-300">
-                <li className="flex items-start gap-2">
-                  <span className="text-[#b22222]">•</span>
-                  <span>Community partnership establishment</span>
-                </li>
-                <li className="flex items-start gap-2">
-                  <span className="text-[#b22222]">•</span>
-                  <span>Digital infrastructure optimization</span>
-                </li>
-                <li className="flex items-start gap-2">
-                  <span className="text-[#b22222]">•</span>
-                  <span>Corporate outreach program launch</span>
-                </li>
-                <li className="flex items-start gap-2">
-                  <span className="text-[#b22222]">•</span>
-                  <span>Content framework implementation</span>
-                </li>
-              </ul>
+              <div className="space-y-8 animate-fadeIn">
+                {/* Visual Timeline */}
+                <div className="relative">
+                  {/* Timeline Line */}
+                  <div className="absolute left-8 top-0 bottom-0 w-0.5 bg-gradient-to-b from-green-500 via-amber-500 to-blue-500 hidden md:block"></div>
+                  
+                  <div className="space-y-12 relative">
+                    {/* Phase 1 */}
+                    <div className="relative pl-0 md:pl-20">
+                      <div className="absolute left-0 md:left-4 w-16 h-16 bg-green-600 rounded-full flex items-center justify-center text-2xl font-bold border-4 border-black z-10">
+                        1
+                      </div>
+                      <div className="bg-green-900/20 rounded-xl p-6 border-2 border-green-500/50 ml-0 md:ml-8">
+                        <div className="flex items-center justify-between mb-4">
+                          <h3 className="text-2xl font-bold text-green-300">Phase 1: Foundation</h3>
+                          <span className="text-sm text-gray-400 bg-black/40 px-3 py-1 rounded-full">Months 1-3</span>
+                        </div>
+                        <div className="grid md:grid-cols-2 gap-3">
+                          {[
+                            "Community partnership establishment",
+                            "Digital infrastructure optimization",
+                            "Corporate outreach program launch",
+                            "Content framework implementation"
+                          ].map((item, i) => (
+                            <div key={i} className="flex items-start gap-2 text-sm text-gray-300">
+                              <span className="text-green-400 mt-1">•</span>
+                              <span>{item}</span>
+                            </div>
+                          ))}
+                        </div>
+                      </div>
             </div>
 
-            <div className="bg-black/40 rounded-lg p-8 border border-white/10">
-              <h3 className="text-2xl font-bold mb-6 text-[#b22222]">Phase 2: Program Launch</h3>
-              <p className="text-sm text-gray-400 mb-4">Months 4-6</p>
-              <ul className="space-y-2 text-sm text-gray-300">
-                <li className="flex items-start gap-2">
-                  <span className="text-[#b22222]">•</span>
-                  <span>Community event programming activation</span>
-                </li>
-                <li className="flex items-start gap-2">
-                  <span className="text-[#b22222]">•</span>
-                  <span>Corporate services formalization</span>
-                </li>
-                <li className="flex items-start gap-2">
-                  <span className="text-[#b22222]">•</span>
-                  <span>Premium takeout/delivery enhancement</span>
-                </li>
-                <li className="flex items-start gap-2">
-                  <span className="text-[#b22222]">•</span>
-                  <span>Beverage program optimization</span>
-                </li>
-              </ul>
+                    {/* Phase 2 */}
+                    <div className="relative pl-0 md:pl-20">
+                      <div className="absolute left-0 md:left-4 w-16 h-16 bg-amber-600 rounded-full flex items-center justify-center text-2xl font-bold border-4 border-black z-10">
+                        2
+                      </div>
+                      <div className="bg-amber-900/20 rounded-xl p-6 border-2 border-amber-500/50 ml-0 md:ml-8">
+                        <div className="flex items-center justify-between mb-4">
+                          <h3 className="text-2xl font-bold text-amber-300">Phase 2: Program Launch</h3>
+                          <span className="text-sm text-gray-400 bg-black/40 px-3 py-1 rounded-full">Months 4-6</span>
+                        </div>
+                        <div className="grid md:grid-cols-2 gap-3">
+                          {[
+                            "Community event programming activation",
+                            "Corporate services formalization",
+                            "Premium takeout/delivery enhancement",
+                            "Beverage program optimization"
+                          ].map((item, i) => (
+                            <div key={i} className="flex items-start gap-2 text-sm text-gray-300">
+                              <span className="text-amber-400 mt-1">•</span>
+                              <span>{item}</span>
+                            </div>
+                          ))}
+                        </div>
+                      </div>
             </div>
 
-            <div className="bg-black/40 rounded-lg p-8 border border-white/10">
-              <h3 className="text-2xl font-bold mb-6 text-[#b22222]">Phase 3: Market Leadership</h3>
-              <p className="text-sm text-gray-400 mb-4">Months 7-12</p>
-              <ul className="space-y-2 text-sm text-gray-300">
-                <li className="flex items-start gap-2">
-                  <span className="text-[#b22222]">•</span>
-                  <span>Private event service expansion</span>
-                </li>
-                <li className="flex items-start gap-2">
-                  <span className="text-[#b22222]">•</span>
-                  <span>Premium catering program launch</span>
-                </li>
-                <li className="flex items-start gap-2">
-                  <span className="text-[#b22222]">•</span>
-                  <span>Market position consolidation</span>
-                </li>
-                <li className="flex items-start gap-2">
-                  <span className="text-[#b22222]">•</span>
-                  <span>Performance measurement & optimization</span>
-                </li>
-              </ul>
+                    {/* Phase 3 */}
+                    <div className="relative pl-0 md:pl-20">
+                      <div className="absolute left-0 md:left-4 w-16 h-16 bg-blue-600 rounded-full flex items-center justify-center text-2xl font-bold border-4 border-black z-10">
+                        3
+                      </div>
+                      <div className="bg-blue-900/20 rounded-xl p-6 border-2 border-blue-500/50 ml-0 md:ml-8">
+                        <div className="flex items-center justify-between mb-4">
+                          <h3 className="text-2xl font-bold text-blue-300">Phase 3: Market Leadership</h3>
+                          <span className="text-sm text-gray-400 bg-black/40 px-3 py-1 rounded-full">Months 7-12</span>
+                        </div>
+                        <div className="grid md:grid-cols-2 gap-3">
+                          {[
+                            "Private event service expansion",
+                            "Premium catering program launch",
+                            "Market position consolidation",
+                            "Performance measurement & optimization"
+                          ].map((item, i) => (
+                            <div key={i} className="flex items-start gap-2 text-sm text-gray-300">
+                              <span className="text-blue-400 mt-1">•</span>
+                              <span>{item}</span>
+                            </div>
+                          ))}
+                        </div>
+                      </div>
+                    </div>
             </div>
           </div>
 
-          <div className="bg-[#b22222]/10 border border-[#b22222]/20 rounded-lg p-6">
-            <h3 className="text-lg font-semibold mb-3 text-[#b22222]">📊 Access Detailed Implementation Tools</h3>
-            <p className="mb-4 text-gray-300">
+                <div className="bg-gradient-to-r from-[#b22222]/20 to-[#8b0000]/20 border-2 border-[#b22222] rounded-xl p-6 text-center">
+                  <h4 className="text-lg font-semibold mb-3 text-[#b22222]">📊 Access Detailed Implementation Tools</h4>
+                  <p className="mb-4 text-gray-300 text-sm">
               Review comprehensive strategy prioritization with 50 initiatives, interactive filtering, and detailed roadmap planning.
             </p>
             <a
               href="/strategy-review"
-              className="inline-block px-6 py-3 bg-[#b22222] text-white rounded-lg hover:bg-[#a01e1e] transition-colors font-semibold"
+                    className="inline-block px-8 py-3 bg-[#b22222] text-white rounded-lg hover:bg-[#a01e1e] transition-colors font-semibold"
             >
               Open Strategy Review Tool →
             </a>
           </div>
           </div>
           )}
+          </div>
         </section>
       </div>
     </main>
