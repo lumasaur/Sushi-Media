@@ -44,7 +44,7 @@ export default function Home() {
             <div className="grid md:grid-cols-2 gap-4">
               <div className="p-4 rounded-lg border border-white/10 bg-black/20">
                 <h5 className="font-semibold mb-2">Corporate Service Development</h5>
-                <ul className="list-disc pl-5 space-y-1 text-sm">
+                <ul className="list-disc pl-5 space-y-2 text-base text-gray-200">
                   <li>Business Lunch Optimization: Menu items specifically designed for professional dining with efficient service timing</li>
                   <li>Private Dining Enhancement: Upstairs space configuration for business meetings with basic presentation capabilities</li>
                   <li>Account Management Approach: Dedicated relationship building with key corporate decision makers</li>
@@ -53,7 +53,7 @@ export default function Home() {
               </div>
               <div className="p-4 rounded-lg border border-white/10 bg-black/20">
                 <h5 className="font-semibold mb-2">Marketing and Outreach Strategy</h5>
-                <ul className="list-disc pl-5 space-y-1 text-sm">
+                <ul className="list-disc pl-5 space-y-2 text-base text-gray-200">
                   <li>LinkedIn Professional Engagement: Targeted content marketing emphasizing community values</li>
                   <li>Direct Relationship Building: Personal outreach to office managers and corporate event coordinators</li>
                   <li>Somerset County Business Partnership Participation: Active involvement in professional networking events</li>
@@ -80,9 +80,52 @@ export default function Home() {
       color: "orange",
       shortDesc: "Build on proven weekend music event success",
       content: (
-        <p className="leading-relaxed text-gray-300">
-          Building on proven weekend music event success to develop systematic community engagement programming that drives consistent mid-week and weekend traffic while strengthening neighborhood relationships and creating differentiated social dining experiences.
-        </p>
+        <>
+          <div className="mb-6">
+            <h4 className="font-semibold mb-2">Market Opportunity Analysis</h4>
+            <p className="mb-3 leading-relaxed text-base text-gray-200">
+              Weekend music events have demonstrated strong customer engagement and revenue generation, proving demand for social dining experiences that combine premium food with entertainment. Central New Jersey lacks consistent, high-quality community programming that brings neighbors together around shared experiences. This opportunity leverages existing event infrastructure while expanding programming to drive mid-week traffic and create recurring community gathering occasions.
+            </p>
+          </div>
+          <div className="mb-6">
+            <h4 className="font-semibold mb-2">Strategic Targeting Approach</h4>
+            <p className="mb-3 leading-relaxed text-base text-gray-200">
+              Focus on building a systematic calendar of community events that appeal to diverse neighborhood segments: music enthusiasts, families seeking weekend activities, professionals looking for after-work socializing, and community-minded residents. Events should balance entertainment value with social connection, creating reasons for repeat visits beyond traditional dining occasions.
+            </p>
+          </div>
+          <div className="mb-6">
+            <h4 className="font-semibold mb-2">Implementation Recommendations</h4>
+            <div className="grid md:grid-cols-2 gap-4">
+              <div className="p-4 rounded-lg border border-white/10 bg-black/20">
+                <h5 className="font-semibold mb-2">Event Programming Development</h5>
+                <ul className="list-disc pl-5 space-y-2 text-base text-gray-200">
+                  <li>Weekly Music Events: Expand proven weekend format with diverse musical styles and local artists</li>
+                  <li>Mid-Week Social Programming: Trivia nights, community meetups, or themed dining experiences</li>
+                  <li>Seasonal Celebrations: Holiday events, cultural festivals, and neighborhood traditions</li>
+                  <li>Family-Friendly Options: Weekend brunch events, kids' activities, and multi-generational programming</li>
+                </ul>
+              </div>
+              <div className="p-4 rounded-lg border border-white/10 bg-black/20">
+                <h5 className="font-semibold mb-2">Community Engagement Strategy</h5>
+                <ul className="list-disc pl-5 space-y-2 text-base text-gray-200">
+                  <li>Local Artist Partnerships: Feature neighborhood musicians and performers to build community connections</li>
+                  <li>Social Media Event Promotion: Create anticipation and shareability through event content</li>
+                  <li>Community Feedback Integration: Regular input from regulars to shape programming direction</li>
+                  <li>Cross-Promotion Opportunities: Partner with local businesses and organizations for joint events</li>
+                </ul>
+              </div>
+            </div>
+          </div>
+          <div>
+            <h4 className="font-semibold mb-2">Potential Success Indicators</h4>
+            <ul className="list-disc pl-5 space-y-1">
+              <li className="leading-relaxed text-base text-gray-200">Event attendance numbers and repeat visitor rates</li>
+              <li className="leading-relaxed text-base text-gray-200">Revenue per event and overall weekend traffic increase</li>
+              <li className="leading-relaxed text-base text-gray-200">Social media engagement and event-related content sharing</li>
+              <li className="leading-relaxed text-base text-gray-200">Community relationship development and word-of-mouth referrals</li>
+            </ul>
+          </div>
+        </>
       )
     },
     {
@@ -91,9 +134,52 @@ export default function Home() {
       color: "green",
       shortDesc: "Premium takeout maintaining quality standards",
       content: (
-        <p className="leading-relaxed text-gray-300">
-          Premium takeout positioning that maintains quality standards while capturing convenience-oriented customer demand and expanding market reach beyond dine-in capacity constraints.
-        </p>
+        <>
+          <div className="mb-6">
+            <h4 className="font-semibold mb-2">Market Opportunity Analysis</h4>
+            <p className="mb-3 leading-relaxed text-base text-gray-200">
+              Consumer demand for premium takeout and delivery has accelerated, with customers willing to pay for quality convenience. Current market options in Central New Jersey typically offer either low-quality fast food or generic restaurant fare. There's a gap for premium Japanese cuisine delivered with attention to presentation and quality that matches dine-in standards. This opportunity expands market reach beyond physical capacity while serving customers who value quality but need convenience.
+            </p>
+          </div>
+          <div className="mb-6">
+            <h4 className="font-semibold mb-2">Strategic Targeting Approach</h4>
+            <p className="mb-3 leading-relaxed text-base text-gray-200">
+              Target busy professionals, families with limited time, and customers who prefer dining at home but want restaurant-quality experiences. Focus on maintaining premium positioning through packaging, presentation, and quality control while optimizing for delivery platforms and direct ordering systems. Emphasize the convenience of accessing premium Japanese cuisine without leaving home or office.
+            </p>
+          </div>
+          <div className="mb-6">
+            <h4 className="font-semibold mb-2">Implementation Recommendations</h4>
+            <div className="grid md:grid-cols-2 gap-4">
+              <div className="p-4 rounded-lg border border-white/10 bg-black/20">
+                <h5 className="font-semibold mb-2">Quality & Packaging Enhancement</h5>
+                <ul className="list-disc pl-5 space-y-2 text-base text-gray-200">
+                  <li>Premium Packaging Design: Eco-friendly containers that maintain food quality and presentation</li>
+                  <li>Temperature Control Systems: Ensure optimal food temperature upon delivery</li>
+                  <li>Quality Assurance Protocols: Regular testing of delivery times and food condition</li>
+                  <li>Presentation Standards: Maintain visual appeal through thoughtful packaging and plating for takeout</li>
+                </ul>
+              </div>
+              <div className="p-4 rounded-lg border border-white/10 bg-black/20">
+                <h5 className="font-semibold mb-2">Delivery Platform Optimization</h5>
+                <ul className="list-disc pl-5 space-y-2 text-base text-gray-200">
+                  <li>DoorDash SEO & Photography: Optimize listings with professional photos and strategic keywords</li>
+                  <li>Direct Ordering System: Develop streamlined online ordering for better margins and customer data</li>
+                  <li>Promotional Calendar: Strategic promotions during slow periods to drive traffic</li>
+                  <li>Customer Communication: Clear expectations about timing, packaging, and reheating instructions</li>
+                </ul>
+              </div>
+            </div>
+          </div>
+          <div>
+            <h4 className="font-semibold mb-2">Potential Success Indicators</h4>
+            <ul className="list-disc pl-5 space-y-1">
+              <li className="leading-relaxed text-base text-gray-200">Takeout and delivery order volume and frequency</li>
+              <li className="leading-relaxed text-base text-gray-200">Average order value for takeout/delivery vs. dine-in</li>
+              <li className="leading-relaxed text-base text-gray-200">Customer satisfaction ratings and repeat order rates</li>
+              <li className="leading-relaxed text-base text-gray-200">Market reach expansion beyond 3-mile radius</li>
+            </ul>
+          </div>
+        </>
       )
     },
     {
@@ -102,9 +188,52 @@ export default function Home() {
       color: "purple",
       shortDesc: "Maximize per-customer revenue on weekends",
       content: (
-        <p className="leading-relaxed text-gray-300">
-          Systematic expansion of successful music event format combined with elevated beverage program to maximize per-customer revenue during peak weekend traffic periods.
-        </p>
+        <>
+          <div className="mb-6">
+            <h4 className="font-semibold mb-2">Market Opportunity Analysis</h4>
+            <p className="mb-3 leading-relaxed text-base text-gray-200">
+              Weekend dining represents peak revenue periods, and customers are more willing to spend on premium experiences including beverages, entertainment, and extended dining occasions. Current beverage program has untapped potential for premium positioning through sake education, signature cocktails, and wine pairings. Combining proven music event success with elevated beverage offerings creates a differentiated weekend experience that justifies premium pricing and increases per-customer spend.
+            </p>
+          </div>
+          <div className="mb-6">
+            <h4 className="font-semibold mb-2">Strategic Targeting Approach</h4>
+            <p className="mb-3 leading-relaxed text-base text-gray-200">
+              Target weekend diners seeking social experiences: date nights, group celebrations, and entertainment-seeking customers. Focus on creating an atmosphere that encourages extended stays and beverage consumption through curated programming, educational components, and premium offerings. Position as the destination for sophisticated weekend socializing that combines premium food, quality beverages, and entertainment.
+            </p>
+          </div>
+          <div className="mb-6">
+            <h4 className="font-semibold mb-2">Implementation Recommendations</h4>
+            <div className="grid md:grid-cols-2 gap-4">
+              <div className="p-4 rounded-lg border border-white/10 bg-black/20">
+                <h5 className="font-semibold mb-2">Beverage Program Enhancement</h5>
+                <ul className="list-disc pl-5 space-y-2 text-base text-gray-200">
+                  <li>Signature Cocktail Development: Monthly rotating Japanese-inspired cocktails with social media spotlight</li>
+                  <li>Sake Education Program: Guided tastings, pairing recommendations, and educational content</li>
+                  <li>Cocktail Flight Program: Tasting flights that encourage exploration and higher beverage spend</li>
+                  <li>Wine & Sake Pairing: Curated pairings with menu items to enhance dining experience</li>
+                </ul>
+              </div>
+              <div className="p-4 rounded-lg border border-white/10 bg-black/20">
+                <h5 className="font-semibold mb-2">Weekend Event Integration</h5>
+                <ul className="list-disc pl-5 space-y-2 text-base text-gray-200">
+                  <li>Music Event Beverage Packages: Special drink offerings tied to weekend music programming</li>
+                  <li>Happy Hour Extensions: Strategic happy hour timing to capture early weekend diners</li>
+                  <li>Bartender Spotlights: Social media features showcasing signature drinks and expertise</li>
+                  <li>Group Beverage Experiences: Shared cocktail flights and sake tastings for groups</li>
+                </ul>
+              </div>
+            </div>
+          </div>
+          <div>
+            <h4 className="font-semibold mb-2">Potential Success Indicators</h4>
+            <ul className="list-disc pl-5 space-y-1">
+              <li className="leading-relaxed text-base text-gray-200">Average beverage revenue per customer on weekends</li>
+              <li className="leading-relaxed text-base text-gray-200">Cocktail and sake sales attachment rates</li>
+              <li className="leading-relaxed text-base text-gray-200">Weekend table turnover and extended dining duration</li>
+              <li className="leading-relaxed text-base text-gray-200">Social media engagement on beverage-related content</li>
+            </ul>
+          </div>
+        </>
       )
     },
     {
@@ -113,9 +242,52 @@ export default function Home() {
       color: "red",
       shortDesc: "High-margin private event services",
       content: (
-        <p className="leading-relaxed text-gray-300">
-          High-margin private event services leveraging upstairs space and culinary expertise to serve corporate celebrations and special occasions with premium positioning.
-        </p>
+        <>
+          <div className="mb-6">
+            <h4 className="font-semibold mb-2">Market Opportunity Analysis</h4>
+            <p className="mb-3 leading-relaxed text-base text-gray-200">
+              Private events and catering represent high-margin revenue opportunities with premium pricing potential. Central New Jersey market shows strong demand for distinctive venues for corporate celebrations, milestone birthdays, anniversaries, and special occasions. The upstairs space provides a unique private dining environment that competitors lack, while culinary expertise enables premium positioning for both on-site events and off-site catering services.
+            </p>
+          </div>
+          <div className="mb-6">
+            <h4 className="font-semibold mb-2">Strategic Targeting Approach</h4>
+            <p className="mb-3 leading-relaxed text-base text-gray-200">
+              Target corporate clients seeking distinctive venues for team celebrations, client entertainment, and milestone events. Also focus on families and individuals planning special occasions who value premium experiences and unique settings. Position the upstairs space as an exclusive, intimate venue while offering off-site catering for larger events. Emphasize the combination of premium Japanese cuisine with personalized service.
+            </p>
+          </div>
+          <div className="mb-6">
+            <h4 className="font-semibold mb-2">Implementation Recommendations</h4>
+            <div className="grid md:grid-cols-2 gap-4">
+              <div className="p-4 rounded-lg border border-white/10 bg-black/20">
+                <h5 className="font-semibold mb-2">Private Event Service Development</h5>
+                <ul className="list-disc pl-5 space-y-2 text-base text-gray-200">
+                  <li>Upstairs Space Configuration: Optimize layout for private dining, presentations, and celebrations</li>
+                  <li>Custom Menu Development: Curated menus for different event types and group sizes</li>
+                  <li>Event Coordination Services: Dedicated support for planning, setup, and execution</li>
+                  <li>Premium Presentation: Enhanced plating, service protocols, and ambiance for special occasions</li>
+                </ul>
+              </div>
+              <div className="p-4 rounded-lg border border-white/10 bg-black/20">
+                <h5 className="font-semibold mb-2">Catering & Marketing Strategy</h5>
+                <ul className="list-disc pl-5 space-y-2 text-base text-gray-200">
+                  <li>Off-Site Catering Program: Premium catering services for corporate and private events</li>
+                  <li>Event Package Development: Standardized packages for common event types with customization options</li>
+                  <li>Referral Program: Incentivize existing customers to book events and refer others</li>
+                  <li>Portfolio Development: Build case studies and testimonials from successful events</li>
+                </ul>
+              </div>
+            </div>
+          </div>
+          <div>
+            <h4 className="font-semibold mb-2">Potential Success Indicators</h4>
+            <ul className="list-disc pl-5 space-y-1">
+              <li className="leading-relaxed text-base text-gray-200">Private event booking frequency and revenue per event</li>
+              <li className="leading-relaxed text-base text-gray-200">Upstairs space utilization rates and peak period bookings</li>
+              <li className="leading-relaxed text-base text-gray-200">Catering order volume and average order value</li>
+              <li className="leading-relaxed text-base text-gray-200">Repeat event bookings and referral rates</li>
+            </ul>
+          </div>
+        </>
       )
     }
   ];
@@ -206,9 +378,9 @@ export default function Home() {
                 <p className="text-xl md:text-2xl text-gray-300 mb-6 font-light">
                   Premium Sushi with Social Soul
                 </p>
-                <p className="text-base text-gray-400 max-w-2xl leading-relaxed">
-                  Central New Jersey's premier social dining destination where premium Japanese cuisine quality meets authentic community connection.
-              </p>
+            <p className="text-lg text-gray-200 max-w-2xl leading-relaxed">
+              Central New Jersey's premier social dining destination where premium Japanese cuisine quality meets authentic community connection.
+            </p>
             </div>
               <div className="flex flex-wrap gap-3">
                 {['Community-Embedded', 'Premium & Approachable', 'Social by Design', 'Cultural Bridge'].map((tag, i) => (
@@ -223,19 +395,19 @@ export default function Home() {
             <div className="grid grid-cols-2 md:grid-cols-4 gap-4 mt-8">
               <div className="bg-black/40 rounded-lg p-4 border border-white/10">
                 <div className="text-2xl font-bold text-[#b22222] mb-1">5</div>
-                <div className="text-xs text-gray-400">Revenue Opportunities</div>
+                <div className="text-sm text-gray-200">Revenue Opportunities</div>
               </div>
               <div className="bg-black/40 rounded-lg p-4 border border-white/10">
                 <div className="text-2xl font-bold text-[#b22222] mb-1">50</div>
-                <div className="text-xs text-gray-400">Marketing Initiatives</div>
+                <div className="text-sm text-gray-200">Marketing Initiatives</div>
               </div>
               <div className="bg-black/40 rounded-lg p-4 border border-white/10">
                 <div className="text-2xl font-bold text-[#b22222] mb-1">3</div>
-                <div className="text-xs text-gray-400">Implementation Phases</div>
+                <div className="text-sm text-gray-200">Implementation Phases</div>
               </div>
               <div className="bg-black/40 rounded-lg p-4 border border-white/10">
                 <div className="text-2xl font-bold text-[#b22222] mb-1">12</div>
-                <div className="text-xs text-gray-400">Month Timeline</div>
+                <div className="text-sm text-gray-200">Month Timeline</div>
               </div>
             </div>
           </div>
@@ -245,7 +417,7 @@ export default function Home() {
         <section id="brand-pillars" className="mb-16 scroll-mt-20">
           <div className="text-center mb-8">
             <h2 className="text-3xl md:text-4xl font-bold mb-3">Strategic Brand Pillars</h2>
-            <p className="text-gray-400 max-w-2xl mx-auto">Four foundational principles that differentiate Ami Sushi in the market</p>
+            <p className="text-gray-200 max-w-2xl mx-auto text-lg">Four foundational principles that differentiate Ami Sushi in the market</p>
           </div>
           <div className="grid md:grid-cols-2 gap-6">
             {brandPillars.map((pillar, index) => {
@@ -298,7 +470,7 @@ export default function Home() {
               </div>
                 <ul className="space-y-2 ml-16">
                   {pillar.points.map((point, i) => (
-                    <li key={i} className="flex items-start gap-2 text-sm text-gray-300">
+                    <li key={i} className="flex items-start gap-2 text-base text-gray-200">
                       <span className="text-[#b22222] mt-1">•</span>
                       <span>{point}</span>
                     </li>
@@ -314,7 +486,7 @@ export default function Home() {
         <section id="objectives" className="mb-16 scroll-mt-20">
           <div className="text-center mb-8">
             <h2 className="text-3xl md:text-4xl font-bold mb-3">Five Strategic Revenue Opportunities</h2>
-            <p className="text-gray-400 max-w-2xl mx-auto">Explore each opportunity for detailed analysis and implementation recommendations</p>
+            <p className="text-gray-200 max-w-2xl mx-auto text-lg">Explore each opportunity for detailed analysis and implementation recommendations</p>
           </div>
 
           {/* Visual Opportunity Cards */}
@@ -341,8 +513,8 @@ export default function Home() {
                 }`}
               >
                 <div className="text-3xl mb-2">{opp.icon}</div>
-                <h3 className="font-bold text-sm mb-2 line-clamp-2">{opp.title}</h3>
-                <p className="text-xs text-gray-400 line-clamp-2">{opp.shortDesc}</p>
+                <h3 className="font-bold text-base mb-2 line-clamp-2">{opp.title}</h3>
+                <p className="text-sm text-gray-200 line-clamp-2">{opp.shortDesc}</p>
               </button>
               );
             })}
@@ -356,7 +528,7 @@ export default function Home() {
                   <span className="text-4xl">{opportunities[activeTab].icon}</span>
                   <div>
                     <h3 className="text-2xl font-bold">Opportunity {activeTab + 1}: {opportunities[activeTab].title}</h3>
-                    <p className="text-gray-400 text-sm">{opportunities[activeTab].shortDesc}</p>
+                    <p className="text-gray-200 text-base">{opportunities[activeTab].shortDesc}</p>
                   </div>
                 </div>
                 <button
@@ -374,7 +546,7 @@ export default function Home() {
 
           <div className="bg-gradient-to-r from-[#b22222]/20 to-[#8b0000]/20 border-2 border-[#b22222] rounded-xl p-6 text-center">
             <h4 className="font-semibold mb-2 text-lg">Explore Detailed Strategy Review</h4>
-            <p className="text-gray-300 mb-4 text-sm">
+            <p className="text-gray-200 mb-4 text-base">
               50 marketing initiatives across all 5 objectives with implementation roadmap and detailed business cases
             </p>
             <a
@@ -390,7 +562,7 @@ export default function Home() {
         <section id="analysis" className="mb-16 scroll-mt-20">
           <div className="text-center mb-8">
             <h2 className="text-3xl md:text-4xl font-bold mb-3">Social Media Content Strategy</h2>
-            <p className="text-gray-400 max-w-2xl mx-auto">Weekly Content Architecture for "Premium Sushi with Social Soul"</p>
+            <p className="text-gray-200 max-w-2xl mx-auto text-lg">Weekly Content Architecture for "Premium Sushi with Social Soul"</p>
           </div>
 
           {/* Content Pillars Visual */}
@@ -398,8 +570,8 @@ export default function Home() {
             {contentPillars.map((pillar, i) => (
               <div key={i} className="bg-black/40 rounded-lg p-3 border border-white/10 text-center hover:border-[#b22222]/50 transition-colors">
                 <div className="text-2xl mb-2">{pillar.icon}</div>
-                <div className="text-xs font-semibold mb-1">{pillar.title}</div>
-                <div className="text-xs text-gray-400">{pillar.desc}</div>
+                <div className="text-base font-semibold mb-1">{pillar.title}</div>
+                <div className="text-base text-gray-200">{pillar.desc}</div>
                 </div>
             ))}
               </div>
@@ -415,19 +587,19 @@ export default function Home() {
                 >
                   <div className="text-center mb-3">
                     <div className="text-2xl mb-2">{day.icon}</div>
-                    <div className="text-xs font-bold text-gray-400 mb-1">{day.day}</div>
-                    <div className="text-sm font-semibold text-white mb-2">{day.name}</div>
+                    <div className="text-sm font-bold text-gray-200 mb-1">{day.day}</div>
+                    <div className="text-base font-semibold text-white mb-2">{day.name}</div>
                   </div>
-                  <div className="space-y-2 text-xs">
+                  <div className="space-y-2 text-base">
                     <div>
                       <div className="text-[#b22222] font-semibold mb-1">Focus:</div>
-                      <div className="text-gray-300">{day.focus}</div>
+                      <div className="text-gray-200">{day.focus}</div>
                     </div>
                     <div>
                       <div className="text-[#b22222] font-semibold mb-1">Purpose:</div>
-                      <div className="text-gray-400">{day.purpose}</div>
-                </div>
-              </div>
+                      <div className="text-gray-200">{day.purpose}</div>
+                    </div>
+                  </div>
                 </div>
               ))}
             </div>
@@ -456,8 +628,8 @@ export default function Home() {
                     {targetMarkets.map((market, i) => (
                       <div key={i} className="bg-black/40 rounded-lg p-4 border border-white/10 text-center hover:border-[#b22222]/50 transition-colors">
                         <div className="text-3xl mb-2">{market.icon}</div>
-                        <div className="font-semibold mb-1 text-sm">{market.name}</div>
-                        <div className="text-xs text-gray-400">{market.desc}</div>
+                        <div className="font-semibold mb-1 text-base">{market.name}</div>
+                        <div className="text-sm text-gray-200">{market.desc}</div>
                       </div>
                     ))}
                   </div>
@@ -472,7 +644,7 @@ export default function Home() {
                   <div className="bg-black/40 rounded p-4 border border-white/10">
                     <div className="text-[#b22222] font-semibold mb-2">Differentiated Positioning:</div>
                     <div className="text-white font-semibold">"Premium Sushi with Social Soul"</div>
-                    <div className="text-sm text-gray-400 mt-2">
+                    <div className="text-base text-gray-200 mt-2">
                       The only restaurant in Central New Jersey delivering NYC-caliber Japanese cuisine within a community-embedded social environment.
                 </div>
               </div>
@@ -484,7 +656,7 @@ export default function Home() {
                   <div className="grid md:grid-cols-2 gap-4">
                     <div className="bg-green-900/20 rounded-lg p-5 border border-green-500/30">
                       <h4 className="font-semibold mb-3 text-green-300">Unique Advantages</h4>
-                      <ul className="space-y-2 text-sm">
+                      <ul className="space-y-2 text-base">
                         {[
                           "Established Community Credibility",
                           "Proven Social Programming Success",
@@ -494,14 +666,14 @@ export default function Home() {
                         ].map((item, i) => (
                           <li key={i} className="flex items-start gap-2">
                             <span className="text-green-400">✓</span>
-                            <span className="text-gray-300">{item}</span>
+                            <span className="text-gray-200">{item}</span>
                           </li>
                         ))}
                       </ul>
               </div>
                     <div className="bg-amber-900/20 rounded-lg p-5 border border-amber-500/30">
                       <h4 className="font-semibold mb-3 text-amber-300">Replication Barriers</h4>
-                      <ul className="space-y-2 text-sm">
+                      <ul className="space-y-2 text-base">
                         {[
                           "Multi-generational Business Relationships",
                           "Cultural Expertise + Local Knowledge",
@@ -510,7 +682,7 @@ export default function Home() {
                         ].map((item, i) => (
                           <li key={i} className="flex items-start gap-2">
                             <span className="text-amber-400">🛡️</span>
-                            <span className="text-gray-300">{item}</span>
+                            <span className="text-gray-200">{item}</span>
                           </li>
                         ))}
                       </ul>
@@ -526,7 +698,7 @@ export default function Home() {
         <section id="roadmap" className="mb-16 scroll-mt-20">
           <div className="text-center mb-8">
             <h2 className="text-3xl md:text-4xl font-bold mb-3">Implementation Roadmap</h2>
-            <p className="text-gray-400 max-w-2xl mx-auto">Three-phase approach to market leadership</p>
+            <p className="text-gray-200 max-w-2xl mx-auto text-lg">Three-phase approach to market leadership</p>
           </div>
 
           <div className="bg-black/50 backdrop-blur-sm rounded-xl border border-white/20 p-6 md:p-10">
@@ -556,7 +728,7 @@ export default function Home() {
                       <div className="bg-green-900/20 rounded-xl p-6 border-2 border-green-500/50 ml-0 md:ml-8">
                         <div className="flex items-center justify-between mb-4">
                           <h3 className="text-2xl font-bold text-green-300">Phase 1: Foundation</h3>
-                          <span className="text-sm text-gray-400 bg-black/40 px-3 py-1 rounded-full">Months 1-3</span>
+                          <span className="text-base text-gray-200 bg-black/40 px-3 py-1 rounded-full">Months 1-3</span>
                         </div>
                         <div className="grid md:grid-cols-2 gap-3">
                           {[
@@ -565,7 +737,7 @@ export default function Home() {
                             "Corporate outreach program launch",
                             "Content framework implementation"
                           ].map((item, i) => (
-                            <div key={i} className="flex items-start gap-2 text-sm text-gray-300">
+                            <div key={i} className="flex items-start gap-2 text-base text-gray-200">
                               <span className="text-green-400 mt-1">•</span>
                               <span>{item}</span>
                             </div>
@@ -591,7 +763,7 @@ export default function Home() {
                             "Premium takeout/delivery enhancement",
                             "Beverage program optimization"
                           ].map((item, i) => (
-                            <div key={i} className="flex items-start gap-2 text-sm text-gray-300">
+                            <div key={i} className="flex items-start gap-2 text-base text-gray-200">
                               <span className="text-amber-400 mt-1">•</span>
                               <span>{item}</span>
                             </div>
@@ -617,7 +789,7 @@ export default function Home() {
                             "Market position consolidation",
                             "Performance measurement & optimization"
                           ].map((item, i) => (
-                            <div key={i} className="flex items-start gap-2 text-sm text-gray-300">
+                            <div key={i} className="flex items-start gap-2 text-base text-gray-200">
                               <span className="text-blue-400 mt-1">•</span>
                               <span>{item}</span>
                             </div>
@@ -630,7 +802,7 @@ export default function Home() {
 
                 <div className="bg-gradient-to-r from-[#b22222]/20 to-[#8b0000]/20 border-2 border-[#b22222] rounded-xl p-6 text-center">
                   <h4 className="text-lg font-semibold mb-3 text-[#b22222]">📊 Access Detailed Implementation Tools</h4>
-                  <p className="mb-4 text-gray-300 text-sm">
+                  <p className="mb-4 text-gray-200 text-base">
               Review comprehensive strategy prioritization with 50 initiatives, interactive filtering, and detailed roadmap planning.
             </p>
             <a
