@@ -39,45 +39,31 @@ export default function RootLayout({
               </a>
 
               <div className="flex gap-6">
-                <div className="relative group">
-                  <a
-                    href="/"
-                    className="text-gray-300 hover:text-white font-medium transition-colors"
-                  >
-                    Strategic Marketing Framework
-                  </a>
-                  <div className="absolute left-0 mt-2 w-56 bg-[#1a1416] border border-gray-700 rounded-md shadow-lg opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-200">
-                    <a href="/#overview" className="block px-4 py-2 text-sm text-gray-300 hover:bg-gray-800 hover:text-white">Overview</a>
-                    <a href="/#objectives" className="block px-4 py-2 text-sm text-gray-300 hover:bg-gray-800 hover:text-white">Objectives</a>
-                    <a href="/#analysis" className="block px-4 py-2 text-sm text-gray-300 hover:bg-gray-800 hover:text-white">Analysis</a>
-                  </div>
-                </div>
+                <a
+                  href="/"
+                  className="text-gray-300 hover:text-white font-medium transition-colors"
+                >
+                  Presentation
+                </a>
 
                 <div className="relative group">
                   <a
-                    href="/strategy-review"
+                    href="/archive"
                     className="text-gray-300 hover:text-white font-medium transition-colors"
                   >
-                    Strategy Initiatives Review
+                    Archive
                   </a>
                   <div className="absolute left-0 mt-2 w-56 bg-[#1a1416] border border-gray-700 rounded-md shadow-lg opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-200">
-                    <a href="/strategy-review#roadmap" className="block px-4 py-2 text-sm text-gray-300 hover:bg-gray-800 hover:text-white">Roadmap</a>
-                    <a href="/strategy-review#portfolio" className="block px-4 py-2 text-sm text-gray-300 hover:bg-gray-800 hover:text-white">Portfolio</a>
-                    <a href="/strategy-review#implementation-checklist" className="block px-4 py-2 text-sm text-gray-300 hover:bg-gray-800 hover:text-white">Implementation Checklist</a>
-                    <a href="/strategy-review/implementation-proposal" className="block px-4 py-2 text-sm text-gray-300 hover:bg-gray-800 hover:text-white border-t border-gray-700">
-                      <span className="flex items-center gap-2">
-                        Implementation Plan
-                        <span className="px-2 py-0.5 bg-[#b22222] text-white text-xs rounded font-semibold">NEW</span>
-                      </span>
-                    </a>
+                    <a href="/archive#objectives" className="block px-4 py-2 text-sm text-gray-300 hover:bg-gray-800 hover:text-white">50-Initiative Portfolio</a>
+                    <a href="/archive/strategy-review" className="block px-4 py-2 text-sm text-gray-300 hover:bg-gray-800 hover:text-white">Strategy Review</a>
                   </div>
                 </div>
 
                 <a
-                  href="https://v0-html-webpage-development-git-master-lumasaurs-projects.vercel.app/strategy-review/content-calendar"
+                  href="/strategy-review/implementation-proposal"
                   className="text-gray-300 hover:text-white font-medium transition-colors"
                 >
-                  Content Calendar
+                  Implementation Proposal
                 </a>
               </div>
             </nav>
