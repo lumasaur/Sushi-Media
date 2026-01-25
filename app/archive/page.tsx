@@ -367,13 +367,30 @@ export default function Home() {
   return (
     <main className="min-h-screen bg-gradient-to-b from-[#120c0d] via-[#1a1416] to-[#120c0d] text-white pt-20">
       <div className="max-w-7xl mx-auto px-4 py-8">
+        {/* Archive Notice Banner */}
+        <div className="mb-8 bg-amber-900/30 border-2 border-amber-500/50 rounded-xl p-6 text-center">
+          <div className="flex items-center justify-center gap-3 mb-3">
+            <span className="text-3xl">📦</span>
+            <h2 className="text-2xl font-bold text-amber-300">Archived Content</h2>
+          </div>
+          <p className="text-lg text-gray-200 mb-4">
+            This content has been archived. It represents the original 50-initiative marketing portfolio and strategy review.
+          </p>
+          <a
+            href="/"
+            className="inline-block px-6 py-2 bg-[#b22222] text-white rounded-lg hover:bg-[#a01e1e] transition-colors font-semibold"
+          >
+            View Current Presentation →
+          </a>
+        </div>
+
         {/* Visual Hero Section */}
         <section id="hero" className="relative mb-16">
           <div className="bg-gradient-to-br from-[#b22222]/20 via-[#8b0000]/10 to-transparent rounded-2xl p-8 md:p-12 border border-[#b22222]/30 backdrop-blur-sm">
             <div className="flex flex-col md:flex-row items-start md:items-center justify-between gap-6 mb-8">
               <div className="flex-1">
                 <h1 className="text-4xl md:text-5xl font-bold tracking-tight mb-4 bg-gradient-to-r from-white to-gray-300 bg-clip-text text-transparent">
-            Ami Marketing Strategy
+            Ami Marketing Strategy (Archive)
           </h1>
                 <p className="text-xl md:text-2xl text-gray-300 mb-6 font-light">
                   Premium Sushi with Social Soul
