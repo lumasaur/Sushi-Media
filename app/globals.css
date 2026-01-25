@@ -199,3 +199,26 @@
     scroll-behavior: auto;
   }
 }
+
+/* Presentation Components - Slide Navigation */
+.custom-scrollbar::-webkit-scrollbar {
+  width: 8px;
+}
+
+.custom-scrollbar::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+.custom-scrollbar::-webkit-scrollbar-thumb {
+  background: rgba(178, 34, 34, 0.3);  /* Ami red at 30% opacity */
+  border-radius: 4px;
+}
+
+.custom-scrollbar::-webkit-scrollbar-thumb:hover {
+  background: rgba(178, 34, 34, 0.5);  /* Ami red at 50% opacity on hover */
+}
+
+/* Scrollable slide marker for touch gesture detection */
+.scrollable-slide {
+  /* Marker class - no styles needed, used for JS detection */
+}
