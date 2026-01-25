@@ -40,6 +40,12 @@ Plans:
 **Dependencies:** Phase 1 (requires SlideContainer foundation)
 
 **Requirements:** NAV-01, NAV-02, NAV-03, NAV-04, NAV-05, NAV-06, NAV-07, NAV-08, NAV-09
+**Plans:** 3 plans in 2 waves
+
+Plans:
+- [ ] 02-01-PLAN.md - Navigation hook with keyboard controls and URL state
+- [ ] 02-02-PLAN.md - Touch gesture system (double-tap and swipe)
+- [ ] 02-03-PLAN.md - Integration and visual polish
 
 **Success Criteria:**
 1. User can navigate forward by double-tapping right 75% of slide or using right arrow key
@@ -134,7 +140,7 @@ Plans:
 | Phase | Status | Requirements | Completion |
 |-------|--------|--------------|------------|
 | 1 - Foundation & Migration | ✓ Complete | 3 | 100% |
-| 2 - Core Navigation | Pending | 9 | 0% |
+| 2 - Core Navigation | Planned | 9 | 0% |
 | 3 - Content Architecture | Pending | 12 | 0% |
 | 4 - Visual Storytelling | Pending | 8 | 0% |
 | 5 - Responsive & Performance | Pending | 10 | 0% |
@@ -162,4 +168,4 @@ Phase 6: Decision Routing ──────┘
 
 ---
 
-*Last updated: 2026-01-25 (Phase 1 complete)*
+*Last updated: 2026-01-25 (Phase 2 planned)*
