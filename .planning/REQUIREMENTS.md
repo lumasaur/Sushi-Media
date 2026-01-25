@@ -70,9 +70,9 @@ Requirements for slide-based presentation rebuild. Each maps to roadmap phases.
 
 ### Archive & Migration
 
-- [ ] **ARCH-01**: Existing 50-initiative portfolio moved to /archive route
-- [ ] **ARCH-02**: Implementation proposal page preserved at existing route
-- [ ] **ARCH-03**: Kangaroo components migrated to Sushi-Media (SlideContainer, etc.)
+- [x] **ARCH-01**: Existing 50-initiative portfolio moved to /archive route
+- [x] **ARCH-02**: Implementation proposal page preserved at existing route
+- [x] **ARCH-03**: Kangaroo components migrated to Sushi-Media (SlideContainer, etc.)
 
 ## v2 Requirements
 
@@ -154,9 +154,9 @@ Which phases cover which requirements. Updated during roadmap creation.
 | PORT-03 | Phase 5 | Pending |
 | PORT-04 | Phase 5 | Pending |
 | PORT-05 | Phase 5 | Pending |
-| ARCH-01 | Phase 1 | Pending |
-| ARCH-02 | Phase 1 | Pending |
-| ARCH-03 | Phase 1 | Pending |
+| ARCH-01 | Phase 1 | Complete |
+| ARCH-02 | Phase 1 | Complete |
+| ARCH-03 | Phase 1 | Complete |
 
 **Coverage:**
 - v1 requirements: 47 total
