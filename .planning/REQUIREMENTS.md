@@ -9,14 +9,15 @@ Requirements for slide-based presentation rebuild. Each maps to roadmap phases.
 
 ### Navigation & UX
 
-- [ ] **NAV-01**: User can navigate slides via click (left 25% back, right 75% forward)
+- [ ] **NAV-01**: User can navigate slides via double-tap (left 25% back, right 75% forward)
 - [ ] **NAV-02**: User can navigate slides via keyboard (arrow keys, spacebar, Home/End)
-- [ ] **NAV-03**: User can navigate slides via touch gestures (swipe horizontal/vertical)
-- [ ] **NAV-04**: User sees current position (slide counter: "3 / 12")
-- [ ] **NAV-05**: User sees overall progress (progress bar visualization)
-- [ ] **NAV-06**: User can jump to sections via breadcrumbs
-- [ ] **NAV-07**: Slide transitions are smooth (fade + slide animations, <300ms)
-- [ ] **NAV-08**: Navigation state persists (URL updates with slide number)
+- [ ] **NAV-03**: User can navigate slides via horizontal swipe gestures (left/right)
+- [ ] **NAV-04**: User can scroll within slides via vertical swipe gestures (no navigation)
+- [ ] **NAV-05**: User sees current position (slide counter: "3 / 12")
+- [ ] **NAV-06**: User sees overall progress (progress bar visualization)
+- [ ] **NAV-07**: User can jump to sections via breadcrumbs
+- [ ] **NAV-08**: Slide transitions are smooth (fade + slide animations, <300ms)
+- [ ] **NAV-09**: Navigation state persists (URL updates with slide number)
 
 ### Content Structure
 
@@ -50,8 +51,7 @@ Requirements for slide-based presentation rebuild. Each maps to roadmap phases.
 - [ ] **RESP-02**: Touch targets minimum 44px for tablet tap accuracy
 - [ ] **RESP-03**: Portrait mobile functional but unoptimized (fallback support)
 - [ ] **RESP-04**: Text/charts readable in landscape presentation format
-- [ ] **RESP-05**: Horizontal swipes navigate, vertical swipes scroll (on scrollable slides)
-- [ ] **RESP-06**: Images/charts scale appropriately for landscape viewports
+- [ ] **RESP-05**: Images/charts scale appropriately for landscape viewports
 
 ### Decision Routing
 
@@ -109,58 +109,60 @@ Which phases cover which requirements. Updated during roadmap creation.
 
 | Requirement | Phase | Status |
 |-------------|-------|--------|
-| NAV-01 | TBD | Pending |
-| NAV-02 | TBD | Pending |
-| NAV-03 | TBD | Pending |
-| NAV-04 | TBD | Pending |
-| NAV-05 | TBD | Pending |
-| NAV-06 | TBD | Pending |
-| NAV-07 | TBD | Pending |
-| NAV-08 | TBD | Pending |
-| CONT-01 | TBD | Pending |
-| CONT-02 | TBD | Pending |
-| CONT-03 | TBD | Pending |
-| CONT-04 | TBD | Pending |
-| CONT-05 | TBD | Pending |
-| CONT-06 | TBD | Pending |
-| CONT-07 | TBD | Pending |
-| CONT-08 | TBD | Pending |
-| CONT-09 | TBD | Pending |
-| CONT-10 | TBD | Pending |
-| CONT-11 | TBD | Pending |
-| CONT-12 | TBD | Pending |
-| VIS-01 | TBD | Pending |
-| VIS-02 | TBD | Pending |
-| VIS-03 | TBD | Pending |
-| VIS-04 | TBD | Pending |
-| VIS-05 | TBD | Pending |
-| VIS-06 | TBD | Pending |
-| VIS-07 | TBD | Pending |
-| VIS-08 | TBD | Pending |
-| RESP-01 | TBD | Pending |
-| RESP-02 | TBD | Pending |
-| RESP-03 | TBD | Pending |
-| RESP-04 | TBD | Pending |
-| RESP-05 | TBD | Pending |
-| RESP-06 | TBD | Pending |
-| DEC-01 | TBD | Pending |
-| DEC-02 | TBD | Pending |
-| DEC-03 | TBD | Pending |
-| DEC-04 | TBD | Pending |
-| PORT-01 | TBD | Pending |
-| PORT-02 | TBD | Pending |
-| PORT-03 | TBD | Pending |
-| PORT-04 | TBD | Pending |
-| PORT-05 | TBD | Pending |
-| ARCH-01 | TBD | Pending |
-| ARCH-02 | TBD | Pending |
-| ARCH-03 | TBD | Pending |
+| NAV-01 | Phase 2 | Pending |
+| NAV-02 | Phase 2 | Pending |
+| NAV-03 | Phase 2 | Pending |
+| NAV-04 | Phase 2 | Pending |
+| NAV-05 | Phase 2 | Pending |
+| NAV-04 | Phase 2 | Pending |
+| NAV-05 | Phase 2 | Pending |
+| NAV-06 | Phase 2 | Pending |
+| NAV-07 | Phase 2 | Pending |
+| NAV-08 | Phase 2 | Pending |
+| NAV-09 | Phase 2 | Pending |
+| CONT-01 | Phase 3 | Pending |
+| CONT-02 | Phase 3 | Pending |
+| CONT-03 | Phase 3 | Pending |
+| CONT-04 | Phase 3 | Pending |
+| CONT-05 | Phase 3 | Pending |
+| CONT-06 | Phase 3 | Pending |
+| CONT-07 | Phase 3 | Pending |
+| CONT-08 | Phase 3 | Pending |
+| CONT-09 | Phase 3 | Pending |
+| CONT-10 | Phase 3 | Pending |
+| CONT-11 | Phase 3 | Pending |
+| CONT-12 | Phase 3 | Pending |
+| VIS-01 | Phase 4 | Pending |
+| VIS-02 | Phase 4 | Pending |
+| VIS-03 | Phase 4 | Pending |
+| VIS-04 | Phase 4 | Pending |
+| VIS-05 | Phase 4 | Pending |
+| VIS-06 | Phase 4 | Pending |
+| VIS-07 | Phase 4 | Pending |
+| VIS-08 | Phase 4 | Pending |
+| RESP-01 | Phase 5 | Pending |
+| RESP-02 | Phase 5 | Pending |
+| RESP-03 | Phase 5 | Pending |
+| RESP-04 | Phase 5 | Pending |
+| RESP-05 | Phase 5 | Pending |
+| DEC-01 | Phase 6 | Pending |
+| DEC-02 | Phase 6 | Pending |
+| DEC-03 | Phase 6 | Pending |
+| DEC-04 | Phase 6 | Pending |
+| PORT-01 | Phase 5 | Pending |
+| PORT-02 | Phase 5 | Pending |
+| PORT-03 | Phase 5 | Pending |
+| PORT-04 | Phase 5 | Pending |
+| PORT-05 | Phase 5 | Pending |
+| ARCH-01 | Phase 1 | Pending |
+| ARCH-02 | Phase 1 | Pending |
+| ARCH-03 | Phase 1 | Pending |
 
 **Coverage:**
 - v1 requirements: 47 total
-- Mapped to phases: 0 (roadmap not created yet)
-- Unmapped: 47 ⚠️
+- Mapped to phases: 47 (100% coverage)
+- Unmapped: 0
 
 ---
 *Requirements defined: 2026-01-24*
-*Last updated: 2026-01-24 after initial definition*
+*Last updated: 2026-01-24 after roadmap creation*
