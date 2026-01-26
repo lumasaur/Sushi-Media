@@ -22,7 +22,7 @@ export interface SlideData {
 
 export const sections = [
   { id: 'intro', name: 'Introduction', slides: [0, 1] },
-  { id: 'systems', name: 'Three Systems', slides: [2, 3, 4] },  // Overview + 2 system deep dives (Corporate Lunch pending)
+  { id: 'systems', name: 'Three Systems', slides: [2, 3, 4, 5] },  // Overview + all 3 system deep dives
   { id: 'execution', name: 'Execution', slides: [] }     // Will populate in subsequent plans
 ]
 
@@ -115,10 +115,29 @@ export const slides: SlideData[] = [
     ],
     background: 'bg-gradient-to-br from-gray-900 to-black',
     layout: 'content'
+  },
+
+  // Slide 5: Weekday Bar Activation Deep Dive
+  {
+    id: 5,
+    section: 'systems',
+    title: 'Weekday Bar Activation',
+    subtitle: 'Turn slow evenings into social destination',
+    bullets: [
+      'Problem: Monday-Thursday bar sits empty after dinner rush',
+      'Solution: Create compelling reasons to visit midweek',
+      {
+        main: 'Social programming drives repeat traffic',
+        sub: ['Happy hour offerings', 'Community events and gatherings', 'Relaxed atmosphere for regulars']
+      },
+      'Fill empty evening hours with consistent traffic',
+      'Build neighborhood loyalty and word-of-mouth'
+    ],
+    background: 'bg-gradient-to-br from-gray-900 to-black',
+    layout: 'content'
   }
 
   // Additional slides will be added in subsequent Phase 3 plans:
-  // - Slide 5: Weekday Bar Activation deep dive
   // - Slide 6: Timeline (First 30 Days)
   // - Slide 7: Next Steps CTA
 ]
