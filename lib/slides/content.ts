@@ -18,12 +18,18 @@ export interface SlideData {
   bullets: Array<string | { main: string; sub: string[] }>
   background?: string  // Tailwind class like 'bg-brand-black'
   layout?: 'title' | 'content' | 'cta'  // Hint for rendering pattern
+  ctas?: Array<{
+    label: string
+    description: string
+    href: string
+    primary: boolean
+  }>
 }
 
 export const sections = [
   { id: 'intro', name: 'Introduction', slides: [0, 1] },
   { id: 'systems', name: 'Three Systems', slides: [2, 3, 4, 5] },  // Overview + all 3 system deep dives
-  { id: 'execution', name: 'Execution', slides: [] }     // Will populate in subsequent plans
+  { id: 'execution', name: 'Execution', slides: [6, 7] }     // Timeline + Next Steps
 ]
 
 export const slides: SlideData[] = [
@@ -135,9 +141,62 @@ export const slides: SlideData[] = [
     ],
     background: 'bg-gradient-to-br from-gray-900 to-black',
     layout: 'content'
-  }
+  },
 
-  // Additional slides will be added in subsequent Phase 3 plans:
-  // - Slide 6: Timeline (First 30 Days)
-  // - Slide 7: Next Steps CTA
+  // Slide 6: First 30 Days Timeline
+  {
+    id: 6,
+    section: 'execution',
+    title: 'First 30 Days',
+    subtitle: 'From launch to momentum',
+    bullets: [
+      {
+        main: 'Week 1: Foundation',
+        sub: ['Launch social presence', 'Announce corporate lunch offering', 'Set up initial promotions']
+      },
+      {
+        main: 'Week 2: Activation',
+        sub: ['First weekday bar event', 'Corporate outreach campaign', 'Social content rhythm established']
+      },
+      {
+        main: 'Week 3: Optimization',
+        sub: ['Refine based on early feedback', 'Double down on what works', 'Build event momentum']
+      },
+      {
+        main: 'Week 4: Scale',
+        sub: ['Expand successful programs', 'Lock in corporate partnerships', 'Community momentum building']
+      }
+    ],
+    background: 'bg-brand-red',
+    layout: 'content'
+  },
+
+  // Slide 7: Next Steps CTA
+  {
+    id: 7,
+    section: 'execution',
+    title: 'Next Steps',
+    subtitle: 'Three Systems. One Strategy. Ready to Execute.',
+    bullets: [
+      'Social Media Engine: Daily presence drives discovery',
+      'Corporate Lunch Machine: Fill empty lunchtimes',
+      'Weekday Bar Activation: Turn slow evenings into destination'
+    ],
+    background: 'bg-gradient-to-br from-gray-900 to-black',
+    layout: 'cta',
+    ctas: [
+      {
+        label: 'Discuss Strategy',
+        description: 'Schedule conversation with stakeholders',
+        href: '#contact',
+        primary: true
+      },
+      {
+        label: 'Review Tactical Plan',
+        description: 'Dive into implementation details',
+        href: '/strategy-review/implementation-proposal',
+        primary: false
+      }
+    ]
+  }
 ]
