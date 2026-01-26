@@ -17,12 +17,12 @@
 
 **Progress:**
 ```
-[████████████░░░░░░░░] 60% (28/47 requirements)
+[███████████████░░░░░] 75% (35/47 requirements)
 
 Phase 1: Foundation & Migration         [█████] 3/3 plans complete ✓
 Phase 2: Core Navigation System         [█████] 3/3 plans complete ✓
 Phase 3: Content Architecture           [█████] 4/4 plans complete ✓
-Phase 4: Visual Storytelling            [██░░░] 2/3 plans complete
+Phase 4: Visual Storytelling            [█████] 3/3 plans complete ✓
 Phase 5: Responsive & Performance       [░░░░░] 0/? pending
 Phase 6: Decision Routing               [░░░░░] 0/? pending
 ```
@@ -73,12 +73,18 @@ Phase 6: Decision Routing               [░░░░░] 0/? pending
 | 2026-01-26 | Systems layout type separate from content layout | Visual diagram needs different structure than bullet lists, maintains clear rendering logic |
 
 | 2026-01-26 | CSS flexbox + Framer Motion for timeline visualization | Custom layout keeps bundle small, 150ms stagger for smooth sequential reveals |
+| 2026-01-26 | 150ms stagger delay for bullets (sweet spot: fast but noticeable) | Research-backed timing from Nielsen Norman 100-150ms range |
+| 2026-01-26 | CSS-only RevenueChart avoiding Recharts (~100kb savings) | Simple two-bar comparison sufficient for directional messaging |
+| 2026-01-26 | Sub-bullets remain static to avoid animation fatigue | Main bullets provide visual rhythm; sub-bullets are supporting detail |
+| 2026-01-26 | RevenueChart conditionally rendered on slide 1 via slide.id check | Chart specifically supports Empty Hours narrative, flexible approach |
+| 2026-01-26 | 200ms initial delay before bullets animate (lets title settle) | Allows slide title to establish context before bullets reveal |
+| 2026-01-26 | 400ms bullet transition duration (0.4s) per Nielsen Norman guidelines | Within recommended 200-500ms range for smooth motion perception |
 ### Active Todos
 
 - [x] Phase 1: Foundation & Migration (3 plans)
 - [x] Phase 2: Core Navigation System (3 plans)
 - [x] Phase 3: Content Architecture (4 plans)
-- [ ] Phase 4: Visual Storytelling
+- [x] Phase 4: Visual Storytelling (3 plans)
 - [ ] Phase 5: Responsive & Performance
 - [ ] Phase 6: Decision Routing
 - [ ] Upgrade Node.js to >=20.9.0 for build verification
@@ -118,23 +124,26 @@ Phase 6: Decision Routing               [░░░░░] 0/? pending
 - Phase 1 COMPLETE: All foundation requirements met (ARCH-01, ARCH-02, ARCH-03)
 - Phase 2 COMPLETE: Core navigation system fully integrated (NAV-01 through NAV-09)
 - Phase 3 COMPLETE: All content slides built (CONT-01 through CONT-12, with CONT-08/10 deferred)
-- Phase 4 IN PROGRESS: Visual storytelling components (2 of 3 plans complete)
+- Phase 4 COMPLETE: Visual storytelling components delivered
   - Plan 01 ✓: Timeline visualization with flexbox layout
   - Plan 02 ✓: System diagram with animated boxes and icon components
-  - Plan 03: Revenue opportunity charts (pending)
+  - Plan 03 ✓: Staggered bullet animations and revenue opportunity chart
 - **8 slides total** with visual enhancements:
   - Slide 0: Title ("Premium Sushi with Social Soul")
-  - Slide 1: Empty Hours hook
+  - Slide 1: Empty Hours hook **with RevenueChart visualization** (animated bars)
   - Slide 2: Three Systems overview **with visual diagram** (animated boxes, flow arrows)
-  - Slide 3: Social Media Engine deep dive
-  - Slide 4: Corporate Lunch Machine deep dive
-  - Slide 5: Weekday Bar Activation deep dive
+  - Slide 3: Social Media Engine deep dive **with staggered bullets**
+  - Slide 4: Corporate Lunch Machine deep dive **with staggered bullets**
+  - Slide 5: Weekday Bar Activation deep dive **with staggered bullets**
   - Slide 6: First 30 Days timeline **with vertical timeline visualization**
   - Slide 7: Next Steps with 2 CTAs
 - SystemDiagram component with staggered animations (200ms delay, scale 0.8→1.0)
 - IconWithLabel pattern established for future visual hierarchy
 - All visualizations use individual Lucide icon imports (tree-shaking optimized)
-- Ready for Phase 4 Plan 03: Revenue opportunity charts
+- All visualization components use CSS-only or Framer Motion (no chart libraries)
+- Bundle optimized: individual Lucide icon imports, no Recharts dependency
+- Animation timing established: 150ms stagger for bullets, 200ms for systems, 0.4s transitions
+- Ready for Phase 5: Responsive & Performance optimization
 
 **Quick Start Commands:**
 ```bash
@@ -147,11 +156,11 @@ git log --oneline -15
 # View the presentation (requires Node.js >=20.9.0)
 npm run dev
 
-# Continue to Phase 4 Plan 3
-/gsd:execute-plan 04-03
+# Continue to Phase 5
+/gsd:execute-phase 05
 ```
 
 ---
 
 *State initialized: 2026-01-24 during roadmap creation*
-*Last updated: 2026-01-26 after Phase 4 Plan 02 completion*
+*Last updated: 2026-01-26 after Phase 4 Plan 03 completion*
