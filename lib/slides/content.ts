@@ -28,7 +28,7 @@ export interface SlideData {
   subtitle?: string
   bullets: Array<string | { main: string; sub: string[] }>
   background?: string  // Tailwind class like 'bg-brand-black'
-  layout?: 'title' | 'content' | 'cta' | 'timeline'  // Hint for rendering pattern
+  layout?: 'title' | 'content' | 'cta' | 'timeline' | 'systems'  // Hint for rendering pattern
   ctas?: Array<{
     label: string
     description: string
@@ -129,7 +129,7 @@ export const slides: SlideData[] = [
       }
     ],
     background: 'bg-brand-red',
-    layout: 'content'
+    layout: 'systems'
   },
 
   // Slide 3: Social Media Engine Deep Dive
