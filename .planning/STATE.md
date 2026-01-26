@@ -11,16 +11,16 @@
 ## Current Position
 
 **Phase:** 2 of 6 - Core Navigation System
-**Plan:** 01 of 08 - Core Navigation Hook
+**Plan:** 03 of 08 - Navigation Integration & Polish
 **Status:** Phase 2 in progress
-**Last activity:** 2026-01-26 - Completed 02-01-PLAN.md (Core Navigation Hook)
+**Last activity:** 2026-01-26 - Completed 02-03-PLAN.md (Navigation Integration & Polish)
 
 **Progress:**
 ```
-[█████░░░░░░░░░░░░░░░] 9% (4/47 requirements)
+[██████░░░░░░░░░░░░░░] 13% (6/47 requirements)
 
 Phase 1: Foundation & Migration         [█████] 3/3 plans complete ✓
-Phase 2: Core Navigation System         [█░░░░] 1/8 plans complete
+Phase 2: Core Navigation System         [███░░] 3/8 plans complete
 Phase 3: Content Architecture           [░░░░░] 0/12
 Phase 4: Visual Storytelling            [░░░░░] 0/8
 Phase 5: Responsive & Performance       [░░░░░] 0/11
@@ -29,8 +29,8 @@ Phase 6: Decision Routing               [░░░░░] 0/4
 
 ## Performance Metrics
 
-**Velocity:** 4 plans completed (3 in Phase 1, 1 in Phase 2)
-**Average Duration:** 13 min per plan (15 + 18 + 8 + 10 / 4)
+**Velocity:** 6 plans completed (3 in Phase 1, 3 in Phase 2)
+**Average Duration:** 12 min per plan (15 + 18 + 8 + 10 + 5 + 17 / 6)
 **Blockers:** 1 active (Node.js version - non-critical)
 **Research Flags:** 0 active
 
@@ -53,6 +53,10 @@ Phase 6: Decision Routing               [░░░░░] 0/4
 | 2026-01-26 | URL hash uses 1-indexed notation (#1, #2, #3) for human readability | Maintains 0-indexed internal state, converts at hash boundaries |
 | 2026-01-26 | Forward/jump navigation creates history entries, backward uses existing | Enables natural browser back/forward button behavior |
 | 2026-01-26 | Keyboard navigation disabled when focused on input/textarea/select | Prevents conflicts between typing and slide navigation |
+| 2026-01-26 | 250ms slide transitions with Material Design easing [0.4, 0, 0.2, 1] | Balances responsiveness with smooth, polished feel |
+| 2026-01-26 | NavigationHints auto-dismiss after 5s or on any interaction | Prevents hints from becoming annoying while ensuring visibility |
+| 2026-01-26 | localStorage key 'sushi-media-nav-hints-seen' for hint persistence | User preferences saved across sessions |
+| 2026-01-26 | Hook composition pattern: useSlideNavigation + useTouchGestures | Multiple navigation methods work independently without conflicts |
 
 ### Active Todos
 
@@ -63,6 +67,9 @@ Phase 6: Decision Routing               [░░░░░] 0/4
 - [x] Complete Plan 01-03 (Verification & Testing)
 - [x] Begin Phase 2 planning (Core Navigation System)
 - [x] Complete Plan 02-01 (Core Navigation Hook)
+- [x] Complete Plan 02-02 (Touch Gesture Navigation)
+- [x] Complete Plan 02-03 (Navigation Integration & Polish)
+- [ ] Continue Phase 2: Plans 02-04 through 02-08
 - [ ] Upgrade Node.js to >=20.9.0 for build verification
 
 ### Known Blockers
@@ -91,21 +98,24 @@ Phase 6: Decision Routing               [░░░░░] 0/4
 
 ## Session Continuity
 
-**Last Session:** 2026-01-26 - Phase 2 in progress (Plan 02-01 complete)
-**Stopped at:** Completed 02-01-SUMMARY.md (Core Navigation Hook)
+**Last Session:** 2026-01-26 - Phase 2 in progress (Plan 02-03 complete)
+**Stopped at:** Completed 02-03-SUMMARY.md (Navigation Integration & Polish)
 **Resume file:** None
 
 **Context for Next Session:**
 - Phase 1 COMPLETE: All foundation requirements met (ARCH-01, ARCH-02, ARCH-03)
-- Phase 2 IN PROGRESS: Core navigation hook implemented (NAV-01, NAV-03, NAV-04)
+- Phase 2 IN PROGRESS: Core navigation system fully integrated (NAV-01, NAV-03, NAV-04, NAV-05, NAV-09)
+- Plans 02-01, 02-02, 02-03 complete: Keyboard, touch, and URL navigation all working
 - Archive at `/archive` with 50-initiative portfolio + strategy review
 - Implementation proposal preserved at `/strategy-review/implementation-proposal`
-- Placeholder presentation at `/` with working component tests
-- 6 presentation components ready in `components/presentation/`
+- Presentation at `/` with full navigation system (keyboard, touch, URL hash)
+- 7 presentation components ready in `components/presentation/` (including NavigationHints)
+- 2 navigation hooks in `hooks/`: useSlideNavigation, useTouchGestures
 - Custom scrollbar CSS in `app/globals.css`
-- Navigation hook created: `hooks/useSlideNavigation.ts` with keyboard controls and URL state
-- All routes functional and verified via dev server
-- Ready to continue Phase 2: Plans 02-02 through 02-08
+- Smooth 250ms transitions with Material Design easing
+- First-visit hints with localStorage persistence
+- Human verification passed on Vercel preview
+- Ready to continue Phase 2: Plans 02-04 through 02-08 (or skip to Phase 3 if core nav sufficient)
 
 **Quick Start Commands:**
 ```bash
@@ -122,7 +132,8 @@ ls .planning/phases/01-foundation-migration/*SUMMARY.md
 ls .planning/phases/02-core-navigation-system/*SUMMARY.md
 
 # Continue Phase 2 planning
-# /gsd:execute-plan .planning/phases/02-core-navigation-system/02-02-PLAN.md
+# /gsd:execute-plan .planning/phases/02-core-navigation-system/02-04-PLAN.md
+# OR skip to Phase 3 content if core navigation sufficient
 ```
 
 ---
