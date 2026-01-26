@@ -40,12 +40,13 @@ Plans:
 **Dependencies:** Phase 1 (requires SlideContainer foundation)
 
 **Requirements:** NAV-01, NAV-02, NAV-03, NAV-04, NAV-05, NAV-06, NAV-07, NAV-08, NAV-09
+
 **Plans:** 3 plans in 2 waves
 
 Plans:
-- [ ] 02-01-PLAN.md - Navigation hook with keyboard controls and URL state
-- [ ] 02-02-PLAN.md - Touch gesture system (double-tap and swipe)
-- [ ] 02-03-PLAN.md - Integration and visual polish
+- [x] 02-01-PLAN.md - Navigation hook with keyboard controls and URL state
+- [x] 02-02-PLAN.md - Touch gesture system (double-tap and swipe)
+- [x] 02-03-PLAN.md - Integration and visual polish
 
 **Success Criteria:**
 1. User can navigate forward by double-tapping right 75% of slide or using right arrow key
@@ -66,6 +67,14 @@ Plans:
 **Dependencies:** Phase 2 (requires navigation to view slides)
 
 **Requirements:** CONT-01, CONT-02, CONT-03, CONT-04, CONT-05, CONT-06, CONT-07, CONT-08, CONT-09, CONT-10, CONT-11, CONT-12
+
+**Plans:** 4 plans in 3 waves
+
+Plans:
+- [ ] 03-01-PLAN.md - Slide data structure + Title + Empty Hours slides
+- [ ] 03-02-PLAN.md - Three Systems overview + Social Media deep dive
+- [ ] 03-03-PLAN.md - Corporate Lunch + Weekday Bar deep dives
+- [ ] 03-04-PLAN.md - Timeline + Next Steps with CTAs
 
 **Success Criteria:**
 1. User encounters title slide introducing "Premium Sushi with Social Soul" as first slide
@@ -140,13 +149,13 @@ Plans:
 | Phase | Status | Requirements | Completion |
 |-------|--------|--------------|------------|
 | 1 - Foundation & Migration | ✓ Complete | 3 | 100% |
-| 2 - Core Navigation | Planned | 9 | 0% |
-| 3 - Content Architecture | Pending | 12 | 0% |
+| 2 - Core Navigation | ✓ Complete | 9 | 100% |
+| 3 - Content Architecture | Planned | 12 | 0% |
 | 4 - Visual Storytelling | Pending | 8 | 0% |
 | 5 - Responsive & Performance | Pending | 10 | 0% |
 | 6 - Decision Routing | Pending | 4 | 0% |
 
-**Overall:** 3/47 requirements complete (6%)
+**Overall:** 12/47 requirements complete (26%)
 
 ---
 
@@ -168,4 +177,4 @@ Phase 6: Decision Routing ──────┘
 
 ---
 
-*Last updated: 2026-01-25 (Phase 2 planned)*
+*Last updated: 2026-01-26 (Phase 3 planned)*
