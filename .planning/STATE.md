@@ -10,27 +10,27 @@
 
 ## Current Position
 
-**Phase:** 3 of 6 - Content Architecture
-**Plan:** 04 of 04 - Timeline + Next Steps with CTAs
-**Status:** Phase 3 COMPLETE ✓
-**Last activity:** 2026-01-26 - Completed Phase 3 (all 4 plans, verified)
+**Phase:** 4 of 6 - Visual Storytelling
+**Plan:** 02 of 03 - System Diagram & Icon Components
+**Status:** In progress
+**Last activity:** 2026-01-26 - Completed 04-02-PLAN.md
 
 **Progress:**
 ```
-[██████████░░░░░░░░░░] 51% (24/47 requirements)
+[████████████░░░░░░░░] 60% (28/47 requirements)
 
 Phase 1: Foundation & Migration         [█████] 3/3 plans complete ✓
 Phase 2: Core Navigation System         [█████] 3/3 plans complete ✓
 Phase 3: Content Architecture           [█████] 4/4 plans complete ✓
-Phase 4: Visual Storytelling            [░░░░░] 0/? pending
+Phase 4: Visual Storytelling            [██░░░] 2/3 plans complete
 Phase 5: Responsive & Performance       [░░░░░] 0/? pending
 Phase 6: Decision Routing               [░░░░░] 0/? pending
 ```
 
 ## Performance Metrics
 
-**Velocity:** 10 plans completed (3 in Phase 1, 3 in Phase 2, 4 in Phase 3)
-**Average Duration:** ~14 min per plan
+**Velocity:** 12 plans completed (3 in Phase 1, 3 in Phase 2, 4 in Phase 3, 2 in Phase 4)
+**Average Duration:** ~16 min per plan
 **Blockers:** 1 active (Node.js version - non-critical)
 **Research Flags:** 0 active
 
@@ -66,6 +66,11 @@ Phase 6: Decision Routing               [░░░░░] 0/? pending
 | 2026-01-26 | Flywheel relationship emphasized in subtitle | Positions systems as reinforcing revenue engine |
 | 2026-01-26 | System deep dives use problem/solution framing | Hook with pain point then show how system solves it |
 | 2026-01-26 | Platform-agnostic language in Social Media slide | "Social platforms" not specific names keeps flexibility |
+| 2026-01-26 | Individual Lucide icon imports (not dynamic) for bundle optimization | Tree-shaking reduces bundle size, avoids 500kb+ bloat from dynamic imports |
+| 2026-01-26 | String-based icon mapping in data layer | Icon strings in content.ts map to React components in rendering layer, avoids circular imports |
+| 2026-01-26 | 200ms stagger delay for system diagram animations | Longer than timeline (150ms) because fewer elements need more emphasis |
+| 2026-01-26 | Scale animation (0.8 to 1.0) for system boxes | Creates noticeable "pop-in" effect that draws attention sequentially |
+| 2026-01-26 | Systems layout type separate from content layout | Visual diagram needs different structure than bullet lists, maintains clear rendering logic |
 
 ### Active Todos
 
@@ -104,27 +109,31 @@ Phase 6: Decision Routing               [░░░░░] 0/? pending
 
 ## Session Continuity
 
-**Last Session:** 2026-01-26 - Phase 3 COMPLETE
-**Stopped at:** Phase 3 verified, ready for Phase 4
+**Last Session:** 2026-01-26 - Phase 4 Plan 02 COMPLETE
+**Stopped at:** Completed 04-02-PLAN.md (System Diagram & Icon Components)
 **Resume file:** None
 
 **Context for Next Session:**
 - Phase 1 COMPLETE: All foundation requirements met (ARCH-01, ARCH-02, ARCH-03)
 - Phase 2 COMPLETE: Core navigation system fully integrated (NAV-01 through NAV-09)
 - Phase 3 COMPLETE: All content slides built (CONT-01 through CONT-12, with CONT-08/10 deferred)
-- **8 slides total** with complete narrative arc:
+- Phase 4 IN PROGRESS: Visual storytelling components (2 of 3 plans complete)
+  - Plan 01 ✓: Timeline visualization with flexbox layout
+  - Plan 02 ✓: System diagram with animated boxes and icon components
+  - Plan 03: Revenue opportunity charts (pending)
+- **8 slides total** with visual enhancements:
   - Slide 0: Title ("Premium Sushi with Social Soul")
   - Slide 1: Empty Hours hook
-  - Slide 2: Three Systems overview (flywheel)
+  - Slide 2: Three Systems overview **with visual diagram** (animated boxes, flow arrows)
   - Slide 3: Social Media Engine deep dive
   - Slide 4: Corporate Lunch Machine deep dive
   - Slide 5: Weekday Bar Activation deep dive
-  - Slide 6: First 30 Days timeline
+  - Slide 6: First 30 Days timeline **with vertical timeline visualization**
   - Slide 7: Next Steps with 2 CTAs
-- CTA slide layout implemented with clickable buttons
-- Breadcrumbs updated with Ami Sushi sections (Introduction, Three Systems, Execution)
-- All navigation methods work (keyboard, touch, URL hash)
-- Ready for Phase 4: Visual Storytelling
+- SystemDiagram component with staggered animations (200ms delay, scale 0.8→1.0)
+- IconWithLabel pattern established for future visual hierarchy
+- All visualizations use individual Lucide icon imports (tree-shaking optimized)
+- Ready for Phase 4 Plan 03: Revenue opportunity charts
 
 **Quick Start Commands:**
 ```bash
@@ -137,11 +146,11 @@ git log --oneline -15
 # View the presentation (requires Node.js >=20.9.0)
 npm run dev
 
-# Continue to Phase 4
-/gsd:plan-phase 4
+# Continue to Phase 4 Plan 3
+/gsd:execute-plan 04-03
 ```
 
 ---
 
 *State initialized: 2026-01-24 during roadmap creation*
-*Last updated: 2026-01-26 after Phase 3 completion*
+*Last updated: 2026-01-26 after Phase 4 Plan 02 completion*
