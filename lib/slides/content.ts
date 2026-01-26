@@ -10,6 +10,17 @@
  * 6. Next Steps CTA (added in subsequent plans)
  */
 
+export interface Week {
+  title: string
+  items: string[]
+}
+
+export interface SystemData {
+  icon: 'users' | 'calendar' | 'trending'
+  title: string
+  description: string
+}
+
 export interface SlideData {
   id: number
   section: string
@@ -17,7 +28,7 @@ export interface SlideData {
   subtitle?: string
   bullets: Array<string | { main: string; sub: string[] }>
   background?: string  // Tailwind class like 'bg-brand-black'
-  layout?: 'title' | 'content' | 'cta'  // Hint for rendering pattern
+  layout?: 'title' | 'content' | 'cta' | 'timeline'  // Hint for rendering pattern
   ctas?: Array<{
     label: string
     description: string
@@ -30,6 +41,44 @@ export const sections = [
   { id: 'intro', name: 'Introduction', slides: [0, 1] },
   { id: 'systems', name: 'Three Systems', slides: [2, 3, 4, 5] },  // Overview + all 3 system deep dives
   { id: 'execution', name: 'Execution', slides: [6, 7] }     // Timeline + Next Steps
+]
+
+
+export const systemsData: SystemData[] = [
+  {
+    icon: 'users',
+    title: 'Social Media Engine',
+    description: 'Build daily presence, create buzz, fill empty seats'
+  },
+  {
+    icon: 'calendar',
+    title: 'Corporate Lunch Machine',
+    description: 'Transform dead lunchtimes into recurring revenue'
+  },
+  {
+    icon: 'trending',
+    title: 'Weekday Bar Activation',
+    description: 'Turn slow evenings into social destination'
+  }
+]
+
+export const timelineData: Week[] = [
+  {
+    title: 'Week 1: Foundation',
+    items: ['Launch social presence', 'Announce corporate lunch offering', 'Set up initial promotions']
+  },
+  {
+    title: 'Week 2: Activation',
+    items: ['First weekday bar event', 'Corporate outreach campaign', 'Social content rhythm established']
+  },
+  {
+    title: 'Week 3: Optimization',
+    items: ['Refine based on early feedback', 'Double down on what works', 'Build event momentum']
+  },
+  {
+    title: 'Week 4: Scale',
+    items: ['Expand successful programs', 'Lock in corporate partnerships', 'Community momentum building']
+  }
 ]
 
 export const slides: SlideData[] = [
@@ -168,7 +217,7 @@ export const slides: SlideData[] = [
       }
     ],
     background: 'bg-brand-red',
-    layout: 'content'
+    layout: 'timeline'
   },
 
   // Slide 7: Next Steps CTA
