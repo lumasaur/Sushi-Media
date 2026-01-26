@@ -7,8 +7,9 @@ import {
   SlideCounter,
   NavigationHints
 } from '@/components/presentation'
+import { Timeline, SystemDiagram } from '@/components/presentation/visualizations'
 import { useSlideNavigation, useTouchGestures } from '@/hooks'
-import { slides } from '@/lib/slides/content'
+import { slides, systemsData, timelineData } from '@/lib/slides/content'
 
 export default function PresentationPage() {
   const totalSlides = slides.length
@@ -83,6 +84,30 @@ export default function PresentationPage() {
                       </li>
                     ))}
                   </ul>
+                </div>
+              )}
+
+              {/* Systems diagram layout */}
+              {slide.layout === 'systems' && (
+                <div className="text-white">
+                  <h2 className="text-4xl md:text-5xl font-bold mb-4 text-center">{slide.title}</h2>
+                  {slide.subtitle && (
+                    <p className="text-xl md:text-2xl text-gray-300 mb-12 text-center">{slide.subtitle}</p>
+                  )}
+                  <SystemDiagram systems={systemsData} />
+                </div>
+              )}
+
+              {/* Timeline slide layout */}
+              {slide.layout === 'timeline' && (
+                <div className="text-white">
+                  <h2 className="text-4xl md:text-5xl font-bold mb-4 text-center">{slide.title}</h2>
+                  {slide.subtitle && (
+                    <p className="text-xl md:text-2xl text-gray-300 mb-12 text-center">{slide.subtitle}</p>
+                  )}
+                  <div className="max-w-3xl mx-auto">
+                    <Timeline weeks={timelineData} />
+                  </div>
                 </div>
               )}
 
