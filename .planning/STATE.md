@@ -1,6 +1,6 @@
 # State: Sushi-Media Presentation Site
 
-**Last Updated:** 2026-01-25
+**Last Updated:** 2026-01-26
 
 ## Project Reference
 
@@ -11,9 +11,9 @@
 ## Current Position
 
 **Phase:** 2 of 6 - Core Navigation System
-**Plan:** 02 of 08 - Touch Gesture Navigation
+**Plan:** 01 of 08 - Core Navigation Hook
 **Status:** Phase 2 in progress
-**Last activity:** 2026-01-25 - Completed 02-02-PLAN.md (Touch Gesture Navigation)
+**Last activity:** 2026-01-26 - Completed 02-01-PLAN.md (Core Navigation Hook)
 
 **Progress:**
 ```
@@ -30,7 +30,7 @@ Phase 6: Decision Routing               [░░░░░] 0/4
 ## Performance Metrics
 
 **Velocity:** 4 plans completed (3 in Phase 1, 1 in Phase 2)
-**Average Duration:** 12 min per plan (15 + 18 + 8 + 5 / 4)
+**Average Duration:** 13 min per plan (15 + 18 + 8 + 10 / 4)
 **Blockers:** 1 active (Node.js version - non-critical)
 **Research Flags:** 0 active
 
@@ -50,9 +50,9 @@ Phase 6: Decision Routing               [░░░░░] 0/4
 | 2026-01-25 | Archive notice uses amber color scheme | Warning/notice intent rather than error (red) or success (green) |
 | 2026-01-25 | Defer production build verification until Node.js upgrade | Dev server and code review sufficient for Phase 1 verification |
 | 2026-01-25 | Use placeholder presentation for component testing | Slide-based page with manual navigation validates migration |
-| 2026-01-25 | Touch gesture thresholds: 600ms double-tap, 100px swipe, 30° angle | Balances responsiveness with accessibility and scroll prevention |
-| 2026-01-25 | Scrollable content uses stricter 20° swipe angle vs 30° standard | Gives users more freedom for vertical scroll without triggering navigation |
-| 2026-01-25 | Haptic feedback: 10ms vibration on successful navigation | Subtle tactile confirmation without being distracting or draining battery |
+| 2026-01-26 | URL hash uses 1-indexed notation (#1, #2, #3) for human readability | Maintains 0-indexed internal state, converts at hash boundaries |
+| 2026-01-26 | Forward/jump navigation creates history entries, backward uses existing | Enables natural browser back/forward button behavior |
+| 2026-01-26 | Keyboard navigation disabled when focused on input/textarea/select | Prevents conflicts between typing and slide navigation |
 
 ### Active Todos
 
@@ -62,7 +62,7 @@ Phase 6: Decision Routing               [░░░░░] 0/4
 - [x] Complete Plan 01-02 (Migrate presentation components)
 - [x] Complete Plan 01-03 (Verification & Testing)
 - [x] Begin Phase 2 planning (Core Navigation System)
-- [x] Complete Plan 02-02 (Touch Gesture Navigation)
+- [x] Complete Plan 02-01 (Core Navigation Hook)
 - [ ] Upgrade Node.js to >=20.9.0 for build verification
 
 ### Known Blockers
@@ -91,21 +91,21 @@ Phase 6: Decision Routing               [░░░░░] 0/4
 
 ## Session Continuity
 
-**Last Session:** 2026-01-25 - Phase 2 in progress (Plan 02-02 complete)
-**Stopped at:** Completed 02-02-SUMMARY.md (Touch Gesture Navigation)
+**Last Session:** 2026-01-26 - Phase 2 in progress (Plan 02-01 complete)
+**Stopped at:** Completed 02-01-SUMMARY.md (Core Navigation Hook)
 **Resume file:** None
 
 **Context for Next Session:**
 - Phase 1 COMPLETE: All foundation requirements met (ARCH-01, ARCH-02, ARCH-03)
-- Phase 2 IN PROGRESS: Touch gestures implemented (NAV-05)
+- Phase 2 IN PROGRESS: Core navigation hook implemented (NAV-01, NAV-03, NAV-04)
 - Archive at `/archive` with 50-initiative portfolio + strategy review
 - Implementation proposal preserved at `/strategy-review/implementation-proposal`
 - Placeholder presentation at `/` with working component tests
 - 6 presentation components ready in `components/presentation/`
 - Custom scrollbar CSS in `app/globals.css`
-- Touch gesture hook created: `hooks/useTouchGestures.ts` with double-tap and swipe
+- Navigation hook created: `hooks/useSlideNavigation.ts` with keyboard controls and URL state
 - All routes functional and verified via dev server
-- Ready to continue Phase 2: Plans 02-03 through 02-08
+- Ready to continue Phase 2: Plans 02-02 through 02-08
 
 **Quick Start Commands:**
 ```bash
@@ -122,10 +122,10 @@ ls .planning/phases/01-foundation-migration/*SUMMARY.md
 ls .planning/phases/02-core-navigation-system/*SUMMARY.md
 
 # Continue Phase 2 planning
-# /gsd:execute-plan .planning/phases/02-core-navigation-system/02-03-PLAN.md
+# /gsd:execute-plan .planning/phases/02-core-navigation-system/02-02-PLAN.md
 ```
 
 ---
 
 *State initialized: 2026-01-24 during roadmap creation*
-*Last updated: 2026-01-25 after Plan 02-02 completion (Touch Gesture Navigation)*
+*Last updated: 2026-01-26 after Plan 02-01 completion (Core Navigation Hook)*
