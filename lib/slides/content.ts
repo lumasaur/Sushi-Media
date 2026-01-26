@@ -22,7 +22,7 @@ export interface SlideData {
 
 export const sections = [
   { id: 'intro', name: 'Introduction', slides: [0, 1] },
-  { id: 'systems', name: 'Three Systems', slides: [2, 3] },  // Overview + Social Media deep dive
+  { id: 'systems', name: 'Three Systems', slides: [2, 3, 4] },  // Overview + 2 system deep dives (Corporate Lunch pending)
   { id: 'execution', name: 'Execution', slides: [] }     // Will populate in subsequent plans
 ]
 
@@ -95,10 +95,30 @@ export const slides: SlideData[] = [
     ],
     background: 'bg-gradient-to-br from-gray-900 to-black',
     layout: 'content'
+  },
+
+  // Slide 4: Corporate Lunch Machine Deep Dive
+  {
+    id: 4,
+    section: 'systems',
+    title: 'Corporate Lunch Machine',
+    subtitle: 'Transform empty lunchtimes into recurring revenue',
+    bullets: [
+      'Problem: Premium kitchen sits idle during lunch hours',
+      'Solution: Target nearby corporate offices with value proposition',
+      {
+        main: 'Executive lunch appeal: Quality meets convenience',
+        sub: ['Premium sushi at accessible pricing', 'Quick service for busy schedules', 'Private dining for client meetings']
+      },
+      'Build weekday lunch momentum',
+      'Create loyal corporate client base'
+    ],
+    background: 'bg-gradient-to-br from-gray-900 to-black',
+    layout: 'content'
   }
 
   // Additional slides will be added in subsequent Phase 3 plans:
-  // - Slides 4-5: System Deep Dives (Corporate Lunch, Weekday Bar)
+  // - Slide 5: Weekday Bar Activation deep dive
   // - Slide 6: Timeline (First 30 Days)
   // - Slide 7: Next Steps CTA
 ]
