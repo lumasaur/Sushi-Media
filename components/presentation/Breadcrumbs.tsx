@@ -8,11 +8,9 @@ interface BreadcrumbsProps {
 }
 
 const sections = [
-  { name: 'Title', startSlide: 0, endSlide: 0 },
-  { name: 'Situation', startSlide: 1, endSlide: 2 },
-  { name: 'Complication', startSlide: 3, endSlide: 5 },
-  { name: 'Question', startSlide: 6, endSlide: 6 },
-  { name: 'Answer', startSlide: 7, endSlide: 16 }
+  { name: 'Introduction', startSlide: 0, endSlide: 1 },
+  { name: 'Three Systems', startSlide: 2, endSlide: 5 },
+  { name: 'Execution', startSlide: 6, endSlide: 7 }
 ]
 
 export function Breadcrumbs({ currentSlide, onNavigate }: BreadcrumbsProps) {
