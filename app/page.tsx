@@ -8,9 +8,10 @@ import {
   NavigationHints
 } from '@/components/presentation'
 import { useSlideNavigation, useTouchGestures } from '@/hooks'
+import { slides } from '@/lib/slides/content'
 
 export default function PresentationPage() {
-  const totalSlides = 3  // Will increase when content is added in Phase 3
+  const totalSlides = slides.length
 
   const {
     currentSlide,
@@ -36,40 +37,58 @@ export default function PresentationPage() {
       <ProgressBar currentSlide={currentSlide} totalSlides={totalSlides} />
       <SlideCounter currentSlide={currentSlide} totalSlides={totalSlides} />
 
-      {/* Placeholder slides - will be replaced in Phase 3 */}
-      <SlideContainer slideNumber={0} isActive={currentSlide === 0} background="bg-brand-black">
-        <div className="h-full flex items-center justify-center">
-          <div className="text-center text-white">
-            <h1 className="text-4xl font-bold mb-4">Ami Sushi Presentation</h1>
-            <p className="text-xl text-gray-300">Premium Sushi with Social Soul</p>
-            <p className="mt-8 text-sm text-gray-400">
-              Try: Arrow keys, swipe, or double-tap to navigate
-            </p>
-          </div>
-        </div>
-      </SlideContainer>
+      {/* Dynamic slide rendering from centralized content */}
+      {slides.map((slide) => (
+        <SlideContainer
+          key={slide.id}
+          slideNumber={slide.id}
+          isActive={currentSlide === slide.id}
+          background={slide.background || 'bg-white'}
+        >
+          <div className="h-full flex items-center justify-center px-12 md:px-24">
+            <div className="max-w-4xl w-full">
+              {/* Title slide layout */}
+              {slide.layout === 'title' && (
+                <div className="text-center text-white">
+                  <h1 className="text-5xl md:text-6xl font-bold">{slide.title}</h1>
+                </div>
+              )}
 
-      <SlideContainer slideNumber={1} isActive={currentSlide === 1} background="bg-brand-red">
-        <div className="h-full flex items-center justify-center">
-          <div className="text-center text-white">
-            <h2 className="text-3xl font-bold mb-4">Navigation System Complete</h2>
-            <p className="text-lg text-gray-200">
-              Keyboard, touch gestures, and URL state all working
-            </p>
+              {/* Content slide layout */}
+              {slide.layout === 'content' && (
+                <div className="text-white">
+                  <h2 className="text-4xl md:text-5xl font-bold mb-4">{slide.title}</h2>
+                  {slide.subtitle && (
+                    <p className="text-xl md:text-2xl text-gray-300 mb-8">{slide.subtitle}</p>
+                  )}
+                  <ul className="space-y-4 text-lg md:text-xl">
+                    {slide.bullets.map((bullet, i) => (
+                      <li key={i} className="flex items-start">
+                        <span className="text-brand-red mr-3 mt-1">•</span>
+                        {typeof bullet === 'string' ? (
+                          <span>{bullet}</span>
+                        ) : (
+                          <div>
+                            <div>{bullet.main}</div>
+                            <ul className="mt-2 ml-4 space-y-1 text-base md:text-lg text-gray-300">
+                              {bullet.sub.map((subBullet, j) => (
+                                <li key={j} className="flex items-start">
+                                  <span className="text-brand-red mr-2">◦</span>
+                                  <span>{subBullet}</span>
+                                </li>
+                              ))}
+                            </ul>
+                          </div>
+                        )}
+                      </li>
+                    ))}
+                  </ul>
+                </div>
+              )}
+            </div>
           </div>
-        </div>
-      </SlideContainer>
-
-      <SlideContainer slideNumber={2} isActive={currentSlide === 2} background="bg-gradient-to-br from-gray-900 to-black">
-        <div className="h-full flex items-center justify-center">
-          <div className="text-center text-white">
-            <h2 className="text-3xl font-bold mb-4">Ready for Content</h2>
-            <p className="text-lg text-gray-200">
-              Phase 3 will add the strategic narrative slides
-            </p>
-          </div>
-        </div>
-      </SlideContainer>
+        </SlideContainer>
+      ))}
 
       {/* Archive link */}
       <a
@@ -78,11 +97,6 @@ export default function PresentationPage() {
       >
         View Archive
       </a>
-
-      {/* Keyboard hint - desktop only */}
-      <div className="hidden md:block fixed bottom-8 right-8 z-40 bg-white/90 backdrop-blur-sm px-3 py-1.5 rounded-lg shadow-lg border border-gray-200 text-xs text-gray-600">
-        <span className="font-mono">&#8592; &#8594;</span> Navigate
-      </div>
     </div>
   )
 }
