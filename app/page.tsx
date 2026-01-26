@@ -1,6 +1,7 @@
 'use client'
 
 import React from 'react'
+import { motion } from 'framer-motion'
 import {
   SlideContainer,
   ProgressBar,
@@ -10,6 +11,23 @@ import {
 import { Timeline, SystemDiagram } from '@/components/presentation/visualizations'
 import { useSlideNavigation, useTouchGestures } from '@/hooks'
 import { slides, systemsData, timelineData } from '@/lib/slides/content'
+
+// Animation variants for staggered bullet entry
+const containerVariants = {
+  hidden: { opacity: 0 },
+  visible: {
+    opacity: 1,
+    transition: {
+      staggerChildren: 0.15,  // 150ms delay between bullets
+      delayChildren: 0.2       // Initial delay before first bullet
+    }
+  }
+}
+
+const itemVariants = {
+  hidden: { opacity: 0, x: -20 },
+  visible: { opacity: 1, x: 0, transition: { duration: 0.4 } }
+}
 
 export default function PresentationPage() {
   const totalSlides = slides.length
@@ -62,9 +80,18 @@ export default function PresentationPage() {
                   {slide.subtitle && (
                     <p className="text-xl md:text-2xl text-gray-300 mb-8">{slide.subtitle}</p>
                   )}
-                  <ul className="space-y-4 text-lg md:text-xl">
+                  <motion.ul
+                    variants={containerVariants}
+                    initial="hidden"
+                    animate="visible"
+                    className="space-y-4 text-lg md:text-xl"
+                  >
                     {slide.bullets.map((bullet, i) => (
-                      <li key={i} className="flex items-start">
+                      <motion.li
+                        key={i}
+                        variants={itemVariants}
+                        className="flex items-start"
+                      >
                         <span className="text-brand-red mr-3 mt-1">•</span>
                         {typeof bullet === 'string' ? (
                           <span>{bullet}</span>
@@ -81,9 +108,9 @@ export default function PresentationPage() {
                             </ul>
                           </div>
                         )}
-                      </li>
+                      </motion.li>
                     ))}
-                  </ul>
+                  </motion.ul>
                 </div>
               )}
 
