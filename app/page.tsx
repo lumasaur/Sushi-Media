@@ -8,7 +8,7 @@ import {
   SlideCounter,
   NavigationHints
 } from '@/components/presentation'
-import { Timeline, SystemDiagram } from '@/components/presentation/visualizations'
+import { Timeline, SystemDiagram, RevenueChart } from '@/components/presentation/visualizations'
 import { useSlideNavigation, useTouchGestures } from '@/hooks'
 import { slides, systemsData, timelineData } from '@/lib/slides/content'
 
@@ -80,6 +80,14 @@ export default function PresentationPage() {
                   {slide.subtitle && (
                     <p className="text-xl md:text-2xl text-gray-300 mb-8">{slide.subtitle}</p>
                   )}
+
+                  {/* Show revenue chart on Empty Hours slide (id 1) */}
+                  {slide.id === 1 && (
+                    <div className="mb-10">
+                      <RevenueChart />
+                    </div>
+                  )}
+
                   <motion.ul
                     variants={containerVariants}
                     initial="hidden"
