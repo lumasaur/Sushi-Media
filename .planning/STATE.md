@@ -10,18 +10,18 @@
 
 ## Current Position
 
-**Phase:** 2 of 6 - Core Navigation System
-**Plan:** 03 of 08 - Navigation Integration & Polish
-**Status:** Phase 2 in progress
-**Last activity:** 2026-01-26 - Completed 02-03-PLAN.md (Navigation Integration & Polish)
+**Phase:** 3 of 6 - Content Architecture
+**Plan:** 01 of 04 - Slide Content Foundation
+**Status:** Phase 3 in progress
+**Last activity:** 2026-01-26 - Completed 03-01-PLAN.md (Slide Content Foundation)
 
 **Progress:**
 ```
-[██████░░░░░░░░░░░░░░] 13% (6/47 requirements)
+[██████░░░░░░░░░░░░░░] 15% (7/47 requirements)
 
 Phase 1: Foundation & Migration         [█████] 3/3 plans complete ✓
 Phase 2: Core Navigation System         [███░░] 3/8 plans complete
-Phase 3: Content Architecture           [░░░░░] 0/12
+Phase 3: Content Architecture           [█░░░░] 1/4 plans complete
 Phase 4: Visual Storytelling            [░░░░░] 0/8
 Phase 5: Responsive & Performance       [░░░░░] 0/11
 Phase 6: Decision Routing               [░░░░░] 0/4
@@ -29,8 +29,8 @@ Phase 6: Decision Routing               [░░░░░] 0/4
 
 ## Performance Metrics
 
-**Velocity:** 6 plans completed (3 in Phase 1, 3 in Phase 2)
-**Average Duration:** 12 min per plan (15 + 18 + 8 + 10 + 5 + 17 / 6)
+**Velocity:** 7 plans completed (3 in Phase 1, 3 in Phase 2, 1 in Phase 3)
+**Average Duration:** 12 min per plan (15 + 18 + 8 + 10 + 5 + 17 + 12 / 7)
 **Blockers:** 1 active (Node.js version - non-critical)
 **Research Flags:** 0 active
 
@@ -57,6 +57,11 @@ Phase 6: Decision Routing               [░░░░░] 0/4
 | 2026-01-26 | NavigationHints auto-dismiss after 5s or on any interaction | Prevents hints from becoming annoying while ensuring visibility |
 | 2026-01-26 | localStorage key 'sushi-media-nav-hints-seen' for hint persistence | User preferences saved across sessions |
 | 2026-01-26 | Hook composition pattern: useSlideNavigation + useTouchGestures | Multiple navigation methods work independently without conflicts |
+| 2026-01-26 | Centralized slide content in lib/slides/content.ts | Single source of truth for all presentation slides, TypeScript types for safety |
+| 2026-01-26 | Layout hints guide rendering: 'title', 'content', 'cta' | Flexible content-driven presentation without hardcoded slide structure |
+| 2026-01-26 | Bullet hierarchy: strings for simple bullets, objects for sub-bullets | Supports scannable content with visual hierarchy |
+| 2026-01-26 | Title slide: single message only, no bullets | Clean premium positioning "Premium Sushi with Social Soul" |
+| 2026-01-26 | Empty Hours hook on slide 2 immediately after title | Grab stakeholder attention early with core opportunity framing |
 
 ### Active Todos
 
@@ -69,7 +74,9 @@ Phase 6: Decision Routing               [░░░░░] 0/4
 - [x] Complete Plan 02-01 (Core Navigation Hook)
 - [x] Complete Plan 02-02 (Touch Gesture Navigation)
 - [x] Complete Plan 02-03 (Navigation Integration & Polish)
-- [ ] Continue Phase 2: Plans 02-04 through 02-08
+- [x] Begin Phase 3 planning (Content Architecture)
+- [x] Complete Plan 03-01 (Slide Content Foundation)
+- [ ] Continue Phase 3: Plans 03-02 through 03-04
 - [ ] Upgrade Node.js to >=20.9.0 for build verification
 
 ### Known Blockers
@@ -77,10 +84,10 @@ Phase 6: Decision Routing               [░░░░░] 0/4
 **Node.js version (non-critical):**
 - Current: 20.3.1
 - Required: >=20.9.0
-- Impact: Cannot run `npm run build` for production verification
-- Workaround: Dev server works, components verified via code review
+- Impact: Cannot run `npm run dev` or `npm run build` for runtime verification
+- Workaround: Components verified via TypeScript compilation and code review
 - Resolution: Upgrade Node.js before production deployment
-- Does NOT block Phase 2 development
+- Does NOT block Phase 2 or Phase 3 development
 
 ### Technical Debt
 
@@ -89,33 +96,36 @@ Phase 6: Decision Routing               [░░░░░] 0/4
 - `components/presentation/Logo.tsx` created in Plan 01-02
 - Action: Remove AmiSushiLogo.tsx in cleanup or consolidate
 
-**Breadcrumbs sections placeholder:**
-- Current sections array uses Kangaroo narrative structure
-- Needs update for Sushi-Media story in Phase 3
+**Breadcrumbs sections:**
+- Updated to Sushi-Media narrative in lib/slides/content.ts (Plan 03-01)
+- Currently shows intro, systems, execution sections
+- Will populate with slide IDs as content is added in Phase 3
 
 **Archive backup file:**
 - `app/archive/page.tsx.backup` can be removed after verification complete
 
 ## Session Continuity
 
-**Last Session:** 2026-01-26 - Phase 2 in progress (Plan 02-03 complete)
-**Stopped at:** Completed 02-03-SUMMARY.md (Navigation Integration & Polish)
+**Last Session:** 2026-01-26 - Phase 3 in progress (Plan 03-01 complete)
+**Stopped at:** Completed 03-01-SUMMARY.md (Slide Content Foundation)
 **Resume file:** None
 
 **Context for Next Session:**
 - Phase 1 COMPLETE: All foundation requirements met (ARCH-01, ARCH-02, ARCH-03)
-- Phase 2 IN PROGRESS: Core navigation system fully integrated (NAV-01, NAV-03, NAV-04, NAV-05, NAV-09)
-- Plans 02-01, 02-02, 02-03 complete: Keyboard, touch, and URL navigation all working
+- Phase 2 PARTIAL: Core navigation system fully integrated (NAV-01, NAV-03, NAV-04, NAV-05, NAV-09)
+- Phase 3 STARTED: Slide content architecture established with first 2 slides
+- Plans complete: 01-01, 01-02, 01-03, 02-01, 02-02, 02-03, 03-01
 - Archive at `/archive` with 50-initiative portfolio + strategy review
 - Implementation proposal preserved at `/strategy-review/implementation-proposal`
-- Presentation at `/` with full navigation system (keyboard, touch, URL hash)
-- 7 presentation components ready in `components/presentation/` (including NavigationHints)
-- 2 navigation hooks in `hooks/`: useSlideNavigation, useTouchGestures
-- Custom scrollbar CSS in `app/globals.css`
-- Smooth 250ms transitions with Material Design easing
-- First-visit hints with localStorage persistence
-- Human verification passed on Vercel preview
-- Ready to continue Phase 2: Plans 02-04 through 02-08 (or skip to Phase 3 if core nav sufficient)
+- Presentation at `/` with:
+  - Full navigation system (keyboard, touch, URL hash, NavigationHints)
+  - Dynamic slide rendering from lib/slides/content.ts
+  - 2 slides: Title ("Premium Sushi with Social Soul") + Empty Hours hook
+  - 7 presentation components in `components/presentation/`
+  - 2 navigation hooks in `hooks/`: useSlideNavigation, useTouchGestures
+  - Custom scrollbar CSS in `app/globals.css`
+- Centralized slide content structure at `lib/slides/content.ts` with TypeScript types
+- Ready to continue Phase 3: Plans 03-02 through 03-04 (Three Systems content)
 
 **Quick Start Commands:**
 ```bash
@@ -131,12 +141,14 @@ ls .planning/phases/01-foundation-migration/*SUMMARY.md
 # Review Phase 2 summaries
 ls .planning/phases/02-core-navigation-system/*SUMMARY.md
 
-# Continue Phase 2 planning
-# /gsd:execute-plan .planning/phases/02-core-navigation-system/02-04-PLAN.md
-# OR skip to Phase 3 content if core navigation sufficient
+# Review Phase 3 summaries
+ls .planning/phases/03-content-architecture/*SUMMARY.md
+
+# Continue Phase 3 content development
+# /gsd:execute-plan .planning/phases/03-content-architecture/03-02-PLAN.md
 ```
 
 ---
 
 *State initialized: 2026-01-24 during roadmap creation*
-*Last updated: 2026-01-26 after Plan 02-01 completion (Core Navigation Hook)*
+*Last updated: 2026-01-26 after Plan 03-01 completion (Slide Content Foundation)*
