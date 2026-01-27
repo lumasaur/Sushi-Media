@@ -18,7 +18,7 @@ const containerVariants = {
   visible: {
     opacity: 1,
     transition: {
-      staggerChildren: 0.15,  // 150ms delay between bullets
+      staggerChildren: 0.1,   // 100ms delay between bullets (faster, per DESIGN-SYSTEM.md)
       delayChildren: 0.2       // Initial delay before first bullet
     }
   }
@@ -26,7 +26,14 @@ const containerVariants = {
 
 const itemVariants = {
   hidden: { opacity: 0, x: -20 },
-  visible: { opacity: 1, x: 0, transition: { duration: 0.4 } }
+  visible: {
+    opacity: 1,
+    x: 0,
+    transition: {
+      duration: 0.3,  // 300ms (faster, per DESIGN-SYSTEM.md)
+      ease: [0.4, 0, 0.2, 1]  // Material Design easing
+    }
+  }
 }
 
 export default function PresentationPage() {
