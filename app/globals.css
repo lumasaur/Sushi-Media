@@ -4,23 +4,47 @@
 
 /* CSS Custom Properties - Ami Sushi Brand Tokens */
 :root {
-  /* Brand Colors */
+  /* Brand Colors (existing) */
   --color-brand-black: #120c0d;
   --color-brand-white: #f5f5f5;
   --color-brand-red: #b22222;
   --color-light-tan: #e8e0d5;
 
-  /* Typography */
-  --font-heading: var(--font-cormorant), serif;
-  --font-body: var(--font-cormorant), serif;
-  --font-meta: var(--font-eb-garamond), serif;
+  /* Japanese-inspired Colors from DESIGN-SYSTEM.md */
+  --color-sumi: #1a1614;
+  --color-washi: #faf8f5;
+  --color-beni: #8b2635;
+  --color-kincha: #c4a35a;
+  --color-hai: #6b6560;
+  --color-kitsune: #d4c4a8;
 
-  /* Spacing Scale */
+  /* Typography */
+  --font-heading: 'Cormorant Garamond', serif;
+  --font-body: 'EB Garamond', serif;
+  --font-ui: 'Inter', sans-serif;
+
+  /* Spacing (8px base) */
+  --space-1: 0.25rem;
+  --space-2: 0.5rem;
+  --space-3: 0.75rem;
+  --space-4: 1rem;
+  --space-6: 1.5rem;
+  --space-8: 2rem;
+  --space-12: 3rem;
+  --space-16: 4rem;
+
+  /* Spacing Scale (legacy - keep during migration) */
   --spacing-xs: 0.5rem;
   --spacing-sm: 1rem;
   --spacing-md: 1.5rem;
   --spacing-lg: 2rem;
   --spacing-xl: 3rem;
+
+  /* Animation */
+  --ease-out: cubic-bezier(0.4, 0, 0.2, 1);
+  --duration-fast: 150ms;
+  --duration-normal: 250ms;
+  --duration-slow: 400ms;
 
   /* Border Radius */
   --radius-sm: 0.375rem;

@@ -1,5 +1,5 @@
 import type { Metadata } from 'next';
-import { Cormorant_Garamond, EB_Garamond } from 'next/font/google';
+import { Cormorant_Garamond, EB_Garamond, Inter } from 'next/font/google';
 import './globals.css';
 
 // Font configuration matching Ami Sushi brand
@@ -17,6 +17,12 @@ const ebGaramond = EB_Garamond({
   display: 'swap',
 });
 
+const inter = Inter({
+  subsets: ['latin'],
+  variable: '--font-inter',
+  display: 'swap',
+});
+
 export const metadata: Metadata = {
   title: 'Ami Sushi Marketing Portal',
   description: 'Internal stakeholder tool for marketing strategy review and content planning',
@@ -29,7 +35,7 @@ export default function RootLayout({
   children: React.ReactNode;
 }) {
   return (
-    <html lang="en" className={`${cormorantGaramond.variable} ${ebGaramond.variable}`}>
+    <html lang="en" className={`${cormorantGaramond.variable} ${ebGaramond.variable} ${inter.variable}`}>
       <body className="antialiased">
         <header className="bg-[#120c0d] border-b border-gray-700 sticky top-0 z-50">
           <div className="max-w-7xl mx-auto px-4 py-4">
