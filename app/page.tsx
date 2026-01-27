@@ -75,17 +75,17 @@ export default function PresentationPage() {
             <div className="max-w-4xl w-full">
               {/* Title slide layout */}
               {slide.layout === 'title' && (
-                <div className="text-center text-white">
-                  <h1 className="text-5xl md:text-6xl font-bold">{slide.title}</h1>
+                <div className="text-center text-washi">
+                  <h1 className="text-5xl md:text-6xl font-bold font-cormorant">{slide.title}</h1>
                 </div>
               )}
 
               {/* Content slide layout */}
               {slide.layout === 'content' && (
-                <div className="text-white">
-                  <h2 className="text-4xl md:text-5xl font-bold mb-4">{slide.title}</h2>
+                <div className="text-washi">
+                  <h2 className="text-4xl md:text-5xl font-bold mb-4 font-cormorant">{slide.title}</h2>
                   {slide.subtitle && (
-                    <p className="text-xl md:text-2xl text-gray-300 mb-8">{slide.subtitle}</p>
+                    <p className="text-xl md:text-2xl text-hai mb-8">{slide.subtitle}</p>
                   )}
 
                   {/* Show revenue chart on Empty Hours slide (id 1) */}
@@ -107,16 +107,16 @@ export default function PresentationPage() {
                         variants={itemVariants}
                         className="flex items-start"
                       >
-                        <span className="text-brand-red mr-3 mt-1">•</span>
+                        <span className="text-beni mr-3 mt-1">•</span>
                         {typeof bullet === 'string' ? (
                           <span>{bullet}</span>
                         ) : (
                           <div>
                             <div>{bullet.main}</div>
-                            <ul className="mt-2 ml-4 space-y-1 text-base md:text-lg text-gray-300">
+                            <ul className="mt-2 ml-4 space-y-1 text-base md:text-lg text-hai">
                               {bullet.sub.map((subBullet, j) => (
                                 <li key={j} className="flex items-start">
-                                  <span className="text-brand-red mr-2">◦</span>
+                                  <span className="text-beni mr-2">◦</span>
                                   <span>{subBullet}</span>
                                 </li>
                               ))}
@@ -126,15 +126,66 @@ export default function PresentationPage() {
                       </motion.li>
                     ))}
                   </motion.ul>
+
+                  {/* Mini-story deep dive CTA */}
+                  {slide.miniStoryLink && (
+                    <div className="mt-8 text-center">
+                      <a
+                        href={`/presentation/${slide.miniStoryLink}?returnSlide=${slide.id}`}
+                        className="inline-flex items-center px-6 py-3 bg-kincha/20 border border-kincha/40 rounded-lg text-kincha hover:bg-kincha/30 transition-colors"
+                      >
+                        Explore the full playbook
+                        <svg className="ml-2 w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                          <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
+                        </svg>
+                      </a>
+                    </div>
+                  )}
+                </div>
+              )}
+
+              {/* Two-column layout (What Changes slide) */}
+              {slide.layout === 'two-column' && slide.twoColumns && (
+                <div className="text-washi">
+                  <h2 className="text-4xl md:text-5xl font-bold mb-4 text-center font-cormorant">{slide.title}</h2>
+                  {slide.subtitle && (
+                    <p className="text-xl md:text-2xl text-hai mb-12 text-center">{slide.subtitle}</p>
+                  )}
+                  <div className="grid md:grid-cols-2 gap-8 md:gap-12">
+                    {/* Left column */}
+                    <div className="bg-washi/5 rounded-lg p-6 border border-washi/10">
+                      <h3 className="text-2xl font-semibold mb-4 text-kincha">{slide.twoColumns.leftTitle}</h3>
+                      <ul className="space-y-3">
+                        {slide.twoColumns.leftItems.map((item, i) => (
+                          <li key={i} className="flex items-start">
+                            <span className="text-kincha mr-3 mt-1">•</span>
+                            <span>{item}</span>
+                          </li>
+                        ))}
+                      </ul>
+                    </div>
+                    {/* Right column */}
+                    <div className="bg-washi/5 rounded-lg p-6 border border-washi/10">
+                      <h3 className="text-2xl font-semibold mb-4 text-beni">{slide.twoColumns.rightTitle}</h3>
+                      <ul className="space-y-3">
+                        {slide.twoColumns.rightItems.map((item, i) => (
+                          <li key={i} className="flex items-start">
+                            <span className="text-beni mr-3 mt-1">•</span>
+                            <span>{item}</span>
+                          </li>
+                        ))}
+                      </ul>
+                    </div>
+                  </div>
                 </div>
               )}
 
               {/* Systems diagram layout */}
               {slide.layout === 'systems' && (
-                <div className="text-white">
-                  <h2 className="text-4xl md:text-5xl font-bold mb-4 text-center">{slide.title}</h2>
+                <div className="text-washi">
+                  <h2 className="text-4xl md:text-5xl font-bold mb-4 text-center font-cormorant">{slide.title}</h2>
                   {slide.subtitle && (
-                    <p className="text-xl md:text-2xl text-gray-300 mb-12 text-center">{slide.subtitle}</p>
+                    <p className="text-xl md:text-2xl text-hai mb-12 text-center">{slide.subtitle}</p>
                   )}
                   <SystemDiagram systems={systemsData} />
                 </div>
@@ -142,10 +193,10 @@ export default function PresentationPage() {
 
               {/* Timeline slide layout */}
               {slide.layout === 'timeline' && (
-                <div className="text-white">
-                  <h2 className="text-4xl md:text-5xl font-bold mb-4 text-center">{slide.title}</h2>
+                <div className="text-washi">
+                  <h2 className="text-4xl md:text-5xl font-bold mb-4 text-center font-cormorant">{slide.title}</h2>
                   {slide.subtitle && (
-                    <p className="text-xl md:text-2xl text-gray-300 mb-12 text-center">{slide.subtitle}</p>
+                    <p className="text-xl md:text-2xl text-hai mb-12 text-center">{slide.subtitle}</p>
                   )}
                   <div className="max-w-3xl mx-auto">
                     <Timeline weeks={timelineData} />
@@ -155,17 +206,17 @@ export default function PresentationPage() {
 
               {/* CTA slide layout */}
               {slide.layout === 'cta' && (
-                <div className="text-white">
-                  <h2 className="text-4xl md:text-5xl font-bold mb-4 text-center">{slide.title}</h2>
+                <div className="text-washi">
+                  <h2 className="text-4xl md:text-5xl font-bold mb-4 text-center font-cormorant">{slide.title}</h2>
                   {slide.subtitle && (
-                    <p className="text-xl md:text-2xl text-gray-300 mb-8 text-center">{slide.subtitle}</p>
+                    <p className="text-xl md:text-2xl text-hai mb-8 text-center">{slide.subtitle}</p>
                   )}
 
                   {/* Summary bullets */}
                   <ul className="space-y-3 text-lg md:text-xl mb-12 max-w-2xl mx-auto">
                     {slide.bullets.map((bullet, i) => (
                       <li key={i} className="flex items-start">
-                        <span className="text-brand-red mr-3 mt-1">•</span>
+                        <span className="text-beni mr-3 mt-1">•</span>
                         <span>{typeof bullet === 'string' ? bullet : bullet.main}</span>
                       </li>
                     ))}
@@ -181,13 +232,13 @@ export default function PresentationPage() {
                           className={`
                             group px-8 py-4 rounded-lg transition-all duration-200 min-w-[280px] text-center
                             ${cta.primary
-                              ? 'bg-brand-red text-white hover:bg-red-700 hover:scale-105'
-                              : 'bg-white text-gray-900 hover:bg-gray-100 hover:scale-105'
+                              ? 'bg-beni text-washi hover:bg-beni/80 hover:scale-105'
+                              : 'border border-washi/30 text-washi hover:bg-gray-100 hover:scale-105'
                             }
                           `}
                         >
                           <div className="font-semibold text-lg mb-1">{cta.label}</div>
-                          <div className={`text-sm ${cta.primary ? 'text-gray-200' : 'text-gray-600'}`}>
+                          <div className={`text-sm ${cta.primary ? 'text-washi/80' : 'text-hai'}`}>
                             {cta.description}
                           </div>
                         </a>
@@ -204,7 +255,7 @@ export default function PresentationPage() {
       {/* Archive link */}
       <a
         href="/archive"
-        className="fixed bottom-8 left-8 z-50 text-sm text-gray-500 hover:text-brand-red underline"
+        className="fixed bottom-8 left-8 z-50 text-sm text-hai hover:text-beni underline"
       >
         View Archive
       </a>
