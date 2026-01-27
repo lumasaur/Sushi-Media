@@ -1,13 +1,18 @@
 /**
  * Centralized slide content structure for Ami Sushi presentation
  *
- * This file defines the complete slide deck following the strategic narrative:
- * 1. Title slide - Premium positioning
- * 2. Empty Hours hook - Core opportunity framing
- * 3. Three Systems overview (added in subsequent plans)
- * 4. System deep dives (added in subsequent plans)
- * 5. Timeline (added in subsequent plans)
- * 6. Next Steps CTA (added in subsequent plans)
+ * This file defines the complete 10-slide main story following PRESENTATION-STRUCTURE.md:
+ * 0. Title slide - Premium positioning
+ * 1. The Opportunity - Current state and untapped revenue
+ * 2. Three Systems We're Building - Overview with flywheel subtitle
+ * 3. What Changes, What Doesn't - Two-column layout
+ * 4. Social Media Engine - First priority with mini-story link
+ * 5. Corporate Lunch Machine - Second priority with mini-story link
+ * 6. Weekday Bar Activation - Third priority with mini-story link (added in Task 2)
+ * 7. First 30 Days - Execution calendar
+ * 8. February 2026 Programming - Calendar view (to be added)
+ * 9. How We Track Success - Metrics dashboard (to be added)
+ * 10. Next Steps - CTAs (currently slide 7, will become 10)
  */
 
 export interface Week {
@@ -27,20 +32,27 @@ export interface SlideData {
   title: string
   subtitle?: string
   bullets: Array<string | { main: string; sub: string[] }>
-  background?: string  // Tailwind class like 'bg-brand-black'
-  layout?: 'title' | 'content' | 'cta' | 'timeline' | 'systems'  // Hint for rendering pattern
+  background?: string  // Tailwind class like 'bg-sumi'
+  layout?: 'title' | 'content' | 'cta' | 'timeline' | 'systems' | 'two-column' | 'calendar' | 'metrics'  // Hint for rendering pattern
   ctas?: Array<{
     label: string
     description: string
     href: string
     primary: boolean
   }>
+  miniStoryLink?: 'social-media' | 'corporate-lunch' | 'weekday-bar'  // Link to mini-story deep dive
+  twoColumns?: {
+    leftTitle: string
+    leftItems: string[]
+    rightTitle: string
+    rightItems: string[]
+  }
 }
 
 export const sections = [
-  { id: 'intro', name: 'Introduction', slides: [0, 1] },
-  { id: 'systems', name: 'Three Systems', slides: [2, 3, 4, 5] },  // Overview + all 3 system deep dives
-  { id: 'execution', name: 'Execution', slides: [6, 7] }     // Timeline + Next Steps
+  { id: 'intro', name: 'Introduction', slides: [0] },
+  { id: 'systems', name: 'Three Systems', slides: [1, 2, 3, 4, 5] },  // Opportunity + Overview + 3 system deep dives
+  { id: 'execution', name: 'Execution', slides: [6, 7, 8, 9] }     // Timeline + February + Tracking + Next Steps
 ]
 
 
@@ -48,36 +60,32 @@ export const systemsData: SystemData[] = [
   {
     icon: 'users',
     title: 'Social Media Engine',
-    description: 'Build daily presence, create buzz, fill empty seats'
+    description: 'We control this completely - starts immediately, costs nothing'
   },
   {
     icon: 'calendar',
-    title: 'Corporate Lunch Machine',
-    description: 'Transform dead lunchtimes into recurring revenue'
+    title: 'Corporate Lunch Pipeline',
+    description: 'Group ordering + direct outreach to office complexes'
   },
   {
     icon: 'trending',
     title: 'Weekday Bar Activation',
-    description: 'Turn slow evenings into social destination'
+    description: 'Happy hour + event programming'
   }
 ]
 
 export const timelineData: Week[] = [
   {
-    title: 'Week 1: Foundation',
-    items: ['Launch social presence', 'Announce corporate lunch offering', 'Set up initial promotions']
+    title: 'Week 1',
+    items: ['Social media batch content creation session', 'Schedule 2 weeks of posts in Meta Business Suite', 'Enable Toast group ordering', 'Create office complex target list']
   },
   {
-    title: 'Week 2: Activation',
-    items: ['First weekday bar event', 'Corporate outreach campaign', 'Social content rhythm established']
+    title: 'Week 2-3',
+    items: ['Daily Stories routine established', 'Corporate warm intro outreach (3-5 contacts)', 'First event promotion cycle (2-week timeline)', 'DoorDash Business account setup']
   },
   {
-    title: 'Week 3: Optimization',
-    items: ['Refine based on early feedback', 'Double down on what works', 'Build event momentum']
-  },
-  {
-    title: 'Week 4: Scale',
-    items: ['Expand successful programs', 'Lock in corporate partnerships', 'Community momentum building']
+    title: 'Week 4',
+    items: ['Performance review: What\'s working?', 'First corporate sample deliveries', 'Event attendance tracking begins', 'Adjust and iterate based on data']
   }
 ]
 
@@ -88,139 +96,181 @@ export const slides: SlideData[] = [
     section: 'intro',
     title: 'Premium Sushi with Social Soul',
     bullets: [],
-    background: 'bg-brand-black',
+    background: 'bg-gradient-to-b from-sumi to-sumi-deep',
     layout: 'title'
   },
 
-  // Slide 1: Empty Hours Hook
+  // Slide 1: The Opportunity
   {
     id: 1,
-    section: 'intro',
-    title: 'Capturing the Empty Hours',
-    subtitle: 'Untapped revenue in lunch and weekday evenings',
+    section: 'systems',
+    title: 'The Opportunity',
+    subtitle: 'Where we are today',
     bullets: [
-      'Weekday lunchtimes sit empty',
-      'Evening hours slow Monday-Thursday',
-      'Premium kitchen ready, audience missing',
-      'Three systems turn downtime into revenue'
+      'Weekends are busy',
+      'Dinner service works well',
+      'BUT: Lunch hours and weekday bar times are underutilized',
+      'Short window of profitability means leaving money on the table',
+      {
+        main: 'The Opportunity:',
+        sub: [
+          'Fill empty hours without changing what works',
+          'Systematic approach to capturing untapped revenue',
+          'Low-cost execution using existing infrastructure'
+        ]
+      }
     ],
-    background: 'bg-gradient-to-br from-gray-900 to-black',
+    background: 'bg-gradient-to-b from-sumi to-sumi-light',
     layout: 'content'
   },
 
-  // Slide 2: Three Systems Overview
+  // Slide 2: Three Systems We're Building
   {
     id: 2,
     section: 'systems',
-    title: 'Three Interconnected Systems',
-    subtitle: 'Each system reinforces the others — a revenue flywheel',
+    title: 'Three Systems We\'re Building',
+    subtitle: 'Each reinforces the others — a revenue flywheel',
     bullets: [
       {
         main: 'Social Media Engine',
-        sub: ['Build daily presence, create buzz, fill empty seats']
+        sub: [
+          'We control this completely',
+          'Starts immediately, costs nothing',
+          'Drives all other initiatives through consistent promotion',
+          'Timeline: Operational this week'
+        ]
       },
       {
-        main: 'Corporate Lunch Machine',
-        sub: ['Transform dead lunchtimes into recurring revenue']
+        main: 'Corporate Lunch Pipeline',
+        sub: [
+          'Group ordering + direct outreach to office complexes',
+          'Fills lunch hours with recurring revenue',
+          'Timeline: Outreach starts week 2'
+        ]
       },
       {
         main: 'Weekday Bar Activation',
-        sub: ['Turn slow evenings into social destination']
+        sub: [
+          'Happy hour + event programming',
+          'Fills weekday evening capacity',
+          'Timeline: Test programming month 1-2'
+        ]
       }
     ],
-    background: 'bg-brand-red',
+    background: 'bg-beni',
     layout: 'systems'
   },
 
-  // Slide 3: Social Media Engine Deep Dive
+  // Slide 3: What Changes, What Doesn't
   {
     id: 3,
     section: 'systems',
-    title: 'Social Media Engine',
-    subtitle: 'Daily presence drives discovery and fills empty seats',
-    bullets: [
-      'Problem: Hidden gem with no voice in noisy market',
-      'Solution: Consistent daily content on social platforms',
-      {
-        main: 'Showcase premium quality and social atmosphere',
-        sub: ['Behind-the-scenes content', 'Event highlights', 'Community stories']
-      },
-      'Drive lunchtime traffic and weekday evening bookings',
-      'Build loyalty beyond transactions'
-    ],
-    background: 'bg-gradient-to-br from-gray-900 to-black',
-    layout: 'content'
+    title: 'What Changes, What Doesn\'t',
+    subtitle: 'Preserving what works, adding what\'s missing',
+    bullets: [],
+    background: 'bg-gradient-to-b from-sumi to-sumi-light',
+    layout: 'two-column',
+    twoColumns: {
+      leftTitle: 'What Stays the Same',
+      leftItems: [
+        'Space and hours',
+        'Core menu and quality standards',
+        'Weekend success model',
+        'Family business values'
+      ],
+      rightTitle: 'What\'s New',
+      rightItems: [
+        'Systematic marketing (vs. ad hoc posting)',
+        'Corporate outreach (vs. waiting for walk-ins)',
+        'Weekday programming (vs. hoping for traffic)'
+      ]
+    }
   },
 
-  // Slide 4: Corporate Lunch Machine Deep Dive
+  // Slide 4: Social Media - First Priority
   {
     id: 4,
     section: 'systems',
-    title: 'Corporate Lunch Machine',
-    subtitle: 'Transform empty lunchtimes into recurring revenue',
+    title: 'Social Media Engine',
+    subtitle: 'First priority — we control it completely',
     bullets: [
-      'Problem: Premium kitchen sits idle during lunch hours',
-      'Solution: Target nearby corporate offices with value proposition',
       {
-        main: 'Executive lunch appeal: Quality meets convenience',
-        sub: ['Premium sushi at accessible pricing', 'Quick service for busy schedules', 'Private dining for client meetings']
+        main: 'Why First:',
+        sub: [
+          'Zero cost to implement',
+          'Foundation for all other initiatives',
+          'Can start today'
+        ]
       },
-      'Build weekday lunch momentum',
-      'Create loyal corporate client base'
+      {
+        main: 'The System:',
+        sub: [
+          'Structured content calendar (5 pillars)',
+          'Consistent posting schedule (4-6x/week)',
+          'Event promotion (2-week cycle)',
+          'Partner amplification (DJs, artists share to their networks)'
+        ]
+      },
+      {
+        main: 'Your Role:',
+        sub: [
+          'Content capture opportunities through your network',
+          'Event promotion through your connections',
+          'Partnership activation'
+        ]
+      }
     ],
-    background: 'bg-gradient-to-br from-gray-900 to-black',
-    layout: 'content'
+    background: 'bg-gradient-to-b from-sumi to-sumi-light',
+    layout: 'content',
+    miniStoryLink: 'social-media'
   },
 
-  // Slide 5: Weekday Bar Activation Deep Dive
-  {
-    id: 5,
-    section: 'systems',
-    title: 'Weekday Bar Activation',
-    subtitle: 'Turn slow evenings into social destination',
-    bullets: [
-      'Problem: Monday-Thursday bar sits empty after dinner rush',
-      'Solution: Create compelling reasons to visit midweek',
-      {
-        main: 'Social programming drives repeat traffic',
-        sub: ['Happy hour offerings', 'Community events and gatherings', 'Relaxed atmosphere for regulars']
-      },
-      'Fill empty evening hours with consistent traffic',
-      'Build neighborhood loyalty and word-of-mouth'
-    ],
-    background: 'bg-gradient-to-br from-gray-900 to-black',
-    layout: 'content'
-  },
+  // Slide 5: Corporate Lunch - Second Priority (Task 2 will add this)
+  // Placeholder for now
 
-  // Slide 6: First 30 Days Timeline
+  // Slide 6: Weekday Bar - Third Priority (will be added later)
+  // Placeholder for now
+
+  // Slide 7: First 30 Days Timeline
   {
     id: 6,
     section: 'execution',
     title: 'First 30 Days',
-    subtitle: 'From launch to momentum',
+    subtitle: 'Execution Calendar',
     bullets: [
       {
-        main: 'Week 1: Foundation',
-        sub: ['Launch social presence', 'Announce corporate lunch offering', 'Set up initial promotions']
+        main: 'Week 1:',
+        sub: [
+          'Social media batch content creation session',
+          'Schedule 2 weeks of posts in Meta Business Suite',
+          'Enable Toast group ordering',
+          'Create office complex target list'
+        ]
       },
       {
-        main: 'Week 2: Activation',
-        sub: ['First weekday bar event', 'Corporate outreach campaign', 'Social content rhythm established']
+        main: 'Week 2-3:',
+        sub: [
+          'Daily Stories routine established',
+          'Corporate warm intro outreach (3-5 contacts)',
+          'First event promotion cycle (2-week timeline)',
+          'DoorDash Business account setup'
+        ]
       },
       {
-        main: 'Week 3: Optimization',
-        sub: ['Refine based on early feedback', 'Double down on what works', 'Build event momentum']
-      },
-      {
-        main: 'Week 4: Scale',
-        sub: ['Expand successful programs', 'Lock in corporate partnerships', 'Community momentum building']
+        main: 'Week 4:',
+        sub: [
+          'Performance review: What\'s working?',
+          'First corporate sample deliveries',
+          'Event attendance tracking begins',
+          'Adjust and iterate based on data'
+        ]
       }
     ],
-    background: 'bg-brand-red',
+    background: 'bg-beni',
     layout: 'timeline'
   },
 
-  // Slide 7: Next Steps CTA
+  // Slide 8: Next Steps CTA (will become slide 10 in final structure)
   {
     id: 7,
     section: 'execution',
@@ -231,7 +281,7 @@ export const slides: SlideData[] = [
       'Corporate Lunch Machine: Fill empty lunchtimes',
       'Weekday Bar Activation: Turn slow evenings into destination'
     ],
-    background: 'bg-gradient-to-br from-gray-900 to-black',
+    background: 'bg-gradient-to-b from-sumi to-sumi-light',
     layout: 'cta',
     ctas: [
       {
