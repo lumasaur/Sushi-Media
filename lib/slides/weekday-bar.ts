@@ -208,9 +208,7 @@ export const weekdayBarSlides: MiniSlideData[] = [
           'Entry includes snacks, creates commitment'
         ]
       },
-      {
-        main: 'Strategy: Low barrier to entry, high value perception'
-      }
+'Strategy: Low barrier to entry, high value perception'
     ],
     background: 'bg-gradient-to-b from-sumi to-sumi-light',
     layout: 'content'
@@ -248,9 +246,7 @@ export const weekdayBarSlides: MiniSlideData[] = [
           'Leverages existing audiences'
         ]
       },
-      {
-        main: 'Social Media Engine drives all event marketing'
-      }
+'Social Media Engine drives all event marketing'
     ],
     background: 'bg-gradient-to-b from-sumi to-sumi-light',
     layout: 'content'
@@ -290,9 +286,7 @@ export const weekdayBarSlides: MiniSlideData[] = [
           'February data informs March planning'
         ]
       },
-      {
-        main: 'Simple tracking: One spreadsheet, 5 min per event'
-      }
+'Simple tracking: One spreadsheet, 5 min per event'
     ],
     background: 'bg-gradient-to-b from-sumi to-sumi-light',
     layout: 'content'
