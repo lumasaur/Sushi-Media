@@ -11,26 +11,26 @@
 ## Current Position
 
 **Phase:** 5 of 6 - Responsive & Performance
-**Plan:** 01 of 07 - Japanese-Inspired Design System Migration
+**Plan:** 02 of 07 - Main Story Restructure & Color Migration
 **Status:** Plan complete ✓
-**Last activity:** 2026-01-27 - Completed 05-01-PLAN.md
+**Last activity:** 2026-01-27 - Completed 05-02-PLAN.md
 
 **Progress:**
 ```
-[████████████████░░░░] 78% (37/47 requirements)
+[████████████████░░░░] 81% (38/47 requirements)
 
 Phase 1: Foundation & Migration         [█████] 3/3 plans complete ✓
 Phase 2: Core Navigation System         [█████] 3/3 plans complete ✓
 Phase 3: Content Architecture           [█████] 4/4 plans complete ✓
 Phase 4: Visual Storytelling            [█████] 3/3 plans complete ✓
-Phase 5: Responsive & Performance       [█░░░░] 1/7 in progress
+Phase 5: Responsive & Performance       [██░░░] 2/7 in progress
 Phase 6: Decision Routing               [░░░░░] 0/? pending
 ```
 
 ## Performance Metrics
 
-**Velocity:** 13 plans completed (3 in Phase 1, 3 in Phase 2, 4 in Phase 3, 3 in Phase 4, 1 in Phase 5)
-**Average Duration:** ~17 min per plan
+**Velocity:** 14 plans completed (3 in Phase 1, 3 in Phase 2, 4 in Phase 3, 3 in Phase 4, 2 in Phase 5)
+**Average Duration:** ~27 min per plan
 **Blockers:** 1 active (Node.js version - non-critical)
 **Research Flags:** 0 active
 
@@ -83,6 +83,9 @@ Phase 6: Decision Routing               [░░░░░] 0/? pending
 | 2026-01-27 | Preserve existing brand-* colors during migration | Gradual migration prevents breaking changes, enables phased rollout |
 | 2026-01-27 | Dual token system: Tailwind + CSS custom properties | Supports both Tailwind classes and vanilla CSS for maximum flexibility |
 | 2026-01-27 | Faster animation timing: 100ms stagger, 300ms duration | Research-backed optimization creates snappier feel per DESIGN-SYSTEM.md |
+| 2026-01-27 | Two-column layout with semantic color-coding | Kincha (gold) for stable/preserve, beni (burgundy) for new/change creates intuitive visual distinction |
+| 2026-01-27 | Mini-story CTA links placed after content | Kincha accent with arrow icon invites exploration without interrupting main narrative flow |
+| 2026-01-27 | Complete brand-* to Japanese palette migration | All text-white → text-washi, text-gray → text-hai, brand-red → beni across presentation |
 ### Active Todos
 
 - [x] Phase 1: Foundation & Migration (3 plans)
