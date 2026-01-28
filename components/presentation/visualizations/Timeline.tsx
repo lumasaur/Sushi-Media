@@ -27,7 +27,7 @@ export function Timeline({ weeks }: TimelineProps) {
     <div className="relative pl-8">
       {/* Vertical timeline center line */}
       <div
-        className="absolute left-0 top-4 bottom-4 w-0.5 bg-brand-red"
+        className="absolute left-0 top-4 bottom-4 w-0.5 bg-kincha/50"
         aria-hidden="true"
       />
 
@@ -45,20 +45,21 @@ export function Timeline({ weeks }: TimelineProps) {
               ease: [0.4, 0, 0.2, 1] // Material Design standard easing
             }}
             viewport={{ once: true }}
+            style={{ willChange: 'transform, opacity' }}
           >
             {/* Timeline dot */}
             <div
-              className="absolute left-[-2rem] top-2 w-4 h-4 rounded-full bg-brand-red ring-4 ring-white"
+              className="absolute left-[-2rem] top-2 w-4 h-4 rounded-full bg-beni ring-4 ring-sumi"
               aria-hidden="true"
             />
 
             {/* Week content */}
             <div>
-              <h3 className="text-xl font-bold mb-2 text-white">{week.title}</h3>
+              <h3 className="text-xl font-bold mb-2 text-kincha">{week.title}</h3>
               <ul className="space-y-1">
                 {week.items.map((item, j) => (
-                  <li key={j} className="flex items-start text-base text-gray-300">
-                    <span className="text-brand-red mr-2 mt-1">◦</span>
+                  <li key={j} className="flex items-start text-base text-hai">
+                    <span className="text-beni mr-2 mt-1">◦</span>
                     <span>{item}</span>
                   </li>
                 ))}

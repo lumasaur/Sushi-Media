@@ -22,13 +22,13 @@ const bars: Bar[] = [
   {
     label: 'Current',
     percentage: 40,
-    color: 'bg-gray-600',
+    color: 'bg-hai',
     description: 'Empty Hours'
   },
   {
     label: 'With Systems',
     percentage: 100,
-    color: 'bg-brand-red',
+    color: 'bg-beni',
     description: 'Filled Hours'
   }
 ]
@@ -43,7 +43,7 @@ export function RevenueChart() {
         {bars.map((bar, index) => (
           <div key={bar.label} className="flex flex-col items-center flex-1">
             {/* Bar container with fixed height */}
-            <div className="relative w-full h-64 bg-gray-800 rounded-lg overflow-hidden">
+            <div className="relative w-full h-64 bg-washi/5 border border-washi/10 rounded-lg overflow-hidden">
               {/* Animated bar */}
               <motion.div
                 initial={{ height: 0 }}
@@ -54,15 +54,16 @@ export function RevenueChart() {
                   ease: [0.4, 0, 0.2, 1]  // Material Design easing
                 }}
                 className={`absolute bottom-0 w-full ${bar.color} rounded-t-lg`}
+                style={{ willChange: 'transform' }}
               />
             </div>
 
             {/* Labels below bar */}
             <div className="mt-4 text-center">
-              <div className="text-lg font-semibold text-white">
+              <div className="text-lg font-semibold text-washi">
                 {bar.label}
               </div>
-              <div className="text-sm text-gray-400 mt-1">
+              <div className="text-sm text-hai mt-1">
                 {bar.description}
               </div>
             </div>

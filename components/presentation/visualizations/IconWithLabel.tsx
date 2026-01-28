@@ -16,13 +16,13 @@ export function IconWithLabel({ icon: Icon, title, description, className }: Ico
   return (
     <div className={combinedClasses}>
       <Icon
-        className="w-8 h-8 text-brand-red flex-shrink-0 mt-1"
+        className="w-8 h-8 text-kincha flex-shrink-0 mt-1"
         strokeWidth={2}
         aria-hidden="true"
       />
       <div>
-        <h3 className="text-xl font-bold mb-2 text-white">{title}</h3>
-        <p className="text-gray-300">{description}</p>
+        <h3 className="text-xl font-bold mb-2 text-washi">{title}</h3>
+        <p className="text-hai">{description}</p>
       </div>
     </div>
   )
