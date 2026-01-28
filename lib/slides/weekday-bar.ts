@@ -76,9 +76,7 @@ export const weekdayBarSlides: MiniSlideData[] = [
           'Whole Tuna Demo (maybe)'
         ]
       },
-      {
-        main: 'Total: 12-13 events testing different formats and customer segments'
-      }
+'Total: 12-13 events testing different formats and customer segments'
     ],
     background: 'bg-gradient-to-b from-sumi to-sumi-light',
     layout: 'content'
