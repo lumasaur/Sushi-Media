@@ -1,0 +1,92 @@
+/* Ami Sushi Marketing Presentation Theme */
+
+:root {
+  /* PRIMARY COLORS - Placeholder (customizable) */
+  --ami-primary: #FF6B6B;              /* Coral/red */
+  --ami-primary-dark: #CC5555;
+  --ami-primary-light: #FFB3B3;
+
+  /* SECONDARY COLORS */
+  --ami-secondary: #4ECDC4;            /* Teal */
+  --ami-secondary-dark: #3EA39C;
+  --ami-secondary-light: #A8E6E2;
+
+  /* ACCENT COLORS */
+  --ami-accent: #FFE66D;               /* Yellow */
+  --ami-accent-dark: #CCBA57;
+
+  /* NEUTRAL PALETTE */
+  --ami-gray-50: #F9FAFB;
+  --ami-gray-100: #F3F4F6;
+  --ami-gray-200: #E5E7EB;
+  --ami-gray-300: #D1D5DB;
+  --ami-gray-400: #9CA3AF;
+  --ami-gray-500: #6B7280;
+  --ami-gray-600: #4B5563;
+  --ami-gray-700: #374151;
+  --ami-gray-800: #1F2937;
+  --ami-gray-900: #111827;
+
+  /* TV-OPTIMIZED TYPOGRAPHY (8-10ft viewing distance) */
+  --ami-text-xs-tv: 1rem;              /* 16px - minimum readable */
+  --ami-text-sm-tv: 1.25rem;           /* 20px */
+  --ami-text-base-tv: 1.5rem;          /* 24px */
+  --ami-text-lg-tv: 1.875rem;          /* 30px */
+  --ami-text-xl-tv: 2.25rem;           /* 36px */
+  --ami-text-2xl-tv: 3rem;             /* 48px */
+  --ami-text-3xl-tv: 3.75rem;          /* 60px */
+  --ami-text-4xl-tv: 4.5rem;           /* 72px */
+  --ami-text-5xl-tv: 6rem;             /* 96px */
+  --ami-text-6xl-tv: 7.5rem;           /* 120px */
+
+  /* UI ELEMENTS - Enlarged for TV */
+  --ami-ui-progress-height: 8px;
+  --ami-ui-breadcrumb-size: 16px;
+  --ami-ui-counter-padding: 1rem;
+  --ami-ui-touch-target: 60px;
+}
+
+/* TV Mode: Enhanced contrast and shadows */
+@media (min-width: 1920px) {
+  .ami-slide {
+    filter: contrast(1.1);
+  }
+
+  .ami-card {
+    box-shadow: 0 10px 40px rgba(0, 0, 0, 0.2);
+  }
+}
+
+/* Scrollbar styling for scrollable slides */
+.scrollable-slide::-webkit-scrollbar {
+  width: 8px;
+}
+
+.scrollable-slide::-webkit-scrollbar-track {
+  background: var(--ami-gray-100);
+}
+
+.scrollable-slide::-webkit-scrollbar-thumb {
+  background: var(--ami-primary);
+  border-radius: 4px;
+}
+
+.scrollable-slide::-webkit-scrollbar-thumb:hover {
+  background: var(--ami-primary-dark);
+}
+
+/* Utility classes */
+.ami-gradient-primary {
+  background: linear-gradient(135deg, var(--ami-primary) 0%, var(--ami-primary-dark) 100%);
+}
+
+.ami-gradient-secondary {
+  background: linear-gradient(135deg, var(--ami-secondary) 0%, var(--ami-secondary-dark) 100%);
+}
+
+.ami-gradient-full {
+  background: linear-gradient(135deg,
+    var(--ami-primary) 0%,
+    var(--ami-secondary) 50%,
+    var(--ami-accent) 100%);
+}

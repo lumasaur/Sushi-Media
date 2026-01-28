@@ -1,0 +1,18 @@
+# Phase 5: Presentation Rebuild - Research
+
+**Researched:** 2026-01-27
+**Domain:** Multi-level presentation with design system migration
+**Confidence:** HIGH
+
+## Summary
+
+This phase rebuilds the presentation from 8 slides to 28 slides (10 main + 18 mini-story) with multi-level navigation, a sophisticated Japanese-inspired color palette, and responsive optimization for iPad landscape. The research covers four critical domains: Next.js App Router multi-level navigation patterns, Tailwind CSS design token migration, TypeScript data structure extensions for nested content, and Framer Motion performance optimization.
+
+**Key Findings:**
+- Next.js App Router's file-system routing with nested layouts is ideal for preserving state across mini-story navigation
+- Tailwind CSS `@theme` directive (or extended config) enables clean color palette replacement
+- TypeScript discriminated unions provide type-safe slide content differentiation
+- Framer Motion's existing stagger animation can be optimized by reducing delay from 150ms to 100ms
+
+**Primary recommendation:** Use Next.js nested routes for mini-stories to enable independent navigation without losing main presentation state, extend Tailwind config for color migration (project uses v3.x), and extend the existing SlideData interface with optional properties for mini-story content.
+

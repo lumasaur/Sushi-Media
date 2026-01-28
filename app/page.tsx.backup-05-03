@@ -10,7 +10,7 @@ import {
 } from '@/components/presentation'
 import { Timeline, SystemDiagram, RevenueChart } from '@/components/presentation/visualizations'
 import { useSlideNavigation, useTouchGestures } from '@/hooks'
-import { slides, systemsData, timelineData, februaryEventsData, februaryRevenueTarget, metricsData } from '@/lib/slides/content'
+import { slides, systemsData, timelineData } from '@/lib/slides/content'
 
 // Animation variants for staggered bullet entry
 const containerVariants = {
@@ -31,7 +31,7 @@ const itemVariants = {
     x: 0,
     transition: {
       duration: 0.3,  // 300ms (faster, per DESIGN-SYSTEM.md)
-      ease: [0.4, 0, 0.2, 1] as const  // Material Design easing
+      ease: [0.4, 0, 0.2, 1]  // Material Design easing
     }
   }
 }
@@ -200,65 +200,6 @@ export default function PresentationPage() {
                   )}
                   <div className="max-w-3xl mx-auto">
                     <Timeline weeks={timelineData} />
-                  </div>
-                </div>
-              )}
-
-              {/* Calendar layout (February 2026) */}
-              {slide.layout === 'calendar' && (
-                <div className="text-washi">
-                  <h2 className="text-4xl md:text-5xl font-bold mb-4 text-center font-cormorant">{slide.title}</h2>
-                  {slide.subtitle && (
-                    <p className="text-xl md:text-2xl text-hai mb-8 text-center">{slide.subtitle}</p>
-                  )}
-                  <div className="grid md:grid-cols-2 gap-4 max-w-3xl mx-auto mb-8">
-                    {februaryEventsData.map((event, i) => (
-                      <div key={i} className="bg-washi/5 rounded-lg p-4 border border-washi/10">
-                        <span className="text-2xl font-bold text-kincha mr-3">{event.count}×</span>
-                        <span className="text-base">{event.type}</span>
-                      </div>
-                    ))}
-                  </div>
-                  <div className="text-center text-lg">
-                    <span className="text-hai">Revenue Target: </span>
-                    <span className="text-kincha font-semibold">{februaryRevenueTarget}</span>
-                  </div>
-                </div>
-              )}
-
-              {/* Metrics layout (How We Track Success) */}
-              {slide.layout === 'metrics' && (
-                <div className="text-washi">
-                  <h2 className="text-4xl md:text-5xl font-bold mb-4 text-center font-cormorant">{slide.title}</h2>
-                  {slide.subtitle && (
-                    <p className="text-xl md:text-2xl text-hai mb-8 text-center">{slide.subtitle}</p>
-                  )}
-
-                  {/* Tracking cadence intro */}
-                  <div className="max-w-2xl mx-auto mb-12 space-y-3">
-                    {slide.bullets.map((bullet, i) => (
-                      <div key={i} className="flex items-start">
-                        <span className="text-beni mr-3 mt-1">•</span>
-                        <span className="text-lg">{typeof bullet === 'string' ? bullet : bullet.main}</span>
-                      </div>
-                    ))}
-                  </div>
-
-                  {/* Three-column metrics grid */}
-                  <div className="grid md:grid-cols-3 gap-6 max-w-4xl mx-auto">
-                    {metricsData.map((category, i) => (
-                      <div key={i} className="bg-washi/5 rounded-lg p-6 border border-washi/10">
-                        <h3 className="text-xl font-semibold mb-4 text-kincha">{category.system}</h3>
-                        <ul className="space-y-2">
-                          {category.metrics.map((metric, j) => (
-                            <li key={j} className="flex items-start text-sm">
-                              <span className="text-hai mr-2 mt-1">•</span>
-                              <span>{metric}</span>
-                            </li>
-                          ))}
-                        </ul>
-                      </div>
-                    ))}
                   </div>
                 </div>
               )}
