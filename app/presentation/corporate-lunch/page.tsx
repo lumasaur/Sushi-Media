@@ -1,6 +1,6 @@
 'use client'
 
-import React from 'react'
+import React, { Suspense } from 'react'
 import { useSearchParams, useRouter } from 'next/navigation'
 import { motion } from 'framer-motion'
 import {
@@ -36,7 +36,7 @@ const itemVariants = {
   }
 }
 
-export default function CorporateLunchMiniStory() {
+function CorporateLunchContent() {
   const router = useRouter()
   const searchParams = useSearchParams()
   const returnSlide = searchParams.get('returnSlide') || '5' // Default to slide 5 (Corporate Lunch slide in main story)
@@ -147,5 +147,13 @@ export default function CorporateLunchMiniStory() {
         </SlideContainer>
       ))}
     </div>
+  )
+}
+
+export default function CorporateLunchMiniStory() {
+  return (
+    <Suspense fallback={<div className="h-screen bg-sumi" />}>
+      <CorporateLunchContent />
+    </Suspense>
   )
 }

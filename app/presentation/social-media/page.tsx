@@ -1,6 +1,6 @@
 'use client'
 
-import React from 'react'
+import React, { Suspense } from 'react'
 import { useSearchParams, useRouter } from 'next/navigation'
 import { motion } from 'framer-motion'
 import {
@@ -36,7 +36,7 @@ const itemVariants = {
   }
 }
 
-export default function SocialMediaMiniStory() {
+function SocialMediaContent() {
   const router = useRouter()
   const searchParams = useSearchParams()
   const returnSlide = searchParams.get('returnSlide') || '4' // Default to slide 4 (Social Media slide in main story)
@@ -147,5 +147,13 @@ export default function SocialMediaMiniStory() {
         </SlideContainer>
       ))}
     </div>
+  )
+}
+
+export default function SocialMediaMiniStory() {
+  return (
+    <Suspense fallback={<div className="h-screen bg-sumi" />}>
+      <SocialMediaContent />
+    </Suspense>
   )
 }

@@ -1,6 +1,6 @@
 'use client'
 
-import React from 'react'
+import React, { Suspense } from 'react'
 import { useSearchParams, useRouter } from 'next/navigation'
 import { motion } from 'framer-motion'
 import {
@@ -36,7 +36,7 @@ const itemVariants = {
   }
 }
 
-export default function WeekdayBarMiniStory() {
+function WeekdayBarContent() {
   const searchParams = useSearchParams()
   const router = useRouter()
   const returnSlide = searchParams.get('returnSlide') || '6'
@@ -148,5 +148,13 @@ export default function WeekdayBarMiniStory() {
         </SlideContainer>
       ))}
     </div>
+  )
+}
+
+export default function WeekdayBarMiniStory() {
+  return (
+    <Suspense fallback={<div className="h-screen bg-sumi" />}>
+      <WeekdayBarContent />
+    </Suspense>
   )
 }
