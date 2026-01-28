@@ -11,26 +11,26 @@
 ## Current Position
 
 **Phase:** 5 of 6 - Responsive & Performance
-**Plan:** 02 of 07 - Main Story Restructure & Color Migration
+**Plan:** 06 of 07 - Mini Story 3: Weekday Bar Activation
 **Status:** Plan complete ✓
-**Last activity:** 2026-01-27 - Completed 05-02-PLAN.md
+**Last activity:** 2026-01-27 - Completed 05-06-PLAN.md
 
 **Progress:**
 ```
-[████████████████░░░░] 81% (38/47 requirements)
+[█████████████████░░░] 85% (40/47 requirements)
 
 Phase 1: Foundation & Migration         [█████] 3/3 plans complete ✓
 Phase 2: Core Navigation System         [█████] 3/3 plans complete ✓
 Phase 3: Content Architecture           [█████] 4/4 plans complete ✓
 Phase 4: Visual Storytelling            [█████] 3/3 plans complete ✓
-Phase 5: Responsive & Performance       [██░░░] 2/7 in progress
+Phase 5: Responsive & Performance       [████░] 4/7 in progress
 Phase 6: Decision Routing               [░░░░░] 0/? pending
 ```
 
 ## Performance Metrics
 
-**Velocity:** 14 plans completed (3 in Phase 1, 3 in Phase 2, 4 in Phase 3, 3 in Phase 4, 2 in Phase 5)
-**Average Duration:** ~27 min per plan
+**Velocity:** 16 plans completed (3 in Phase 1, 3 in Phase 2, 4 in Phase 3, 3 in Phase 4, 4 in Phase 5)
+**Average Duration:** ~30 min per plan
 **Blockers:** 1 active (Node.js version - non-critical)
 **Research Flags:** 0 active
 
@@ -86,12 +86,14 @@ Phase 6: Decision Routing               [░░░░░] 0/? pending
 | 2026-01-27 | Two-column layout with semantic color-coding | Kincha (gold) for stable/preserve, beni (burgundy) for new/change creates intuitive visual distinction |
 | 2026-01-27 | Mini-story CTA links placed after content | Kincha accent with arrow icon invites exploration without interrupting main narrative flow |
 | 2026-01-27 | Complete brand-* to Japanese palette migration | All text-white → text-washi, text-gray → text-hai, brand-red → beni across presentation |
+| 2026-01-27 | Mini-story pattern: back button + title badge + returnSlide param | Consistent navigation between main story and deep dives with context preservation |
+| 2026-01-27 | Weekday Bar mini-story 7 slides: foundation → tracking | January success → February validation → revenue targets ($25K-35K) |
 ### Active Todos
 
 - [x] Phase 1: Foundation & Migration (3 plans)
 - [x] Phase 2: Core Navigation System (3 plans)
 - [x] Phase 3: Content Architecture (4 plans)
-- [x] Phase 4: Visual Storytelling (3 plans)
+- [ ] Phase 5: Responsive & Performance (4 of 7 complete)
 - [ ] Phase 5: Responsive & Performance
 - [ ] Phase 6: Decision Routing
 - [ ] Upgrade Node.js to >=20.9.0 for build verification
@@ -102,7 +104,7 @@ Phase 6: Decision Routing               [░░░░░] 0/? pending
 - Current: 20.3.1
 - Required: >=20.9.0
 - Impact: Cannot run `npm run dev` or `npm run build` for runtime verification
-- Workaround: Components verified via TypeScript compilation and code review
+- Does NOT block Phase 5 development
 - Resolution: Upgrade Node.js before production deployment
 - Does NOT block Phase 2 or Phase 3 development
 
@@ -121,8 +123,8 @@ Phase 6: Decision Routing               [░░░░░] 0/? pending
 **Archive backup file:**
 - `app/archive/page.tsx.backup` can be removed after verification complete
 
-## Session Continuity
-
+**Last Session:** 2026-01-27 - Phase 5 Plan 06 Complete
+**Stopped at:** Completed 05-06-PLAN.md - Mini Story 3: Weekday Bar Activation
 **Last Session:** 2026-01-27 - Phase 5 Plan 01 Complete
 **Stopped at:** Completed 05-01-PLAN.md with Japanese design system migration
 **Resume file:** None
@@ -133,29 +135,19 @@ Phase 6: Decision Routing               [░░░░░] 0/? pending
 - Phase 3 COMPLETE: All content slides built (CONT-01 through CONT-12, with CONT-08/10 deferred)
 - Phase 4 COMPLETE: Visual storytelling components delivered
   - Plan 01 ✓: Timeline visualization with flexbox layout
-  - Plan 02 ✓: System diagram with animated boxes and icon components
-  - Plan 03 ✓: Staggered bullet animations and revenue opportunity chart
-- **8 slides total** with visual enhancements:
-  - Slide 0: Title ("Premium Sushi with Social Soul")
-  - Slide 1: Empty Hours hook **with RevenueChart visualization** (animated bars)
-  - Slide 2: Three Systems overview **with visual diagram** (animated boxes, flow arrows)
-  - Slide 3: Social Media Engine deep dive **with staggered bullets**
-  - Slide 4: Corporate Lunch Machine deep dive **with staggered bullets**
-  - Slide 5: Weekday Bar Activation deep dive **with staggered bullets**
-  - Slide 6: First 30 Days timeline **with vertical timeline visualization**
-  - Slide 7: Next Steps with 2 CTAs
-- SystemDiagram component with staggered animations (200ms delay, scale 0.8→1.0)
-- IconWithLabel pattern established for future visual hierarchy
-- All visualizations use individual Lucide icon imports (tree-shaking optimized)
-- All visualization components use CSS-only or Framer Motion (no chart libraries)
-- Phase 5 Plan 01 ✓: Japanese-inspired design system foundation
-  - 6 color tokens: sumi, washi, beni, kincha, hai, kitsune
-  - CSS custom properties for design tokens
-  - Inter font for UI elements
-  - Optimized animation timing (100ms stagger, 300ms duration)
-  - Existing brand-* colors preserved for gradual migration
-- Bundle optimized: individual Lucide icon imports, no Recharts dependency
 - Animation timing established: 150ms stagger for bullets, 200ms for systems, 0.4s transitions
+- **Phase 5 Progress (4 of 7 plans complete):**
+  - Plan 01 ✓: Japanese design system foundation (sumi, washi, beni, kincha, hai, kitsune)
+  - Plan 02 ✓: Main story color migration to Japanese palette
+  - Plan 04 ✓: Mini Story 1: Social Media Engine (7 slides)
+  - Plan 06 ✓: Mini Story 3: Weekday Bar Activation (7 slides)
+- **11 total slides** in main story with visual enhancements
+- **2 mini-stories complete:** Social Media (7 slides), Weekday Bar (7 slides)
+- **1 mini-story remaining:** Corporate Lunch (4 slides) - Plan 05-07
+- Mini-story pattern established: back button, title badge, returnSlide param
+- All visualizations use individual Lucide icon imports (tree-shaking optimized)
+- Bundle optimized: CSS-only or Framer Motion, no chart libraries
+- Animation timing: 100ms stagger for bullets, 300ms duration
 - Ready for Phase 5 Plan 02: Color migration using new Japanese palette
 
 **Quick Start Commands:**
@@ -174,6 +166,6 @@ npm run dev
 ```
 
 ---
-
+*Last updated: 2026-01-27 after Phase 5 Plan 06 completion*
 *State initialized: 2026-01-24 during roadmap creation*
 *Last updated: 2026-01-26 after Phase 4 Plan 03 completion*
