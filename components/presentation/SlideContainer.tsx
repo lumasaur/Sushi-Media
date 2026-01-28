@@ -18,7 +18,7 @@ export function SlideContainer({
   children,
   slideNumber,
   isActive,
-  background = 'bg-white',
+  background = 'bg-night',
   className = '',
   enableScroll = false,
   showScrollIndicator = false
