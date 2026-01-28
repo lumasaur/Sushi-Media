@@ -246,3 +246,65 @@
 .scrollable-slide {
   /* Marker class - no styles needed, used for JS detection */
 }
+
+/* Touch target minimum (WCAG 2.5.8) */
+.min-touch {
+  min-height: 44px;
+  min-width: 44px;
+}
+
+/* Ensure buttons and interactive elements meet touch target */
+.touch-target {
+  @apply min-h-[44px] min-w-[44px] flex items-center justify-center;
+}
+
+/* Responsive typography for iPad landscape primary */
+@media (min-width: 1024px) {
+  :root {
+    --slide-title-size: 3rem;      /* 48px */
+    --slide-subtitle-size: 1.5rem;  /* 24px */
+    --slide-body-size: 1.125rem;    /* 18px */
+  }
+}
+
+@media (max-width: 1023px) {
+  :root {
+    --slide-title-size: 2.5rem;     /* 40px */
+    --slide-subtitle-size: 1.25rem;  /* 20px */
+    --slide-body-size: 1rem;         /* 16px */
+  }
+}
+
+/* Portrait fallback - smaller text to fit */
+@media (max-width: 768px) and (orientation: portrait) {
+  :root {
+    --slide-title-size: 2rem;       /* 32px */
+    --slide-subtitle-size: 1.125rem; /* 18px */
+    --slide-body-size: 0.9375rem;    /* 15px */
+  }
+}
+
+/* Japanese-inspired background gradients */
+.bg-night {
+  background: linear-gradient(180deg, #1a1614 0%, #2d2825 100%);
+}
+
+.bg-deep {
+  background: linear-gradient(180deg, #1a1614 0%, #1f1a18 100%);
+}
+
+.bg-warm {
+  background: linear-gradient(180deg, #2d2825 0%, #3d3530 100%);
+}
+
+/* Subtle divider utility */
+.divider-subtle {
+  height: 1px;
+  background: linear-gradient(
+    90deg,
+    transparent 0%,
+    rgba(250, 248, 245, 0.1) 20%,
+    rgba(250, 248, 245, 0.1) 80%,
+    transparent 100%
+  );
+}
