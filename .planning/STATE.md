@@ -24,13 +24,13 @@ Phase 2: Core Navigation System            [█████] 3/3 plans complete 
 Phase 3: Content Architecture              [█████] 4/4 plans complete ✓
 Phase 4: Visual Storytelling               [█████] 3/3 plans complete ✓
 Phase 5: Responsive & Performance          [█████] 7/7 plans complete ✓
-Phase 5.5: Presentation Visual Design      [████░] 4/5 in progress
+Phase 5.5: Presentation Visual Design      [███░░] 3/5 in progress
 Phase 6: Decision Routing                  [░░░░░] 0/? pending
 ```
 
 ## Performance Metrics
 
-**Velocity:** 18 plans completed (3 in Phase 1, 3 in Phase 2, 4 in Phase 3, 3 in Phase 4, 7 in Phase 5, 2 in Phase 5.5)
+**Velocity:** 19 plans completed (3 in Phase 1, 3 in Phase 2, 4 in Phase 3, 3 in Phase 4, 7 in Phase 5, 3 in Phase 5.5)
 **Average Duration:** ~25 min per plan
 **Blockers:** 1 active (Node.js version - non-critical)
 **Research Flags:** 0 active
@@ -106,6 +106,11 @@ Phase 6: Decision Routing                  [░░░░░] 0/? pending
 | 2026-01-29 | Special rendering logic for stats slides in mini-stories | Large number displays more impactful than CenteredMinimal component |
 | 2026-01-29 | Image distribution: 2 in Social Media, 1 in Corporate Lunch (2 uses), 3 in Weekday Bar | Balanced visual variety, reuses main-story images where thematically appropriate, 8 total unique images |
 | 2026-01-29 | Switch statement rendering pattern for mini-stories | Proven pattern from main story, easy to understand and extend |
+| 2026-01-29 | Main story 11 slides redesigned with creative layouts | FullBleed hero, image backgrounds, asymmetric splits alternate left-right-left |
+| 2026-01-29 | AsymmetricSplit extended to support 40-60 split ratio | Enables content-focused layouts (smaller image, larger content area) |
+| 2026-01-29 | renderSlideContent switch function in page.tsx | Type-safe layout selection, custom layouts bypass standard padding |
+| 2026-01-29 | Mini-story links integrated into AsymmetricSplit component | Consistent kincha-styled CTA with arrow icon, cleaner than separate rendering |
+| 2026-01-29 | textPosition types aligned across all slide data files | Match FullBleedHero interface: 'center' | 'bottom-left' | 'bottom-center' |
 ### Active Todos
 
 - [x] Phase 1: Foundation & Migration (3 plans)
