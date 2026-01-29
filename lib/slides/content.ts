@@ -208,7 +208,7 @@ export const slides: SlideData[] = [
         ]
       }
     ],
-    background: 'bg-beni',
+    background: 'bg-premium-dark',
     layout: 'systems'
   },
 
@@ -387,7 +387,7 @@ export const slides: SlideData[] = [
         ]
       }
     ],
-    background: 'bg-beni',
+    background: 'bg-deepIndigo',
     layout: 'timeline'
   },
 

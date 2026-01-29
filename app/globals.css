@@ -18,6 +18,13 @@
   --color-hai: #6b6560;
   --color-kitsune: #d4c4a8;
 
+  /* Premium palette additions */
+  --color-deep-indigo: #1A1F3A;
+  --color-warm-cream: #F5F1E8;
+  --color-coral: #FF6B5A;
+  --color-soft-gold: #D4AF37;
+  --color-charcoal: #2D2D2D;
+
   /* Typography */
   --font-heading: 'Cormorant Garamond', serif;
   --font-body: 'EB Garamond', serif;
@@ -307,4 +314,17 @@
     rgba(250, 248, 245, 0.1) 80%,
     transparent 100%
   );
+}
+
+/* Premium gradient backgrounds */
+.bg-premium-dark {
+  background: linear-gradient(180deg, #1A1F3A 0%, #1a1614 100%);
+}
+
+.bg-premium-warm {
+  background: linear-gradient(180deg, #2d2825 0%, #1a1614 100%);
+}
+
+.bg-cream-subtle {
+  background: linear-gradient(180deg, #F5F1E8 0%, #e8e0d5 100%);
 }

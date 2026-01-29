@@ -26,16 +26,26 @@ module.exports = {
         'ami-accent': 'var(--ami-accent)',
         'ami-accent-dark': 'var(--ami-accent-dark)',
 
-        // NEW: Japanese-inspired palette from DESIGN-SYSTEM.md
-        'sumi': '#1a1614',        // Ink black - primary background
+        // Japanese-inspired palette from DESIGN-SYSTEM.md
+        'sumi': {
+          DEFAULT: '#1a1614',
+          deep: '#0f0d0c',
+          light: '#2d2825'
+        },
         'washi': '#faf8f5',       // Paper white - primary text
         'beni': '#8b2635',        // Burgundy - accent
         'kincha': '#c4a35a',      // Gold tea - highlights
         'hai': '#6b6560',         // Ash gray - secondary text
         'kitsune': '#d4c4a8',     // Fox tan - warm backgrounds
 
+        // Premium palette additions
+        'deepIndigo': '#1A1F3A',  // Primary dark background
+        'warmCream': '#F5F1E8',   // Primary light background
+        'coral': '#FF6B5A',       // CTA accent (replaces heavy beni)
+        'softGold': '#D4AF37',    // Premium touch
+        'charcoal': '#2D2D2D',    // Text on light
+
         // Gradient colors for Night/Deep/Warm backgrounds
-        'sumi-light': '#2d2825',  // Night gradient end
         'sumi-deep': '#1f1a18',   // Deep gradient end
         'sumi-warm': '#3d3530',   // Warm gradient end
       },
