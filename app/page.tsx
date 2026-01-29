@@ -71,7 +71,7 @@ export default function PresentationPage() {
           isActive={currentSlide === slide.id}
           background={slide.background || 'bg-white'}
         >
-          <div className="h-full flex items-center justify-center px-12 md:px-24">
+          <div className="min-h-full flex items-center py-8 px-8 md:px-16 lg:px-24">
             <div className="max-w-4xl w-full">
               {/* Title slide layout */}
               {slide.layout === 'title' && (
