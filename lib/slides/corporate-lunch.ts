@@ -9,147 +9,72 @@ export interface MiniSlideData {
   subtitle?: string
   bullets: Array<string | { main: string; sub: string[] }>
   background?: string
-  layout?: 'content' | 'title'
+  layout?: 'content' | 'title' | 'fullBleed' | 'asymmetric' | 'imageBackground' | 'centered'
+  imageSrc?: string
+  imageAlt?: string
+  overlayOpacity?: number
+  textPosition?: 'center' | 'left' | 'right'
+  imagePosition?: 'left' | 'right'
+  splitRatio?: '60-40' | '70-30' | '50-50'
+  overlayType?: 'gradient-bottom' | 'gradient-left' | 'full-dark' | 'blur-bottom'
+  overlayIntensity?: 'light' | 'medium' | 'heavy'
+  contentPosition?: 'center' | 'left' | 'right' | 'bottom'
 }
 
 export const corporateLunchSlides: MiniSlideData[] = [
-  // Slide 2.1: The Corporate Opportunity
+  // Slide 0: Mini-story title
   {
     id: 0,
-    title: 'The Corporate Opportunity',
-    bullets: [
-      {
-        main: 'The Math:',
-        sub: [
-          '15-20 office complexes within 3 miles',
-          'Target: 3-5 buildings with weekly standing orders',
-          'Each building = 10-20 orders per week'
-        ]
-      },
-      {
-        main: 'Why This Works:',
-        sub: [
-          'Office parks lack quality lunch options',
-          'Premium sushi stands out from fast casual',
-          'Group ordering removes friction'
-        ]
-      },
-      {
-        main: 'Current Bottleneck:',
-        sub: [
-          'Coordination hassle prevents orders',
-          'Solution: Group ordering platforms handle logistics'
-        ]
-      }
-    ],
-    background: 'bg-gradient-to-b from-sumi to-sumi-light',
-    layout: 'content'
+    title: 'Corporate Lunch Machine',
+    subtitle: 'Filling weekday lunch hours with recurring revenue',
+    layout: 'fullBleed',
+    imageSrc: '/images/main-story/office-park.png',
+    imageAlt: 'Modern office park buildings',
+    overlayOpacity: 0.5,
+    textPosition: 'center',
+    bullets: []
   },
 
-  // Slide 2.2: Group Ordering Technology
+  // Slide 1: The Opportunity
   {
     id: 1,
-    title: 'Group Ordering Technology',
+    title: 'The Opportunity',
+    subtitle: 'Office parks within 3 miles',
+    layout: 'asymmetric',
+    imageSrc: '/images/main-story/office-park.png',
+    imageAlt: 'Office buildings representing target customers',
+    imagePosition: 'left',
+    splitRatio: '40-60',
     bullets: [
-      {
-        main: 'Toast Group Ordering (Week 1):',
-        sub: [
-          'Already using Toast for POS',
-          'Enable group ordering feature',
-          'Share link with office managers',
-          'Orders aggregate automatically'
-        ]
-      },
-      {
-        main: 'DoorDash for Business (Week 2):',
-        sub: [
-          'Enterprise ordering portal',
-          'Expense management built in',
-          'Scheduled delivery windows',
-          'Reaches businesses already on platform'
-        ]
-      },
-      {
-        main: 'ezCater (Month 2, Passive):',
-        sub: [
-          'Largest corporate catering marketplace',
-          'Orders come to you',
-          'Good for larger group orders',
-          'Set it and forget it'
-        ]
-      }
-    ],
-    background: 'bg-gradient-to-b from-sumi to-sumi-light',
-    layout: 'content'
+      'Clear demand from local businesses',
+      'Fills specific empty hours: 11:30am-1:30pm weekdays',
+      'Your sales network enables warm introductions',
+      'Premium sushi differentiates from typical lunch options'
+    ]
   },
 
-  // Slide 2.3: Office Complex Outreach
+  // Slide 2: The System
   {
     id: 2,
-    title: 'Office Complex Outreach',
-    subtitle: 'Three-phase approach',
-    bullets: [
-      {
-        main: 'Phase 1: Warm Introductions (Week 1-2)',
-        sub: [
-          'Use your network for office manager intros',
-          'Personal touch beats cold outreach',
-          'Offer first-order incentive'
-        ]
-      },
-      {
-        main: 'Phase 2: Physical Flyers + Direct Outreach (Week 3-4)',
-        sub: [
-          'Flyers in building lobbies',
-          'Direct email to office managers',
-          'Follow up call within 3 days'
-        ]
-      },
-      {
-        main: 'Phase 3: Sample Delivery (Week 5+)',
-        sub: [
-          'Free sample lunch for decision makers',
-          'Include ordering instructions',
-          'Follow up within 48 hours'
-        ]
-      }
-    ],
+    title: 'The System',
+    subtitle: 'Multi-channel ordering infrastructure',
+    layout: 'content',
     background: 'bg-gradient-to-b from-sumi to-sumi-light',
-    layout: 'content'
+    bullets: [
+      { main: 'Group Ordering Platforms', sub: ['Toast group ordering enabled', 'DoorDash Business setup', 'ezCater consideration'] },
+      { main: 'Direct Outreach', sub: ['Office manager contact list', 'Sample delivery program', 'Recurring order incentives'] },
+      { main: 'Account Management', sub: ['Regular check-ins', 'Special corporate pricing', 'Holiday and event catering'] }
+    ]
   },
 
-  // Slide 2.4: Building Recurring Revenue
+  // Slide 3: Target & Timeline
   {
     id: 3,
-    title: 'Building Recurring Revenue',
-    bullets: [
-      {
-        main: 'After First Order:',
-        sub: [
-          'Thank you call or email within 24 hours',
-          'Ask for feedback',
-          'Offer standing order option'
-        ]
-      },
-      {
-        main: 'Converting to Standing Orders:',
-        sub: [
-          'Weekly lunch on same day',
-          '10% discount for commitment',
-          'Automatic reminder/confirmation'
-        ]
-      },
-      {
-        main: 'Corporate Account Management:',
-        sub: [
-          'Dedicated contact for large accounts',
-          'Invoice vs. per-order payment',
-          'Priority handling for their orders'
-        ]
-      }
-    ],
-    background: 'bg-gradient-to-b from-sumi to-sumi-light',
-    layout: 'content'
+    title: 'Target Outcomes',
+    subtitle: 'Measurable goals for Month 1-3',
+    layout: 'centered',
+    background: 'bg-premium-dark',
+    bullets: []
   }
 ]
 
