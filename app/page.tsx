@@ -161,12 +161,28 @@ export default function PresentationPage() {
                       </h3>
                       {isObject && bullet.sub && (
                         <ul className="space-y-3 flex-grow">
-                          {bullet.sub.map((subBullet, j) => (
-                            <li key={j} className="flex items-start">
-                              <span className="text-kincha/60 mr-3 mt-1">•</span>
-                              <span className="text-washi/90 text-base leading-relaxed">{subBullet}</span>
-                            </li>
-                          ))}
+                          {bullet.sub.map((subBullet, j) => {
+                            // Parse and bold the header (text before colon)
+                            const parts = subBullet.split(':')
+                            const header = parts[0]
+                            const content = parts.slice(1).join(':')
+
+                            return (
+                              <li key={j} className="flex items-start">
+                                <span className="text-kincha/60 mr-3 mt-1">•</span>
+                                <span className="text-washi/90 text-base leading-relaxed">
+                                  {content ? (
+                                    <>
+                                      <strong className="font-semibold text-washi">{header}:</strong>
+                                      {content}
+                                    </>
+                                  ) : (
+                                    subBullet
+                                  )}
+                                </span>
+                              </li>
+                            )
+                          })}
                         </ul>
                       )}
                     </motion.div>
@@ -248,14 +264,30 @@ export default function PresentationPage() {
                         <div className="mb-4 mt-2 text-kincha/80">
                           <WeekIcon className="w-6 h-6" />
                         </div>
-                        <h3 className="text-lg font-bold mb-3 text-washi">{typeof bullet === 'string' ? bullet : bullet.main}</h3>
-                        <ul className="space-y-2">
-                          {typeof bullet !== 'string' && bullet.sub && bullet.sub.map((item: string, j: number) => (
-                            <li key={j} className="text-sm text-hai leading-snug flex items-start">
-                              <span className="text-kincha/50 mr-2 mt-0.5">•</span>
-                              {item}
-                            </li>
-                          ))}
+                        <h3 className="text-xl font-bold mb-4 text-washi">{typeof bullet === 'string' ? bullet : bullet.main}</h3>
+                        <ul className="space-y-3">
+                          {typeof bullet !== 'string' && bullet.sub && bullet.sub.map((item: string, j: number) => {
+                            // Parse and bold the header (text before colon)
+                            const parts = item.split(':')
+                            const header = parts[0]
+                            const content = parts.slice(1).join(':')
+
+                            return (
+                              <li key={j} className="flex items-start leading-relaxed">
+                                <span className="text-kincha/50 mr-2 mt-1">•</span>
+                                <span className="text-base text-hai">
+                                  {content ? (
+                                    <>
+                                      <strong className="font-semibold text-washi">{header}:</strong>
+                                      {content}
+                                    </>
+                                  ) : (
+                                    item
+                                  )}
+                                </span>
+                              </li>
+                            )
+                          })}
                         </ul>
                       </motion.div>
                     )
@@ -340,13 +372,15 @@ export default function PresentationPage() {
                     </ul>
                   </div>
 
-                  {/* Right: Toast Dashboard Image */}
-                  <div className="relative h-[300px] rounded-lg overflow-hidden border border-washi/10">
+                  {/* Right: Toast Dashboard Image - FIT TO IMAGE SIZE */}
+                  <div className="relative rounded-lg overflow-hidden">
                     <Image
                       src={slide.analyticsBox.image}
                       alt="Toast POS Analytics Dashboard"
-                      fill
-                      className="object-cover"
+                      width={800}
+                      height={600}
+                      className="w-full h-auto object-contain rounded-lg"
+                      sizes="(max-width: 768px) 100vw, 50vw"
                     />
                   </div>
                 </div>
@@ -358,15 +392,6 @@ export default function PresentationPage() {
                   {slide.meetingCadence.footnote}
                 </p>
               )}
-
-              <div className="max-w-2xl mx-auto mb-12 space-y-3">
-                {slide.bullets.map((bullet, i) => (
-                  <div key={i} className="flex items-center justify-center text-center">
-                    <span className="text-beni mr-3 text-xl">•</span>
-                    <span className="text-lg md:text-xl font-medium">{typeof bullet === 'string' ? bullet : bullet.main}</span>
-                  </div>
-                ))}
-              </div>
             </div>
           </div>
         )

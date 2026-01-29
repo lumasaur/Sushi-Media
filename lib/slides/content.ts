@@ -508,32 +508,57 @@ export const slides: SlideData[] = [
       {
         type: 'text',
         title: 'March 2026',
-        description: 'March Madness viewing parties (NCAA tournament), St. Patrick\'s Day specials (March 17), Cherry Blossom Festival tie-in (March 20 kickoff), Spring menu preview events',
+        bullets: [
+          'March Madness viewing parties (NCAA tournament)',
+          'St. Patrick\'s Day specials (March 17)',
+          'Cherry Blossom Festival tie-in (March 20 kickoff)',
+          'Spring menu preview events'
+        ],
         size: 'medium'
       },
       {
         type: 'text',
         title: 'April 2026',
-        description: 'The Masters viewing (April 9-12), Easter Weekend brunch focus (April 5), Earth Day sustainability showcase (April 22), Spring patio launch party',
+        bullets: [
+          'The Masters viewing (April 9-12)',
+          'Easter Weekend brunch focus (April 5)',
+          'Earth Day sustainability showcase (April 22)',
+          'Spring patio launch party'
+        ],
         size: 'medium'
       },
       {
         type: 'text',
         title: 'May 2026',
-        description: 'Cinco de Mayo celebration (May 5 - fusion event), Indy 500 party (May 24), Mother\'s Day brunch/lunch marketing push, Memorial Day weekend kickoff (May 25)',
+        bullets: [
+          'Cinco de Mayo celebration (May 5 - fusion event)',
+          'Indy 500 party (May 24)',
+          'Mother\'s Day brunch/lunch marketing push',
+          'Memorial Day weekend kickoff (May 25)'
+        ],
         size: 'medium'
       },
       {
         type: 'text',
         title: 'June 2026',
-        description: '🏆 FIFA World Cup Launch (June 11 - major event), Group stage viewing parties (June 11-27), Juneteenth celebration (June 19), Pride Month special events',
+        bullets: [
+          '🏆 FIFA World Cup Launch (June 11 - major event)',
+          'Group stage viewing parties (June 11-27)',
+          'Juneteenth celebration (June 19)',
+          'Pride Month special events'
+        ],
         size: 'large',
         accentColor: 'text-beni'
       },
       {
         type: 'text',
         title: 'July 2026',
-        description: '⚽ World Cup Final Week (July 13-19 - HUGE revenue opportunity), Independence Day specials (July 4), MLB All-Star Game viewing (July 14), Summer menu celebration',
+        bullets: [
+          '⚽ World Cup Final Week (July 13-19 - HUGE revenue opportunity)',
+          'Independence Day specials (July 4)',
+          'MLB All-Star Game viewing (July 14)',
+          'Summer menu celebration'
+        ],
         size: 'large',
         accentColor: 'text-beni'
       }
@@ -546,14 +571,9 @@ export const slides: SlideData[] = [
   {
     id: 10,
     section: 'execution',
-    title: 'How We Will Operate',
-    subtitle: 'Data-driven decision making',
-    bullets: [
-      'Leverage Toast POS analytics for deep insights',
-      'Analyze dish performance & profitability',
-      'Review event impact on overall business trends',
-      'Adjust strategy based on real sales data'
-    ],
+    title: 'How We Will Operate Together',
+    subtitle: 'Data-driven collaboration',
+    bullets: [],  // REMOVED: Redundant with analytics box
     background: 'bg-gradient-to-b from-sumi to-sumi-light',
     layout: 'metrics',
     // "Double the times provided" -> assuming referring to meeting cadence

@@ -12,6 +12,7 @@ export interface BentoItem {
   // For text type
   title?: string
   description?: string
+  bullets?: string[]  // NEW: Array of bullet points
   // For stat type
   value?: string
   label?: string
@@ -94,7 +95,7 @@ export function BentoGrid({
         return (
           <motion.div
             key={index}
-            className={`${baseClasses} p-6 flex flex-col justify-center space-y-3 border border-washi/10`}
+            className={`${baseClasses} p-6 flex flex-col justify-start space-y-3 border border-washi/10 ${item.size === 'large' ? 'min-h-[280px]' : 'min-h-[240px]'}`}
             initial={{ opacity: 0, y: 10 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{
@@ -104,12 +105,21 @@ export function BentoGrid({
             }}
           >
             {item.title && (
-              <h3 className="font-cormorant font-bold text-2xl md:text-3xl text-washi">
+              <h3 className={`font-cormorant font-bold text-xl md:text-2xl ${item.accentColor || 'text-kincha'}`}>
                 {item.title}
               </h3>
             )}
-            {item.description && (
-              <p className="font-eb-garamond text-base md:text-lg text-washi/80">
+            {item.bullets ? (
+              <ul className="space-y-2 flex-grow">
+                {item.bullets.map((bullet, j) => (
+                  <li key={j} className="flex items-start">
+                    <span className="text-kincha mr-2 mt-1 text-sm">•</span>
+                    <span className="text-washi/90 text-sm leading-relaxed">{bullet}</span>
+                  </li>
+                ))}
+              </ul>
+            ) : item.description && (
+              <p className="font-eb-garamond text-base md:text-lg text-washi/80 flex-grow">
                 {item.description}
               </p>
             )}
