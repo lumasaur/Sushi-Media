@@ -1,6 +1,6 @@
 # State: Sushi-Media Presentation Site
 
-**Last Updated:** 2026-01-27
+**Last Updated:** 2026-01-28
 
 ## Project Reference
 
@@ -10,27 +10,28 @@
 
 ## Current Position
 
-**Phase:** 5 of 6 - Responsive & Performance
-**Plan:** 06 of 07 - Mini Story 3: Weekday Bar Activation
+**Phase:** 5.5 of 6 - Presentation Visual Design & Polish
+**Plan:** 01 of 05 - Foundation: Fix Truncation, Refine Colors, Prepare Images
 **Status:** Plan complete ✓
-**Last activity:** 2026-01-27 - Completed 05-06-PLAN.md
+**Last activity:** 2026-01-28 - Completed 05.5-01-PLAN.md
 
 **Progress:**
 ```
-[█████████████████░░░] 85% (40/47 requirements)
+[██████████████████░░] 88% (41/47 requirements)
 
-Phase 1: Foundation & Migration         [█████] 3/3 plans complete ✓
-Phase 2: Core Navigation System         [█████] 3/3 plans complete ✓
-Phase 3: Content Architecture           [█████] 4/4 plans complete ✓
-Phase 4: Visual Storytelling            [█████] 3/3 plans complete ✓
-Phase 5: Responsive & Performance       [████░] 4/7 in progress
-Phase 6: Decision Routing               [░░░░░] 0/? pending
+Phase 1: Foundation & Migration            [█████] 3/3 plans complete ✓
+Phase 2: Core Navigation System            [█████] 3/3 plans complete ✓
+Phase 3: Content Architecture              [█████] 4/4 plans complete ✓
+Phase 4: Visual Storytelling               [█████] 3/3 plans complete ✓
+Phase 5: Responsive & Performance          [█████] 7/7 plans complete ✓
+Phase 5.5: Presentation Visual Design      [█░░░░] 1/5 in progress
+Phase 6: Decision Routing                  [░░░░░] 0/? pending
 ```
 
 ## Performance Metrics
 
-**Velocity:** 16 plans completed (3 in Phase 1, 3 in Phase 2, 4 in Phase 3, 3 in Phase 4, 4 in Phase 5)
-**Average Duration:** ~30 min per plan
+**Velocity:** 17 plans completed (3 in Phase 1, 3 in Phase 2, 4 in Phase 3, 3 in Phase 4, 4 in Phase 5, 1 in Phase 5.5)
+**Average Duration:** ~28 min per plan
 **Blockers:** 1 active (Node.js version - non-critical)
 **Research Flags:** 0 active
 
@@ -88,6 +89,10 @@ Phase 6: Decision Routing               [░░░░░] 0/? pending
 | 2026-01-27 | Complete brand-* to Japanese palette migration | All text-white → text-washi, text-gray → text-hai, brand-red → beni across presentation |
 | 2026-01-27 | Mini-story pattern: back button + title badge + returnSlide param | Consistent navigation between main story and deep dives with context preservation |
 | 2026-01-27 | Weekday Bar mini-story 7 slides: foundation → tracking | January success → February validation → revenue targets ($25K-35K) |
+| 2026-01-28 | Flexible layout (min-h-full) prevents content truncation | Replaces fixed-height centering, allows natural growth while maintaining visual centering |
+| 2026-01-28 | Red (beni) reserved for accents only, never full backgrounds | Philosophy: "Red like wasabi - powerful in small amounts, overwhelming in large" |
+| 2026-01-28 | Premium color palette additions (deepIndigo, coral, warmCream, softGold) | Provides sophisticated alternatives to heavy red usage while maintaining Japanese aesthetic |
+| 2026-01-28 | Image organization: hero/, main-story/, mini-story/ structure | Semantic categories match slide hierarchy, 8 images (58MB) ready for Next.js Image integration |
 ### Active Todos
 
 - [x] Phase 1: Foundation & Migration (3 plans)
@@ -123,10 +128,8 @@ Phase 6: Decision Routing               [░░░░░] 0/? pending
 **Archive backup file:**
 - `app/archive/page.tsx.backup` can be removed after verification complete
 
-**Last Session:** 2026-01-27 - Phase 5 Plan 06 Complete
-**Stopped at:** Completed 05-06-PLAN.md - Mini Story 3: Weekday Bar Activation
-**Last Session:** 2026-01-27 - Phase 5 Plan 01 Complete
-**Stopped at:** Completed 05-01-PLAN.md with Japanese design system migration
+**Last Session:** 2026-01-28 - Phase 5.5 Plan 01 Complete
+**Stopped at:** Completed 05.5-01-PLAN.md - Foundation: Fix Truncation, Refine Colors, Prepare Images
 **Resume file:** None
 
 **Context for Next Session:**
@@ -134,21 +137,27 @@ Phase 6: Decision Routing               [░░░░░] 0/? pending
 - Phase 2 COMPLETE: Core navigation system fully integrated (NAV-01 through NAV-09)
 - Phase 3 COMPLETE: All content slides built (CONT-01 through CONT-12, with CONT-08/10 deferred)
 - Phase 4 COMPLETE: Visual storytelling components delivered
-  - Plan 01 ✓: Timeline visualization with flexbox layout
-- Animation timing established: 150ms stagger for bullets, 200ms for systems, 0.4s transitions
-- **Phase 5 Progress (4 of 7 plans complete):**
+- Phase 5 COMPLETE: All responsive & performance requirements met (7/7 plans)
   - Plan 01 ✓: Japanese design system foundation (sumi, washi, beni, kincha, hai, kitsune)
   - Plan 02 ✓: Main story color migration to Japanese palette
   - Plan 04 ✓: Mini Story 1: Social Media Engine (7 slides)
+  - Plan 05 ✓: Mini Story 2: Corporate Lunch Machine (7 slides)
   - Plan 06 ✓: Mini Story 3: Weekday Bar Activation (7 slides)
+  - Plan 07 ✓: Responsive optimization complete
+- **Phase 5.5 Progress (1 of 5 plans complete):**
+  - Plan 01 ✓: Foundation - Fixed content truncation, refined color system, prepared 8 images (58MB)
+- **Visual Design Foundation:**
+  - Content truncation eliminated with min-h-full flexible layout
+  - Red (beni) reserved for accents only, never full backgrounds
+  - Premium palette: deepIndigo, warmCream, coral, softGold, charcoal
+  - 8 images organized: hero/ (1), main-story/ (4), mini-story/ (3)
 - **11 total slides** in main story with visual enhancements
-- **2 mini-stories complete:** Social Media (7 slides), Weekday Bar (7 slides)
-- **1 mini-story remaining:** Corporate Lunch (4 slides) - Plan 05-07
+- **3 mini-stories complete:** Social Media (7 slides), Corporate Lunch (7 slides), Weekday Bar (7 slides)
 - Mini-story pattern established: back button, title badge, returnSlide param
 - All visualizations use individual Lucide icon imports (tree-shaking optimized)
 - Bundle optimized: CSS-only or Framer Motion, no chart libraries
 - Animation timing: 100ms stagger for bullets, 300ms duration
-- Ready for Phase 5 Plan 02: Color migration using new Japanese palette
+- Ready for Phase 5.5 Plan 02: Title slide with hero image integration
 
 **Quick Start Commands:**
 ```bash
@@ -166,6 +175,5 @@ npm run dev
 ```
 
 ---
-*Last updated: 2026-01-27 after Phase 5 Plan 06 completion*
+*Last updated: 2026-01-28 after Phase 5.5 Plan 01 completion*
 *State initialized: 2026-01-24 during roadmap creation*
-*Last updated: 2026-01-26 after Phase 4 Plan 03 completion*
