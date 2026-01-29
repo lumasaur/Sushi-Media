@@ -71,7 +71,7 @@ export interface SlideData {
   imageSrc?: string
   imageAlt?: string
   imagePosition?: 'left' | 'right'
-  splitRatio?: '60-40' | '70-30' | '50-50'
+  splitRatio?: '60-40' | '70-30' | '50-50' | '40-60'
   overlayType?: 'gradient-bottom' | 'gradient-left' | 'full-dark' | 'blur-bottom'
   overlayOpacity?: number
   textPosition?: 'center' | 'bottom-left' | 'bottom-center'
@@ -182,9 +182,13 @@ export const slides: SlideData[] = [
     id: 0,
     section: 'intro',
     title: 'Premium Sushi with Social Soul',
+    subtitle: 'Ami Sushi',
     bullets: [],
-    background: 'bg-gradient-to-b from-sumi to-sumi-deep',
-    layout: 'title'
+    layout: 'fullBleed',
+    imageSrc: '/images/hero/sushi-platter.png',
+    imageAlt: 'Premium sushi platter showcasing fresh nigiri and rolls',
+    overlayOpacity: 0.4,
+    textPosition: 'center'
   },
 
   // Slide 1: The Opportunity
@@ -207,8 +211,12 @@ export const slides: SlideData[] = [
         ]
       }
     ],
-    background: 'bg-gradient-to-b from-sumi to-sumi-light',
-    layout: 'content'
+    layout: 'imageBackground',
+    imageSrc: '/images/main-story/empty-space.png',
+    imageAlt: 'Empty restaurant seating during off-peak hours',
+    overlayType: 'gradient-left',
+    overlayIntensity: 'heavy',
+    contentPosition: 'right'
   },
 
   // Slide 2: Three Systems We're Building
@@ -307,8 +315,11 @@ export const slides: SlideData[] = [
         ]
       }
     ],
-    background: 'bg-gradient-to-b from-sumi to-sumi-light',
-    layout: 'content',
+    layout: 'asymmetric',
+    imageSrc: '/images/main-story/smartphone-insta.png',
+    imageAlt: 'Smartphone showing Instagram post of sushi',
+    imagePosition: 'left',
+    splitRatio: '40-60',
     miniStoryLink: 'social-media'
   },
 
@@ -345,8 +356,11 @@ export const slides: SlideData[] = [
         ]
       }
     ],
-    background: 'bg-gradient-to-b from-sumi to-sumi-light',
-    layout: 'content',
+    layout: 'asymmetric',
+    imageSrc: '/images/main-story/office-park.png',
+    imageAlt: 'Modern office park buildings',
+    imagePosition: 'right',
+    splitRatio: '60-40',
     miniStoryLink: 'corporate-lunch'
   },
 
@@ -383,8 +397,11 @@ export const slides: SlideData[] = [
         ]
       }
     ],
-    background: 'bg-gradient-to-b from-sumi to-sumi-light',
-    layout: 'content',
+    layout: 'asymmetric',
+    imageSrc: '/images/main-story/bar-patrons.png',
+    imageAlt: 'Warm atmosphere with bar patrons enjoying drinks',
+    imagePosition: 'left',
+    splitRatio: '40-60',
     miniStoryLink: 'weekday-bar'
   },
 
@@ -470,8 +487,8 @@ export const slides: SlideData[] = [
     title: 'Next Steps',
     subtitle: 'Three Systems. One Strategy. Ready to Execute.',
     bullets: [],
-    background: 'bg-gradient-to-b from-sumi to-sumi-light',
-    layout: 'cta',
+    layout: 'centered',
+    background: 'bg-premium-dark',
     ctas: [
       {
         label: 'Discuss Strategy',

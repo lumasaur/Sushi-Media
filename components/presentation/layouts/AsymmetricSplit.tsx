@@ -8,12 +8,13 @@ export interface AsymmetricSplitProps {
   imageSrc: string
   imageAlt: string
   imagePosition: 'left' | 'right'
-  splitRatio?: '60-40' | '70-30' | '50-50'  // Default '60-40'
+  splitRatio?: '60-40' | '70-30' | '50-50' | '40-60'  // Default '60-40'
   title: string
   subtitle?: string
   bullets?: Array<string | { main: string; sub: string[] }>
   accentColor?: string  // Tailwind color class for bullet points
   backgroundColor?: string  // For content side
+  miniStoryLink?: string  // Link to mini-story deep dive
 }
 
 export function AsymmetricSplit({
@@ -25,13 +26,15 @@ export function AsymmetricSplit({
   subtitle,
   bullets,
   accentColor = 'text-kincha',
-  backgroundColor = 'bg-sumi'
+  backgroundColor = 'bg-sumi',
+  miniStoryLink
 }: AsymmetricSplitProps) {
   // Map splitRatio to CSS Grid template columns
   const gridTemplates = {
     '60-40': imagePosition === 'left' ? 'grid-cols-1 lg:grid-cols-[60fr_40fr]' : 'grid-cols-1 lg:grid-cols-[40fr_60fr]',
     '70-30': imagePosition === 'left' ? 'grid-cols-1 lg:grid-cols-[70fr_30fr]' : 'grid-cols-1 lg:grid-cols-[30fr_70fr]',
-    '50-50': 'grid-cols-1 lg:grid-cols-2'
+    '50-50': 'grid-cols-1 lg:grid-cols-2',
+    '40-60': imagePosition === 'left' ? 'grid-cols-1 lg:grid-cols-[40fr_60fr]' : 'grid-cols-1 lg:grid-cols-[60fr_40fr]'
   }
 
   const contentSide = (
@@ -116,6 +119,26 @@ export function AsymmetricSplit({
               )
             })}
           </motion.ul>
+        )}
+
+        {/* Mini-story CTA link */}
+        {miniStoryLink && (
+          <motion.div
+            initial={{ opacity: 0, y: 10 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.3, ease: 'easeOut', delay: 0.3 + (bullets?.length || 0) * 0.1 }}
+            className="pt-4"
+          >
+            <a
+              href={`/presentation/${miniStoryLink}`}
+              className="inline-flex items-center px-6 py-3 bg-kincha/20 border border-kincha/40 rounded-lg text-kincha hover:bg-kincha/30 transition-colors"
+            >
+              Explore the full playbook
+              <svg className="ml-2 w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
+              </svg>
+            </a>
+          </motion.div>
         )}
       </div>
     </div>
