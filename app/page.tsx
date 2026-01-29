@@ -240,7 +240,7 @@ export default function PresentationPage() {
                         whileInView={{ opacity: 1, y: 0 }}
                         transition={{ delay: i * 0.15, duration: 0.4 }}
                         viewport={{ once: true }}
-                        className="relative bg-gradient-to-b from-charcoal to-sumi border-l-4 border-kincha p-6 rounded-r-lg shadow-lg hover:shadow-kincha/5 transition-shadow duration-300 h-full"
+                        className="relative bg-gradient-to-b from-charcoal to-sumi border-l-4 border-kincha p-6 rounded-r-lg shadow-lg hover:shadow-kincha/5 transition-shadow duration-300 min-h-[500px]"
                       >
                         <div className="absolute -top-4 left-6 bg-kincha text-sumi text-xs font-bold uppercase px-3 py-1 rounded-full">
                           {phaseTitle}
@@ -309,18 +309,56 @@ export default function PresentationPage() {
               {slide.subtitle && (
                 <p className="text-xl md:text-2xl text-hai mb-8 text-center">{slide.subtitle}</p>
               )}
-              {slide.dateTokens && (
+              {slide.meetingCadence && (
                 <div className="flex justify-center gap-8 mb-12">
                   <div className="text-center bg-kincha/10 px-6 py-3 rounded-full border border-kincha/20">
                     <span className="block text-xs uppercase tracking-wider text-kincha mb-1">Weekly</span>
-                    <span className="font-bold text-washi">{slide.dateTokens.weekly}</span>
+                    <span className="font-bold text-washi">{slide.meetingCadence.weekly}*</span>
                   </div>
                   <div className="text-center bg-beni/10 px-6 py-3 rounded-full border border-beni/20">
                     <span className="block text-xs uppercase tracking-wider text-beni mb-1">Monthly</span>
-                    <span className="font-bold text-washi">{slide.dateTokens.monthly}</span>
+                    <span className="font-bold text-washi">{slide.meetingCadence.monthly}*</span>
                   </div>
                 </div>
               )}
+
+              {/* Toast Analytics Box - New Section */}
+              {slide.analyticsBox && (
+                <div className="grid md:grid-cols-2 gap-8 items-center mb-12 max-w-6xl mx-auto">
+                  {/* Left: Content Box */}
+                  <div className="bg-sumi/60 backdrop-blur-md border border-kincha/30 rounded-xl p-8">
+                    <h3 className="text-2xl font-bold mb-6 text-kincha font-cormorant">
+                      {slide.analyticsBox.title}
+                    </h3>
+                    <ul className="space-y-4">
+                      {slide.analyticsBox.bullets.map((bullet, i) => (
+                        <li key={i} className="flex items-start">
+                          <span className="text-kincha mr-3 mt-1">•</span>
+                          <span className="text-washi/90 text-base leading-relaxed">{bullet}</span>
+                        </li>
+                      ))}
+                    </ul>
+                  </div>
+
+                  {/* Right: Toast Dashboard Image */}
+                  <div className="relative h-[300px] rounded-lg overflow-hidden border border-washi/10">
+                    <Image
+                      src={slide.analyticsBox.image}
+                      alt="Toast POS Analytics Dashboard"
+                      fill
+                      className="object-cover"
+                    />
+                  </div>
+                </div>
+              )}
+
+              {/* Footnote */}
+              {slide.meetingCadence?.footnote && (
+                <p className="text-center text-sm text-hai/70 mt-8">
+                  {slide.meetingCadence.footnote}
+                </p>
+              )}
+
               <div className="max-w-2xl mx-auto mb-12 space-y-3">
                 {slide.bullets.map((bullet, i) => (
                   <div key={i} className="flex items-center justify-center text-center">
@@ -359,16 +397,29 @@ export default function PresentationPage() {
                       key={i}
                       href={cta.href}
                       className={`
-                            group px-8 py-5 rounded-lg transition-all duration-200 min-w-[280px] text-center
+                            group px-8 py-5 rounded-lg transition-all duration-200 min-w-[280px] text-center flex flex-col items-center gap-3
                             ${cta.primary
                           ? 'bg-beni text-washi hover:bg-beni/90 hover:-translate-y-1 shadow-lg shadow-beni/20'
                           : 'bg-transparent border-2 border-kincha text-kincha hover:bg-kincha/10 hover:-translate-y-1'
                         }
                           `}
                     >
-                      <div className="font-bold text-xl mb-1 font-cormorant">{cta.label}</div>
-                      <div className={`text-sm tracking-wide ${cta.primary ? 'text-washi/90' : 'text-kincha/80'}`}>
-                        {cta.description}
+                      {/* Icon */}
+                      {cta.icon && (
+                        <div className="text-4xl">
+                          {cta.icon.startsWith('/') ? (
+                            <Image src={cta.icon} alt="" width={48} height={48} />
+                          ) : (
+                            <span>{cta.icon}</span>  // For emoji
+                          )}
+                        </div>
+                      )}
+
+                      <div>
+                        <div className="font-bold text-xl mb-1 font-cormorant">{cta.label}</div>
+                        <div className={`text-sm tracking-wide ${cta.primary ? 'text-washi/90' : 'text-kincha/80'}`}>
+                          {cta.description}
+                        </div>
                       </div>
                     </a>
                   ))}

@@ -21,7 +21,7 @@ This document provides **complete visual design specifications** for the Ami Sus
 
 ### How to Use This Document:
 
-1. **Open the site** in Chrome: https://sushi-media-ami.vercel.app
+1. **Open the site** in Chrome: https://amimarketingstrategy-git-feature-ami-dc16de-lumasaurs-projects.vercel.app/#1
 2. **Activate Google Antigravity extension**
 3. **Reference this document** for design specifications
 4. **Compare** actual implementation vs. specifications below
@@ -36,7 +36,7 @@ This document provides **complete visual design specifications** for the Ami Sus
 ### Issue #1: Missing Mini-Story Navigation Links
 **Location:** Site header (app/layout.tsx lines 40-77)
 **Current State:** Header shows "Presentation | Archive | Implementation Proposal"
-**Expected State:** Header should show mini-story links under Presentation dropdown
+**Expected State:** Header should show mini-story links under Presentation as a dropdown 
 
 **Specification:**
 ```html

@@ -58,6 +58,7 @@ export interface SlideData {
     description: string
     href: string
     primary: boolean
+    icon?: string
   }>
   miniStoryLink?: 'social-media' | 'corporate-lunch' | 'weekday-bar'  // Link to mini-story deep dive
   twoColumns?: {
@@ -83,6 +84,19 @@ export interface SlideData {
   bentoItems?: BentoItem[]
   bentoColumns?: 2 | 3 | 4
   bentoGap?: 'tight' | 'normal' | 'loose'
+  // New for Slide 10 (metrics)
+  analyticsBox?: {
+    title: string
+    bullets: string[]
+    image: string
+  }
+  meetingCadence?: {
+    weekly: string
+    monthly: string
+    footnote?: string
+  }
+
+  // New for Slide 12 (CTA)
   dateTokens?: {
     weekly: string
     monthly: string
@@ -234,25 +248,28 @@ export const slides: SlideData[] = [
       {
         main: 'Social Media Engine',
         sub: [
-          'The megaphone that drives awareness',
-          'Objective: Build an audience we own',
-          'Why: Consistent visibility fills seats'
+          'What: Daily content + event promotion via Instagram/Facebook',
+          'Why: Builds an owned audience that costs nothing to reach',
+          'Timeline: Operational week 1',
+          'Success Metric: 20% follower growth, 50+ event post engagements'
         ]
       },
       {
         main: 'Corporate Lunch Pipeline',
         sub: [
-          'The recurring revenue machine',
-          'Objective: Lock in predictable weekday sales',
-          'Why: Leverages local density & office demand'
+          'What: Direct sales outreach + group ordering platforms',
+          'Why: Converts proximity to offices into predictable weekday revenue',
+          'Timeline: Outreach starts week 2',
+          'Success Metric: 3-5 weekly standing orders, 40-60 new covers'
         ]
       },
       {
         main: 'Weekday Bar Activation',
         sub: [
-          'The atmosphere builder',
-          'Objective: Create magnetic evening vibes',
-          'Why: Transforms "slow nights" into destinations'
+          'What: Programmed events (Mix & Mingle, DJ nights, sports viewing)',
+          'Why: Creates destination vibe that transforms "slow nights"',
+          'Timeline: February programming cycle',
+          'Success Metric: 2x bar revenue on event nights vs. baseline'
         ]
       }
     ],
@@ -274,17 +291,17 @@ export const slides: SlideData[] = [
     twoColumns: {
       leftTitle: 'What Stays the Same',
       leftItems: [
-        'Space and hours',
-        'Core menu and quality standards',
-        'Weekend success model',
-        'Family business values'
+        'Physical space and operating hours remain unchanged',
+        'Core menu integrity and quality standards maintained',
+        'Weekend dinner success model continues as-is',
+        'Family-owned business values and customer relationships'
       ],
       rightTitle: 'What\'s New',
       rightItems: [
-        'Systematic vs. Ad-hoc Marketing',
-        'Proactive vs. Passive Sales',
-        'Programmed vs. Random Evenings',
-        'Data-driven vs. Intuition-based'
+        'Systematic Marketing: Content calendar vs. sporadic posts',
+        'Proactive Sales: Outbound outreach vs. waiting for walk-ins',
+        'Programmed Evenings: Event strategy vs. hoping for traffic',
+        'Data-Driven Ops: Toast analytics vs. intuition-based decisions'
       ]
     }
   },
@@ -423,30 +440,36 @@ export const slides: SlideData[] = [
     subtitle: 'Three phases to sustained growth',
     bullets: [
       {
-        main: 'Phase 1: Setup & Creation',
+        main: 'Phase 1: Setup & Creation (Weeks 1-2)',
         sub: [
-          'Strategy Alignment: Define branding & voice with Andreia',
-          'Production: Master Schedule created (2-3 months out)',
-          'Deadline: Finalized 2 weeks prior to month start',
-          'Sales: Build office target lists & enable group ordering'
+          'Brand Strategy: Define voice, tone, and visual identity with Andreia',
+          'Content Production: Master schedule created 2-3 months ahead',
+          'Deadline Protocol: Month finalized 2 weeks prior for print materials',
+          'Sales Infrastructure: Build target lists, enable Toast group ordering',
+          'Platform Setup: Activate Meta Business Suite, DoorDash Business',
+          'Deliverable: Approved Feb-April content calendar'
         ]
       },
       {
-        main: 'Phase 2: Launch & Learn',
+        main: 'Phase 2: Launch & Learn (Weeks 3-6)',
         sub: [
-          'Marketing: Daily stories & targeted posts begin',
-          'Sales: Corporate warm intros & sample runs',
-          'Events: February programming execution',
-          'Ops: DoorDash Business setup'
+          'Marketing Activation: Daily stories, 4-6 posts/week, event promotion',
+          'Sales Outreach: 3-5 warm corporate intros, sample delivery logistics',
+          'Event Execution: February calendar (13 events) goes live',
+          'Operations: Monitor group orders, refine delivery timing',
+          'Team Training: Staff briefed on event programming and promotions',
+          'Deliverable: First month performance data captured'
         ]
       },
       {
-        main: 'Phase 3: Optimize & Scale',
+        main: 'Phase 3: Optimize & Scale (Weeks 7-12)',
         sub: [
-          'Review: Performance data breakdown',
-          'Refine: Adjust event mix based on attendance',
-          'Expand: Add new corporate partners',
-          'Routine: Monthly planning cycle operational'
+          'Performance Review: Analyze social reach, event attendance, sales lift',
+          'Content Refinement: Double down on high-performing post types',
+          'Event Optimization: Adjust mix based on revenue per event',
+          'Sales Expansion: Add 2-3 new corporate accounts monthly',
+          'Operational Rhythm: Monthly planning becomes self-sustaining',
+          'Deliverable: Quarterly strategy review with recommendations'
         ]
       }
     ],
@@ -478,30 +501,44 @@ export const slides: SlideData[] = [
     id: 9,
     section: 'execution',
     title: 'Future Programming',
-    subtitle: 'Capturing seasonality and culture',
     bullets: [],
     layout: 'bento',
-    bentoColumns: 3,
+    bentoColumns: 2,
     bentoItems: [
       {
         type: 'text',
-        title: 'March',
-        description: 'March Madness viewing parties, St. Patrick\'s delivery specials, Spring menu teaser',
+        title: 'March 2026',
+        description: 'March Madness viewing parties (NCAA tournament), St. Patrick\'s Day specials (March 17), Cherry Blossom Festival tie-in (March 20 kickoff), Spring menu preview events',
         size: 'medium'
       },
       {
         type: 'text',
-        title: 'April',
-        description: 'Cherry Blossom festival tie-ins, Tax Day relief specials, Outdoor patio launch party',
+        title: 'April 2026',
+        description: 'The Masters viewing (April 9-12), Easter Weekend brunch focus (April 5), Earth Day sustainability showcase (April 22), Spring patio launch party',
         size: 'medium'
       },
       {
         type: 'text',
-        title: 'May',
-        description: 'Cinco de Mayo fusion event, Mother\'s Day brunch/lunch focus, Memorial Day weekend kickoff',
+        title: 'May 2026',
+        description: 'Cinco de Mayo celebration (May 5 - fusion event), Indy 500 party (May 24), Mother\'s Day brunch/lunch marketing push, Memorial Day weekend kickoff (May 25)',
         size: 'medium'
+      },
+      {
+        type: 'text',
+        title: 'June 2026',
+        description: '🏆 FIFA World Cup Launch (June 11 - major event), Group stage viewing parties (June 11-27), Juneteenth celebration (June 19), Pride Month special events',
+        size: 'large',
+        accentColor: 'text-beni'
+      },
+      {
+        type: 'text',
+        title: 'July 2026',
+        description: '⚽ World Cup Final Week (July 13-19 - HUGE revenue opportunity), Independence Day specials (July 4), MLB All-Star Game viewing (July 14), Summer menu celebration',
+        size: 'large',
+        accentColor: 'text-beni'
       }
     ],
+    subtitle: 'Capturing seasonality, sports, and culture through July 2026',
     background: 'bg-premium-dark'
   },
 
@@ -520,9 +557,20 @@ export const slides: SlideData[] = [
     background: 'bg-gradient-to-b from-sumi to-sumi-light',
     layout: 'metrics',
     // "Double the times provided" -> assuming referring to meeting cadence
-    dateTokens: {
-      weekly: '10-minute check-ins* (Suggested)',
-      monthly: '30-minute reviews* (Suggested)'
+    analyticsBox: {
+      title: 'Leveraging Toast POS Analytics',
+      bullets: [
+        'Sales Trends: Track revenue by day/time to identify high-potential slots',
+        'Dish Performance: Analyze which menu items drive profit vs. just volume',
+        'Event Impact: Measure bar sales lift on event nights vs. baseline',
+        'Labor Efficiency: Optimize staffing based on actual traffic patterns'
+      ],
+      image: '/images/toast-pos-dashboard.png'
+    },
+    meetingCadence: {
+      weekly: '10-minute check-ins',
+      monthly: '30-minute reviews',
+      footnote: '* Suggested time allocations, adjust as needed'
     }
   },
 
@@ -540,25 +588,29 @@ export const slides: SlideData[] = [
         label: 'Discuss Strategy',
         description: 'Schedule conversation',
         href: '#contact',
-        primary: true
+        primary: true,
+        icon: '/images/icons/calendar-check.png'
       },
       {
         label: 'Social Media Playbook',
         description: 'Deep dive strategy',
         href: '/presentation/social-media',
-        primary: false
+        primary: false,
+        icon: '/images/icons/instagram.png'
       },
       {
         label: 'Corporate Lunch Playbook',
         description: 'Operations detail',
         href: '/presentation/corporate-lunch',
-        primary: false
+        primary: false,
+        icon: '/images/icons/briefcase.png'
       },
       {
         label: 'Weekday Bar Playbook',
         description: 'Event plans',
         href: '/presentation/weekday-bar',
-        primary: false
+        primary: false,
+        icon: '/images/icons/cocktail.png'
       }
     ]
   }
