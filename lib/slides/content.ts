@@ -15,6 +15,22 @@
  * 10. Next Steps - CTAs (currently slide 7, will become 10)
  */
 
+/**
+ * Image asset mapping for slides
+ * All images optimized and stored in public/images/ directory
+ */
+export const slideImages = {
+  title: '/images/hero/sushi-platter.png',
+  opportunity: '/images/main-story/empty-space.png',
+  socialMedia: '/images/main-story/smartphone-insta.png',
+  corporateLunch: '/images/main-story/office-park.png',
+  weekdayBar: '/images/main-story/bar-patrons.png',
+  // Mini-story images
+  happyHour: '/images/mini-story/happy-hour.png',
+  mixMingle: '/images/mini-story/mix-mingle.png',
+  metaInsights: '/images/mini-story/meta-insights.png'
+}
+
 export interface Week {
   title: string
   items: string[]
