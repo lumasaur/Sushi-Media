@@ -1,6 +1,6 @@
 'use client'
 
-import React from 'react'
+import React, { useState } from 'react'
 import Image from 'next/image'
 import { motion } from 'framer-motion'
 
@@ -23,6 +23,8 @@ export function FullBleedHero({
   textPosition = 'center',
   titleSize = '2xl'
 }: FullBleedHeroProps) {
+  const [imageLoaded, setImageLoaded] = useState(false)
+
   // Map titleSize prop to Tailwind classes
   const titleSizeClasses = {
     'xl': 'text-5xl md:text-6xl',
@@ -38,14 +40,15 @@ export function FullBleedHero({
   }
 
   return (
-    <div className="relative w-full h-full min-h-screen overflow-hidden">
+    <div className="relative w-full h-full min-h-screen overflow-hidden bg-sumi">
       {/* Background Image */}
       <Image
         src={imageSrc}
         alt={imageAlt}
         fill
         priority
-        className="object-cover"
+        onLoad={() => setImageLoaded(true)}
+        className={`object-cover transition-opacity duration-500 ${imageLoaded ? 'opacity-100' : 'opacity-0'}`}
         sizes="100vw"
       />
 
@@ -66,7 +69,7 @@ export function FullBleedHero({
           className="max-w-5xl"
         >
           <h1
-            className={`font-cormorant font-bold ${titleSizeClasses[titleSize]} text-washi tracking-tight mb-4`}
+            className={`hero-title font-cormorant font-bold ${titleSizeClasses[titleSize]} text-washi tracking-tight mb-4`}
           >
             {title}
           </h1>
@@ -75,7 +78,7 @@ export function FullBleedHero({
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.6, ease: 'easeOut', delay: 0.2 }}
-              className="text-2xl md:text-3xl text-washi/90 font-eb-garamond font-light"
+              className="hero-subtitle text-2xl md:text-3xl text-washi/90 font-eb-garamond font-light"
             >
               {subtitle}
             </motion.p>

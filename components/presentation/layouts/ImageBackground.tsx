@@ -1,6 +1,6 @@
 'use client'
 
-import React from 'react'
+import React, { useState } from 'react'
 import Image from 'next/image'
 import { motion } from 'framer-motion'
 
@@ -25,6 +25,8 @@ export function ImageBackground({
   overlayIntensity = 'medium',
   contentPosition = 'center'
 }: ImageBackgroundProps) {
+  const [imageLoaded, setImageLoaded] = useState(false)
+
   // Map overlayType to gradient classes
   const overlayClasses = {
     'gradient-bottom': 'bg-gradient-to-t from-black/70 via-black/30 to-transparent',
@@ -49,13 +51,14 @@ export function ImageBackground({
   }
 
   return (
-    <div className="relative w-full min-h-screen overflow-hidden">
+    <div className="relative w-full min-h-screen overflow-hidden bg-sumi">
       {/* Background Image */}
       <Image
         src={imageSrc}
         alt={imageAlt}
         fill
-        className="object-cover"
+        onLoad={() => setImageLoaded(true)}
+        className={`object-cover transition-opacity duration-500 ${imageLoaded ? 'opacity-100' : 'opacity-0'}`}
         sizes="100vw"
       />
 
@@ -75,7 +78,7 @@ export function ImageBackground({
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.3, ease: 'easeOut' }}
-            className="font-cormorant font-bold text-4xl md:text-5xl lg:text-6xl text-washi tracking-tight"
+            className="text-overlay font-cormorant font-bold text-4xl md:text-5xl lg:text-6xl text-washi tracking-tight"
           >
             {title}
           </motion.h2>
@@ -86,7 +89,7 @@ export function ImageBackground({
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.3, ease: 'easeOut', delay: 0.1 }}
-              className="text-xl md:text-2xl text-washi/90 font-eb-garamond"
+              className="text-overlay text-xl md:text-2xl text-washi/90 font-eb-garamond"
             >
               {subtitle}
             </motion.p>
@@ -117,7 +120,7 @@ export function ImageBackground({
                       <>
                         <div className="flex items-start space-x-3">
                           <span className="text-kincha text-xl mt-1">•</span>
-                          <span className="font-eb-garamond text-lg text-washi font-medium">
+                          <span className="text-overlay font-eb-garamond text-lg text-washi font-medium">
                             {bullet.main}
                           </span>
                         </div>
@@ -129,7 +132,7 @@ export function ImageBackground({
                                 className="flex items-start space-x-3"
                               >
                                 <span className="text-hai text-sm mt-1">–</span>
-                                <span className="font-eb-garamond text-base text-washi/80">
+                                <span className="text-overlay font-eb-garamond text-base text-washi/80">
                                   {subBullet}
                                 </span>
                               </li>
@@ -140,7 +143,7 @@ export function ImageBackground({
                     ) : (
                       <div className="flex items-start space-x-3">
                         <span className="text-kincha text-xl mt-1">•</span>
-                        <span className="font-eb-garamond text-lg text-washi">
+                        <span className="text-overlay font-eb-garamond text-lg text-washi">
                           {bullet}
                         </span>
                       </div>
