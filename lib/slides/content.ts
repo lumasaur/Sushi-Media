@@ -15,6 +15,8 @@
  * 10. Next Steps - CTAs (currently slide 7, will become 10)
  */
 
+import type { BentoItem } from '@/components/presentation/layouts'
+
 /**
  * Image asset mapping for slides
  * All images optimized and stored in public/images/ directory
@@ -49,7 +51,8 @@ export interface SlideData {
   subtitle?: string
   bullets: Array<string | { main: string; sub: string[] }>
   background?: string  // Tailwind class like 'bg-sumi'
-  layout?: 'title' | 'content' | 'cta' | 'timeline' | 'systems' | 'two-column' | 'calendar' | 'metrics'  // Hint for rendering pattern
+  layout?: 'title' | 'content' | 'cta' | 'timeline' | 'systems' | 'two-column' | 'calendar' | 'metrics'
+    | 'fullBleed' | 'asymmetric' | 'bento' | 'centered' | 'imageBackground'  // New layout types
   ctas?: Array<{
     label: string
     description: string
@@ -63,6 +66,23 @@ export interface SlideData {
     rightTitle: string
     rightItems: string[]
   }
+
+  // New optional fields for layout-specific data
+  imageSrc?: string
+  imageAlt?: string
+  imagePosition?: 'left' | 'right'
+  splitRatio?: '60-40' | '70-30' | '50-50'
+  overlayType?: 'gradient-bottom' | 'gradient-left' | 'full-dark' | 'blur-bottom'
+  overlayOpacity?: number
+  textPosition?: 'center' | 'bottom-left' | 'bottom-center'
+  titleSize?: 'xl' | '2xl' | '3xl'
+  contentPosition?: 'center' | 'left' | 'right' | 'bottom'
+  overlayIntensity?: 'light' | 'medium' | 'heavy'
+  accentText?: string
+  textColor?: 'light' | 'dark'
+  bentoItems?: BentoItem[]
+  bentoColumns?: 2 | 3 | 4
+  bentoGap?: 'tight' | 'normal' | 'loose'
 }
 
 export const sections = [
