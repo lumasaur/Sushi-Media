@@ -1,8 +1,8 @@
 # Roadmap: Sushi-Media Presentation Site
 
 **Created:** 2026-01-24
-**Depth:** Standard (6 phases)
-**Coverage:** 47/47 v1 requirements mapped
+**Depth:** Standard (7 phases)
+**Coverage:** 47/47 v1 requirements mapped + Phase 5.5 design enhancement
 
 ## Overview
 
@@ -99,9 +99,9 @@ Plans:
 **Plans:** 3 plans in 2 waves
 
 Plans:
-- [ ] 04-01-PLAN.md - Timeline visualization with Framer Motion animations
-- [ ] 04-02-PLAN.md - System diagram with icons and flow arrows
-- [ ] 04-03-PLAN.md - Staggered animations and revenue chart
+- [x] 04-01-PLAN.md - Timeline visualization with Framer Motion animations
+- [x] 04-02-PLAN.md - System diagram with icons and flow arrows
+- [x] 04-03-PLAN.md - Staggered animations and revenue chart
 
 **Success Criteria:**
 1. User sees First 30 Days timeline with week-by-week visual breakdown
@@ -122,6 +122,17 @@ Plans:
 
 **Requirements:** RESP-01, RESP-02, RESP-03, RESP-04, RESP-05, PORT-01, PORT-02, PORT-03, PORT-04, PORT-05
 
+**Plans:** 7 plans
+
+Plans:
+- [x] 05-01-PLAN.md - Japanese design system foundation
+- [x] 05-02-PLAN.md - Main story color migration
+- [x] 05-03-PLAN.md - Calendar and metrics layouts
+- [x] 05-04-PLAN.md - Mini Story 1: Social Media Engine (7 slides)
+- [x] 05-05-PLAN.md - Mini Story 2: Corporate Lunch (4 slides)
+- [x] 05-06-PLAN.md - Mini Story 3: Weekday Bar Activation (7 slides)
+- [x] 05-07-PLAN.md - Visualization color migration
+
 **Success Criteria:**
 1. User experiences optimized viewing on landscape tablets, desktops, and TV presentation mode
 2. All interactive elements have minimum 44px touch targets for tablet accuracy
@@ -135,11 +146,40 @@ Plans:
 
 ---
 
+### Phase 5.5: Presentation Visual Design & Polish
+
+**Goal:** Transform all 29 slides from generic layouts to portfolio-quality visual design with creative layouts, integrated images, and sophisticated color usage.
+
+**Dependencies:** Phase 5 (requires Japanese palette and mini-stories complete)
+
+**Requirements:** User feedback (2026-01-28) - design quality issues
+
+**Plans:** 5 plans in 4 waves
+
+Plans:
+- [ ] 05.5-01-PLAN.md - Foundation: Fix truncation, refine colors, prepare images
+- [ ] 05.5-02-PLAN.md - Layout components: Create 5 reusable layout patterns
+- [ ] 05.5-03-PLAN.md - Main story redesign (11 slides with new layouts and images)
+- [ ] 05.5-04-PLAN.md - Mini-stories redesign (18 slides with new layouts and images)
+- [ ] 05.5-05-PLAN.md - Visual polish, accessibility audit, user verification
+
+**Success Criteria:**
+1. No content truncation on any of the 29 slides
+2. Red used only as tasteful accents (bullets, links) - NOT backgrounds
+3. All 8 images integrated strategically across slides
+4. Minimum 5 different layout patterns implemented (fullBleed, asymmetric, bento, centered, imageBackground)
+5. Visual variety across slides - no two adjacent slides use identical patterns
+6. Modern, portfolio-quality design approved by user
+7. WCAG AA accessibility compliance (4.5:1 contrast minimum)
+8. 60fps animations that respect prefers-reduced-motion
+
+---
+
 ### Phase 6: Decision Routing
 
 **Goal:** Final slide guides stakeholders to actionable next steps with clear CTAs.
 
-**Dependencies:** Phase 3 (requires content structure), Phase 5 (requires mobile-friendly CTAs)
+**Dependencies:** Phase 3 (requires content structure), Phase 5.5 (requires polished CTAs)
 
 **Requirements:** DEC-01, DEC-02, DEC-03, DEC-04
 
@@ -155,14 +195,15 @@ Plans:
 
 | Phase | Status | Requirements | Completion |
 |-------|--------|--------------|------------|
-| 1 - Foundation & Migration | ✓ Complete | 3 | 100% |
-| 2 - Core Navigation | ✓ Complete | 9 | 100% |
-| 3 - Content Architecture | ✓ Complete | 12 | 100% |
-| 4 - Visual Storytelling | Pending | 8 | 0% |
-| 5 - Responsive & Performance | Pending | 10 | 0% |
+| 1 - Foundation & Migration | Complete | 3 | 100% |
+| 2 - Core Navigation | Complete | 9 | 100% |
+| 3 - Content Architecture | Complete | 12 | 100% |
+| 4 - Visual Storytelling | Complete | 8 | 100% |
+| 5 - Responsive & Performance | Complete | 10 | 100% |
+| 5.5 - Visual Design & Polish | **In Progress** | N/A | 0% |
 | 6 - Decision Routing | Pending | 4 | 0% |
 
-**Overall:** 24/47 requirements complete (51%)
+**Overall:** 42/47 requirements complete (89%) + Phase 5.5 design enhancement
 
 ---
 
@@ -170,18 +211,20 @@ Plans:
 
 ```
 Phase 1: Foundation & Migration
-    ↓
+    |
 Phase 2: Core Navigation System
-    ↓
-Phase 3: Content Architecture ←┐
-    ↓                           │
-Phase 4: Visual Storytelling    │
-    ↓                           │
-Phase 5: Responsive & Performance
-    ↓                           │
-Phase 6: Decision Routing ──────┘
+    |
+Phase 3: Content Architecture <----|
+    |                               |
+Phase 4: Visual Storytelling        |
+    |                               |
+Phase 5: Responsive & Performance   |
+    |                               |
+Phase 5.5: Visual Design & Polish <-+
+    |
+Phase 6: Decision Routing
 ```
 
 ---
 
-*Last updated: 2026-01-26 (Phase 4 planned)*
+*Last updated: 2026-01-28 (Phase 5.5 planned)*
