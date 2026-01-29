@@ -3,6 +3,7 @@
 import React, { useState } from 'react'
 import Image from 'next/image'
 import { motion } from 'framer-motion'
+import { useReducedMotion } from '@/lib/hooks/useReducedMotion'
 
 export interface ImageBackgroundProps {
   imageSrc: string
@@ -26,6 +27,7 @@ export function ImageBackground({
   contentPosition = 'center'
 }: ImageBackgroundProps) {
   const [imageLoaded, setImageLoaded] = useState(false)
+  const prefersReducedMotion = useReducedMotion()
 
   // Map overlayType to gradient classes
   const overlayClasses = {
@@ -75,9 +77,9 @@ export function ImageBackground({
         <div className="max-w-4xl space-y-6">
           {/* Title */}
           <motion.h2
-            initial={{ opacity: 0, y: 20 }}
+            initial={prefersReducedMotion ? { opacity: 1, y: 0 } : { opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.3, ease: 'easeOut' }}
+            transition={prefersReducedMotion ? { duration: 0 } : { duration: 0.3, ease: 'easeOut' }}
             className="text-overlay font-cormorant font-bold text-4xl md:text-5xl lg:text-6xl text-washi tracking-tight"
           >
             {title}
@@ -86,9 +88,9 @@ export function ImageBackground({
           {/* Subtitle */}
           {subtitle && (
             <motion.p
-              initial={{ opacity: 0, y: 20 }}
+              initial={prefersReducedMotion ? { opacity: 1, y: 0 } : { opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.3, ease: 'easeOut', delay: 0.1 }}
+              transition={prefersReducedMotion ? { duration: 0 } : { duration: 0.3, ease: 'easeOut', delay: 0.1 }}
               className="text-overlay text-xl md:text-2xl text-washi/90 font-eb-garamond"
             >
               {subtitle}
@@ -107,9 +109,9 @@ export function ImageBackground({
                 return (
                   <motion.li
                     key={index}
-                    initial={{ opacity: 0, x: -10 }}
+                    initial={prefersReducedMotion ? { opacity: 1, x: 0 } : { opacity: 0, x: -10 }}
                     animate={{ opacity: 1, x: 0 }}
-                    transition={{
+                    transition={prefersReducedMotion ? { duration: 0 } : {
                       duration: 0.3,
                       ease: 'easeOut',
                       delay: 0.2 + index * 0.1

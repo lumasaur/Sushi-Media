@@ -3,6 +3,7 @@
 import React, { useState } from 'react'
 import Image from 'next/image'
 import { motion } from 'framer-motion'
+import { useReducedMotion } from '@/lib/hooks/useReducedMotion'
 
 export interface FullBleedHeroProps {
   imageSrc: string
@@ -24,6 +25,7 @@ export function FullBleedHero({
   titleSize = '2xl'
 }: FullBleedHeroProps) {
   const [imageLoaded, setImageLoaded] = useState(false)
+  const prefersReducedMotion = useReducedMotion()
 
   // Map titleSize prop to Tailwind classes
   const titleSizeClasses = {
@@ -63,9 +65,9 @@ export function FullBleedHero({
       {/* Text Content */}
       <div className={`absolute inset-0 flex flex-col ${textPositionClasses[textPosition]} p-8 md:p-16`}>
         <motion.div
-          initial={{ opacity: 0, y: 20 }}
+          initial={prefersReducedMotion ? { opacity: 1, y: 0 } : { opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.6, ease: 'easeOut' }}
+          transition={prefersReducedMotion ? { duration: 0 } : { duration: 0.6, ease: 'easeOut' }}
           className="max-w-5xl"
         >
           <h1
@@ -75,9 +77,9 @@ export function FullBleedHero({
           </h1>
           {subtitle && (
             <motion.p
-              initial={{ opacity: 0, y: 20 }}
+              initial={prefersReducedMotion ? { opacity: 1, y: 0 } : { opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.6, ease: 'easeOut', delay: 0.2 }}
+              transition={prefersReducedMotion ? { duration: 0 } : { duration: 0.6, ease: 'easeOut', delay: 0.2 }}
               className="hero-subtitle text-2xl md:text-3xl text-washi/90 font-eb-garamond font-light"
             >
               {subtitle}
