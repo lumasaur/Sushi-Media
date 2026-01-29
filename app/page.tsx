@@ -9,6 +9,12 @@ import {
   NavigationHints
 } from '@/components/presentation'
 import { Timeline, SystemDiagram, RevenueChart } from '@/components/presentation/visualizations'
+import {
+  FullBleedHero,
+  AsymmetricSplit,
+  CenteredMinimal,
+  ImageBackground
+} from '@/components/presentation/layouts'
 import { useSlideNavigation, useTouchGestures } from '@/hooks'
 import { slides, systemsData, timelineData, februaryEventsData, februaryRevenueTarget, metricsData } from '@/lib/slides/content'
 
@@ -54,6 +60,64 @@ export default function PresentationPage() {
     onNavigateBackward: previousSlide
   })
 
+
+  // Render slide content based on layout type
+  const renderSlideContent = (slide: typeof slides[0]) => {
+    switch (slide.layout) {
+      case 'fullBleed':
+        return slide.imageSrc ? (
+          <FullBleedHero
+            imageSrc={slide.imageSrc}
+            imageAlt={slide.imageAlt || 'Presentation image'}
+            title={slide.title}
+            subtitle={slide.subtitle}
+            overlayOpacity={slide.overlayOpacity}
+            textPosition={slide.textPosition}
+          />
+        ) : null
+
+      case 'imageBackground':
+        return slide.imageSrc ? (
+          <ImageBackground
+            imageSrc={slide.imageSrc}
+            imageAlt={slide.imageAlt || 'Background image'}
+            title={slide.title}
+            subtitle={slide.subtitle}
+            bullets={slide.bullets}
+            overlayType={slide.overlayType}
+            overlayIntensity={slide.overlayIntensity}
+            contentPosition={slide.contentPosition}
+          />
+        ) : null
+
+      case 'asymmetric':
+        return slide.imageSrc ? (
+          <AsymmetricSplit
+            imageSrc={slide.imageSrc}
+            imageAlt={slide.imageAlt || 'Feature image'}
+            imagePosition={slide.imagePosition || 'left'}
+            splitRatio={slide.splitRatio || '60-40'}
+            title={slide.title}
+            subtitle={slide.subtitle}
+            bullets={slide.bullets}
+            miniStoryLink={slide.miniStoryLink}
+          />
+        ) : null
+
+      // Keep existing layout renderings for other types
+      case 'systems':
+      case 'timeline':
+      case 'calendar':
+      case 'metrics':
+      case 'two-column':
+      case 'content':
+      case 'title':
+      case 'cta':
+      default:
+        return null // Will be rendered in the legacy code path
+    }
+  }
+
   return (
     <div className="relative h-screen overflow-hidden">
       {/* Navigation hints for first-time users */}
@@ -64,17 +128,26 @@ export default function PresentationPage() {
       <SlideCounter currentSlide={currentSlide} totalSlides={totalSlides} />
 
       {/* Dynamic slide rendering from centralized content */}
-      {slides.map((slide) => (
-        <SlideContainer
-          key={slide.id}
-          slideNumber={slide.id}
-          isActive={currentSlide === slide.id}
-          background={slide.background || 'bg-white'}
-        >
-          <div className="min-h-full flex items-center py-8 px-8 md:px-16 lg:px-24">
-            <div className="max-w-4xl w-full">
-              {/* Title slide layout */}
-              {slide.layout === 'title' && (
+      {slides.map((slide) => {
+        const usesCustomLayout = ['fullBleed', 'asymmetric', 'imageBackground'].includes(slide.layout || '')
+        const newLayoutContent = renderSlideContent(slide)
+        
+        return (
+          <SlideContainer
+            key={slide.id}
+            slideNumber={slide.id}
+            isActive={currentSlide === slide.id}
+            background={usesCustomLayout ? 'bg-transparent' : (slide.background || 'bg-gradient-to-b from-sumi to-sumi-light')}
+          >
+            {newLayoutContent ? (
+              // New custom layouts handle their own padding and backgrounds
+              newLayoutContent
+            ) : (
+              // Traditional layouts use the standard padding container
+              <div className="min-h-full flex items-center py-8 px-8 md:px-16 lg:px-24">
+                <div className="max-w-4xl w-full">
+                  {/* Title slide layout */}
+                  {slide.layout === 'title' && (
                 <div className="text-center text-washi">
                   <h1 className="text-5xl md:text-6xl font-bold font-cormorant">{slide.title}</h1>
                 </div>
@@ -306,10 +379,12 @@ export default function PresentationPage() {
                   )}
                 </div>
               )}
-            </div>
-          </div>
-        </SlideContainer>
-      ))}
+                </div>
+              </div>
+            )}
+          </SlideContainer>
+        )
+      })}
 
       {/* Archive link */}
       <a

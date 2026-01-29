@@ -15,7 +15,7 @@ export interface MiniSlideData {
   imageSrc?: string
   imageAlt?: string
   overlayOpacity?: number
-  textPosition?: 'center' | 'left' | 'right'
+  textPosition?: 'center' | 'bottom-left' | 'bottom-center'
   imagePosition?: 'left' | 'right'
   splitRatio?: '60-40' | '70-30' | '50-50'
   overlayType?: 'gradient-bottom' | 'gradient-left' | 'full-dark' | 'blur-bottom'

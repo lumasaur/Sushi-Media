@@ -13,7 +13,7 @@ export interface MiniSlideData {
   imageSrc?: string
   imageAlt?: string
   overlayOpacity?: number
-  textPosition?: 'center' | 'left' | 'right'
+  textPosition?: 'center' | 'bottom-left' | 'bottom-center'
   imagePosition?: 'left' | 'right'
   splitRatio?: '60-40' | '70-30' | '50-50'
   overlayType?: 'gradient-bottom' | 'gradient-left' | 'full-dark' | 'blur-bottom'
@@ -44,7 +44,7 @@ export const corporateLunchSlides: MiniSlideData[] = [
     imageSrc: '/images/main-story/office-park.png',
     imageAlt: 'Office buildings representing target customers',
     imagePosition: 'left',
-    splitRatio: '40-60',
+    splitRatio: '60-40',
     bullets: [
       'Clear demand from local businesses',
       'Fills specific empty hours: 11:30am-1:30pm weekdays',
