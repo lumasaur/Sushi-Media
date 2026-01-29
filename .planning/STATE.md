@@ -11,9 +11,9 @@
 ## Current Position
 
 **Phase:** 5.5 of 6 - Presentation Visual Design & Polish
-**Plan:** 02 of 05 - Layout Component Library
+**Plan:** 04 of 05 - Mini-Story Visual Redesign
 **Status:** Plan complete ✓
-**Last activity:** 2026-01-29 - Completed 05.5-02-PLAN.md
+**Last activity:** 2026-01-29 - Completed 05.5-04-PLAN.md
 
 **Progress:**
 ```
@@ -24,7 +24,7 @@ Phase 2: Core Navigation System            [█████] 3/3 plans complete 
 Phase 3: Content Architecture              [█████] 4/4 plans complete ✓
 Phase 4: Visual Storytelling               [█████] 3/3 plans complete ✓
 Phase 5: Responsive & Performance          [█████] 7/7 plans complete ✓
-Phase 5.5: Presentation Visual Design      [██░░░] 2/5 in progress
+Phase 5.5: Presentation Visual Design      [████░] 4/5 in progress
 Phase 6: Decision Routing                  [░░░░░] 0/? pending
 ```
 
@@ -102,6 +102,10 @@ Phase 6: Decision Routing                  [░░░░░] 0/? pending
 | 2026-01-29 | BentoGrid supports 4 item types (image, text, stat, quote) | Japanese-inspired modular layout with 3 sizes (small, medium, large) |
 | 2026-01-29 | Barrel export pattern for layout components | Clean imports via components/presentation/layouts/index.ts |
 | 2026-01-29 | SlideData interface extended with layout-specific props | Supports fullBleed, asymmetric, bento, centered, imageBackground layouts |
+| 2026-01-29 | MiniSlideData interface extended with full layout properties | Enables all layout components from Plan 02 in mini-stories, consistent API |
+| 2026-01-29 | Special rendering logic for stats slides in mini-stories | Large number displays more impactful than CenteredMinimal component |
+| 2026-01-29 | Image distribution: 2 in Social Media, 1 in Corporate Lunch (2 uses), 3 in Weekday Bar | Balanced visual variety, reuses main-story images where thematically appropriate, 8 total unique images |
+| 2026-01-29 | Switch statement rendering pattern for mini-stories | Proven pattern from main story, easy to understand and extend |
 ### Active Todos
 
 - [x] Phase 1: Foundation & Migration (3 plans)
@@ -137,8 +141,8 @@ Phase 6: Decision Routing                  [░░░░░] 0/? pending
 **Archive backup file:**
 - `app/archive/page.tsx.backup` can be removed after verification complete
 
-**Last Session:** 2026-01-29 - Phase 5.5 Plan 02 Complete
-**Stopped at:** Completed 05.5-02-PLAN.md - Layout Component Library
+**Last Session:** 2026-01-29 - Phase 5.5 Plan 04 Complete
+**Stopped at:** Completed 05.5-04-PLAN.md - Mini-Story Visual Redesign
 **Resume file:** None
 
 **Context for Next Session:**
@@ -153,7 +157,7 @@ Phase 6: Decision Routing                  [░░░░░] 0/? pending
   - Plan 05 ✓: Mini Story 2: Corporate Lunch Machine (7 slides)
   - Plan 06 ✓: Mini Story 3: Weekday Bar Activation (7 slides)
   - Plan 07 ✓: Responsive optimization complete
-- **Phase 5.5 Progress (2 of 5 plans complete):**
+- **Phase 5.5 Progress (4 of 5 plans complete):**
   - Plan 01 ✓: Foundation - Fixed content truncation, refined color system, prepared 8 images (58MB)
   - Plan 02 ✓: Layout Component Library - 5 production-ready layout components with Japanese aesthetic
 - **Visual Design Foundation:**
@@ -176,7 +180,11 @@ Phase 6: Decision Routing                  [░░░░░] 0/? pending
 - All visualizations use individual Lucide icon imports (tree-shaking optimized)
 - Bundle optimized: CSS-only or Framer Motion, no chart libraries
 - Animation timing: 100ms stagger for bullets, 300ms duration
-- Ready for Phase 5.5 Plan 03: Main Story Visual Redesign (apply layouts to 11 slides)
+  - Plan 03 ✓: Main Story Visual Redesign - 11 slides with creative layouts and 5 images
+  - Plan 04 ✓: Mini-Story Visual Redesign - 18 slides with layouts, 6 image uses (3 new + 3 reused)
+- **All 29 presentation slides redesigned** with creative layouts and premium imagery
+- **8 unique images integrated:** 5 in main story + 3 new in mini-stories = 14 total placements
+- Ready for Phase 5.5 Plan 05: Final Polish (animations, performance, accessibility)
 
 **Quick Start Commands:**
 ```bash
