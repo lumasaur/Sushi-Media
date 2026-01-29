@@ -11,284 +11,126 @@ export interface MiniSlideData {
   subtitle?: string
   bullets: Array<string | { main: string; sub: string[] }>
   background?: string
-  layout?: 'content' | 'title'
+  layout?: 'content' | 'title' | 'fullBleed' | 'asymmetric' | 'imageBackground' | 'centered'
+  imageSrc?: string
+  imageAlt?: string
+  overlayOpacity?: number
+  textPosition?: 'center' | 'left' | 'right'
+  imagePosition?: 'left' | 'right'
+  splitRatio?: '60-40' | '70-30' | '50-50'
+  overlayType?: 'gradient-bottom' | 'gradient-left' | 'full-dark' | 'blur-bottom'
+  overlayIntensity?: 'light' | 'medium' | 'heavy'
+  contentPosition?: 'center' | 'left' | 'right' | 'bottom'
 }
 
 export const weekdayBarSlides: MiniSlideData[] = [
-  // Slide 3.1: January Foundation - What's Working
+  // Slide 0: Mini-story title
   {
     id: 0,
-    title: 'January Foundation',
-    subtitle: 'What\'s working already',
-    bullets: [
-      {
-        main: 'Mix & Mingle Format:',
-        sub: [
-          'Every Thursday event structure',
-          '$20 entry creates premium positioning',
-          'Consistent schedule builds expectations'
-        ]
-      },
-      {
-        main: 'Social Hour Menu:',
-        sub: [
-          '$8 signature snacks (accessible premium)',
-          'Drink specials drive bar revenue',
-          'Menu tested and operational'
-        ]
-      },
-      {
-        main: '"Ami Sushi Lounge" Positioning:',
-        sub: [
-          'Bar transforms into social venue',
-          'Different identity from dinner service',
-          'Attracts new customer segment'
-        ]
-      }
-    ],
-    background: 'bg-gradient-to-b from-sumi to-sumi-light',
-    layout: 'content'
+    title: 'Weekday Bar Activation',
+    subtitle: 'Transforming empty evenings into revenue events',
+    layout: 'fullBleed',
+    imageSrc: '/images/main-story/bar-patrons.png',
+    imageAlt: 'Warm bar atmosphere with engaged patrons',
+    overlayOpacity: 0.45,
+    textPosition: 'center',
+    bullets: []
   },
 
-  // Slide 3.2: February 2026 Full Calendar
+  // Slide 1: January Success
   {
     id: 1,
-    title: 'February 2026 Full Calendar',
-    subtitle: '12-13 events validating the model',
+    title: 'January Proved the Model',
+    subtitle: 'Events drive weekday traffic',
+    layout: 'asymmetric',
+    imageSrc: '/images/mini-story/mix-mingle.png',
+    imageAlt: 'Mix & Mingle networking event',
+    imagePosition: 'right',
+    splitRatio: '60-40',
     bullets: [
-      {
-        main: 'Recurring Programs:',
-        sub: [
-          '4 Mix & Mingle Thursdays',
-          '1 Tech Tuesday (first Tuesday)',
-          '2 DJ Nights (bi-weekly Saturdays)',
-          '1 Broadway Tunes + Mix & Mingle combo'
-        ]
-      },
-      {
-        main: 'Special Events:',
-        sub: [
-          'Super Bowl LX (Feb 8) - biggest revenue event',
-          'Lunar New Year (Feb 17)',
-          'Galentine\'s Day (Feb 12)',
-          'Sake Brand Takeover (Feb 18)',
-          'Friday Night Knicks (Feb 20)',
-          'Whole Tuna Demo (maybe)'
-        ]
-      },
-'Total: 12-13 events testing different formats and customer segments'
-    ],
-    background: 'bg-gradient-to-b from-sumi to-sumi-light',
-    layout: 'content'
+      'Mix & Mingle Thursdays established consistent draw',
+      'DJ nights generated bar revenue spikes',
+      'Broadway Tunes found its audience',
+      'Social Hour menu proved profitable'
+    ]
   },
 
-  // Slide 3.3: Recurring Event Programming
+  // Slide 2: Event Categories
   {
     id: 2,
-    title: 'Recurring Event Programming',
-    subtitle: 'Building predictable weekday traffic',
-    bullets: [
-      {
-        main: 'Mix & Mingle (Every Thursday):',
-        sub: [
-          'Anchor weekly program',
-          '$20 entry with premium snacks',
-          'Different themes each week (Galentine\'s, Broadway pairing)',
-          'Builds Thursday habit'
-        ]
-      },
-      {
-        main: 'Tech Tuesday (First Tuesday):',
-        sub: [
-          'New monthly program launching February',
-          'Targets local tech/startup community',
-          'Lower barrier to entry than Thursday events'
-        ]
-      },
-      {
-        main: 'Broadway Tunes (Monthly):',
-        sub: [
-          'Niche event with dedicated audience',
-          'Can pair with Mix & Mingle for dual appeal',
-          'Cultural positioning'
-        ]
-      },
-      {
-        main: 'DJ Nights (Bi-weekly Saturdays):',
-        sub: [
-          'Weekend bar activation',
-          'Builds on weekday momentum',
-          'Valentine\'s Day special edition'
-        ]
-      }
-    ],
+    title: 'Event Programming',
+    subtitle: 'Multiple formats for different audiences',
+    layout: 'content',
     background: 'bg-gradient-to-b from-sumi to-sumi-light',
-    layout: 'content'
+    bullets: [
+      { main: 'Weekly Recurring', sub: ['Mix & Mingle every Thursday', 'Creates habitual attendance'] },
+      { main: 'Monthly Specials', sub: ['Tech Tuesday', 'Broadway Tunes', 'Sake Education'] },
+      { main: 'Cultural & Sports', sub: ['Lunar New Year', 'Super Bowl', 'Knicks viewing parties'] }
+    ]
   },
 
-  // Slide 3.4: Special February Events
+  // Slide 3: Happy Hour Focus
   {
     id: 3,
-    title: 'Special February Events',
-    subtitle: 'One-time programming testing demand',
+    title: 'Happy Hour Optimization',
+    subtitle: 'Weekday 4-7pm opportunity',
+    layout: 'imageBackground',
+    imageSrc: '/images/mini-story/happy-hour.png',
+    imageAlt: 'Happy hour drinks and atmosphere',
+    overlayType: 'gradient-left',
+    overlayIntensity: 'heavy',
+    contentPosition: 'right',
     bullets: [
-      {
-        main: 'Super Bowl LX (Feb 8):',
-        sub: [
-          'Biggest revenue event of the month',
-          '$8K-12K target',
-          'Capacity stress test',
-          'Watch party format validation'
-        ]
-      },
-      {
-        main: 'Lunar New Year (Feb 17):',
-        sub: [
-          'Cultural celebration aligns with brand',
-          'Special menu items',
-          'Family and community focus'
-        ]
-      },
-      {
-        main: 'Galentine\'s Day (Feb 12):',
-        sub: [
-          'Mix & Mingle with Valentine\'s theme',
-          '$30 special pricing',
-          'Targets female friend groups'
-        ]
-      },
-      {
-        main: 'Sake Brand Takeover (Feb 18):',
-        sub: [
-          'Education event with partner brand',
-          'Premium positioning',
-          'Sake knowledge as attraction'
-        ]
-      },
-      {
-        main: 'Friday Night Knicks (Feb 20):',
-        sub: [
-          'Sports viewing test',
-          'Different format from Super Bowl',
-          'Local team loyalty play'
-        ]
-      }
-    ],
-    background: 'bg-gradient-to-b from-sumi to-sumi-light',
-    layout: 'content'
+      'Social Hour menu drives traffic',
+      'Transition from happy hour to dinner',
+      'Bar revenue during traditionally slow hours',
+      'Partner DJs bring their audiences'
+    ]
   },
 
-  // Slide 3.5: Updated Social Hour Menu & Pricing
+  // Slide 4: February Programming
   {
     id: 4,
-    title: 'Social Hour Menu & Pricing',
-    subtitle: 'Accessible premium model',
-    bullets: [
-      {
-        main: '$8 Signature Snacks:',
-        sub: [
-          'Premium quality at accessible price point',
-          'Shareables encourage social interaction',
-          'Bar revenue focus (food drives drinks)'
-        ]
-      },
-      {
-        main: 'Social Sips Pricing:',
-        sub: [
-          'Drink specials drive bar traffic',
-          'Competitive with casual dining',
-          'Premium cocktails remain full price'
-        ]
-      },
-      {
-        main: 'Event Entry Pricing:',
-        sub: [
-          '$20 Mix & Mingle standard',
-          '$30 Galentine\'s Special',
-          'Entry includes snacks, creates commitment'
-        ]
-      },
-'Strategy: Low barrier to entry, high value perception'
-    ],
+    title: 'February Calendar',
+    subtitle: '13 events across the month',
+    layout: 'content',
     background: 'bg-gradient-to-b from-sumi to-sumi-light',
-    layout: 'content'
+    bullets: [
+      '4 Mix & Mingle Thursdays (including Galentine\'s)',
+      '2 DJ Nights (Valentine\'s Day special)',
+      '1 Super Bowl watch party (biggest revenue event)',
+      '1 Lunar New Year celebration',
+      '1 Tech Tuesday launch',
+      'Multiple combo events'
+    ]
   },
 
-  // Slide 3.6: Event Marketing Timeline
+  // Slide 5: Revenue Targets
   {
     id: 5,
-    title: 'Event Marketing Timeline',
-    subtitle: 'Standard promotion cycle',
-    bullets: [
-      {
-        main: 'Standard Events (10-14 day cycle):',
-        sub: [
-          'Day 1: Event announced on social',
-          'Day 3-5: Second wave promotion',
-          'Day 7: One week reminder',
-          'Day 10-12: Final push',
-          'Day of: Real-time Stories coverage'
-        ]
-      },
-      {
-        main: 'Super Bowl Exception:',
-        sub: [
-          '2+ week promotion cycle',
-          'Higher stakes require longer runway',
-          'Multiple touchpoints needed for big event'
-        ]
-      },
-      {
-        main: 'Partner Amplification:',
-        sub: [
-          'DJs share to their networks',
-          'Artists promote their performance',
-          'Leverages existing audiences'
-        ]
-      },
-'Social Media Engine drives all event marketing'
-    ],
-    background: 'bg-gradient-to-b from-sumi to-sumi-light',
-    layout: 'content'
+    title: 'Revenue Opportunity',
+    subtitle: 'February target: $25K-35K from events',
+    layout: 'centered',
+    background: 'bg-premium-dark',
+    bullets: []
   },
 
-  // Slide 3.7: February Revenue Targets & Tracking
+  // Slide 6: Summary
   {
     id: 6,
-    title: 'February Revenue Targets',
-    subtitle: '$25K-35K from events alone',
+    title: 'The Foundation is Set',
+    subtitle: 'January validated, February scales',
+    layout: 'imageBackground',
+    imageSrc: '/images/main-story/bar-patrons.png',
+    imageAlt: 'Successful bar atmosphere',
+    overlayType: 'full-dark',
+    overlayIntensity: 'medium',
+    contentPosition: 'center',
     bullets: [
-      {
-        main: 'Expected Revenue by Event Type:',
-        sub: [
-          'Super Bowl: $8K-12K (capacity event)',
-          'Mix & Mingle (4x): $1.5-2K each = $6-8K',
-          'DJ Nights (2x): $2-3K each = $4-6K',
-          'Special events: $1-2K each = $5-8K',
-          'Total target: $25K-35K'
-        ]
-      },
-      {
-        main: 'Tracking Metrics:',
-        sub: [
-          'Event attendance vs. target',
-          'Bar revenue: event nights vs. normal nights',
-          'Customer retention (repeat attendees)',
-          'Per-person spend average'
-        ]
-      },
-      {
-        main: 'Success Criteria:',
-        sub: [
-          'Hit 70%+ of revenue targets',
-          'Identify 2-3 winning formats to repeat',
-          'Build email list of 200+ event attendees',
-          'February data informs March planning'
-        ]
-      },
-'Simple tracking: One spreadsheet, 5 min per event'
-    ],
-    background: 'bg-gradient-to-b from-sumi to-sumi-light',
-    layout: 'content'
+      'Event infrastructure proven',
+      'Partner relationships established',
+      'Social media promotion workflow active',
+      'Ready to scale in February and beyond'
+    ]
   }
 ]
