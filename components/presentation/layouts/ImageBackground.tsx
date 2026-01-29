@@ -74,7 +74,7 @@ export function ImageBackground({
 
       {/* Content */}
       <div className={`absolute inset-0 flex flex-col ${positionClasses[contentPosition]} p-8 md:p-16`}>
-        <div className="max-w-4xl space-y-6">
+        <div className="max-w-4xl space-y-6 bg-sumi/40 backdrop-blur-md rounded-2xl p-8 md:p-10 border border-washi/10">
           {/* Title */}
           <motion.h2
             initial={prefersReducedMotion ? { opacity: 1, y: 0 } : { opacity: 0, y: 20 }}

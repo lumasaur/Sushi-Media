@@ -11,7 +11,7 @@ export interface FullBleedHeroProps {
   title: string
   subtitle?: string
   overlayOpacity?: number  // 0.3 to 0.7, default 0.4
-  textPosition?: 'center' | 'bottom-left' | 'bottom-center'
+  textPosition?: 'center' | 'bottom-left' | 'bottom-center' | 'top-center'
   titleSize?: 'xl' | '2xl' | '3xl'  // Maps to text-5xl, text-6xl, text-7xl
 }
 
@@ -38,7 +38,8 @@ export function FullBleedHero({
   const textPositionClasses = {
     'center': 'items-center justify-center text-center',
     'bottom-left': 'items-end justify-start text-left pb-16 pl-8 md:pb-24 md:pl-16',
-    'bottom-center': 'items-end justify-center text-center pb-16 md:pb-24'
+    'bottom-center': 'items-end justify-center text-center pb-16 md:pb-24',
+    'top-center': 'items-start justify-center text-center pt-[30vh]'
   }
 
   return (

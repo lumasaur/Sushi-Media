@@ -74,7 +74,7 @@ export interface SlideData {
   splitRatio?: '60-40' | '70-30' | '50-50' | '40-60'
   overlayType?: 'gradient-bottom' | 'gradient-left' | 'full-dark' | 'blur-bottom'
   overlayOpacity?: number
-  textPosition?: 'center' | 'bottom-left' | 'bottom-center'
+  textPosition?: 'center' | 'bottom-left' | 'bottom-center' | 'top-center'
   titleSize?: 'xl' | '2xl' | '3xl'
   contentPosition?: 'center' | 'left' | 'right' | 'bottom'
   overlayIntensity?: 'light' | 'medium' | 'heavy'
@@ -83,12 +83,16 @@ export interface SlideData {
   bentoItems?: BentoItem[]
   bentoColumns?: 2 | 3 | 4
   bentoGap?: 'tight' | 'normal' | 'loose'
+  dateTokens?: {
+    weekly: string
+    monthly: string
+  }
 }
 
 export const sections = [
   { id: 'intro', name: 'Introduction', slides: [0] },
   { id: 'systems', name: 'Three Systems', slides: [1, 2, 3, 4, 5, 6] },  // Opportunity + Overview + What Changes + 3 system deep dives
-  { id: 'execution', name: 'Execution', slides: [7, 8, 9, 10] }     // Timeline + February + Tracking + Next Steps
+  { id: 'execution', name: 'Execution', slides: [7, 8, 9, 10, 11] }     // Timeline + February + Future + Operating + Next Steps
 ]
 
 
@@ -188,7 +192,7 @@ export const slides: SlideData[] = [
     imageSrc: '/images/hero/sushi-platter.png',
     imageAlt: 'Premium sushi platter showcasing fresh nigiri and rolls',
     overlayOpacity: 0.6,
-    textPosition: 'center'
+    textPosition: 'top-center' // Title raised to 30% from top, above sushi plate
   },
 
   // Slide 1: The Opportunity
@@ -214,9 +218,10 @@ export const slides: SlideData[] = [
     layout: 'imageBackground',
     imageSrc: '/images/main-story/empty-space.png',
     imageAlt: 'Empty restaurant seating during off-peak hours',
-    overlayType: 'gradient-left',
+    overlayType: 'blur-bottom', // Changed to blur-bottom or we might need a custom Type for "blur box"
     overlayIntensity: 'heavy',
-    contentPosition: 'right'
+    contentPosition: 'center', // Changed to center, layout component will need to handle the box
+    accentText: 'blur-box' // Signal to component to use the blur box style
   },
 
   // Slide 2: Three Systems We're Building
@@ -224,36 +229,36 @@ export const slides: SlideData[] = [
     id: 2,
     section: 'systems',
     title: 'Three Systems We\'re Building',
-    subtitle: 'Each reinforces the others — a revenue flywheel',
+    subtitle: 'A unified strategy to capture untapped revenue',
     bullets: [
       {
         main: 'Social Media Engine',
         sub: [
-          'We control this completely',
-          'Starts immediately, costs nothing',
-          'Drives all other initiatives through consistent promotion',
-          'Timeline: Operational this week'
+          'The megaphone that drives awareness',
+          'Objective: Build an audience we own',
+          'Why: Consistent visibility fills seats'
         ]
       },
       {
         main: 'Corporate Lunch Pipeline',
         sub: [
-          'Group ordering + direct outreach to office complexes',
-          'Fills lunch hours with recurring revenue',
-          'Timeline: Outreach starts week 2'
+          'The recurring revenue machine',
+          'Objective: Lock in predictable weekday sales',
+          'Why: Leverages local density & office demand'
         ]
       },
       {
         main: 'Weekday Bar Activation',
         sub: [
-          'Happy hour + event programming',
-          'Fills weekday evening capacity',
-          'Timeline: Test programming month 1-2'
+          'The atmosphere builder',
+          'Objective: Create magnetic evening vibes',
+          'Why: Transforms "slow nights" into destinations'
         ]
       }
     ],
     background: 'bg-premium-dark',
-    layout: 'systems'
+    layout: 'systems',
+    textPosition: 'center'
   },
 
   // Slide 3: What Changes, What Doesn't
@@ -261,10 +266,11 @@ export const slides: SlideData[] = [
     id: 3,
     section: 'systems',
     title: 'What Changes, What Doesn\'t',
-    subtitle: 'Preserving what works, adding what\'s missing',
+    subtitle: 'Evolution, not revolution',
     bullets: [],
     background: 'bg-gradient-to-b from-sumi to-sumi-light',
     layout: 'two-column',
+    textPosition: 'center',
     twoColumns: {
       leftTitle: 'What Stays the Same',
       leftItems: [
@@ -275,9 +281,10 @@ export const slides: SlideData[] = [
       ],
       rightTitle: 'What\'s New',
       rightItems: [
-        'Systematic marketing (vs. ad hoc posting)',
-        'Corporate outreach (vs. waiting for walk-ins)',
-        'Weekday programming (vs. hoping for traffic)'
+        'Systematic vs. Ad-hoc Marketing',
+        'Proactive vs. Passive Sales',
+        'Programmed vs. Random Evenings',
+        'Data-driven vs. Intuition-based'
       ]
     }
   },
@@ -287,31 +294,31 @@ export const slides: SlideData[] = [
     id: 4,
     section: 'systems',
     title: 'Social Media Engine',
-    subtitle: 'First priority — we control it completely',
+    subtitle: 'First priority — getting people in the door',
     bullets: [
       {
         main: 'Why First:',
         sub: [
-          'Zero cost to implement',
+          'Immediate impact on visibility',
           'Foundation for all other initiatives',
           'Can start today'
         ]
       },
       {
-        main: 'The System:',
+        main: 'The Strategy:',
         sub: [
-          'Structured content calendar (5 pillars)',
-          'Consistent posting schedule (4-6x/week)',
-          'Event promotion (2-week cycle)',
-          'Partner amplification (DJs, artists share to their networks)'
+          'Brand Direction: We work with Andreia',
+          'She provides the visual identity & vibe',
+          'We build the plan & messages (AI-assisted)',
+          'Consistent, high-quality output'
         ]
       },
       {
-        main: 'Your Role:',
+        main: 'Why It Will Work:',
         sub: [
-          'Content capture opportunities through your network',
-          'Event promotion through your connections',
-          'Partnership activation'
+          'Strong existing network foundation',
+          'Access to new outlets via Andreia',
+          'Product is already premium—just needs amplification'
         ]
       }
     ],
@@ -320,6 +327,7 @@ export const slides: SlideData[] = [
     imageAlt: 'Smartphone showing Instagram post of sushi',
     imagePosition: 'left',
     splitRatio: '40-60',
+    contentPosition: 'center',
     miniStoryLink: 'social-media'
   },
 
@@ -360,7 +368,8 @@ export const slides: SlideData[] = [
     imageSrc: '/images/main-story/office-park.png',
     imageAlt: 'Modern office park buildings',
     imagePosition: 'right',
-    splitRatio: '60-40',
+    splitRatio: '50-50',
+    contentPosition: 'center',
     miniStoryLink: 'corporate-lunch'
   },
 
@@ -374,9 +383,9 @@ export const slides: SlideData[] = [
       {
         main: 'Why Third:',
         sub: [
-          'Requires programming coordination',
-          'Builds on January event success',
-          'Tests different customer segments'
+          'Creates the "Vibe" that drives return visits',
+          'Gives people a reason to come back',
+          'Builds community beyond just food'
         ]
       },
       {
@@ -402,41 +411,42 @@ export const slides: SlideData[] = [
     imageAlt: 'Warm atmosphere with bar patrons enjoying drinks',
     imagePosition: 'left',
     splitRatio: '40-60',
+    contentPosition: 'center',
     miniStoryLink: 'weekday-bar'
   },
 
-  // Slide 7: First 30 Days Timeline
+  // Slide 7: Execution Roadmap (formerly First 30 Days)
   {
     id: 7,
     section: 'execution',
-    title: 'First 30 Days',
-    subtitle: 'Execution Calendar',
+    title: 'Execution Roadmap',
+    subtitle: 'Three phases to sustained growth',
     bullets: [
       {
-        main: 'Week 1:',
+        main: 'Phase 1: Setup & Creation',
         sub: [
-          'Social media batch content creation session',
-          'Schedule 2 weeks of posts in Meta Business Suite',
-          'Enable Toast group ordering',
-          'Create office complex target list'
+          'Strategy Alignment: Define branding & voice with Andreia',
+          'Production: Master Schedule created (2-3 months out)',
+          'Deadline: Finalized 2 weeks prior to month start',
+          'Sales: Build office target lists & enable group ordering'
         ]
       },
       {
-        main: 'Week 2-3:',
+        main: 'Phase 2: Launch & Learn',
         sub: [
-          'Daily Stories routine established',
-          'Corporate warm intro outreach (3-5 contacts)',
-          'First event promotion cycle (2-week timeline)',
-          'DoorDash Business account setup'
+          'Marketing: Daily stories & targeted posts begin',
+          'Sales: Corporate warm intros & sample runs',
+          'Events: February programming execution',
+          'Ops: DoorDash Business setup'
         ]
       },
       {
-        main: 'Week 4:',
+        main: 'Phase 3: Optimize & Scale',
         sub: [
-          'Performance review: What\'s working?',
-          'First corporate sample deliveries',
-          'Event attendance tracking begins',
-          'Adjust and iterate based on data'
+          'Review: Performance data breakdown',
+          'Refine: Adjust event mix based on attendance',
+          'Expand: Add new corporate partners',
+          'Routine: Monthly planning cycle operational'
         ]
       }
     ],
@@ -444,62 +454,110 @@ export const slides: SlideData[] = [
     layout: 'timeline'
   },
 
-  // Slide 8: February 2026 Programming
+  // Slide 8: Feb 2026 Programming Sample
   {
     id: 8,
     section: 'execution',
-    title: 'February 2026 Programming',
-    subtitle: '13 events validating the model',
+    title: 'Sample Feb 2026 Programming',
+    subtitle: 'Strategic mix of recurring & special events',
     bullets: [
-      '4 Mix & Mingle Thursdays (including Galentine\'s theme)',
-      '1 Tech Tuesday (new monthly program)',
-      '1 Super Bowl watch party (biggest revenue event)',
-      '1 Lunar New Year celebration',
-      '2 DJ Nights (including Valentine\'s Day)',
-      '1 Broadway Tunes + Mix & Mingle combo',
-      '1 Sake Brand Takeover education event',
-      '1 Friday Night Knicks viewing party',
-      '1 Whole Tuna Demo (maybe)'
+      'Mix & Mingle Thursdays: The consistent weekly anchor',
+      'Tech Tuesday: New industry-specific monthly pilot',
+      'Super Bowl Watch Party: High-revenue tentpole event',
+      'Lunar New Year & Valentine\'s: Cultural & seasonal captures',
+      'Friday Night Knicks: Low-lift sports viewing',
+      'Sake Education: Brand partnership activation'
     ],
     background: 'bg-gradient-to-b from-sumi to-sumi-light',
-    layout: 'calendar'
+    layout: 'calendar',
+    contentPosition: 'right' // Move content to right, image to left
   },
 
-  // Slide 9: How We Track Success
+  // Slide 9: Future Programming (New Slide)
   {
     id: 9,
     section: 'execution',
-    title: 'How We Track Success',
-    subtitle: 'Simple dashboard approach',
-    bullets: [
-      'Weekly 5-minute check-ins',
-      'Monthly 15-minute reviews',
-      'Data-driven adjustments, not guessing'
+    title: 'Future Programming',
+    subtitle: 'Capturing seasonality and culture',
+    bullets: [],
+    layout: 'bento',
+    bentoColumns: 3,
+    bentoItems: [
+      {
+        type: 'text',
+        title: 'March',
+        description: 'March Madness viewing parties, St. Patrick\'s delivery specials, Spring menu teaser',
+        size: 'medium'
+      },
+      {
+        type: 'text',
+        title: 'April',
+        description: 'Cherry Blossom festival tie-ins, Tax Day relief specials, Outdoor patio launch party',
+        size: 'medium'
+      },
+      {
+        type: 'text',
+        title: 'May',
+        description: 'Cinco de Mayo fusion event, Mother\'s Day brunch/lunch focus, Memorial Day weekend kickoff',
+        size: 'medium'
+      }
     ],
-    background: 'bg-gradient-to-b from-sumi to-sumi-light',
-    layout: 'metrics'
+    background: 'bg-premium-dark'
   },
 
-  // Slide 10: Next Steps CTA
+  // Slide 10: How We Operate (formerly Metrics)
   {
     id: 10,
     section: 'execution',
+    title: 'How We Will Operate',
+    subtitle: 'Data-driven decision making',
+    bullets: [
+      'Leverage Toast POS analytics for deep insights',
+      'Analyze dish performance & profitability',
+      'Review event impact on overall business trends',
+      'Adjust strategy based on real sales data'
+    ],
+    background: 'bg-gradient-to-b from-sumi to-sumi-light',
+    layout: 'metrics',
+    // "Double the times provided" -> assuming referring to meeting cadence
+    dateTokens: {
+      weekly: '10-minute check-ins* (Suggested)',
+      monthly: '30-minute reviews* (Suggested)'
+    }
+  },
+
+  // Slide 11: Next Steps & Playbooks
+  {
+    id: 11,
+    section: 'execution',
     title: 'Next Steps',
-    subtitle: 'Three Systems. One Strategy. Ready to Execute.',
+    subtitle: 'Ready to Execute',
     bullets: [],
     layout: 'centered',
     background: 'bg-premium-dark',
     ctas: [
       {
         label: 'Discuss Strategy',
-        description: 'Schedule conversation with stakeholders',
+        description: 'Schedule conversation',
         href: '#contact',
         primary: true
       },
       {
-        label: 'Review Tactical Plan',
-        description: 'Dive into implementation details',
-        href: '/strategy-review/implementation-proposal',
+        label: 'Social Media Playbook',
+        description: 'Deep dive strategy',
+        href: '/presentation/social-media',
+        primary: false
+      },
+      {
+        label: 'Corporate Lunch Playbook',
+        description: 'Operations detail',
+        href: '/presentation/corporate-lunch',
+        primary: false
+      },
+      {
+        label: 'Weekday Bar Playbook',
+        description: 'Event plans',
+        href: '/presentation/weekday-bar',
         primary: false
       }
     ]
