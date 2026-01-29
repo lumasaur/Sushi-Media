@@ -1,6 +1,7 @@
 'use client'
 
 import React from 'react'
+import Image from 'next/image'
 import { motion } from 'framer-motion'
 import {
   SlideContainer,
@@ -15,6 +16,7 @@ import {
   CenteredMinimal,
   ImageBackground
 } from '@/components/presentation/layouts'
+import { Users, Calendar, TrendingUp, LayoutTemplate } from 'lucide-react'
 import { useSlideNavigation, useTouchGestures } from '@/hooks'
 import { slides, systemsData, timelineData, februaryEventsData, februaryRevenueTarget, metricsData } from '@/lib/slides/content'
 
@@ -131,7 +133,7 @@ export default function PresentationPage() {
       {slides.map((slide) => {
         const usesCustomLayout = ['fullBleed', 'asymmetric', 'imageBackground'].includes(slide.layout || '')
         const newLayoutContent = renderSlideContent(slide)
-        
+
         return (
           <SlideContainer
             key={slide.id}
@@ -148,237 +150,309 @@ export default function PresentationPage() {
                 <div className="max-w-4xl w-full">
                   {/* Title slide layout */}
                   {slide.layout === 'title' && (
-                <div className="text-center text-washi">
-                  <h1 className="text-5xl md:text-6xl font-bold font-cormorant">{slide.title}</h1>
-                </div>
-              )}
-
-              {/* Content slide layout */}
-              {slide.layout === 'content' && (
-                <div className="text-washi">
-                  <h2 className="text-4xl md:text-5xl font-bold mb-4 font-cormorant">{slide.title}</h2>
-                  {slide.subtitle && (
-                    <p className="text-xl md:text-2xl text-hai mb-8">{slide.subtitle}</p>
-                  )}
-
-                  {/* Show revenue chart on Empty Hours slide (id 1) */}
-                  {slide.id === 1 && (
-                    <div className="mb-10">
-                      <RevenueChart />
+                    <div className="text-center text-washi">
+                      <h1 className="text-5xl md:text-6xl font-bold font-cormorant">{slide.title}</h1>
                     </div>
                   )}
 
-                  <motion.ul
-                    variants={containerVariants}
-                    initial="hidden"
-                    animate="visible"
-                    className="space-y-4 text-lg md:text-xl"
-                  >
-                    {slide.bullets.map((bullet, i) => (
-                      <motion.li
-                        key={i}
-                        variants={itemVariants}
-                        className="flex items-start"
+                  {/* Content slide layout */}
+                  {slide.layout === 'content' && (
+                    <div className="text-washi">
+                      <h2 className="text-4xl md:text-5xl font-bold mb-4 font-cormorant">{slide.title}</h2>
+                      {slide.subtitle && (
+                        <p className="text-xl md:text-2xl text-hai mb-8">{slide.subtitle}</p>
+                      )}
+
+                      {/* Show revenue chart on Empty Hours slide (id 1) */}
+                      {slide.id === 1 && (
+                        <div className="mb-10">
+                          <RevenueChart />
+                        </div>
+                      )}
+
+                      <motion.ul
+                        variants={containerVariants}
+                        initial="hidden"
+                        animate="visible"
+                        className="space-y-4 text-lg md:text-xl"
                       >
-                        <span className="text-beni mr-3 mt-1">•</span>
-                        {typeof bullet === 'string' ? (
-                          <span>{bullet}</span>
-                        ) : (
-                          <div>
-                            <div>{bullet.main}</div>
-                            <ul className="mt-2 ml-4 space-y-1 text-base md:text-lg text-hai">
-                              {bullet.sub.map((subBullet, j) => (
-                                <li key={j} className="flex items-start">
-                                  <span className="text-beni mr-2">◦</span>
-                                  <span>{subBullet}</span>
+                        {slide.bullets.map((bullet, i) => (
+                          <motion.li
+                            key={i}
+                            variants={itemVariants}
+                            className="flex items-start"
+                          >
+                            <span className="text-beni mr-3 mt-1">•</span>
+                            {typeof bullet === 'string' ? (
+                              <span>{bullet}</span>
+                            ) : (
+                              <div>
+                                <div>{bullet.main}</div>
+                                <ul className="mt-2 ml-4 space-y-1 text-base md:text-lg text-hai">
+                                  {bullet.sub.map((subBullet, j) => (
+                                    <li key={j} className="flex items-start">
+                                      <span className="text-beni mr-2">◦</span>
+                                      <span>{subBullet}</span>
+                                    </li>
+                                  ))}
+                                </ul>
+                              </div>
+                            )}
+                          </motion.li>
+                        ))}
+                      </motion.ul>
+
+                      {/* Mini-story deep dive CTA */}
+                      {slide.miniStoryLink && (
+                        <div className="mt-8 text-center">
+                          <a
+                            href={`/presentation/${slide.miniStoryLink}?returnSlide=${slide.id}`}
+                            className="inline-flex items-center px-6 py-3 bg-kincha/20 border border-kincha/40 rounded-lg text-kincha hover:bg-kincha/30 transition-colors"
+                          >
+                            Explore the full playbook
+                            <svg className="ml-2 w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
+                            </svg>
+                          </a>
+                        </div>
+                      )}
+                    </div>
+                  )}
+
+                  {/* Two-column layout (What Changes slide) */}
+                  {slide.layout === 'two-column' && slide.twoColumns && (
+                    <div className="text-washi">
+                      <h2 className="text-4xl md:text-5xl font-bold mb-4 text-center font-cormorant">{slide.title}</h2>
+                      {slide.subtitle && (
+                        <p className="text-xl md:text-2xl text-hai mb-12 text-center">{slide.subtitle}</p>
+                      )}
+                      <div className="grid md:grid-cols-2 gap-8 md:gap-12 max-w-6xl mx-auto">
+                        {/* Left column - Preserve (Kincha/Gold) */}
+                        <div className="bg-kincha/10 rounded-lg p-8 border-l-4 border-kincha">
+                          <div className="inline-block bg-kincha text-sumi px-3 py-1 rounded text-sm font-bold uppercase tracking-wider mb-6">
+                            What We Preserve
+                          </div>
+                          <h3 className="text-2xl font-semibold mb-6 text-washi">{slide.twoColumns.leftTitle}</h3>
+                          <ul className="space-y-4">
+                            {slide.twoColumns.leftItems.map((item, i) => (
+                              <li key={i} className="flex items-start">
+                                <span className="text-kincha mr-3 mt-1.5">•</span>
+                                <span className="text-lg text-washi/90">{item}</span>
+                              </li>
+                            ))}
+                          </ul>
+                        </div>
+                        {/* Right column - Change (Beni/Red) */}
+                        <div className="bg-beni/10 rounded-lg p-8 border-l-4 border-beni">
+                          <div className="inline-block bg-beni text-washi px-3 py-1 rounded text-sm font-bold uppercase tracking-wider mb-6">
+                            What Changes
+                          </div>
+                          <h3 className="text-2xl font-semibold mb-6 text-washi">{slide.twoColumns.rightTitle}</h3>
+                          <ul className="space-y-4">
+                            {slide.twoColumns.rightItems.map((item, i) => (
+                              <li key={i} className="flex items-start">
+                                <span className="text-beni mr-3 mt-1.5">•</span>
+                                <span className="text-lg text-washi/90">{item}</span>
+                              </li>
+                            ))}
+                          </ul>
+                        </div>
+                      </div>
+                    </div>
+                  )}
+
+                  {/* Systems diagram layout */}
+                  {slide.layout === 'systems' && (
+                    <div className="text-washi">
+                      <h2 className="text-4xl md:text-5xl font-bold mb-4 text-center font-cormorant">{slide.title}</h2>
+                      {slide.subtitle && (
+                        <p className="text-xl md:text-2xl text-hai mb-12 text-center">{slide.subtitle}</p>
+                      )}
+                      {/* Replaces SystemDiagram with custom card layout per spec */}
+                      <div className="grid md:grid-cols-3 gap-6 max-w-6xl mx-auto">
+                        {systemsData.map((system, i) => {
+                          const Icon = {
+                            users: Users,
+                            calendar: Calendar,
+                            trending: TrendingUp
+                          }[system.icon] as any
+
+                          return (
+                            <motion.div
+                              key={i}
+                              initial={{ opacity: 0, y: 20 }}
+                              whileInView={{ opacity: 1, y: 0 }}
+                              transition={{ delay: i * 0.2, duration: 0.4 }}
+                              viewport={{ once: true }}
+                              className="bg-sumi/50 backdrop-blur-md border border-washi/10 rounded-lg p-6 flex flex-col h-full hover:border-kincha/50 transition-colors duration-300"
+                            >
+                              <div className="mb-4 text-kincha">
+                                <Icon className="w-8 h-8" />
+                              </div>
+                              <h3 className="text-xl font-bold mb-2 text-kincha">{system.title}</h3>
+                              <p className="text-hai text-lg leading-relaxed">{system.description}</p>
+                            </motion.div>
+                          )
+                        })}
+                      </div>
+                    </div>
+                  )}
+
+                  {/* Timeline slide layout */}
+                  {slide.layout === 'timeline' && (
+                    <div className="text-washi">
+                      <h2 className="text-4xl md:text-5xl font-bold mb-4 text-center font-cormorant">{slide.title}</h2>
+                      {slide.subtitle && (
+                        <p className="text-xl md:text-2xl text-hai mb-12 text-center">{slide.subtitle}</p>
+                      )}
+                      {/* Visual Timeline Layout */}
+                      <div className="relative max-w-7xl mx-auto pt-8">
+                        {/* Connector Line */}
+                        <div className="absolute top-8 left-0 right-0 h-0.5 bg-gradient-to-r from-transparent via-hai/30 to-transparent dashed-line hidden md:block" />
+
+                        <div className="grid md:grid-cols-3 gap-6">
+                          {timelineData.map((week, i) => {
+                            // Map specific icons to timeline weeks
+                            const WeekIcon = i === 0 ? LayoutTemplate : (i === 1 ? Users : TrendingUp);
+
+                            return (
+                              <motion.div
+                                key={i}
+                                initial={{ opacity: 0, y: 20 }}
+                                whileInView={{ opacity: 1, y: 0 }}
+                                transition={{ delay: i * 0.15, duration: 0.4 }}
+                                viewport={{ once: true }}
+                                className="relative bg-gradient-to-b from-charcoal to-sumi border-l-4 border-kincha p-6 rounded-r-lg shadow-lg hover:shadow-kincha/5 transition-shadow duration-300 h-full"
+                              >
+                                {/* Week Badge */}
+                                <div className="absolute -top-4 left-6 bg-kincha text-sumi text-xs font-bold uppercase px-3 py-1 rounded-full">
+                                  {week.title}
+                                </div>
+
+                                {/* Icon */}
+                                <div className="mb-4 mt-2 text-kincha/80">
+                                  <WeekIcon className="w-6 h-6" />
+                                </div>
+
+                                <h3 className="text-lg font-bold mb-3 text-washi">{week.title === 'Week 4' ? 'Review & Optimize' : (i === 0 ? 'Setup & Creation' : 'Outreach & Activation')}</h3>
+                                <ul className="space-y-2">
+                                  {week.items.map((item, j) => (
+                                    <li key={j} className="text-sm text-hai leading-snug flex items-start">
+                                      <span className="text-kincha/50 mr-2 mt-0.5">•</span>
+                                      {item}
+                                    </li>
+                                  ))}
+                                </ul>
+                              </motion.div>
+                            )
+                          })}
+                        </div>
+                      </div>
+                    </div>
+                  )}
+
+                  {/* Calendar layout (February 2026) */}
+                  {slide.layout === 'calendar' && (
+                    <div className="text-washi">
+                      <h2 className="text-4xl md:text-5xl font-bold mb-4 text-center font-cormorant">{slide.title}</h2>
+                      {slide.subtitle && (
+                        <p className="text-xl md:text-2xl text-hai mb-8 text-center">{slide.subtitle}</p>
+                      )}
+                      {/* Calendar Image Implementation */}
+                      <div className="max-w-5xl mx-auto relative h-[600px] w-full">
+                        <div className="relative w-full h-full rounded-lg overflow-hidden border border-washi/10 shadow-2xl">
+                          <Image
+                            src="/images/february-2026-calendar.png"
+                            alt="February 2026 Programming Calendar"
+                            fill
+                            className="object-contain"
+                            sizes="(max-width: 768px) 100vw, (max-width: 1200px) 80vw, 1000px"
+                          />
+                        </div>
+                      </div>
+                    </div>
+                  )}
+
+                  {/* Metrics layout (How We Track Success) */}
+                  {slide.layout === 'metrics' && (
+                    <div className="text-washi">
+                      <h2 className="text-4xl md:text-5xl font-bold mb-4 text-center font-cormorant">{slide.title}</h2>
+                      {slide.subtitle && (
+                        <p className="text-xl md:text-2xl text-hai mb-8 text-center">{slide.subtitle}</p>
+                      )}
+
+                      {/* Tracking cadence intro */}
+                      <div className="max-w-2xl mx-auto mb-12 space-y-3">
+                        {slide.bullets.map((bullet, i) => (
+                          <div key={i} className="flex items-center justify-center">
+                            <span className="text-beni mr-3 text-xl">•</span>
+                            <span className="text-lg md:text-xl font-medium">{typeof bullet === 'string' ? bullet : bullet.main}</span>
+                          </div>
+                        ))}
+                      </div>
+
+                      {/* Three-column metrics grid */}
+                      <div className="grid md:grid-cols-3 gap-6 max-w-5xl mx-auto">
+                        {metricsData.map((category, i) => (
+                          <div key={i} className="bg-sumi/40 backdrop-blur-sm rounded-lg p-8 border border-washi/10 h-full flex flex-col hover:border-kincha/30 transition-colors">
+                            <h3 className="text-xl font-bold mb-6 text-kincha border-b border-washi/5 pb-2">{category.system}</h3>
+                            <ul className="space-y-3 flex-grow">
+                              {category.metrics.map((metric, j) => (
+                                <li key={j} className="flex items-start text-base">
+                                  <span className="text-hai mr-2 mt-1.5">•</span>
+                                  <span className="text-washi/90">{metric}</span>
                                 </li>
                               ))}
                             </ul>
                           </div>
-                        )}
-                      </motion.li>
-                    ))}
-                  </motion.ul>
-
-                  {/* Mini-story deep dive CTA */}
-                  {slide.miniStoryLink && (
-                    <div className="mt-8 text-center">
-                      <a
-                        href={`/presentation/${slide.miniStoryLink}?returnSlide=${slide.id}`}
-                        className="inline-flex items-center px-6 py-3 bg-kincha/20 border border-kincha/40 rounded-lg text-kincha hover:bg-kincha/30 transition-colors"
-                      >
-                        Explore the full playbook
-                        <svg className="ml-2 w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                          <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
-                        </svg>
-                      </a>
-                    </div>
-                  )}
-                </div>
-              )}
-
-              {/* Two-column layout (What Changes slide) */}
-              {slide.layout === 'two-column' && slide.twoColumns && (
-                <div className="text-washi">
-                  <h2 className="text-4xl md:text-5xl font-bold mb-4 text-center font-cormorant">{slide.title}</h2>
-                  {slide.subtitle && (
-                    <p className="text-xl md:text-2xl text-hai mb-12 text-center">{slide.subtitle}</p>
-                  )}
-                  <div className="grid md:grid-cols-2 gap-8 md:gap-12">
-                    {/* Left column */}
-                    <div className="bg-washi/5 rounded-lg p-6 border border-washi/10">
-                      <h3 className="text-2xl font-semibold mb-4 text-kincha">{slide.twoColumns.leftTitle}</h3>
-                      <ul className="space-y-3">
-                        {slide.twoColumns.leftItems.map((item, i) => (
-                          <li key={i} className="flex items-start">
-                            <span className="text-kincha mr-3 mt-1">•</span>
-                            <span>{item}</span>
-                          </li>
                         ))}
-                      </ul>
+                      </div>
                     </div>
-                    {/* Right column */}
-                    <div className="bg-washi/5 rounded-lg p-6 border border-washi/10">
-                      <h3 className="text-2xl font-semibold mb-4 text-beni">{slide.twoColumns.rightTitle}</h3>
-                      <ul className="space-y-3">
-                        {slide.twoColumns.rightItems.map((item, i) => (
+                  )}
+
+                  {/* CTA slide layout */}
+                  {slide.layout === 'cta' && (
+                    <div className="text-washi">
+                      <h2 className="text-4xl md:text-5xl font-bold mb-4 text-center font-cormorant">{slide.title}</h2>
+                      {slide.subtitle && (
+                        <p className="text-xl md:text-2xl text-hai mb-8 text-center">{slide.subtitle}</p>
+                      )}
+
+                      {/* Summary bullets */}
+                      <ul className="space-y-3 text-lg md:text-xl mb-12 max-w-2xl mx-auto">
+                        {slide.bullets.map((bullet, i) => (
                           <li key={i} className="flex items-start">
                             <span className="text-beni mr-3 mt-1">•</span>
-                            <span>{item}</span>
+                            <span>{typeof bullet === 'string' ? bullet : bullet.main}</span>
                           </li>
                         ))}
                       </ul>
-                    </div>
-                  </div>
-                </div>
-              )}
 
-              {/* Systems diagram layout */}
-              {slide.layout === 'systems' && (
-                <div className="text-washi">
-                  <h2 className="text-4xl md:text-5xl font-bold mb-4 text-center font-cormorant">{slide.title}</h2>
-                  {slide.subtitle && (
-                    <p className="text-xl md:text-2xl text-hai mb-12 text-center">{slide.subtitle}</p>
-                  )}
-                  <SystemDiagram systems={systemsData} />
-                </div>
-              )}
-
-              {/* Timeline slide layout */}
-              {slide.layout === 'timeline' && (
-                <div className="text-washi">
-                  <h2 className="text-4xl md:text-5xl font-bold mb-4 text-center font-cormorant">{slide.title}</h2>
-                  {slide.subtitle && (
-                    <p className="text-xl md:text-2xl text-hai mb-12 text-center">{slide.subtitle}</p>
-                  )}
-                  <div className="max-w-3xl mx-auto">
-                    <Timeline weeks={timelineData} />
-                  </div>
-                </div>
-              )}
-
-              {/* Calendar layout (February 2026) */}
-              {slide.layout === 'calendar' && (
-                <div className="text-washi">
-                  <h2 className="text-4xl md:text-5xl font-bold mb-4 text-center font-cormorant">{slide.title}</h2>
-                  {slide.subtitle && (
-                    <p className="text-xl md:text-2xl text-hai mb-8 text-center">{slide.subtitle}</p>
-                  )}
-                  <div className="grid md:grid-cols-2 gap-4 max-w-3xl mx-auto mb-8">
-                    {februaryEventsData.map((event, i) => (
-                      <div key={i} className="bg-washi/5 rounded-lg p-4 border border-washi/10">
-                        <span className="text-2xl font-bold text-kincha mr-3">{event.count}×</span>
-                        <span className="text-base">{event.type}</span>
-                      </div>
-                    ))}
-                  </div>
-                  <div className="text-center text-lg">
-                    <span className="text-hai">Revenue Target: </span>
-                    <span className="text-kincha font-semibold">{februaryRevenueTarget}</span>
-                  </div>
-                </div>
-              )}
-
-              {/* Metrics layout (How We Track Success) */}
-              {slide.layout === 'metrics' && (
-                <div className="text-washi">
-                  <h2 className="text-4xl md:text-5xl font-bold mb-4 text-center font-cormorant">{slide.title}</h2>
-                  {slide.subtitle && (
-                    <p className="text-xl md:text-2xl text-hai mb-8 text-center">{slide.subtitle}</p>
-                  )}
-
-                  {/* Tracking cadence intro */}
-                  <div className="max-w-2xl mx-auto mb-12 space-y-3">
-                    {slide.bullets.map((bullet, i) => (
-                      <div key={i} className="flex items-start">
-                        <span className="text-beni mr-3 mt-1">•</span>
-                        <span className="text-lg">{typeof bullet === 'string' ? bullet : bullet.main}</span>
-                      </div>
-                    ))}
-                  </div>
-
-                  {/* Three-column metrics grid */}
-                  <div className="grid md:grid-cols-3 gap-6 max-w-4xl mx-auto">
-                    {metricsData.map((category, i) => (
-                      <div key={i} className="bg-washi/5 rounded-lg p-6 border border-washi/10">
-                        <h3 className="text-xl font-semibold mb-4 text-kincha">{category.system}</h3>
-                        <ul className="space-y-2">
-                          {category.metrics.map((metric, j) => (
-                            <li key={j} className="flex items-start text-sm">
-                              <span className="text-hai mr-2 mt-1">•</span>
-                              <span>{metric}</span>
-                            </li>
-                          ))}
-                        </ul>
-                      </div>
-                    ))}
-                  </div>
-                </div>
-              )}
-
-              {/* CTA slide layout */}
-              {slide.layout === 'cta' && (
-                <div className="text-washi">
-                  <h2 className="text-4xl md:text-5xl font-bold mb-4 text-center font-cormorant">{slide.title}</h2>
-                  {slide.subtitle && (
-                    <p className="text-xl md:text-2xl text-hai mb-8 text-center">{slide.subtitle}</p>
-                  )}
-
-                  {/* Summary bullets */}
-                  <ul className="space-y-3 text-lg md:text-xl mb-12 max-w-2xl mx-auto">
-                    {slide.bullets.map((bullet, i) => (
-                      <li key={i} className="flex items-start">
-                        <span className="text-beni mr-3 mt-1">•</span>
-                        <span>{typeof bullet === 'string' ? bullet : bullet.main}</span>
-                      </li>
-                    ))}
-                  </ul>
-
-                  {/* CTA buttons */}
-                  {slide.ctas && (
-                    <div className="flex flex-col md:flex-row gap-6 justify-center items-center mt-12">
-                      {slide.ctas.map((cta, i) => (
-                        <a
-                          key={i}
-                          href={cta.href}
-                          className={`
-                            group px-8 py-4 rounded-lg transition-all duration-200 min-w-[280px] text-center
+                      {/* CTA buttons */}
+                      {slide.ctas && (
+                        <div className="flex flex-col md:flex-row gap-6 justify-center items-center mt-12">
+                          {slide.ctas.map((cta, i) => (
+                            <a
+                              key={i}
+                              href={cta.href}
+                              className={`
+                            group px-8 py-5 rounded-lg transition-all duration-200 min-w-[280px] text-center
                             ${cta.primary
-                              ? 'bg-beni text-washi hover:bg-beni/80 hover:scale-105'
-                              : 'border border-washi/30 text-washi hover:bg-gray-100 hover:scale-105'
-                            }
+                                  ? 'bg-beni text-washi hover:bg-beni/90 hover:-translate-y-1 shadow-lg shadow-beni/20'
+                                  : 'bg-transparent border-2 border-kincha text-kincha hover:bg-kincha/10 hover:-translate-y-1'
+                                }
                           `}
-                        >
-                          <div className="font-semibold text-lg mb-1">{cta.label}</div>
-                          <div className={`text-sm ${cta.primary ? 'text-washi/80' : 'text-hai'}`}>
-                            {cta.description}
-                          </div>
-                        </a>
-                      ))}
+                            >
+                              <div className="font-bold text-xl mb-1 font-cormorant">{cta.label}</div>
+                              <div className={`text-sm tracking-wide ${cta.primary ? 'text-washi/90' : 'text-kincha/80'}`}>
+                                {cta.description}
+                              </div>
+                            </a>
+                          ))}
+                        </div>
+                      )}
                     </div>
                   )}
-                </div>
-              )}
                 </div>
               </div>
             )}

@@ -26,6 +26,22 @@ export function SlideContainer({
   autoScroll = true
 }: SlideContainerProps) {
   const contentRef = useRef<HTMLDivElement>(null)
+  const [hasOverflow, setHasOverflow] = React.useState(false)
+
+  // Detect overflow to conditionally show scroll indicator
+  React.useEffect(() => {
+    const checkOverflow = () => {
+      if (contentRef.current) {
+        const { scrollHeight, clientHeight } = contentRef.current
+        setHasOverflow(scrollHeight > clientHeight)
+      }
+    }
+
+    // Check after render and on resize
+    checkOverflow()
+    window.addEventListener('resize', checkOverflow)
+    return () => window.removeEventListener('resize', checkOverflow)
+  }, [children, isActive])
 
   if (!isActive) return null
 
@@ -45,16 +61,15 @@ export function SlideContainer({
         <div className="w-full min-h-full flex flex-col pt-16 pb-16 md:pt-20 md:pb-24 px-4 sm:px-8 lg:px-16">
           <div
             ref={contentRef}
-            className={`w-full max-w-[1400px] min-h-full mx-auto flex flex-col justify-center ${
-              autoScroll && enableScroll ? 'overflow-y-auto scrollable-slide' : 'overflow-hidden'
-            } custom-scrollbar`}
+            className={`w-full max-w-[1400px] min-h-full mx-auto flex flex-col justify-center ${(autoScroll && enableScroll) || hasOverflow ? 'overflow-y-auto scrollable-slide' : 'overflow-hidden'
+              } custom-scrollbar slide-content`}
           >
             {children}
           </div>
         </div>
 
-        {/* Scroll indicator - only show if explicitly enabled */}
-        {showScrollIndicator && enableScroll && <ScrollIndicator slideRef={contentRef} />}
+        {/* Scroll indicator - show if requested OR if overflow detected */}
+        {(showScrollIndicator || hasOverflow) && enableScroll && <ScrollIndicator slideRef={contentRef} />}
       </motion.section>
     </AnimatePresence>
   )

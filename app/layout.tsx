@@ -45,12 +45,19 @@ export default function RootLayout({
               </a>
 
               <div className="flex gap-6">
-                <a
-                  href="/"
-                  className="text-gray-300 hover:text-white font-medium transition-colors"
-                >
-                  Presentation
-                </a>
+                <div className="relative group">
+                  <a
+                    href="/"
+                    className="text-gray-300 hover:text-white font-medium transition-colors"
+                  >
+                    Presentation
+                  </a>
+                  <div className="absolute left-0 mt-2 w-64 bg-[#1a1416] border border-gray-700 rounded-md shadow-lg opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-200">
+                    <a href="/presentation/social-media" className="block px-4 py-2 text-sm text-gray-300 hover:bg-gray-800 hover:text-white">Social Media Engine</a>
+                    <a href="/presentation/corporate-lunch" className="block px-4 py-2 text-sm text-gray-300 hover:bg-gray-800 hover:text-white">Corporate Lunch Machine</a>
+                    <a href="/presentation/weekday-bar" className="block px-4 py-2 text-sm text-gray-300 hover:bg-gray-800 hover:text-white">Weekday Bar Activation</a>
+                  </div>
+                </div>
 
                 <div className="relative group">
                   <a

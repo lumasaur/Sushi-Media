@@ -52,7 +52,7 @@ export interface SlideData {
   bullets: Array<string | { main: string; sub: string[] }>
   background?: string  // Tailwind class like 'bg-sumi'
   layout?: 'title' | 'content' | 'cta' | 'timeline' | 'systems' | 'two-column' | 'calendar' | 'metrics'
-    | 'fullBleed' | 'asymmetric' | 'bento' | 'centered' | 'imageBackground'  // New layout types
+  | 'fullBleed' | 'asymmetric' | 'bento' | 'centered' | 'imageBackground'  // New layout types
   ctas?: Array<{
     label: string
     description: string
@@ -187,7 +187,7 @@ export const slides: SlideData[] = [
     layout: 'fullBleed',
     imageSrc: '/images/hero/sushi-platter.png',
     imageAlt: 'Premium sushi platter showcasing fresh nigiri and rolls',
-    overlayOpacity: 0.4,
+    overlayOpacity: 0.6,
     textPosition: 'center'
   },
 
