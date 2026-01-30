@@ -234,7 +234,7 @@ export const slides: SlideData[] = [
     imageAlt: 'Empty restaurant seating during off-peak hours',
     overlayType: 'blur-bottom',
     overlayIntensity: 'heavy',
-    contentPosition: 'top', // Position above the tables/chairs to avoid blending with foreground
+    contentPosition: 'center',
     accentText: 'blur-box'
   },
 

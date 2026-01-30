@@ -69,7 +69,7 @@ export function FullBleedHero({
           initial={prefersReducedMotion ? { opacity: 1, y: 0 } : { opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={prefersReducedMotion ? { duration: 0 } : { duration: 0.6, ease: 'easeOut' }}
-          className="max-w-5xl"
+          className="max-w-5xl mx-auto"
         >
           <h1
             className={`hero-title font-cormorant font-bold ${titleSizeClasses[titleSize]} text-washi tracking-tight mb-4`}
