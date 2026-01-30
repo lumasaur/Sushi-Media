@@ -105,16 +105,16 @@ export function BentoGrid({
             }}
           >
             {item.title && (
-              <h3 className={`font-cormorant font-bold text-2xl md:text-3xl ${item.accentColor || 'text-kincha'}`}>
+              <h3 className={`font-cormorant font-bold text-xl md:text-2xl ${item.accentColor || 'text-kincha'}`}>
                 {item.title}
               </h3>
             )}
             {item.bullets ? (
-              <ul className="space-y-3 flex-grow">
+              <ul className="space-y-2 flex-grow">
                 {item.bullets.map((bullet, j) => (
                   <li key={j} className="flex items-start">
-                    <span className="text-kincha mr-2 mt-1">•</span>
-                    <span className="text-washi/90 text-base leading-relaxed">{bullet}</span>
+                    <span className="text-kincha mr-2 mt-1 text-sm">•</span>
+                    <span className="text-washi/90 text-sm leading-relaxed">{bullet}</span>
                   </li>
                 ))}
               </ul>
