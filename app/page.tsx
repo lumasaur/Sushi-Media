@@ -372,14 +372,13 @@ export default function PresentationPage() {
                     </ul>
                   </div>
 
-                  {/* Right: Toast Dashboard Image - FIT TO IMAGE SIZE */}
-                  <div className="relative rounded-lg overflow-hidden">
+                  {/* Right: Toast Dashboard Image - CROP WHITE PADDING */}
+                  <div className="relative rounded-lg overflow-hidden aspect-[4/3]">
                     <Image
                       src={slide.analyticsBox.image}
                       alt="Toast POS Analytics Dashboard"
-                      width={800}
-                      height={600}
-                      className="w-full h-auto object-contain rounded-lg"
+                      fill
+                      className="object-cover scale-125"
                       sizes="(max-width: 768px) 100vw, 50vw"
                     />
                   </div>

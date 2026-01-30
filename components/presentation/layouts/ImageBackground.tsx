@@ -13,7 +13,7 @@ export interface ImageBackgroundProps {
   bullets?: Array<string | { main: string; sub: string[] }>
   overlayType?: 'gradient-bottom' | 'gradient-left' | 'full-dark' | 'blur-bottom'
   overlayIntensity?: 'light' | 'medium' | 'heavy'  // 30%, 50%, 70% opacity
-  contentPosition?: 'center' | 'left' | 'right' | 'bottom'
+  contentPosition?: 'center' | 'top' | 'left' | 'right' | 'bottom'
 }
 
 export function ImageBackground({
@@ -47,6 +47,7 @@ export function ImageBackground({
   // Map contentPosition to flexbox positioning
   const positionClasses = {
     'center': 'items-center justify-center text-center',
+    'top': 'items-start justify-center text-center pt-16 md:pt-24',
     'left': 'items-center justify-start text-left pl-8 md:pl-16 lg:pl-24',
     'right': 'items-center justify-end text-right pr-8 md:pr-16 lg:pr-24',
     'bottom': 'items-end justify-center text-center pb-16 md:pb-24'
@@ -74,7 +75,7 @@ export function ImageBackground({
 
       {/* Content */}
       <div className={`absolute inset-0 flex flex-col ${positionClasses[contentPosition]} p-8 md:p-16`}>
-        <div className="w-full max-w-4xl mx-auto space-y-6 bg-sumi/40 backdrop-blur-md rounded-2xl p-8 md:p-10 border border-washi/10">
+        <div className="max-w-4xl space-y-6 bg-sumi/40 backdrop-blur-md rounded-2xl p-8 md:p-10 border border-washi/10">
           {/* Title */}
           <motion.h2
             initial={prefersReducedMotion ? { opacity: 1, y: 0 } : { opacity: 0, y: 20 }}

@@ -161,20 +161,18 @@ export function AsymmetricSplit({
   )
 
   return (
-    <div className="relative min-h-screen flex items-center">
-      <div className={`grid ${gridTemplates[splitRatio]} w-full`}>
-        {imagePosition === 'left' ? (
-          <>
-            {imageSide}
-            {contentSide}
-          </>
-        ) : (
-          <>
-            {contentSide}
-            {imageSide}
-          </>
-        )}
-      </div>
+    <div className={`grid ${gridTemplates[splitRatio]} min-h-screen w-full`}>
+      {imagePosition === 'left' ? (
+        <>
+          {imageSide}
+          {contentSide}
+        </>
+      ) : (
+        <>
+          {contentSide}
+          {imageSide}
+        </>
+      )}
     </div>
   )
 }

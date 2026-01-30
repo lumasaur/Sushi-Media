@@ -77,7 +77,7 @@ export interface SlideData {
   overlayOpacity?: number
   textPosition?: 'center' | 'bottom-left' | 'bottom-center' | 'top-center'
   titleSize?: 'xl' | '2xl' | '3xl'
-  contentPosition?: 'center' | 'left' | 'right' | 'bottom'
+  contentPosition?: 'center' | 'top' | 'left' | 'right' | 'bottom'
   overlayIntensity?: 'light' | 'medium' | 'heavy'
   accentText?: string
   textColor?: 'light' | 'dark'
@@ -232,10 +232,10 @@ export const slides: SlideData[] = [
     layout: 'imageBackground',
     imageSrc: '/images/main-story/empty-space.png',
     imageAlt: 'Empty restaurant seating during off-peak hours',
-    overlayType: 'blur-bottom', // Changed to blur-bottom or we might need a custom Type for "blur box"
+    overlayType: 'blur-bottom',
     overlayIntensity: 'heavy',
-    contentPosition: 'center', // Changed to center, layout component will need to handle the box
-    accentText: 'blur-box' // Signal to component to use the blur box style
+    contentPosition: 'top', // Position above the tables/chairs to avoid blending with foreground
+    accentText: 'blur-box'
   },
 
   // Slide 2: Three Systems We're Building
@@ -549,21 +549,9 @@ export const slides: SlideData[] = [
         ],
         size: 'large',
         accentColor: 'text-beni'
-      },
-      {
-        type: 'text',
-        title: 'July 2026',
-        bullets: [
-          '⚽ World Cup Final Week (July 13-19 - HUGE revenue opportunity)',
-          'Independence Day specials (July 4)',
-          'MLB All-Star Game viewing (July 14)',
-          'Summer menu celebration'
-        ],
-        size: 'large',
-        accentColor: 'text-beni'
       }
     ],
-    subtitle: 'Capturing seasonality, sports, and culture through July 2026',
+    subtitle: 'Capturing seasonality, sports, and culture through June 2026',
     background: 'bg-premium-dark'
   },
 
