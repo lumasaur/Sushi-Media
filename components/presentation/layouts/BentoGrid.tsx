@@ -95,7 +95,7 @@ export function BentoGrid({
         return (
           <motion.div
             key={index}
-            className={`${baseClasses} p-6 flex flex-col justify-start space-y-3 border border-washi/10 ${item.size === 'large' ? 'min-h-[280px]' : 'min-h-[240px]'}`}
+            className={`${baseClasses} p-6 flex flex-col justify-start space-y-3 border border-washi/10 min-h-[280px]`}
             initial={{ opacity: 0, y: 10 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{

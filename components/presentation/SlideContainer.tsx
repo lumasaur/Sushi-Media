@@ -50,7 +50,7 @@ export function SlideContainer({
       <motion.section
         key={slideNumber}
         id={`slide-${slideNumber}`}
-        className={`absolute inset-0 w-full h-full overflow-hidden ${background} ${className}`}
+        className={`absolute inset-0 w-full h-full ${background} ${className}`}
         initial={{ opacity: 0, x: 50 }}
         animate={{ opacity: 1, x: 0 }}
         exit={{ opacity: 0, x: -50 }}
