@@ -514,7 +514,7 @@ export const slides: SlideData[] = [
           'Cherry Blossom Festival tie-in (March 20 kickoff)',
           'Spring menu preview events'
         ],
-        size: 'small'
+        size: 'medium'
       },
       {
         type: 'text',
@@ -525,7 +525,7 @@ export const slides: SlideData[] = [
           'Earth Day sustainability showcase (April 22)',
           'Spring patio launch party'
         ],
-        size: 'small'
+        size: 'medium'
       },
       {
         type: 'text',
@@ -536,7 +536,7 @@ export const slides: SlideData[] = [
           'Mother\'s Day brunch/lunch marketing push',
           'Memorial Day weekend kickoff (May 25)'
         ],
-        size: 'small'
+        size: 'medium'
       },
       {
         type: 'text',
@@ -547,7 +547,7 @@ export const slides: SlideData[] = [
           'Juneteenth celebration (June 19)',
           'Pride Month special events'
         ],
-        size: 'small',
+        size: 'large',
         accentColor: 'text-beni'
       }
     ],

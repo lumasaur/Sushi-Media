@@ -39,7 +39,7 @@ export function FullBleedHero({
     'center': 'items-center justify-center text-center',
     'bottom-left': 'items-end justify-start text-left pb-16 pl-8 md:pb-24 md:pl-16',
     'bottom-center': 'items-end justify-center text-center pb-16 md:pb-24',
-    'top-center': 'items-start justify-center text-center pt-[30%]'
+    'top-center': 'items-start justify-center text-center pt-[30vh]'
   }
 
   return (
