@@ -61,7 +61,7 @@ export function SlideContainer({
         <div className="w-full min-h-full flex flex-col pt-16 pb-16 md:pt-20 md:pb-24 px-4 sm:px-8 lg:px-16">
           <div
             ref={contentRef}
-            className={`w-full max-w-[1400px] min-h-full mx-auto flex flex-col justify-center ${(autoScroll && enableScroll) || hasOverflow ? 'overflow-y-auto scrollable-slide' : 'overflow-hidden'
+            className={`w-full max-w-[1400px] min-h-full mx-auto flex flex-col justify-center ${(autoScroll && enableScroll) || hasOverflow ? 'overflow-y-auto scrollable-slide' : ''
               } custom-scrollbar slide-content`}
           >
             {children}
